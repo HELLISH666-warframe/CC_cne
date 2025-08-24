@@ -1,0 +1,10 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="CC/the-dark-lord" icon="the-dark-lord" color="#ff0000" x="130" y="30" camx="-700" camy="-70" holdTime="6.1" scale="1.1">
+	<anim name="idle" anim="TDL Idle" x="36.36363636363636" y="-72.72727272727272" loop="true"/>
+	<anim name="singLEFT" anim="TDL Left" x="412.7272727272727" y="-145.45454545454544"/>
+	<anim name="singDOWN" anim="TDL Down" x="448.18181818181813" y="-252.72727272727272"/>
+	<anim name="singUP" anim="TDL Up" x="272.7272727272727" y="84.54545454545453"/>
+	<anim name="singRIGHT" anim="TDL Right" x="389.99999999999994" y="-112.72727272727272"/>
+	<anim name="attack" anim="TDL Slice" x="340" y="131.8181818181818"/>
+</character>

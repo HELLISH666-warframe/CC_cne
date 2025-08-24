@@ -1,0 +1,9 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="CC/extras/ash" icon="ash" color="#292f88" y="50" camx="-150" camy="300" holdTime="6.1" scale="0.7">
+	<anim name="singLEFT" anim="ashleft" x="327.14285714285717" y="-375.7142857142857"/>
+	<anim name="singDOWN" anim="ashdown" x="260" y="-271.42857142857144"/>
+	<anim name="singUP" anim="ashup" x="220" y="-164.2857142857143"/>
+	<anim name="singRIGHT" anim="ashright" x="251.42857142857144" y="-374.28571428571433"/>
+	<anim name="idle" anim="ashidle" x="220" y="-351.42857142857144"/>
+</character>

@@ -1,0 +1,9 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="CC/extras/aurora_tdl" icon="tdl" color="#ff0000" y="-352" camx="-230" camy="-270" holdTime="6.1" scale="2.2">
+	<anim name="idle" anim="IDLEANIM"/>
+	<anim name="singLEFT" anim="LEFTANIM" x="115.9090909090909" y="49.090909090909086"/>
+	<anim name="singRIGHT" anim="RIGHTANIM" x="-6.8181818181818175" y="18.18181818181818"/>
+	<anim name="singDOWN" anim="DOWNANIM" x="64.54545454545455" y="-12.727272727272727"/>
+	<anim name="singUP" anim="UPANIM" x="43.18181818181818" y="101.81818181818181"/>
+</character>

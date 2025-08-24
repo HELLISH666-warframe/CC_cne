@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="thechosenone_older.png">
+	<!-- Created with Adobe Animate version 21.0.5.40714 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="TCO Down0000" x="82" y="203" width="565" height="733"/>
+	<SubTexture name="TCO Down0001" x="876" y="212" width="543" height="724"/>
+	<SubTexture name="TCO Idle0000" x="1782" y="204" width="365" height="680"/>
+	<SubTexture name="TCO Idle0001" x="2566" y="172" width="395" height="706"/>
+	<SubTexture name="TCO Idle0002" x="3354" y="118" width="411" height="788"/>
+	<SubTexture name="TCO Idle0003" x="167" y="1122" width="410" height="780"/>
+	<SubTexture name="TCO Idle0004" x="968" y="1113" width="403" height="798"/>
+	<SubTexture name="TCO Left0026" x="1794" y="1147" width="369" height="788"/>
+	<SubTexture name="TCO Left0027" x="2547" y="1149" width="393" height="786"/>
+	<SubTexture name="TCO Right0000" x="3361" y="1153" width="514" height="763"/>
+	<SubTexture name="TCO Right0001" x="183" y="2157" width="413" height="767"/>
+	<SubTexture name="TCO Right0002" x="967" y="2157" width="426" height="767"/>
+	<SubTexture name="TCO Up0000" x="1744" y="2121" width="473" height="822"/>
+	<SubTexture name="TCO Up0001" x="2553" y="2141" width="455" height="803"/>
+</TextureAtlas>

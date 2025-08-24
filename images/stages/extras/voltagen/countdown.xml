@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="countdown.png">
+	<!-- Created with Adobe Animate version 21.0.0.35450 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Symbol 25190000" x="4" y="4" width="443" height="83"/>
+	<SubTexture name="Symbol 25190001" x="4" y="4" width="443" height="83"/>
+	<SubTexture name="Symbol 25190002" x="4" y="4" width="443" height="83"/>
+	<SubTexture name="Symbol 25190003" x="4" y="4" width="443" height="83"/>
+	<SubTexture name="Symbol 25190004" x="4" y="4" width="443" height="83"/>
+	<SubTexture name="Symbol 25190005" x="4" y="4" width="443" height="83"/>
+	<SubTexture name="Symbol 25190006" x="4" y="4" width="443" height="83"/>
+	<SubTexture name="Symbol 25190007" x="4" y="4" width="443" height="83"/>
+	<SubTexture name="Symbol 25190008" x="4" y="4" width="443" height="83"/>
+	<SubTexture name="Symbol 25190009" x="4" y="4" width="443" height="83"/>
+	<SubTexture name="Symbol 25190010" x="4" y="4" width="443" height="83"/>
+	<SubTexture name="Symbol 25190011" x="4" y="4" width="443" height="83"/>
+	<SubTexture name="Symbol 25190012" x="4" y="4" width="443" height="83"/>
+	<SubTexture name="Symbol 25190013" x="4" y="4" width="443" height="83"/>
+	<SubTexture name="Symbol 25190014" x="4" y="4" width="443" height="83"/>
+	<SubTexture name="Symbol 25190015" x="4" y="4" width="443" height="83"/>
+	<SubTexture name="Symbol 25190016" x="4" y="4" width="443" height="83"/>
+	<SubTexture name="Symbol 25190017" x="4" y="4" width="443" height="83"/>
+	<SubTexture name="Symbol 25190018" x="497" y="4" width="443" height="83"/>
+	<SubTexture name="Symbol 25190019" x="497" y="4" width="443" height="83"/>
+	<SubTexture name="Symbol 25190020" x="497" y="4" width="443" height="83"/>
+	<SubTexture name="Symbol 25190021" x="497" y="4" width="443" height="83"/>
+	<SubTexture name="Symbol 25190022" x="497" y="4" width="443" height="83"/>
+	<SubTexture name="Symbol 25190023" x="497" y="4" width="443" height="83"/>
+	<SubTexture name="Symbol 25190024" x="497" y="4" width="443" height="83"/>
+	<SubTexture name="Symbol 25190025" x="497" y="4" width="443" height="83"/>
+	<SubTexture name="Symbol 25190026" x="497" y="4" width="443" height="83"/>
+	<SubTexture name="Symbol 25190027" x="497" y="4" width="443" height="83"/>
+	<SubTexture name="Symbol 25190028" x="497" y="4" width="443" height="83"/>
+	<SubTexture name="Symbol 25190029" x="497" y="4" width="443" height="83"/>
+	<SubTexture name="Symbol 25190030" x="497" y="4" width="443" height="83"/>
+	<SubTexture name="Symbol 25190031" x="497" y="4" width="443" height="83"/>
+	<SubTexture name="Symbol 25190032" x="497" y="4" width="443" height="83"/>
+	<SubTexture name="Symbol 25190033" x="497" y="4" width="443" height="83"/>
+	<SubTexture name="Symbol 25190034" x="497" y="4" width="443" height="83"/>
+	<SubTexture name="Symbol 25190035" x="497" y="4" width="443" height="83"/>
+	<SubTexture name="Symbol 25190036" x="4" y="137" width="443" height="83"/>
+	<SubTexture name="Symbol 25190037" x="4" y="137" width="443" height="83"/>
+	<SubTexture name="Symbol 25190038" x="4" y="137" width="443" height="83"/>
+	<SubTexture name="Symbol 25190039" x="4" y="137" width="443" height="83"/>
+	<SubTexture name="Symbol 25190040" x="4" y="137" width="443" height="83"/>
+	<SubTexture name="Symbol 25190041" x="4" y="137" width="443" height="83"/>
+	<SubTexture name="Symbol 25190042" x="4" y="137" width="443" height="83"/>
+	<SubTexture name="Symbol 25190043" x="4" y="137" width="443" height="83"/>
+	<SubTexture name="Symbol 25190044" x="4" y="137" width="443" height="83"/>
+	<SubTexture name="Symbol 25190045" x="4" y="137" width="443" height="83"/>
+	<SubTexture name="Symbol 25190046" x="4" y="137" width="443" height="83"/>
+	<SubTexture name="Symbol 25190047" x="4" y="137" width="443" height="83"/>
+	<SubTexture name="Symbol 25190048" x="4" y="137" width="443" height="83"/>
+	<SubTexture name="Symbol 25190049" x="4" y="137" width="443" height="83"/>
+	<SubTexture name="Symbol 25190050" x="4" y="137" width="443" height="83"/>
+	<SubTexture name="Symbol 25190051" x="4" y="137" width="443" height="83"/>
+	<SubTexture name="Symbol 25190052" x="4" y="137" width="443" height="83"/>
+	<SubTexture name="Symbol 25190053" x="4" y="137" width="443" height="83"/>
+	<SubTexture name="Symbol 25190054" x="497" y="137" width="443" height="83"/>
+	<SubTexture name="Symbol 25190055" x="497" y="137" width="443" height="83"/>
+	<SubTexture name="Symbol 25190056" x="497" y="137" width="443" height="83"/>
+	<SubTexture name="Symbol 25190057" x="497" y="137" width="443" height="83"/>
+	<SubTexture name="Symbol 25190058" x="497" y="137" width="443" height="83"/>
+	<SubTexture name="Symbol 25190059" x="497" y="137" width="443" height="83"/>
+	<SubTexture name="Symbol 25190060" x="497" y="137" width="443" height="83"/>
+	<SubTexture name="Symbol 25190061" x="497" y="137" width="443" height="83"/>
+	<SubTexture name="Symbol 25190062" x="497" y="137" width="443" height="83"/>
+	<SubTexture name="Symbol 25190063" x="497" y="137" width="443" height="83"/>
+	<SubTexture name="Symbol 25190064" x="497" y="137" width="443" height="83"/>
+	<SubTexture name="Symbol 25190065" x="497" y="137" width="443" height="83"/>
+	<SubTexture name="Symbol 25190066" x="497" y="137" width="443" height="83"/>
+	<SubTexture name="Symbol 25190067" x="497" y="137" width="443" height="83"/>
+	<SubTexture name="Symbol 25190068" x="497" y="137" width="443" height="83"/>
+	<SubTexture name="Symbol 25190069" x="497" y="137" width="443" height="83"/>
+	<SubTexture name="Symbol 25190070" x="497" y="137" width="443" height="83"/>
+	<SubTexture name="Symbol 25190071" x="497" y="137" width="443" height="83"/>
+	<SubTexture name="Symbol 25190072" x="4" y="270" width="430" height="83" frameX="0" frameY="0" frameWidth="443" frameHeight="83"/>
+	<SubTexture name="Symbol 25190073" x="4" y="270" width="430" height="83" frameX="0" frameY="0" frameWidth="443" frameHeight="83"/>
+	<SubTexture name="Symbol 25190074" x="4" y="270" width="430" height="83" frameX="0" frameY="0" frameWidth="443" frameHeight="83"/>
+	<SubTexture name="Symbol 25190075" x="4" y="270" width="430" height="83" frameX="0" frameY="0" frameWidth="443" frameHeight="83"/>
+	<SubTexture name="Symbol 25190076" x="4" y="270" width="430" height="83" frameX="0" frameY="0" frameWidth="443" frameHeight="83"/>
+	<SubTexture name="Symbol 25190077" x="4" y="270" width="430" height="83" frameX="0" frameY="0" frameWidth="443" frameHeight="83"/>
+	<SubTexture name="Symbol 25190078" x="4" y="270" width="430" height="83" frameX="0" frameY="0" frameWidth="443" frameHeight="83"/>
+	<SubTexture name="Symbol 25190079" x="4" y="270" width="430" height="83" frameX="0" frameY="0" frameWidth="443" frameHeight="83"/>
+	<SubTexture name="Symbol 25190080" x="4" y="270" width="430" height="83" frameX="0" frameY="0" frameWidth="443" frameHeight="83"/>
+	<SubTexture name="Symbol 25190081" x="4" y="270" width="430" height="83" frameX="0" frameY="0" frameWidth="443" frameHeight="83"/>
+	<SubTexture name="Symbol 25190082" x="4" y="270" width="430" height="83" frameX="0" frameY="0" frameWidth="443" frameHeight="83"/>
+	<SubTexture name="Symbol 25190083" x="4" y="270" width="430" height="83" frameX="0" frameY="0" frameWidth="443" frameHeight="83"/>
+	<SubTexture name="Symbol 25190084" x="4" y="270" width="430" height="83" frameX="0" frameY="0" frameWidth="443" frameHeight="83"/>
+	<SubTexture name="Symbol 25190085" x="4" y="270" width="430" height="83" frameX="0" frameY="0" frameWidth="443" frameHeight="83"/>
+	<SubTexture name="Symbol 25190086" x="4" y="270" width="430" height="83" frameX="0" frameY="0" frameWidth="443" frameHeight="83"/>
+	<SubTexture name="Symbol 25190087" x="4" y="270" width="430" height="83" frameX="0" frameY="0" frameWidth="443" frameHeight="83"/>
+	<SubTexture name="Symbol 25190088" x="4" y="270" width="430" height="83" frameX="0" frameY="0" frameWidth="443" frameHeight="83"/>
+	<SubTexture name="Symbol 25190089" x="4" y="270" width="430" height="83" frameX="0" frameY="0" frameWidth="443" frameHeight="83"/>
+	<SubTexture name="Symbol 25190090" x="4" y="270" width="430" height="83" frameX="0" frameY="0" frameWidth="443" frameHeight="83"/>
+	<SubTexture name="Symbol 25190091" x="484" y="270" width="128" height="83" frameX="-164" frameY="0" frameWidth="443" frameHeight="83"/>
+	<SubTexture name="Symbol 25190092" x="484" y="270" width="128" height="83" frameX="-164" frameY="0" frameWidth="443" frameHeight="83"/>
+	<SubTexture name="Symbol 25190093" x="484" y="270" width="128" height="83" frameX="-164" frameY="0" frameWidth="443" frameHeight="83"/>
+	<SubTexture name="Symbol 25190094" x="484" y="270" width="128" height="83" frameX="-164" frameY="0" frameWidth="443" frameHeight="83"/>
+	<SubTexture name="Symbol 25190095" x="484" y="270" width="128" height="83" frameX="-164" frameY="0" frameWidth="443" frameHeight="83"/>
+	<SubTexture name="Symbol 25190096" x="484" y="270" width="128" height="83" frameX="-164" frameY="0" frameWidth="443" frameHeight="83"/>
+	<SubTexture name="Symbol 25190097" x="484" y="270" width="128" height="83" frameX="-164" frameY="0" frameWidth="443" frameHeight="83"/>
+	<SubTexture name="Symbol 25190098" x="662" y="270" width="0" height="0" frameX="0" frameY="-41" frameWidth="443" frameHeight="83"/>
+</TextureAtlas>

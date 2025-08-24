@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Created with Funkin Packer v0.1.3 https://neeeoo.github.io/funkin-packer/
+-->
+<TextureAtlas imagePath="StickFigureRed.png" width="8131" height="5198">
+	<SubTexture name="red phase 1 down0000" x="3863" y="2987" width="247" height="463" frameX="-0" frameY="-1" frameWidth="247" frameHeight="468"/>
+	<SubTexture name="red phase 1 down0001" x="3334" y="4621" width="344" height="232" rotated="true" frameX="-1" frameY="-120" frameWidth="247" frameHeight="468"/>
+	<SubTexture name="red phase 1 down0002" x="4986" y="1259" width="273" height="225" rotated="true" frameX="-1" frameY="-190" frameWidth="247" frameHeight="468"/>
+	<SubTexture name="red phase 1 down0003" x="5545" y="451" width="223" height="284" frameX="-0" frameY="-179" frameWidth="247" frameHeight="468"/>
+	<SubTexture name="red phase 1 down0004" x="6092" y="1082" width="290" height="223" rotated="true" frameX="-0" frameY="-173" frameWidth="247" frameHeight="468"/>
+	<SubTexture name="red phase 1 down0005" x="6092" y="1308" width="223" height="290" frameX="-0" frameY="-173" frameWidth="247" frameHeight="468"/>
+	<SubTexture name="red phase 1 down0006" x="6092" y="225" width="293" height="223" rotated="true" frameX="-0" frameY="-170" frameWidth="247" frameHeight="468"/>
+	<SubTexture name="red phase 1 down0007" x="6092" y="856" width="293" height="223" rotated="true" frameX="-0" frameY="-170" frameWidth="247" frameHeight="468"/>
+	<SubTexture name="red phase 1 down0008" x="4855" y="1670" width="298" height="221" rotated="true" frameX="-1" frameY="-166" frameWidth="247" frameHeight="468"/>
+	<SubTexture name="red phase 1 down0009" x="4855" y="1670" width="298" height="221" rotated="true" frameX="-1" frameY="-166" frameWidth="247" frameHeight="468"/>
+	<SubTexture name="red phase 1 down0010" x="4855" y="1670" width="298" height="221" rotated="true" frameX="-1" frameY="-166" frameWidth="247" frameHeight="468"/>
+	<SubTexture name="red phase 1 down0011" x="6092" y="1" width="298" height="221" rotated="true" frameX="-1" frameY="-166" frameWidth="247" frameHeight="468"/>
+	<SubTexture name="red phase 1 down0012" x="1109" y="2654" width="224" height="313" frameX="-0" frameY="-152" frameWidth="247" frameHeight="468"/>
+	<SubTexture name="red phase 1 down0013" x="3144" y="4861" width="226" height="330" frameX="-1" frameY="-138" frameWidth="247" frameHeight="468"/>
+	<SubTexture name="red phase 1 down0014" x="5159" y="1671" width="230" height="358" frameX="-1" frameY="-109" frameWidth="247" frameHeight="468"/>
+	<SubTexture name="red phase 1 down0015" x="3681" y="4621" width="432" height="231" rotated="true" frameX="-1" frameY="-31" frameWidth="247" frameHeight="468"/>
+	<SubTexture name="red phase 1 idle0000" x="1129" y="1" width="244" height="542" frameX="-0" frameY="-0" frameWidth="244" frameHeight="543"/>
+	<SubTexture name="red phase 1 idle0001" x="1376" y="1" width="244" height="542" frameX="-0" frameY="-0" frameWidth="244" frameHeight="543"/>
+	<SubTexture name="red phase 1 idle0002" x="3954" y="4061" width="242" height="505" frameX="-1" frameY="-36" frameWidth="244" frameHeight="543"/>
+	<SubTexture name="red phase 1 idle0003" x="4502" y="2036" width="242" height="521" frameX="-1" frameY="-19" frameWidth="244" frameHeight="543"/>
+	<SubTexture name="red phase 1 idle0004" x="4880" y="1" width="243" height="534" frameX="-0" frameY="-9" frameWidth="244" frameHeight="543"/>
+	<SubTexture name="red phase 1 idle0005" x="5126" y="1" width="243" height="534" frameX="-0" frameY="-9" frameWidth="244" frameHeight="543"/>
+	<SubTexture name="red phase 1 idle0006" x="3599" y="3533" width="241" height="536" frameX="-2" frameY="-4" frameWidth="244" frameHeight="543"/>
+	<SubTexture name="red phase 1 idle0007" x="3619" y="2987" width="241" height="536" frameX="-2" frameY="-4" frameWidth="244" frameHeight="543"/>
+	<SubTexture name="red phase 1 idle0008" x="1359" y="747" width="244" height="542" frameX="-0" frameY="-0" frameWidth="244" frameHeight="543"/>
+	<SubTexture name="red phase 1 idle0009" x="1359" y="747" width="244" height="542" frameX="-0" frameY="-0" frameWidth="244" frameHeight="543"/>
+	<SubTexture name="red phase 1 idle0010" x="1623" y="1" width="244" height="542" frameX="-0" frameY="-0" frameWidth="244" frameHeight="543"/>
+	<SubTexture name="red phase 1 idle0011" x="1870" y="1" width="244" height="542" frameX="-0" frameY="-0" frameWidth="244" frameHeight="543"/>
+	<SubTexture name="red phase 1 left0000" x="5789" y="4861" width="533" height="314" rotated="true" frameX="-50" frameY="-16" frameWidth="364" frameHeight="550"/>
+	<SubTexture name="red phase 1 left0001" x="3674" y="1493" width="301" height="537" frameX="-0" frameY="-12" frameWidth="364" frameHeight="550"/>
+	<SubTexture name="red phase 1 left0002" x="2364" y="1" width="292" height="541" frameX="-9" frameY="-8" frameWidth="364" frameHeight="550"/>
+	<SubTexture name="red phase 1 left0003" x="3327" y="2987" width="289" height="543" frameX="-12" frameY="-6" frameWidth="364" frameHeight="550"/>
+	<SubTexture name="red phase 1 left0004" x="3044" y="3535" width="287" height="544" frameX="-14" frameY="-5" frameWidth="364" frameHeight="550"/>
+	<SubTexture name="red phase 1 left0005" x="3779" y="2036" width="287" height="545" frameX="-14" frameY="-4" frameWidth="364" frameHeight="550"/>
+	<SubTexture name="red phase 1 left0006" x="3037" y="2987" width="287" height="545" frameX="-14" frameY="-4" frameWidth="364" frameHeight="550"/>
+	<SubTexture name="red phase 1 left0007" x="2987" y="2036" width="287" height="546" frameX="-14" frameY="-3" frameWidth="364" frameHeight="550"/>
+	<SubTexture name="red phase 1 left0008" x="2457" y="2987" width="287" height="546" frameX="-14" frameY="-3" frameWidth="364" frameHeight="550"/>
+	<SubTexture name="red phase 1 left0009" x="2747" y="2987" width="287" height="546" frameX="-14" frameY="-3" frameWidth="364" frameHeight="550"/>
+	<SubTexture name="red phase 1 left0010" x="3277" y="2036" width="287" height="546" frameX="-14" frameY="-3" frameWidth="364" frameHeight="550"/>
+	<SubTexture name="red phase 1 left0011" x="2717" y="2036" width="267" height="547" frameX="-34" frameY="-2" frameWidth="364" frameHeight="550"/>
+	<SubTexture name="red phase 1 left0012" x="2207" y="2036" width="260" height="549" frameX="-45" frameY="-0" frameWidth="364" frameHeight="550"/>
+	<SubTexture name="red phase 1 left0013" x="2470" y="2036" width="244" height="548" frameX="-60" frameY="-2" frameWidth="364" frameHeight="550"/>
+	<SubTexture name="red phase 1 left0014" x="3567" y="2036" width="209" height="546" frameX="-89" frameY="-1" frameWidth="364" frameHeight="550"/>
+	<SubTexture name="red phase 1 right0000" x="4382" y="3490" width="378" height="499" frameX="-4" frameY="-1" frameWidth="421" frameHeight="505"/>
+	<SubTexture name="red phase 1 right0001" x="3787" y="2584" width="437" height="400" rotated="true" frameX="-0" frameY="-65" frameWidth="421" frameHeight="505"/>
+	<SubTexture name="red phase 1 right0002" x="3787" y="2584" width="437" height="400" rotated="true" frameX="-0" frameY="-65" frameWidth="421" frameHeight="505"/>
+	<SubTexture name="red phase 1 right0003" x="4657" y="2560" width="437" height="421" rotated="true" frameX="-0" frameY="-65" frameWidth="421" frameHeight="505"/>
+	<SubTexture name="red phase 1 right0004" x="5678" y="1188" width="411" height="437" frameX="-0" frameY="-65" frameWidth="421" frameHeight="505"/>
+	<SubTexture name="red phase 1 right0005" x="5372" y="1" width="437" height="406" rotated="true" frameX="-0" frameY="-65" frameWidth="421" frameHeight="505"/>
+	<SubTexture name="red phase 1 right0006" x="5976" y="451" width="437" height="402" rotated="true" frameX="-0" frameY="-65" frameWidth="421" frameHeight="505"/>
+	<SubTexture name="red phase 1 right0007" x="5283" y="3918" width="402" height="437" frameX="-0" frameY="-65" frameWidth="421" frameHeight="505"/>
+	<SubTexture name="red phase 1 right0008" x="5517" y="3447" width="400" height="437" frameX="-0" frameY="-65" frameWidth="421" frameHeight="505"/>
+	<SubTexture name="red phase 1 right0009" x="5688" y="3887" width="400" height="437" frameX="-0" frameY="-65" frameWidth="421" frameHeight="505"/>
+	<SubTexture name="red phase 1 right0010" x="5920" y="3447" width="400" height="437" frameX="-0" frameY="-65" frameWidth="421" frameHeight="505"/>
+	<SubTexture name="red phase 1 right0011" x="3787" y="2584" width="437" height="400" rotated="true" frameX="-0" frameY="-65" frameWidth="421" frameHeight="505"/>
+	<SubTexture name="red phase 1 right0012" x="2591" y="2587" width="437" height="397" rotated="true" frameX="-0" frameY="-65" frameWidth="421" frameHeight="505"/>
+	<SubTexture name="red phase 1 right0013" x="6419" y="1" width="391" height="440" frameX="-0" frameY="-62" frameWidth="421" frameHeight="505"/>
+	<SubTexture name="red phase 1 right0014" x="5430" y="741" width="379" height="444" frameX="-4" frameY="-59" frameWidth="421" frameHeight="505"/>
+	<SubTexture name="red phase 1 right0015" x="5392" y="1671" width="449" height="353" rotated="true" frameX="-6" frameY="-52" frameWidth="421" frameHeight="505"/>
+	<SubTexture name="red phase 1 right0016" x="4382" y="4532" width="489" height="299" rotated="true" frameX="-6" frameY="-16" frameWidth="421" frameHeight="505"/>
+	<SubTexture name="red phase 1 up0000" x="3423" y="1493" width="248" height="538" frameX="-20" frameY="-5" frameWidth="299" frameHeight="543"/>
+	<SubTexture name="red phase 1 up0001" x="2383" y="1493" width="257" height="538" frameX="-1" frameY="-3" frameWidth="299" frameHeight="543"/>
+	<SubTexture name="red phase 1 up0002" x="3843" y="3526" width="291" height="532" frameX="-8" frameY="-8" frameWidth="299" frameHeight="543"/>
+	<SubTexture name="red phase 1 up0003" x="4269" y="742" width="275" height="534" frameX="-2" frameY="-5" frameWidth="299" frameHeight="543"/>
+	<SubTexture name="red phase 1 up0004" x="3999" y="743" width="267" height="536" frameX="-1" frameY="-4" frameWidth="299" frameHeight="543"/>
+	<SubTexture name="red phase 1 up0005" x="4363" y="1" width="267" height="536" frameX="-1" frameY="-4" frameWidth="299" frameHeight="543"/>
+	<SubTexture name="red phase 1 up0006" x="3262" y="4082" width="262" height="536" frameX="-2" frameY="-4" frameWidth="299" frameHeight="543"/>
+	<SubTexture name="red phase 1 up0007" x="3334" y="3533" width="262" height="536" frameX="-2" frameY="-4" frameWidth="299" frameHeight="543"/>
+	<SubTexture name="red phase 1 up0008" x="2643" y="1493" width="257" height="538" frameX="-1" frameY="-3" frameWidth="299" frameHeight="543"/>
+	<SubTexture name="red phase 1 up0009" x="2643" y="1493" width="257" height="538" frameX="-1" frameY="-3" frameWidth="299" frameHeight="543"/>
+	<SubTexture name="red phase 1 up0010" x="2903" y="1493" width="257" height="538" frameX="-1" frameY="-3" frameWidth="299" frameHeight="543"/>
+	<SubTexture name="red phase 1 up0011" x="3163" y="1493" width="257" height="538" frameX="-1" frameY="-3" frameWidth="299" frameHeight="543"/>
+	<SubTexture name="red phase 1 up0012" x="2122" y="1493" width="258" height="538" frameX="-0" frameY="-3" frameWidth="299" frameHeight="543"/>
+	<SubTexture name="red phase 1 up0013" x="1109" y="1493" width="256" height="540" frameX="-2" frameY="-1" frameWidth="299" frameHeight="543"/>
+	<SubTexture name="red phase 1 up0014" x="2659" y="1" width="249" height="541" frameX="-9" frameY="-0" frameWidth="299" frameHeight="543"/>
+	<SubTexture name="red phase 1 up0015" x="1112" y="747" width="244" height="543" frameX="-15" frameY="-0" frameWidth="299" frameHeight="543"/>
+	<SubTexture name="red phase 1 up0016" x="2431" y="4989" width="530" height="207" rotated="true" frameX="-51" frameY="-11" frameWidth="299" frameHeight="543"/>
+	<SubTexture name="red phase 2 down0000" x="5812" y="197" width="270" height="191" rotated="true" frameX="-0" frameY="-8" frameWidth="199" frameHeight="279"/>
+	<SubTexture name="red phase 2 down0001" x="3810" y="545" width="273" height="195" rotated="true" frameX="-0" frameY="-5" frameWidth="199" frameHeight="279"/>
+	<SubTexture name="red phase 2 down0002" x="1973" y="546" width="274" height="197" rotated="true" frameX="-0" frameY="-4" frameWidth="199" frameHeight="279"/>
+	<SubTexture name="red phase 2 down0003" x="1695" y="546" width="275" height="198" rotated="true" frameX="-0" frameY="-3" frameWidth="199" frameHeight="279"/>
+	<SubTexture name="red phase 2 down0004" x="4597" y="540" width="278" height="199" rotated="true" frameX="-0" frameY="-1" frameWidth="199" frameHeight="279"/>
+	<SubTexture name="red phase 2 down0005" x="4878" y="540" width="278" height="199" rotated="true" frameX="-0" frameY="-1" frameWidth="199" frameHeight="279"/>
+	<SubTexture name="red phase 2 down0006" x="7916" y="2883" width="199" height="278" frameX="-0" frameY="-1" frameWidth="199" frameHeight="279"/>
+	<SubTexture name="red phase 2 down0007" x="6688" y="2897" width="278" height="199" rotated="true" frameX="-0" frameY="-1" frameWidth="199" frameHeight="279"/>
+	<SubTexture name="red phase 2 down0008" x="6688" y="3099" width="278" height="199" rotated="true" frameX="-0" frameY="-1" frameWidth="199" frameHeight="279"/>
+	<SubTexture name="red phase 2 down0009" x="6688" y="3301" width="278" height="199" rotated="true" frameX="-0" frameY="-1" frameWidth="199" frameHeight="279"/>
+	<SubTexture name="red phase 2 idle0000" x="7625" y="4780" width="191" height="278" frameX="-0" frameY="-1" frameWidth="217" frameHeight="279"/>
+	<SubTexture name="red phase 2 idle0001" x="5262" y="1206" width="209" height="278" frameX="-8" frameY="-1" frameWidth="217" frameHeight="279"/>
+	<SubTexture name="red phase 2 idle0002" x="3250" y="545" width="278" height="196" rotated="true" frameX="-2" frameY="-1" frameWidth="217" frameHeight="279"/>
+	<SubTexture name="red phase 2 idle0003" x="2150" y="4992" width="278" height="205" rotated="true" frameX="-6" frameY="-1" frameWidth="217" frameHeight="279"/>
+	<SubTexture name="red phase 2 idle0004" x="6723" y="3503" width="199" height="278" frameX="-4" frameY="-1" frameWidth="217" frameHeight="279"/>
+	<SubTexture name="red phase 2 idle0005" x="5474" y="1206" width="201" height="278" frameX="-5" frameY="-1" frameWidth="217" frameHeight="279"/>
+	<SubTexture name="red phase 2 idle0006" x="7808" y="3164" width="278" height="199" rotated="true" frameX="-4" frameY="-1" frameWidth="217" frameHeight="279"/>
+	<SubTexture name="red phase 2 idle0007" x="7808" y="3366" width="278" height="199" rotated="true" frameX="-4" frameY="-1" frameWidth="217" frameHeight="279"/>
+	<SubTexture name="red phase 2 idle0008" x="7369" y="3264" width="278" height="199" rotated="true" frameX="-4" frameY="-1" frameWidth="217" frameHeight="279"/>
+	<SubTexture name="red phase 2 idle0009" x="7369" y="3264" width="278" height="199" rotated="true" frameX="-4" frameY="-1" frameWidth="217" frameHeight="279"/>
+	<SubTexture name="red phase 2 idle0010" x="7369" y="3466" width="278" height="199" rotated="true" frameX="-4" frameY="-1" frameWidth="217" frameHeight="279"/>
+	<SubTexture name="red phase 2 idle0011" x="6925" y="3628" width="278" height="199" rotated="true" frameX="-4" frameY="-1" frameWidth="217" frameHeight="279"/>
+	<SubTexture name="red phase 2 left0000" x="4855" y="1492" width="270" height="175" rotated="true" frameX="-0" frameY="-9" frameWidth="202" frameHeight="279"/>
+	<SubTexture name="red phase 2 left0001" x="5156" y="1487" width="273" height="181" rotated="true" frameX="-1" frameY="-6" frameWidth="202" frameHeight="279"/>
+	<SubTexture name="red phase 2 left0002" x="6226" y="1628" width="189" height="275" frameX="-2" frameY="-4" frameWidth="202" frameHeight="279"/>
+	<SubTexture name="red phase 2 left0003" x="5812" y="1" width="275" height="193" rotated="true" frameX="-3" frameY="-4" frameWidth="202" frameHeight="279"/>
+	<SubTexture name="red phase 2 left0004" x="3531" y="545" width="276" height="195" rotated="true" frameX="-3" frameY="-3" frameWidth="202" frameHeight="279"/>
+	<SubTexture name="red phase 2 left0005" x="6723" y="3784" width="199" height="278" frameX="-3" frameY="-1" frameWidth="202" frameHeight="279"/>
+	<SubTexture name="red phase 2 left0006" x="6463" y="3882" width="199" height="278" frameX="-3" frameY="-1" frameWidth="202" frameHeight="279"/>
+	<SubTexture name="red phase 2 left0007" x="6463" y="4163" width="199" height="278" frameX="-3" frameY="-1" frameWidth="202" frameHeight="279"/>
+	<SubTexture name="red phase 2 left0008" x="6463" y="4444" width="199" height="278" frameX="-3" frameY="-1" frameWidth="202" frameHeight="279"/>
+	<SubTexture name="red phase 2 left0009" x="6187" y="4296" width="199" height="278" frameX="-3" frameY="-1" frameWidth="202" frameHeight="279"/>
+	<SubTexture name="red phase 2 right0000" x="4704" y="1279" width="279" height="210" rotated="true" frameX="-6" frameY="-1" frameWidth="216" frameHeight="280"/>
+	<SubTexture name="red phase 2 right0001" x="1868" y="4992" width="279" height="205" rotated="true" frameX="-3" frameY="-1" frameWidth="216" frameHeight="280"/>
+	<SubTexture name="red phase 2 right0002" x="7916" y="2319" width="202" height="279" frameX="-2" frameY="-1" frameWidth="216" frameHeight="280"/>
+	<SubTexture name="red phase 2 right0003" x="7916" y="2601" width="200" height="279" frameX="-1" frameY="-1" frameWidth="216" frameHeight="280"/>
+	<SubTexture name="red phase 2 right0004" x="6187" y="4577" width="199" height="278" frameX="-0" frameY="-2" frameWidth="216" frameHeight="280"/>
+	<SubTexture name="red phase 2 right0005" x="7650" y="3568" width="278" height="199" rotated="true" frameX="-0" frameY="-2" frameWidth="216" frameHeight="280"/>
+	<SubTexture name="red phase 2 right0006" x="7931" y="3568" width="199" height="278" frameX="-0" frameY="-2" frameWidth="216" frameHeight="280"/>
+	<SubTexture name="red phase 2 right0007" x="7206" y="3668" width="278" height="199" rotated="true" frameX="-0" frameY="-2" frameWidth="216" frameHeight="280"/>
+	<SubTexture name="red phase 2 right0008" x="6925" y="3830" width="278" height="199" rotated="true" frameX="-0" frameY="-2" frameWidth="216" frameHeight="280"/>
+	<SubTexture name="red phase 2 right0009" x="7487" y="3770" width="278" height="199" rotated="true" frameX="-0" frameY="-2" frameWidth="216" frameHeight="280"/>
+	<SubTexture name="red phase 2 up0000" x="5004" y="4861" width="189" height="320" frameX="-0" frameY="-12" frameWidth="199" frameHeight="332"/>
+	<SubTexture name="red phase 2 up0001" x="3553" y="4861" width="177" height="327" frameX="-0" frameY="-4" frameWidth="199" frameHeight="332"/>
+	<SubTexture name="red phase 2 up0002" x="2964" y="4861" width="177" height="331" frameX="-0" frameY="-0" frameWidth="199" frameHeight="332"/>
+	<SubTexture name="red phase 2 up0003" x="3373" y="4861" width="177" height="328" frameX="-0" frameY="-3" frameWidth="199" frameHeight="332"/>
+	<SubTexture name="red phase 2 up0004" x="4823" y="4861" width="178" height="322" frameX="-0" frameY="-9" frameWidth="199" frameHeight="332"/>
+	<SubTexture name="red phase 2 up0005" x="4116" y="4569" width="193" height="289" frameX="-0" frameY="-42" frameWidth="199" frameHeight="332"/>
+	<SubTexture name="red phase 2 up0006" x="7206" y="3870" width="278" height="199" rotated="true" frameX="-0" frameY="-53" frameWidth="199" frameHeight="332"/>
+	<SubTexture name="red phase 2 up0007" x="6925" y="4032" width="278" height="199" rotated="true" frameX="-0" frameY="-53" frameWidth="199" frameHeight="332"/>
+	<SubTexture name="red phase 2 up0008" x="6665" y="4065" width="199" height="278" frameX="-0" frameY="-53" frameWidth="199" frameHeight="332"/>
+	<SubTexture name="red phase 2 up0009" x="7768" y="3849" width="278" height="199" rotated="true" frameX="-0" frameY="-53" frameWidth="199" frameHeight="332"/>
+	<SubTexture name="red phase 3 down0000" x="5196" y="4861" width="590" height="316" rotated="true" frameX="-16" frameY="-0" frameWidth="404" frameHeight="609"/>
+	<SubTexture name="red phase 3 down0001" x="4309" y="4861" width="511" height="324" rotated="true" frameX="-19" frameY="-81" frameWidth="404" frameHeight="609"/>
+	<SubTexture name="red phase 3 down0002" x="5264" y="2036" width="383" height="467" frameX="-21" frameY="-142" frameWidth="404" frameHeight="609"/>
+	<SubTexture name="red phase 3 down0003" x="5650" y="2036" width="382" height="467" frameX="-21" frameY="-142" frameWidth="404" frameHeight="609"/>
+	<SubTexture name="red phase 3 down0004" x="3031" y="2585" width="381" height="399" rotated="true" frameX="-4" frameY="-227" frameWidth="404" frameHeight="609"/>
+	<SubTexture name="red phase 3 down0005" x="7002" y="2864" width="400" height="381" frameX="-4" frameY="-227" frameWidth="404" frameHeight="609"/>
+	<SubTexture name="red phase 3 down0006" x="6323" y="3503" width="397" height="376" frameX="-7" frameY="-220" frameWidth="404" frameHeight="609"/>
+	<SubTexture name="red phase 3 down0007" x="6969" y="3248" width="397" height="377" frameX="-7" frameY="-220" frameWidth="404" frameHeight="609"/>
+	<SubTexture name="red phase 3 down0008" x="2212" y="2588" width="376" height="396" rotated="true" frameX="-7" frameY="-220" frameWidth="404" frameHeight="609"/>
+	<SubTexture name="red phase 3 down0009" x="3415" y="2585" width="369" height="399" rotated="true" frameX="-4" frameY="-227" frameWidth="404" frameHeight="609"/>
+	<SubTexture name="red phase 3 down0010" x="7405" y="2892" width="400" height="369" frameX="-4" frameY="-227" frameWidth="404" frameHeight="609"/>
+	<SubTexture name="red phase 3 down0011" x="7002" y="2488" width="404" height="373" frameX="-0" frameY="-223" frameWidth="404" frameHeight="609"/>
+	<SubTexture name="red phase 3 down0012" x="7534" y="2079" width="379" height="404" rotated="true" frameX="-0" frameY="-223" frameWidth="404" frameHeight="609"/>
+	<SubTexture name="red phase 3 down0013" x="7534" y="2486" width="379" height="403" rotated="true" frameX="-0" frameY="-223" frameWidth="404" frameHeight="609"/>
+	<SubTexture name="red phase 3 idle0000" x="2347" y="745" width="244" height="541" frameX="-1" frameY="-0" frameWidth="245" frameHeight="542"/>
+	<SubTexture name="red phase 3 idle0001" x="2594" y="745" width="244" height="541" frameX="-1" frameY="-0" frameWidth="245" frameHeight="542"/>
+	<SubTexture name="red phase 3 idle0002" x="4137" y="3519" width="242" height="505" frameX="-2" frameY="-35" frameWidth="245" frameHeight="542"/>
+	<SubTexture name="red phase 3 idle0003" x="4400" y="1492" width="242" height="521" frameX="-2" frameY="-18" frameWidth="245" frameHeight="542"/>
+	<SubTexture name="red phase 3 idle0004" x="4547" y="742" width="244" height="534" frameX="-0" frameY="-8" frameWidth="245" frameHeight="542"/>
+	<SubTexture name="red phase 3 idle0005" x="4633" y="1" width="244" height="534" frameX="-0" frameY="-8" frameWidth="245" frameHeight="542"/>
+	<SubTexture name="red phase 3 idle0006" x="4069" y="2036" width="241" height="535" frameX="-3" frameY="-4" frameWidth="245" frameHeight="542"/>
+	<SubTexture name="red phase 3 idle0007" x="4156" y="1493" width="241" height="535" frameX="-3" frameY="-4" frameWidth="245" frameHeight="542"/>
+	<SubTexture name="red phase 3 idle0008" x="3150" y="1" width="244" height="541" frameX="-1" frameY="-0" frameWidth="245" frameHeight="542"/>
+	<SubTexture name="red phase 3 idle0009" x="2841" y="744" width="244" height="541" frameX="-1" frameY="-0" frameWidth="245" frameHeight="542"/>
+	<SubTexture name="red phase 3 idle0010" x="3088" y="744" width="244" height="541" frameX="-1" frameY="-0" frameWidth="245" frameHeight="542"/>
+	<SubTexture name="red phase 3 idle0011" x="3397" y="1" width="244" height="541" frameX="-1" frameY="-0" frameWidth="245" frameHeight="542"/>
+	<SubTexture name="red phase 3 idle0012" x="3644" y="1" width="244" height="541" frameX="-1" frameY="-0" frameWidth="245" frameHeight="542"/>
+	<SubTexture name="red phase 3 idle0013" x="3335" y="744" width="244" height="541" frameX="-1" frameY="-0" frameWidth="245" frameHeight="542"/>
+	<SubTexture name="red phase 3 left0000" x="3827" y="743" width="169" height="537" frameX="-575" frameY="-0" frameWidth="745" frameHeight="568"/>
+	<SubTexture name="red phase 3 left0001" x="3527" y="4072" width="246" height="536" frameX="-497" frameY="-5" frameWidth="745" frameHeight="568"/>
+	<SubTexture name="red phase 3 left0002" x="1" y="1" width="559" height="745" rotated="true" frameX="-0" frameY="-5" frameWidth="745" frameHeight="568"/>
+	<SubTexture name="red phase 3 left0003" x="1" y="1495" width="560" height="743" rotated="true" frameX="-0" frameY="-5" frameWidth="745" frameHeight="568"/>
+	<SubTexture name="red phase 3 left0004" x="1" y="2241" width="560" height="743" rotated="true" frameX="-0" frameY="-5" frameWidth="745" frameHeight="568"/>
+	<SubTexture name="red phase 3 left0005" x="1" y="2987" width="560" height="743" rotated="true" frameX="-0" frameY="-5" frameWidth="745" frameHeight="568"/>
+	<SubTexture name="red phase 3 left0006" x="549" y="3733" width="542" height="743" rotated="true" frameX="-0" frameY="-5" frameWidth="745" frameHeight="568"/>
+	<SubTexture name="red phase 3 left0007" x="564" y="1495" width="542" height="743" rotated="true" frameX="-0" frameY="-5" frameWidth="745" frameHeight="568"/>
+	<SubTexture name="red phase 3 left0008" x="567" y="747" width="542" height="743" rotated="true" frameX="-0" frameY="-5" frameWidth="745" frameHeight="568"/>
+	<SubTexture name="red phase 3 left0009" x="564" y="2241" width="542" height="743" rotated="true" frameX="-0" frameY="-5" frameWidth="745" frameHeight="568"/>
+	<SubTexture name="red phase 3 left0010" x="564" y="2987" width="542" height="743" rotated="true" frameX="-0" frameY="-5" frameWidth="745" frameHeight="568"/>
+	<SubTexture name="red phase 3 left0011" x="1109" y="2987" width="542" height="743" rotated="true" frameX="-0" frameY="-5" frameWidth="745" frameHeight="568"/>
+	<SubTexture name="red phase 3 left0012" x="1654" y="2987" width="542" height="743" rotated="true" frameX="-0" frameY="-5" frameWidth="745" frameHeight="568"/>
+	<SubTexture name="red phase 3 left0013" x="1" y="3733" width="545" height="743" rotated="true" frameX="-0" frameY="-5" frameWidth="745" frameHeight="568"/>
+	<SubTexture name="red phase 3 left0014" x="1" y="749" width="563" height="743" rotated="true" frameX="-0" frameY="-5" frameWidth="745" frameHeight="568"/>
+	<SubTexture name="red phase 3 left0015" x="563" y="1" width="563" height="743" rotated="true" frameX="-0" frameY="-5" frameWidth="745" frameHeight="568"/>
+	<SubTexture name="red phase 3 right0000" x="1748" y="1493" width="371" height="538" frameX="-0" frameY="-0" frameWidth="410" frameHeight="540"/>
+	<SubTexture name="red phase 3 right0001" x="4763" y="3468" width="367" height="468" frameX="-3" frameY="-66" frameWidth="410" frameHeight="540"/>
+	<SubTexture name="red phase 3 right0002" x="4227" y="2574" width="427" height="408" rotated="true" frameX="-2" frameY="-109" frameWidth="410" frameHeight="540"/>
+	<SubTexture name="red phase 3 right0003" x="6419" y="2079" width="370" height="406" rotated="true" frameX="-4" frameY="-166" frameWidth="410" frameHeight="540"/>
+	<SubTexture name="red phase 3 right0004" x="5814" y="4327" width="370" height="406" rotated="true" frameX="-4" frameY="-166" frameWidth="410" frameHeight="540"/>
+	<SubTexture name="red phase 3 right0005" x="6317" y="2909" width="368" height="406" rotated="true" frameX="-4" frameY="-168" frameWidth="410" frameHeight="540"/>
+	<SubTexture name="red phase 3 right0006" x="6091" y="3887" width="369" height="406" rotated="true" frameX="-4" frameY="-168" frameWidth="410" frameHeight="540"/>
+	<SubTexture name="red phase 3 right0007" x="6631" y="2488" width="368" height="406" rotated="true" frameX="-4" frameY="-169" frameWidth="410" frameHeight="540"/>
+	<SubTexture name="red phase 3 right0008" x="6792" y="2079" width="368" height="406" rotated="true" frameX="-4" frameY="-169" frameWidth="410" frameHeight="540"/>
+	<SubTexture name="red phase 3 right0009" x="7163" y="2079" width="368" height="406" rotated="true" frameX="-4" frameY="-169" frameWidth="410" frameHeight="540"/>
+	<SubTexture name="red phase 3 right0010" x="5844" y="1628" width="379" height="405" rotated="true" frameX="-4" frameY="-160" frameWidth="410" frameHeight="540"/>
+	<SubTexture name="red phase 3 right0011" x="6249" y="2500" width="379" height="406" rotated="true" frameX="-4" frameY="-160" frameWidth="410" frameHeight="540"/>
+	<SubTexture name="red phase 3 right0012" x="6419" y="444" width="390" height="406" rotated="true" frameX="-4" frameY="-150" frameWidth="410" frameHeight="540"/>
+	<SubTexture name="red phase 3 right0013" x="6419" y="853" width="390" height="406" rotated="true" frameX="-4" frameY="-150" frameWidth="410" frameHeight="540"/>
+	<SubTexture name="red phase 3 right0014" x="6419" y="1262" width="390" height="406" rotated="true" frameX="-4" frameY="-150" frameWidth="410" frameHeight="540"/>
+	<SubTexture name="red phase 3 right0015" x="6419" y="1671" width="390" height="405" rotated="true" frameX="-4" frameY="-150" frameWidth="410" frameHeight="540"/>
+	<SubTexture name="red phase 3 up0000" x="4391" y="3992" width="240" height="478" frameX="-103" frameY="-142" frameWidth="406" frameHeight="620"/>
+	<SubTexture name="red phase 3 up0001" x="4634" y="3992" width="240" height="478" frameX="-103" frameY="-142" frameWidth="406" frameHeight="620"/>
+	<SubTexture name="red phase 3 up0002" x="3582" y="743" width="242" height="541" frameX="-103" frameY="-76" frameWidth="406" frameHeight="620"/>
+	<SubTexture name="red phase 3 up0003" x="3891" y="1" width="242" height="541" frameX="-103" frameY="-76" frameWidth="406" frameHeight="620"/>
+	<SubTexture name="red phase 3 up0004" x="1946" y="2036" width="258" height="555" frameX="-104" frameY="-60" frameWidth="406" frameHeight="620"/>
+	<SubTexture name="red phase 3 up0005" x="3733" y="4861" width="573" height="325" rotated="true" frameX="-60" frameY="-45" frameWidth="406" frameHeight="620"/>
+	<SubTexture name="red phase 3 up0006" x="2453" y="4246" width="399" height="619" frameX="-7" frameY="-0" frameWidth="406" frameHeight="620"/>
+	<SubTexture name="red phase 3 up0007" x="2642" y="3619" width="399" height="619" frameX="-7" frameY="-0" frameWidth="406" frameHeight="620"/>
+	<SubTexture name="red phase 3 up0008" x="2855" y="4241" width="404" height="617" frameX="-1" frameY="-2" frameWidth="406" frameHeight="620"/>
+	<SubTexture name="red phase 3 up0009" x="6817" y="1" width="617" height="404" rotated="true" frameX="-1" frameY="-2" frameWidth="406" frameHeight="620"/>
+	<SubTexture name="red phase 3 up0010" x="7437" y="1" width="617" height="404" rotated="true" frameX="-1" frameY="-2" frameWidth="406" frameHeight="620"/>
+	<SubTexture name="red phase 3 up0011" x="6817" y="408" width="615" height="404" rotated="true" frameX="-0" frameY="-4" frameWidth="406" frameHeight="620"/>
+	<SubTexture name="red phase 3 up0012" x="7435" y="408" width="615" height="404" rotated="true" frameX="-0" frameY="-4" frameWidth="406" frameHeight="620"/>
+	<SubTexture name="red phase 3 up0013" x="6817" y="815" width="615" height="404" rotated="true" frameX="-0" frameY="-4" frameWidth="406" frameHeight="620"/>
+	<SubTexture name="red phase 3 up0014" x="7435" y="815" width="615" height="404" rotated="true" frameX="-0" frameY="-4" frameWidth="406" frameHeight="620"/>
+	<SubTexture name="red phase 3 up0015" x="6817" y="1222" width="615" height="404" rotated="true" frameX="-0" frameY="-4" frameWidth="406" frameHeight="620"/>
+	<SubTexture name="red phase 3 up0016" x="7435" y="1222" width="615" height="404" rotated="true" frameX="-0" frameY="-4" frameWidth="406" frameHeight="620"/>
+	<SubTexture name="red phase 3 up0017" x="6817" y="1629" width="615" height="404" rotated="true" frameX="-0" frameY="-4" frameWidth="406" frameHeight="620"/>
+	<SubTexture name="red phase 3 up0018" x="7435" y="1629" width="615" height="404" rotated="true" frameX="-0" frameY="-4" frameWidth="406" frameHeight="620"/>
+	<SubTexture name="red phase 3 up0019" x="1109" y="2036" width="404" height="615" frameX="-0" frameY="-4" frameWidth="406" frameHeight="620"/>
+	<SubTexture name="red phase transition 10000" x="1606" y="747" width="244" height="542" frameX="-224" frameY="-2" frameWidth="468" frameHeight="547"/>
+	<SubTexture name="red phase transition 10001" x="1606" y="747" width="244" height="542" frameX="-224" frameY="-2" frameWidth="468" frameHeight="547"/>
+	<SubTexture name="red phase transition 10002" x="1606" y="747" width="244" height="542" frameX="-224" frameY="-2" frameWidth="468" frameHeight="547"/>
+	<SubTexture name="red phase transition 10003" x="1853" y="747" width="244" height="542" frameX="-224" frameY="-2" frameWidth="468" frameHeight="547"/>
+	<SubTexture name="red phase transition 10004" x="2117" y="1" width="244" height="542" frameX="-224" frameY="-2" frameWidth="468" frameHeight="547"/>
+	<SubTexture name="red phase transition 10005" x="2100" y="746" width="244" height="542" frameX="-224" frameY="-2" frameWidth="468" frameHeight="547"/>
+	<SubTexture name="red phase transition 10006" x="2911" y="1" width="224" height="541" frameX="-226" frameY="-0" frameWidth="468" frameHeight="547"/>
+	<SubTexture name="red phase transition 10007" x="4136" y="1" width="224" height="541" frameX="-226" frameY="-0" frameWidth="468" frameHeight="547"/>
+	<SubTexture name="red phase transition 10008" x="1368" y="1493" width="187" height="539" frameX="-223" frameY="-5" frameWidth="468" frameHeight="547"/>
+	<SubTexture name="red phase transition 10009" x="1558" y="1493" width="187" height="539" frameX="-223" frameY="-5" frameWidth="468" frameHeight="547"/>
+	<SubTexture name="red phase transition 10010" x="3978" y="1493" width="175" height="537" frameX="-192" frameY="-6" frameWidth="468" frameHeight="547"/>
+	<SubTexture name="red phase transition 10011" x="3776" y="4072" width="175" height="534" frameX="-153" frameY="-12" frameWidth="468" frameHeight="547"/>
+	<SubTexture name="red phase transition 10012" x="4116" y="2987" width="186" height="529" frameX="-114" frameY="-18" frameWidth="468" frameHeight="547"/>
+	<SubTexture name="red phase transition 10013" x="4313" y="2036" width="186" height="529" frameX="-114" frameY="-18" frameWidth="468" frameHeight="547"/>
+	<SubTexture name="red phase transition 10014" x="4184" y="1282" width="517" height="207" rotated="true" frameX="-77" frameY="-25" frameWidth="468" frameHeight="547"/>
+	<SubTexture name="red phase transition 10015" x="4645" y="1492" width="207" height="517" frameX="-77" frameY="-25" frameWidth="468" frameHeight="547"/>
+	<SubTexture name="red phase transition 10016" x="3150" y="1288" width="514" height="202" rotated="true" frameX="-78" frameY="-28" frameWidth="468" frameHeight="547"/>
+	<SubTexture name="red phase transition 10017" x="3150" y="1288" width="514" height="202" rotated="true" frameX="-78" frameY="-28" frameWidth="468" frameHeight="547"/>
+	<SubTexture name="red phase transition 10018" x="3667" y="1288" width="514" height="202" rotated="true" frameX="-78" frameY="-28" frameWidth="468" frameHeight="547"/>
+	<SubTexture name="red phase transition 10019" x="4855" y="742" width="202" height="514" frameX="-78" frameY="-28" frameWidth="468" frameHeight="547"/>
+	<SubTexture name="red phase transition 10020" x="2120" y="1291" width="512" height="199" rotated="true" frameX="-78" frameY="-30" frameWidth="468" frameHeight="547"/>
+	<SubTexture name="red phase transition 10021" x="2635" y="1291" width="512" height="199" rotated="true" frameX="-78" frameY="-30" frameWidth="468" frameHeight="547"/>
+	<SubTexture name="red phase transition 10022" x="4086" y="545" width="508" height="194" rotated="true" frameX="-78" frameY="-34" frameWidth="468" frameHeight="547"/>
+	<SubTexture name="red phase transition 10023" x="4312" y="2985" width="189" height="502" frameX="-78" frameY="-39" frameWidth="468" frameHeight="547"/>
+	<SubTexture name="red phase transition 10024" x="4199" y="4027" width="189" height="502" frameX="-78" frameY="-39" frameWidth="468" frameHeight="547"/>
+	<SubTexture name="red phase transition 10025" x="1112" y="1293" width="501" height="197" rotated="true" frameX="-66" frameY="-41" frameWidth="468" frameHeight="547"/>
+	<SubTexture name="red phase transition 10026" x="1616" y="1293" width="501" height="197" rotated="true" frameX="-66" frameY="-41" frameWidth="468" frameHeight="547"/>
+	<SubTexture name="red phase transition 10027" x="2250" y="546" width="497" height="196" rotated="true" frameX="-64" frameY="-44" frameWidth="468" frameHeight="547"/>
+	<SubTexture name="red phase transition 10028" x="2750" y="545" width="497" height="196" rotated="true" frameX="-64" frameY="-44" frameWidth="468" frameHeight="547"/>
+	<SubTexture name="red phase transition 10029" x="4877" y="3939" width="200" height="465" frameX="-78" frameY="-74" frameWidth="468" frameHeight="547"/>
+	<SubTexture name="red phase transition 10030" x="5080" y="3939" width="200" height="465" frameX="-78" frameY="-74" frameWidth="468" frameHeight="547"/>
+	<SubTexture name="red phase transition 10031" x="5159" y="538" width="383" height="200" rotated="true" frameX="-74" frameY="-157" frameWidth="468" frameHeight="547"/>
+	<SubTexture name="red phase transition 10032" x="1336" y="2654" width="203" height="307" frameX="-32" frameY="-234" frameWidth="468" frameHeight="547"/>
+	<SubTexture name="red phase transition 10033" x="1542" y="2654" width="203" height="307" frameX="-32" frameY="-234" frameWidth="468" frameHeight="547"/>
+	<SubTexture name="red phase transition 10034" x="5771" y="451" width="202" height="280" frameX="-2" frameY="-262" frameWidth="468" frameHeight="547"/>
+	<SubTexture name="red phase transition 10035" x="5812" y="856" width="202" height="280" frameX="-2" frameY="-262" frameWidth="468" frameHeight="547"/>
+	<SubTexture name="red phase transition 10036" x="7916" y="2036" width="202" height="280" frameX="-2" frameY="-262" frameWidth="468" frameHeight="547"/>
+	<SubTexture name="red phase transition 10037" x="7487" y="3972" width="278" height="199" rotated="true" frameX="-0" frameY="-264" frameWidth="468" frameHeight="547"/>
+	<SubTexture name="red phase transition 10038" x="7206" y="4072" width="278" height="199" rotated="true" frameX="-0" frameY="-264" frameWidth="468" frameHeight="547"/>
+	<SubTexture name="red phase transition 10039" x="6867" y="4234" width="278" height="199" rotated="true" frameX="-0" frameY="-264" frameWidth="468" frameHeight="547"/>
+	<SubTexture name="red phase transition 10040" x="6665" y="4346" width="199" height="278" frameX="-0" frameY="-264" frameWidth="468" frameHeight="547"/>
+	<SubTexture name="red phase transition 10041" x="6665" y="4627" width="278" height="199" rotated="true" frameX="-0" frameY="-264" frameWidth="468" frameHeight="547"/>
+	<SubTexture name="red phase transition 10042" x="7768" y="4051" width="278" height="199" rotated="true" frameX="-0" frameY="-264" frameWidth="468" frameHeight="547"/>
+	<SubTexture name="red phase transition 10043" x="7487" y="4174" width="278" height="199" rotated="true" frameX="-0" frameY="-264" frameWidth="468" frameHeight="547"/>
+	<SubTexture name="red phase transition 10044" x="7148" y="4274" width="278" height="199" rotated="true" frameX="-0" frameY="-264" frameWidth="468" frameHeight="547"/>
+	<SubTexture name="red phase transition 10045" x="6946" y="4436" width="199" height="278" frameX="-0" frameY="-264" frameWidth="468" frameHeight="547"/>
+	<SubTexture name="red phase transition 10046" x="7768" y="4253" width="278" height="199" rotated="true" frameX="-0" frameY="-264" frameWidth="468" frameHeight="547"/>
+	<SubTexture name="red phase transition 10047" x="7429" y="4376" width="278" height="199" rotated="true" frameX="-0" frameY="-264" frameWidth="468" frameHeight="547"/>
+	<SubTexture name="red phase transition 20000" x="7148" y="4476" width="278" height="199" rotated="true" frameX="-147" frameY="-360" frameWidth="418" frameHeight="650"/>
+	<SubTexture name="red phase transition 20001" x="6817" y="4829" width="199" height="278" frameX="-147" frameY="-360" frameWidth="418" frameHeight="650"/>
+	<SubTexture name="red phase transition 20002" x="7710" y="4455" width="278" height="199" rotated="true" frameX="-147" frameY="-360" frameWidth="418" frameHeight="650"/>
+	<SubTexture name="red phase transition 20003" x="7429" y="4578" width="278" height="199" rotated="true" frameX="-147" frameY="-360" frameWidth="418" frameHeight="650"/>
+	<SubTexture name="red phase transition 20004" x="7148" y="4678" width="278" height="199" rotated="true" frameX="-147" frameY="-360" frameWidth="418" frameHeight="650"/>
+	<SubTexture name="red phase transition 20005" x="7019" y="4880" width="199" height="278" frameX="-147" frameY="-360" frameWidth="418" frameHeight="650"/>
+	<SubTexture name="red phase transition 20006" x="7221" y="4880" width="199" height="278" frameX="-147" frameY="-360" frameWidth="418" frameHeight="650"/>
+	<SubTexture name="red phase transition 20007" x="7423" y="4880" width="199" height="278" frameX="-147" frameY="-360" frameWidth="418" frameHeight="650"/>
+	<SubTexture name="red phase transition 20008" x="1129" y="546" width="280" height="198" rotated="true" frameX="-147" frameY="-359" frameWidth="418" frameHeight="650"/>
+	<SubTexture name="red phase transition 20009" x="1412" y="546" width="280" height="198" rotated="true" frameX="-147" frameY="-359" frameWidth="418" frameHeight="650"/>
+	<SubTexture name="red phase transition 20010" x="6325" y="4861" width="243" height="313" frameX="-141" frameY="-325" frameWidth="418" frameHeight="650"/>
+	<SubTexture name="red phase transition 20011" x="6571" y="4861" width="243" height="313" frameX="-141" frameY="-325" frameWidth="418" frameHeight="650"/>
+	<SubTexture name="red phase transition 20012" x="6051" y="2970" width="263" height="423" frameX="-107" frameY="-213" frameWidth="418" frameHeight="650"/>
+	<SubTexture name="red phase transition 20013" x="1516" y="2036" width="212" height="564" frameX="-64" frameY="-73" frameWidth="418" frameHeight="650"/>
+	<SubTexture name="red phase transition 20014" x="1731" y="2036" width="212" height="564" frameX="-64" frameY="-73" frameWidth="418" frameHeight="650"/>
+	<SubTexture name="red phase transition 20015" x="1" y="4479" width="254" height="633" frameX="-1" frameY="-3" frameWidth="418" frameHeight="650"/>
+	<SubTexture name="red phase transition 20016" x="258" y="4479" width="254" height="633" frameX="-1" frameY="-3" frameWidth="418" frameHeight="650"/>
+	<SubTexture name="red phase transition 20017" x="905" y="4479" width="255" height="629" frameX="-0" frameY="-6" frameWidth="418" frameHeight="650"/>
+	<SubTexture name="red phase transition 20018" x="1163" y="4479" width="255" height="629" frameX="-0" frameY="-6" frameWidth="418" frameHeight="650"/>
+	<SubTexture name="red phase transition 20019" x="1094" y="3733" width="255" height="627" frameX="-0" frameY="-8" frameWidth="418" frameHeight="650"/>
+	<SubTexture name="red phase transition 20020" x="1352" y="3733" width="255" height="627" frameX="-0" frameY="-8" frameWidth="418" frameHeight="650"/>
+	<SubTexture name="red phase transition 20021" x="1610" y="3733" width="255" height="627" frameX="-0" frameY="-8" frameWidth="418" frameHeight="650"/>
+	<SubTexture name="red phase transition 20022" x="1679" y="4363" width="255" height="626" frameX="-0" frameY="-9" frameWidth="418" frameHeight="650"/>
+	<SubTexture name="red phase transition 20023" x="1868" y="3733" width="255" height="626" frameX="-0" frameY="-9" frameWidth="418" frameHeight="650"/>
+	<SubTexture name="red phase transition 20024" x="1937" y="4362" width="255" height="626" frameX="-0" frameY="-9" frameWidth="418" frameHeight="650"/>
+	<SubTexture name="red phase transition 20025" x="2126" y="3733" width="255" height="626" frameX="-0" frameY="-9" frameWidth="418" frameHeight="650"/>
+	<SubTexture name="red phase transition 20026" x="1421" y="4479" width="255" height="629" frameX="-3" frameY="-6" frameWidth="418" frameHeight="650"/>
+	<SubTexture name="red phase transition 20027" x="2199" y="2987" width="255" height="629" frameX="-3" frameY="-6" frameWidth="418" frameHeight="650"/>
+	<SubTexture name="red phase transition 20028" x="2195" y="4362" width="255" height="624" frameX="-6" frameY="-10" frameWidth="418" frameHeight="650"/>
+	<SubTexture name="red phase transition 20029" x="2384" y="3619" width="255" height="624" frameX="-6" frameY="-10" frameWidth="418" frameHeight="650"/>
+	<SubTexture name="red phase transition 20030" x="515" y="4479" width="387" height="631" frameX="-31" frameY="-0" frameWidth="418" frameHeight="650"/>
+	<SubTexture name="red phase transition 20031" x="4504" y="2985" width="365" height="480" frameX="-42" frameY="-159" frameWidth="418" frameHeight="650"/>
+	<SubTexture name="red phase transition 20032" x="4747" y="2036" width="365" height="480" frameX="-42" frameY="-159" frameWidth="418" frameHeight="650"/>
+	<SubTexture name="red phase transition 20033" x="4874" y="4473" width="467" height="384" rotated="true" frameX="-23" frameY="-172" frameWidth="418" frameHeight="650"/>
+	<SubTexture name="red phase transition 20034" x="5344" y="4473" width="467" height="384" rotated="true" frameX="-23" frameY="-172" frameWidth="418" frameHeight="650"/>
+	<SubTexture name="red phase transition 20035" x="4877" y="2984" width="384" height="467" frameX="-23" frameY="-172" frameWidth="418" frameHeight="650"/>
+	<SubTexture name="red phase transition 20036" x="1748" y="2603" width="461" height="381" rotated="true" frameX="-26" frameY="-178" frameWidth="418" frameHeight="650"/>
+	<SubTexture name="red phase transition 20037" x="5097" y="2519" width="381" height="461" frameX="-26" frameY="-178" frameWidth="418" frameHeight="650"/>
+	<SubTexture name="red phase transition 20038" x="5133" y="3454" width="381" height="461" frameX="-26" frameY="-178" frameWidth="418" frameHeight="650"/>
+	<SubTexture name="red phase transition 20039" x="5283" y="2983" width="381" height="461" frameX="-26" frameY="-178" frameWidth="418" frameHeight="650"/>
+	<SubTexture name="red phase transition 20040" x="5667" y="2983" width="381" height="461" frameX="-26" frameY="-178" frameWidth="418" frameHeight="650"/>
+	<SubTexture name="red phase transition 20041" x="5481" y="2506" width="381" height="461" frameX="-26" frameY="-178" frameWidth="418" frameHeight="650"/>
+	<SubTexture name="red phase transition 20042" x="5865" y="2506" width="381" height="461" frameX="-26" frameY="-178" frameWidth="418" frameHeight="650"/>
+	<SubTexture name="red phase transition 20043" x="6035" y="2036" width="381" height="461" frameX="-26" frameY="-178" frameWidth="418" frameHeight="650"/>
+	<SubTexture name="red phase transition 20044" x="5060" y="742" width="367" height="461" frameX="-26" frameY="-178" frameWidth="418" frameHeight="650"/>
+</TextureAtlas>

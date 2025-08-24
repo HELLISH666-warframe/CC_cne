@@ -1,0 +1,14 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="ned" icon="dad" color="#af66ce" holdTime="6.1">
+	<anim name="idle-loop" anim="Dad idle dance" loop="true" indices="10..12,12"/>
+	<anim name="singLEFT-loop" anim="Dad Sing Note LEFT" x="-9" y="10" loop="true" indices="12..15"/>
+	<anim name="singRIGHT-loop" anim="Dad Sing Note RIGHT" x="0" y="27" loop="true" indices="15..18"/>
+	<anim name="singUP-loop" anim="Dad Sing Note UP" x="-6" y="50" loop="true" indices="56..59"/>
+	<anim name="hey" anim="WhatYouKnowAboutRollingDownInTheDeep" x="140" y="-100"/>
+	<anim name="singLEFT" anim="ned"/>
+	<anim name="singDOWN" anim="ned"/>
+	<anim name="singUP" anim="ned"/>
+	<anim name="singRIGHT" anim="ned"/>
+	<anim name="idle" anim="ned"/>
+</character>

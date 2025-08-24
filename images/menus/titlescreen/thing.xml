@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="thing.png">
+	<!-- Created with Adobe Animate version 21.0.0.35450 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="yo0000" x="4" y="4" width="363" height="956"/>
+	<SubTexture name="yo0001" x="4" y="4" width="363" height="956"/>
+	<SubTexture name="yo0002" x="4" y="4" width="363" height="956"/>
+	<SubTexture name="yo0003" x="417" y="4" width="363" height="956"/>
+	<SubTexture name="yo0004" x="417" y="4" width="363" height="956"/>
+	<SubTexture name="yo0005" x="417" y="4" width="363" height="956"/>
+	<SubTexture name="yo0006" x="830" y="4" width="363" height="956"/>
+	<SubTexture name="yo0007" x="830" y="4" width="363" height="956"/>
+	<SubTexture name="yo0008" x="830" y="4" width="363" height="956"/>
+	<SubTexture name="yo0009" x="417" y="4" width="363" height="956"/>
+	<SubTexture name="yo0010" x="417" y="4" width="363" height="956"/>
+	<SubTexture name="yo0011" x="417" y="4" width="363" height="956"/>
+</TextureAtlas>

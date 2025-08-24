@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="aol.png">
+	<!-- Created with Adobe Animate version 21.0.7.42652 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="AOL down0000" x="14" y="14" width="272" height="168" frameX="-1" frameY="0" frameWidth="274" frameHeight="168"/>
+	<SubTexture name="AOL down0001" x="14" y="14" width="272" height="168" frameX="-1" frameY="0" frameWidth="274" frameHeight="168"/>
+	<SubTexture name="AOL down0002" x="300" y="14" width="274" height="167" frameX="0" frameY="-1" frameWidth="274" frameHeight="168"/>
+	<SubTexture name="AOL down0003" x="300" y="14" width="274" height="167" frameX="0" frameY="-1" frameWidth="274" frameHeight="168"/>
+	<SubTexture name="AOL down0004" x="300" y="14" width="274" height="167" frameX="0" frameY="-1" frameWidth="274" frameHeight="168"/>
+	<SubTexture name="AOL down0005" x="300" y="14" width="274" height="167" frameX="0" frameY="-1" frameWidth="274" frameHeight="168"/>
+	<SubTexture name="AOL down0006" x="300" y="14" width="274" height="167" frameX="0" frameY="-1" frameWidth="274" frameHeight="168"/>
+	<SubTexture name="AOL down0007" x="300" y="14" width="274" height="167" frameX="0" frameY="-1" frameWidth="274" frameHeight="168"/>
+	<SubTexture name="AOL down0008" x="300" y="14" width="274" height="167" frameX="0" frameY="-1" frameWidth="274" frameHeight="168"/>
+	<SubTexture name="AOL down0009" x="300" y="14" width="274" height="167" frameX="0" frameY="-1" frameWidth="274" frameHeight="168"/>
+	<SubTexture name="AOL down0010" x="300" y="14" width="274" height="167" frameX="0" frameY="-1" frameWidth="274" frameHeight="168"/>
+	<SubTexture name="AOL down0011" x="300" y="14" width="274" height="167" frameX="0" frameY="-1" frameWidth="274" frameHeight="168"/>
+	<SubTexture name="AOL down0012" x="300" y="14" width="274" height="167" frameX="0" frameY="-1" frameWidth="274" frameHeight="168"/>
+	<SubTexture name="AOL down0013" x="300" y="14" width="274" height="167" frameX="0" frameY="-1" frameWidth="274" frameHeight="168"/>
+	<SubTexture name="AOL down0014" x="300" y="14" width="274" height="167" frameX="0" frameY="-1" frameWidth="274" frameHeight="168"/>
+	<SubTexture name="AOL down0015" x="300" y="14" width="274" height="167" frameX="0" frameY="-1" frameWidth="274" frameHeight="168"/>
+	<SubTexture name="AOL down0016" x="300" y="14" width="274" height="167" frameX="0" frameY="-1" frameWidth="274" frameHeight="168"/>
+	<SubTexture name="AOL down0017" x="300" y="14" width="274" height="167" frameX="0" frameY="-1" frameWidth="274" frameHeight="168"/>
+	<SubTexture name="AOL down0018" x="300" y="14" width="274" height="167" frameX="0" frameY="-1" frameWidth="274" frameHeight="168"/>
+	<SubTexture name="AOL down0019" x="300" y="14" width="274" height="167" frameX="0" frameY="-1" frameWidth="274" frameHeight="168"/>
+	<SubTexture name="AOL down0020" x="300" y="14" width="274" height="167" frameX="0" frameY="-1" frameWidth="274" frameHeight="168"/>
+	<SubTexture name="AOL down0021" x="300" y="14" width="274" height="167" frameX="0" frameY="-1" frameWidth="274" frameHeight="168"/>
+	<SubTexture name="AOL down0022" x="300" y="14" width="274" height="167" frameX="0" frameY="-1" frameWidth="274" frameHeight="168"/>
+	<SubTexture name="AOL down0023" x="300" y="14" width="274" height="167" frameX="0" frameY="-1" frameWidth="274" frameHeight="168"/>
+	<SubTexture name="AOL down0024" x="300" y="14" width="274" height="167" frameX="0" frameY="-1" frameWidth="274" frameHeight="168"/>
+	<SubTexture name="AOL down0025" x="300" y="14" width="274" height="167" frameX="0" frameY="-1" frameWidth="274" frameHeight="168"/>
+	<SubTexture name="AOL down0026" x="300" y="14" width="274" height="167" frameX="0" frameY="-1" frameWidth="274" frameHeight="168"/>
+	<SubTexture name="AOL down0027" x="300" y="14" width="274" height="167" frameX="0" frameY="-1" frameWidth="274" frameHeight="168"/>
+	<SubTexture name="AOL down0028" x="300" y="14" width="274" height="167" frameX="0" frameY="-1" frameWidth="274" frameHeight="168"/>
+	<SubTexture name="AOL down0029" x="300" y="14" width="274" height="167" frameX="0" frameY="-1" frameWidth="274" frameHeight="168"/>
+	<SubTexture name="AOL down0030" x="300" y="14" width="274" height="167" frameX="0" frameY="-1" frameWidth="274" frameHeight="168"/>
+	<SubTexture name="AOL down0031" x="300" y="14" width="274" height="167" frameX="0" frameY="-1" frameWidth="274" frameHeight="168"/>
+	<SubTexture name="AOL down0032" x="300" y="14" width="274" height="167" frameX="0" frameY="-1" frameWidth="274" frameHeight="168"/>
+	<SubTexture name="AOL down0033" x="300" y="14" width="274" height="167" frameX="0" frameY="-1" frameWidth="274" frameHeight="168"/>
+	<SubTexture name="AOL down0034" x="300" y="14" width="274" height="167" frameX="0" frameY="-1" frameWidth="274" frameHeight="168"/>
+	<SubTexture name="AOL down0035" x="300" y="14" width="274" height="167" frameX="0" frameY="-1" frameWidth="274" frameHeight="168"/>
+	<SubTexture name="AOL down0036" x="300" y="14" width="274" height="167" frameX="0" frameY="-1" frameWidth="274" frameHeight="168"/>
+	<SubTexture name="AOL down0037" x="300" y="14" width="274" height="167" frameX="0" frameY="-1" frameWidth="274" frameHeight="168"/>
+	<SubTexture name="AOL down0038" x="300" y="14" width="274" height="167" frameX="0" frameY="-1" frameWidth="274" frameHeight="168"/>
+	<SubTexture name="AOL down0039" x="300" y="14" width="274" height="167" frameX="0" frameY="-1" frameWidth="274" frameHeight="168"/>
+	<SubTexture name="AOL down0040" x="300" y="14" width="274" height="167" frameX="0" frameY="-1" frameWidth="274" frameHeight="168"/>
+	<SubTexture name="AOL down0041" x="300" y="14" width="274" height="167" frameX="0" frameY="-1" frameWidth="274" frameHeight="168"/>
+	<SubTexture name="AOL idle0000" x="588" y="14" width="323" height="158" frameX="-2" frameY="-3" frameWidth="326" frameHeight="161"/>
+	<SubTexture name="AOL idle0001" x="14" y="196" width="323" height="158" frameX="-2" frameY="-3" frameWidth="326" frameHeight="161"/>
+	<SubTexture name="AOL idle0002" x="351" y="196" width="326" height="161"/>
+	<SubTexture name="AOL idle0003" x="351" y="196" width="326" height="161"/>
+	<SubTexture name="AOL idle0004" x="14" y="371" width="326" height="161"/>
+	<SubTexture name="AOL idle0005" x="14" y="371" width="326" height="161"/>
+	<SubTexture name="AOL idle0006" x="14" y="371" width="326" height="161"/>
+	<SubTexture name="AOL idle0007" x="14" y="371" width="326" height="161"/>
+	<SubTexture name="AOL idle0008" x="14" y="371" width="326" height="161"/>
+	<SubTexture name="AOL idle0009" x="14" y="371" width="326" height="161"/>
+	<SubTexture name="AOL idle0010" x="14" y="371" width="326" height="161"/>
+	<SubTexture name="AOL idle0011" x="14" y="371" width="326" height="161"/>
+	<SubTexture name="AOL idle0012" x="14" y="371" width="326" height="161"/>
+	<SubTexture name="AOL idle0013" x="14" y="371" width="326" height="161"/>
+	<SubTexture name="AOL left0000" x="354" y="371" width="264" height="192" frameX="0" frameY="0" frameWidth="281" frameHeight="192"/>
+	<SubTexture name="AOL left0001" x="354" y="371" width="264" height="192" frameX="0" frameY="0" frameWidth="281" frameHeight="192"/>
+	<SubTexture name="AOL left0002" x="632" y="371" width="274" height="183" frameX="-7" frameY="-9" frameWidth="281" frameHeight="192"/>
+	<SubTexture name="AOL left0003" x="632" y="371" width="274" height="183" frameX="-7" frameY="-9" frameWidth="281" frameHeight="192"/>
+	<SubTexture name="AOL left0004" x="632" y="371" width="274" height="183" frameX="-7" frameY="-9" frameWidth="281" frameHeight="192"/>
+	<SubTexture name="AOL left0005" x="632" y="371" width="274" height="183" frameX="-7" frameY="-9" frameWidth="281" frameHeight="192"/>
+	<SubTexture name="AOL left0006" x="632" y="371" width="274" height="183" frameX="-7" frameY="-9" frameWidth="281" frameHeight="192"/>
+	<SubTexture name="AOL left0007" x="632" y="371" width="274" height="183" frameX="-7" frameY="-9" frameWidth="281" frameHeight="192"/>
+	<SubTexture name="AOL left0008" x="632" y="371" width="274" height="183" frameX="-7" frameY="-9" frameWidth="281" frameHeight="192"/>
+	<SubTexture name="AOL left0009" x="632" y="371" width="274" height="183" frameX="-7" frameY="-9" frameWidth="281" frameHeight="192"/>
+	<SubTexture name="AOL left0010" x="632" y="371" width="274" height="183" frameX="-7" frameY="-9" frameWidth="281" frameHeight="192"/>
+	<SubTexture name="AOL left0011" x="632" y="371" width="274" height="183" frameX="-7" frameY="-9" frameWidth="281" frameHeight="192"/>
+	<SubTexture name="AOL left0012" x="632" y="371" width="274" height="183" frameX="-7" frameY="-9" frameWidth="281" frameHeight="192"/>
+	<SubTexture name="AOL left0013" x="632" y="371" width="274" height="183" frameX="-7" frameY="-9" frameWidth="281" frameHeight="192"/>
+	<SubTexture name="AOL left0014" x="632" y="371" width="274" height="183" frameX="-7" frameY="-9" frameWidth="281" frameHeight="192"/>
+	<SubTexture name="AOL left0015" x="632" y="371" width="274" height="183" frameX="-7" frameY="-9" frameWidth="281" frameHeight="192"/>
+	<SubTexture name="AOL left0016" x="632" y="371" width="274" height="183" frameX="-7" frameY="-9" frameWidth="281" frameHeight="192"/>
+	<SubTexture name="AOL left0017" x="632" y="371" width="274" height="183" frameX="-7" frameY="-9" frameWidth="281" frameHeight="192"/>
+	<SubTexture name="AOL left0018" x="632" y="371" width="274" height="183" frameX="-7" frameY="-9" frameWidth="281" frameHeight="192"/>
+	<SubTexture name="AOL left0019" x="632" y="371" width="274" height="183" frameX="-7" frameY="-9" frameWidth="281" frameHeight="192"/>
+	<SubTexture name="AOL left0020" x="632" y="371" width="274" height="183" frameX="-7" frameY="-9" frameWidth="281" frameHeight="192"/>
+	<SubTexture name="AOL left0021" x="632" y="371" width="274" height="183" frameX="-7" frameY="-9" frameWidth="281" frameHeight="192"/>
+	<SubTexture name="AOL left0022" x="632" y="371" width="274" height="183" frameX="-7" frameY="-9" frameWidth="281" frameHeight="192"/>
+	<SubTexture name="AOL left0023" x="632" y="371" width="274" height="183" frameX="-7" frameY="-9" frameWidth="281" frameHeight="192"/>
+	<SubTexture name="AOL left0024" x="632" y="371" width="274" height="183" frameX="-7" frameY="-9" frameWidth="281" frameHeight="192"/>
+	<SubTexture name="AOL left0025" x="632" y="371" width="274" height="183" frameX="-7" frameY="-9" frameWidth="281" frameHeight="192"/>
+	<SubTexture name="AOL left0026" x="632" y="371" width="274" height="183" frameX="-7" frameY="-9" frameWidth="281" frameHeight="192"/>
+	<SubTexture name="AOL left0027" x="632" y="371" width="274" height="183" frameX="-7" frameY="-9" frameWidth="281" frameHeight="192"/>
+	<SubTexture name="AOL left0028" x="632" y="371" width="274" height="183" frameX="-7" frameY="-9" frameWidth="281" frameHeight="192"/>
+	<SubTexture name="AOL left0029" x="632" y="371" width="274" height="183" frameX="-7" frameY="-9" frameWidth="281" frameHeight="192"/>
+	<SubTexture name="AOL left0030" x="632" y="371" width="274" height="183" frameX="-7" frameY="-9" frameWidth="281" frameHeight="192"/>
+	<SubTexture name="AOL left0031" x="632" y="371" width="274" height="183" frameX="-7" frameY="-9" frameWidth="281" frameHeight="192"/>
+	<SubTexture name="AOL left0032" x="632" y="371" width="274" height="183" frameX="-7" frameY="-9" frameWidth="281" frameHeight="192"/>
+	<SubTexture name="AOL left0033" x="632" y="371" width="274" height="183" frameX="-7" frameY="-9" frameWidth="281" frameHeight="192"/>
+	<SubTexture name="AOL left0034" x="632" y="371" width="274" height="183" frameX="-7" frameY="-9" frameWidth="281" frameHeight="192"/>
+	<SubTexture name="AOL left0035" x="632" y="371" width="274" height="183" frameX="-7" frameY="-9" frameWidth="281" frameHeight="192"/>
+	<SubTexture name="AOL left0036" x="632" y="371" width="274" height="183" frameX="-7" frameY="-9" frameWidth="281" frameHeight="192"/>
+	<SubTexture name="AOL left0037" x="632" y="371" width="274" height="183" frameX="-7" frameY="-9" frameWidth="281" frameHeight="192"/>
+	<SubTexture name="AOL left0038" x="632" y="371" width="274" height="183" frameX="-7" frameY="-9" frameWidth="281" frameHeight="192"/>
+	<SubTexture name="AOL left0039" x="632" y="371" width="274" height="183" frameX="-7" frameY="-9" frameWidth="281" frameHeight="192"/>
+	<SubTexture name="AOL left0040" x="632" y="371" width="274" height="183" frameX="-7" frameY="-9" frameWidth="281" frameHeight="192"/>
+	<SubTexture name="AOL left0041" x="632" y="371" width="274" height="183" frameX="-7" frameY="-9" frameWidth="281" frameHeight="192"/>
+	<SubTexture name="AOL right0000" x="14" y="577" width="291" height="257" frameX="-10" frameY="0" frameWidth="301" frameHeight="257"/>
+	<SubTexture name="AOL right0001" x="14" y="577" width="291" height="257" frameX="-10" frameY="0" frameWidth="301" frameHeight="257"/>
+	<SubTexture name="AOL right0002" x="319" y="577" width="295" height="256" frameX="0" frameY="-1" frameWidth="301" frameHeight="257"/>
+	<SubTexture name="AOL right0003" x="319" y="577" width="295" height="256" frameX="0" frameY="-1" frameWidth="301" frameHeight="257"/>
+	<SubTexture name="AOL right0004" x="319" y="577" width="295" height="256" frameX="0" frameY="-1" frameWidth="301" frameHeight="257"/>
+	<SubTexture name="AOL right0005" x="319" y="577" width="295" height="256" frameX="0" frameY="-1" frameWidth="301" frameHeight="257"/>
+	<SubTexture name="AOL right0006" x="319" y="577" width="295" height="256" frameX="0" frameY="-1" frameWidth="301" frameHeight="257"/>
+	<SubTexture name="AOL right0007" x="319" y="577" width="295" height="256" frameX="0" frameY="-1" frameWidth="301" frameHeight="257"/>
+	<SubTexture name="AOL right0008" x="319" y="577" width="295" height="256" frameX="0" frameY="-1" frameWidth="301" frameHeight="257"/>
+	<SubTexture name="AOL right0009" x="319" y="577" width="295" height="256" frameX="0" frameY="-1" frameWidth="301" frameHeight="257"/>
+	<SubTexture name="AOL right0010" x="319" y="577" width="295" height="256" frameX="0" frameY="-1" frameWidth="301" frameHeight="257"/>
+	<SubTexture name="AOL right0011" x="319" y="577" width="295" height="256" frameX="0" frameY="-1" frameWidth="301" frameHeight="257"/>
+	<SubTexture name="AOL right0012" x="319" y="577" width="295" height="256" frameX="0" frameY="-1" frameWidth="301" frameHeight="257"/>
+	<SubTexture name="AOL right0013" x="319" y="577" width="295" height="256" frameX="0" frameY="-1" frameWidth="301" frameHeight="257"/>
+	<SubTexture name="AOL right0014" x="319" y="577" width="295" height="256" frameX="0" frameY="-1" frameWidth="301" frameHeight="257"/>
+	<SubTexture name="AOL right0015" x="319" y="577" width="295" height="256" frameX="0" frameY="-1" frameWidth="301" frameHeight="257"/>
+	<SubTexture name="AOL right0016" x="319" y="577" width="295" height="256" frameX="0" frameY="-1" frameWidth="301" frameHeight="257"/>
+	<SubTexture name="AOL right0017" x="319" y="577" width="295" height="256" frameX="0" frameY="-1" frameWidth="301" frameHeight="257"/>
+	<SubTexture name="AOL right0018" x="319" y="577" width="295" height="256" frameX="0" frameY="-1" frameWidth="301" frameHeight="257"/>
+	<SubTexture name="AOL right0019" x="319" y="577" width="295" height="256" frameX="0" frameY="-1" frameWidth="301" frameHeight="257"/>
+	<SubTexture name="AOL right0020" x="319" y="577" width="295" height="256" frameX="0" frameY="-1" frameWidth="301" frameHeight="257"/>
+	<SubTexture name="AOL right0021" x="319" y="577" width="295" height="256" frameX="0" frameY="-1" frameWidth="301" frameHeight="257"/>
+	<SubTexture name="AOL right0022" x="319" y="577" width="295" height="256" frameX="0" frameY="-1" frameWidth="301" frameHeight="257"/>
+	<SubTexture name="AOL right0023" x="319" y="577" width="295" height="256" frameX="0" frameY="-1" frameWidth="301" frameHeight="257"/>
+	<SubTexture name="AOL right0024" x="319" y="577" width="295" height="256" frameX="0" frameY="-1" frameWidth="301" frameHeight="257"/>
+	<SubTexture name="AOL right0025" x="319" y="577" width="295" height="256" frameX="0" frameY="-1" frameWidth="301" frameHeight="257"/>
+	<SubTexture name="AOL right0026" x="319" y="577" width="295" height="256" frameX="0" frameY="-1" frameWidth="301" frameHeight="257"/>
+	<SubTexture name="AOL right0027" x="319" y="577" width="295" height="256" frameX="0" frameY="-1" frameWidth="301" frameHeight="257"/>
+	<SubTexture name="AOL right0028" x="319" y="577" width="295" height="256" frameX="0" frameY="-1" frameWidth="301" frameHeight="257"/>
+	<SubTexture name="AOL right0029" x="319" y="577" width="295" height="256" frameX="0" frameY="-1" frameWidth="301" frameHeight="257"/>
+	<SubTexture name="AOL right0030" x="319" y="577" width="295" height="256" frameX="0" frameY="-1" frameWidth="301" frameHeight="257"/>
+	<SubTexture name="AOL right0031" x="319" y="577" width="295" height="256" frameX="0" frameY="-1" frameWidth="301" frameHeight="257"/>
+	<SubTexture name="AOL right0032" x="319" y="577" width="295" height="256" frameX="0" frameY="-1" frameWidth="301" frameHeight="257"/>
+	<SubTexture name="AOL right0033" x="319" y="577" width="295" height="256" frameX="0" frameY="-1" frameWidth="301" frameHeight="257"/>
+	<SubTexture name="AOL right0034" x="319" y="577" width="295" height="256" frameX="0" frameY="-1" frameWidth="301" frameHeight="257"/>
+	<SubTexture name="AOL right0035" x="319" y="577" width="295" height="256" frameX="0" frameY="-1" frameWidth="301" frameHeight="257"/>
+	<SubTexture name="AOL right0036" x="319" y="577" width="295" height="256" frameX="0" frameY="-1" frameWidth="301" frameHeight="257"/>
+	<SubTexture name="AOL right0037" x="319" y="577" width="295" height="256" frameX="0" frameY="-1" frameWidth="301" frameHeight="257"/>
+	<SubTexture name="AOL right0038" x="319" y="577" width="295" height="256" frameX="0" frameY="-1" frameWidth="301" frameHeight="257"/>
+	<SubTexture name="AOL right0039" x="319" y="577" width="295" height="256" frameX="0" frameY="-1" frameWidth="301" frameHeight="257"/>
+	<SubTexture name="AOL right0040" x="319" y="577" width="295" height="256" frameX="0" frameY="-1" frameWidth="301" frameHeight="257"/>
+	<SubTexture name="AOL right0041" x="319" y="577" width="295" height="256" frameX="0" frameY="-1" frameWidth="301" frameHeight="257"/>
+	<SubTexture name="AOL up 0000" x="628" y="577" width="309" height="164" frameX="-4" frameY="0" frameWidth="315" frameHeight="164"/>
+	<SubTexture name="AOL up 0001" x="628" y="577" width="309" height="164" frameX="-4" frameY="0" frameWidth="315" frameHeight="164"/>
+	<SubTexture name="AOL up 0002" x="14" y="848" width="315" height="162" frameX="0" frameY="-2" frameWidth="315" frameHeight="164"/>
+	<SubTexture name="AOL up 0003" x="14" y="848" width="315" height="162" frameX="0" frameY="-2" frameWidth="315" frameHeight="164"/>
+	<SubTexture name="AOL up 0004" x="14" y="848" width="315" height="162" frameX="0" frameY="-2" frameWidth="315" frameHeight="164"/>
+	<SubTexture name="AOL up 0005" x="14" y="848" width="315" height="162" frameX="0" frameY="-2" frameWidth="315" frameHeight="164"/>
+	<SubTexture name="AOL up 0006" x="14" y="848" width="315" height="162" frameX="0" frameY="-2" frameWidth="315" frameHeight="164"/>
+	<SubTexture name="AOL up 0007" x="14" y="848" width="315" height="162" frameX="0" frameY="-2" frameWidth="315" frameHeight="164"/>
+	<SubTexture name="AOL up 0008" x="14" y="848" width="315" height="162" frameX="0" frameY="-2" frameWidth="315" frameHeight="164"/>
+	<SubTexture name="AOL up 0009" x="14" y="848" width="315" height="162" frameX="0" frameY="-2" frameWidth="315" frameHeight="164"/>
+	<SubTexture name="AOL up 0010" x="14" y="848" width="315" height="162" frameX="0" frameY="-2" frameWidth="315" frameHeight="164"/>
+	<SubTexture name="AOL up 0011" x="14" y="848" width="315" height="162" frameX="0" frameY="-2" frameWidth="315" frameHeight="164"/>
+	<SubTexture name="AOL up 0012" x="14" y="848" width="315" height="162" frameX="0" frameY="-2" frameWidth="315" frameHeight="164"/>
+	<SubTexture name="AOL up 0013" x="14" y="848" width="315" height="162" frameX="0" frameY="-2" frameWidth="315" frameHeight="164"/>
+	<SubTexture name="AOL up 0014" x="14" y="848" width="315" height="162" frameX="0" frameY="-2" frameWidth="315" frameHeight="164"/>
+	<SubTexture name="AOL up 0015" x="14" y="848" width="315" height="162" frameX="0" frameY="-2" frameWidth="315" frameHeight="164"/>
+	<SubTexture name="AOL up 0016" x="14" y="848" width="315" height="162" frameX="0" frameY="-2" frameWidth="315" frameHeight="164"/>
+	<SubTexture name="AOL up 0017" x="14" y="848" width="315" height="162" frameX="0" frameY="-2" frameWidth="315" frameHeight="164"/>
+	<SubTexture name="AOL up 0018" x="14" y="848" width="315" height="162" frameX="0" frameY="-2" frameWidth="315" frameHeight="164"/>
+	<SubTexture name="AOL up 0019" x="14" y="848" width="315" height="162" frameX="0" frameY="-2" frameWidth="315" frameHeight="164"/>
+	<SubTexture name="AOL up 0020" x="14" y="848" width="315" height="162" frameX="0" frameY="-2" frameWidth="315" frameHeight="164"/>
+	<SubTexture name="AOL up 0021" x="14" y="848" width="315" height="162" frameX="0" frameY="-2" frameWidth="315" frameHeight="164"/>
+	<SubTexture name="AOL up 0022" x="14" y="848" width="315" height="162" frameX="0" frameY="-2" frameWidth="315" frameHeight="164"/>
+	<SubTexture name="AOL up 0023" x="14" y="848" width="315" height="162" frameX="0" frameY="-2" frameWidth="315" frameHeight="164"/>
+	<SubTexture name="AOL up 0024" x="14" y="848" width="315" height="162" frameX="0" frameY="-2" frameWidth="315" frameHeight="164"/>
+	<SubTexture name="AOL up 0025" x="14" y="848" width="315" height="162" frameX="0" frameY="-2" frameWidth="315" frameHeight="164"/>
+	<SubTexture name="AOL up 0026" x="14" y="848" width="315" height="162" frameX="0" frameY="-2" frameWidth="315" frameHeight="164"/>
+	<SubTexture name="AOL up 0027" x="14" y="848" width="315" height="162" frameX="0" frameY="-2" frameWidth="315" frameHeight="164"/>
+	<SubTexture name="AOL up 0028" x="14" y="848" width="315" height="162" frameX="0" frameY="-2" frameWidth="315" frameHeight="164"/>
+	<SubTexture name="AOL up 0029" x="14" y="848" width="315" height="162" frameX="0" frameY="-2" frameWidth="315" frameHeight="164"/>
+	<SubTexture name="AOL up 0030" x="14" y="848" width="315" height="162" frameX="0" frameY="-2" frameWidth="315" frameHeight="164"/>
+	<SubTexture name="AOL up 0031" x="14" y="848" width="315" height="162" frameX="0" frameY="-2" frameWidth="315" frameHeight="164"/>
+	<SubTexture name="AOL up 0032" x="14" y="848" width="315" height="162" frameX="0" frameY="-2" frameWidth="315" frameHeight="164"/>
+	<SubTexture name="AOL up 0033" x="14" y="848" width="315" height="162" frameX="0" frameY="-2" frameWidth="315" frameHeight="164"/>
+	<SubTexture name="AOL up 0034" x="14" y="848" width="315" height="162" frameX="0" frameY="-2" frameWidth="315" frameHeight="164"/>
+	<SubTexture name="AOL up 0035" x="14" y="848" width="315" height="162" frameX="0" frameY="-2" frameWidth="315" frameHeight="164"/>
+	<SubTexture name="AOL up 0036" x="14" y="848" width="315" height="162" frameX="0" frameY="-2" frameWidth="315" frameHeight="164"/>
+	<SubTexture name="AOL up 0037" x="14" y="848" width="315" height="162" frameX="0" frameY="-2" frameWidth="315" frameHeight="164"/>
+	<SubTexture name="AOL up 0038" x="14" y="848" width="315" height="162" frameX="0" frameY="-2" frameWidth="315" frameHeight="164"/>
+	<SubTexture name="AOL up 0039" x="14" y="848" width="315" height="162" frameX="0" frameY="-2" frameWidth="315" frameHeight="164"/>
+	<SubTexture name="AOL up 0040" x="14" y="848" width="315" height="162" frameX="0" frameY="-2" frameWidth="315" frameHeight="164"/>
+	<SubTexture name="AOL up 0041" x="14" y="848" width="315" height="162" frameX="0" frameY="-2" frameWidth="315" frameHeight="164"/>
+</TextureAtlas>

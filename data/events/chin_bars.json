@@ -1,0 +1,13 @@
+{
+	"params": [
+		{
+			"name": "speed?",
+			"type": "String",
+			"defaultValue": 0.015
+		}, {
+			"name": "targetAlpha",
+			"type": "String",
+			"defaultValue": "1"
+		}
+	]
+}

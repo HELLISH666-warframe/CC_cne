@@ -1,0 +1,13 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="CC/old/TheChosenOne" icon="tco" color="#eb8e00" camx="-130" camy="130" holdTime="6.1">
+	<anim name="idle" anim="TCO Idle" x="40" y="-146" loop="true"/>
+	<anim name="singDOWN" anim="TCO Down" x="12" y="-140"/>
+	<anim name="singDOWN-loop" anim="TCO Down" x="12" y="-140" loop="true"/>
+	<anim name="singLEFT-loop" anim="TCO Left" x="98" y="0" loop="true"/>
+	<anim name="singLEFT" anim="TCO Left" x="98" y="0"/>
+	<anim name="singRIGHT" anim="TCO Right" x="-28" y="-152"/>
+	<anim name="singRIGHT-loop" anim="TCO Right" x="-28" y="-152" loop="true"/>
+	<anim name="singUP" anim="TCO Up" x="110" y="100"/>
+	<anim name="singUP-loop" anim="TCO Up" x="110" y="100" loop="true"/>
+</character>

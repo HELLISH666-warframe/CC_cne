@@ -1,0 +1,10 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="CC/TheSecondComing-guitar" icon="tsc" color="#ff6600" x="10" y="190" camx="-210" camy="-140" holdTime="6.1" scale="1.5">
+	<anim name="singDOWN" anim="tsc guitar down" x="-10" y="66"/>
+	<anim name="singLEFT" anim="tsc guitar left" x="54" y="-73.33333333333333"/>
+	<anim name="singUP" anim="tsc guitar up" x="148" y="261.3333333333333"/>
+	<anim name="singRIGHT" anim="tsc guitar right" x="29.333333333333332" y="-126"/>
+	<anim name="end" anim="tsc guitar end"/>
+	<anim name="idle" anim="tsc guitar left" x="1.3333333333333333" y="-46.666666666666664"/>
+</character>

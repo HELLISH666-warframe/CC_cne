@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="NewgroundsBurning.png">
+	<!-- Created with Adobe Animate version 21.0.2.37893 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Symbol 3 instance 10000" x="0" y="0" width="1016" height="889"/>
+	<SubTexture name="Symbol 3 instance 10001" x="1016" y="0" width="1016" height="889"/>
+	<SubTexture name="Symbol 3 instance 10002" x="2032" y="0" width="1016" height="889"/>
+	<SubTexture name="Symbol 3 instance 10003" x="3048" y="0" width="1016" height="889"/>
+	<SubTexture name="Symbol 3 instance 10004" x="0" y="889" width="1016" height="889"/>
+	<SubTexture name="Symbol 3 instance 10005" x="0" y="1778" width="1016" height="889"/>
+	<SubTexture name="Symbol 3 instance 10006" x="0" y="2667" width="1016" height="889"/>
+	<SubTexture name="Symbol 3 instance 10007" x="1016" y="889" width="1016" height="889"/>
+	<SubTexture name="Symbol 3 instance 10008" x="2032" y="889" width="1016" height="889"/>
+	<SubTexture name="Symbol 3 instance 10009" x="3048" y="889" width="1016" height="889"/>
+	<SubTexture name="Symbol 3 instance 10010" x="1016" y="1778" width="1016" height="889"/>
+	<SubTexture name="Symbol 3 instance 10011" x="1016" y="2667" width="1016" height="889"/>
+	<SubTexture name="Symbol 3 instance 10012" x="2032" y="1778" width="1016" height="889"/>
+	<SubTexture name="Symbol 3 instance 10013" x="3048" y="1778" width="1016" height="889"/>
+	<SubTexture name="Symbol 3 instance 10014" x="2032" y="2667" width="1016" height="889"/>
+</TextureAtlas>

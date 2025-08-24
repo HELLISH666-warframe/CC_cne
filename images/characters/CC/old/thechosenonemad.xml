@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="thechosenonemad.png">
+	<!-- Created with Adobe Animate version 21.0.5.40714 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="TCO Down0000" x="146" y="203" width="529" height="733"/>
+	<SubTexture name="TCO Down0001" x="943" y="218" width="650" height="726"/>
+	<SubTexture name="TCO Down0002" x="1742" y="209" width="648" height="741"/>
+	<SubTexture name="TCO Down0003" x="2539" y="209" width="641" height="762"/>
+	<SubTexture name="TCO Down0004" x="3336" y="209" width="641" height="763"/>
+	<SubTexture name="TCO Down0005" x="4133" y="209" width="624" height="727"/>
+	<SubTexture name="TCO Idle0000" x="4952" y="277" width="431" height="607"/>
+	<SubTexture name="TCO Idle0001" x="5747" y="277" width="434" height="607"/>
+	<SubTexture name="TCO Idle0002" x="6540" y="257" width="433" height="627"/>
+	<SubTexture name="TCO Idle0003" x="7340" y="257" width="429" height="627"/>
+	<SubTexture name="TCO Idle0004" x="158" y="1254" width="443" height="631"/>
+	<SubTexture name="TCO Idle0005" x="944" y="1254" width="454" height="631"/>
+	<SubTexture name="TCO Idle0006" x="1744" y="1242" width="452" height="643"/>
+	<SubTexture name="TCO Idle0007" x="2536" y="1254" width="456" height="631"/>
+	<SubTexture name="TCO Idle0008" x="3339" y="1251" width="450" height="634"/>
+	<SubTexture name="TCO Idle0009" x="4114" y="1251" width="472" height="634"/>
+	<SubTexture name="TCO Idle0010" x="4910" y="1251" width="473" height="634"/>
+	<SubTexture name="TCO Idle0011" x="5719" y="1251" width="462" height="634"/>
+	<SubTexture name="TCO Idle0012" x="6496" y="1251" width="484" height="634"/>
+	<SubTexture name="TCO Idle0013" x="7319" y="1251" width="455" height="634"/>
+	<SubTexture name="TCO Left0000" x="77" y="2149" width="614" height="787"/>
+	<SubTexture name="TCO Left0001" x="907" y="2148" width="612" height="788"/>
+	<SubTexture name="TCO Left0002" x="1676" y="2147" width="621" height="789"/>
+	<SubTexture name="TCO Right0000" x="2534" y="2154" width="647" height="763"/>
+	<SubTexture name="TCO Right0001" x="3313" y="2154" width="647" height="763"/>
+	<SubTexture name="TCO Right0002" x="4122" y="2152" width="644" height="765"/>
+	<SubTexture name="TCO Up0000" x="4817" y="2106" width="607" height="854"/>
+	<SubTexture name="TCO Up0001" x="5609" y="2129" width="632" height="813"/>
+	<SubTexture name="TCO Up0002" x="6408" y="2118" width="624" height="824"/>
+</TextureAtlas>

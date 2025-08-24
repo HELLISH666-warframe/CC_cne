@@ -1,0 +1,14 @@
+{
+	"displayName": "adobe",
+	"bpm": 140.0,
+	"icon": "the-chosen-one-adobe",
+	"difficulties": [
+		"SIMPLE",
+		"HARD",
+		"INSANE"
+	],
+	"color": "##141414",
+	"background": "adobe",
+	"portrait": "adobe",
+	"composer": "amaarzadjali"
+}

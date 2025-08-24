@@ -1,0 +1,9 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="CC/old/thechosenone_older" icon="face" color="#a1a1a1" holdTime="6.1">
+	<anim name="idle" anim="TCO Idle"/>
+	<anim name="singLEFT" anim="TCO Left" x="126" y="-15"/>
+	<anim name="singDOWN" anim="TCO Down" x="85" y="-51"/>
+	<anim name="singUP" anim="TCO Up" x="66" y="16"/>
+	<anim name="singRIGHT" anim="TCO Right" x="-65" y="-33"/>
+</character>

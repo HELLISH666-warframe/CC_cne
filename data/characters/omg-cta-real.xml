@@ -1,0 +1,9 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="CC/extras/wongmau_catto" icon="wongmau" color="#d6cfbf" y="30" camx="-150" camy="200" holdTime="6.1">
+	<anim name="idle" anim="cat_idle" x="140" y="-129"/>
+	<anim name="singLEFT" anim="cat_left" x="280" y="-232"/>
+	<anim name="singDOWN" anim="cat_down" x="160" y="-190"/>
+	<anim name="singUP" anim="cat_up" x="84" y="-115"/>
+	<anim name="singRIGHT" anim="cat_right" x="124" y="-190"/>
+</character>

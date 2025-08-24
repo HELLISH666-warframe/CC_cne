@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="background2.png">
+	<!-- Created with Adobe Animate version 21.0.0.35450 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Símbolo 10000" x="4" y="4" width="1294" height="728"/>
+	<SubTexture name="Símbolo 10001" x="1348" y="4" width="1294" height="728"/>
+	<SubTexture name="Símbolo 10002" x="2692" y="4" width="1294" height="728"/>
+	<SubTexture name="Símbolo 10003" x="4036" y="4" width="1294" height="728"/>
+	<SubTexture name="Símbolo 10004" x="5380" y="4" width="1294" height="728"/>
+	<SubTexture name="Símbolo 10005" x="6724" y="4" width="1294" height="728"/>
+	<SubTexture name="Símbolo 10006" x="4" y="782" width="1294" height="728"/>
+	<SubTexture name="Símbolo 10007" x="1348" y="782" width="1294" height="728"/>
+	<SubTexture name="Símbolo 10008" x="2692" y="782" width="1294" height="728"/>
+	<SubTexture name="Símbolo 10009" x="4036" y="782" width="1294" height="728"/>
+	<SubTexture name="Símbolo 10010" x="5380" y="782" width="1294" height="728"/>
+	<SubTexture name="Símbolo 10011" x="6724" y="782" width="1294" height="728"/>
+	<SubTexture name="Símbolo 10012" x="4" y="1560" width="1294" height="728"/>
+	<SubTexture name="Símbolo 10013" x="1348" y="1560" width="1294" height="728"/>
+	<SubTexture name="Símbolo 10014" x="2692" y="1560" width="1294" height="728"/>
+	<SubTexture name="Símbolo 10015" x="4036" y="1560" width="1294" height="728"/>
+	<SubTexture name="Símbolo 10016" x="5380" y="1560" width="1294" height="728"/>
+	<SubTexture name="Símbolo 10017" x="6724" y="1560" width="1294" height="728"/>
+	<SubTexture name="Símbolo 10018" x="4" y="2338" width="1294" height="728"/>
+	<SubTexture name="Símbolo 10019" x="1348" y="2338" width="1294" height="728"/>
+	<SubTexture name="Símbolo 10020" x="2692" y="2338" width="1294" height="728"/>
+	<SubTexture name="Símbolo 10021" x="4036" y="2338" width="1294" height="728"/>
+	<SubTexture name="Símbolo 10022" x="5380" y="2338" width="1294" height="728"/>
+	<SubTexture name="Símbolo 10023" x="6724" y="2338" width="1294" height="728"/>
+	<SubTexture name="Símbolo 10024" x="4" y="3116" width="1294" height="728"/>
+	<SubTexture name="Símbolo 10025" x="1348" y="3116" width="1294" height="728"/>
+	<SubTexture name="Símbolo 10026" x="2692" y="3116" width="1294" height="728"/>
+	<SubTexture name="Símbolo 10027" x="4036" y="3116" width="1294" height="728"/>
+	<SubTexture name="Símbolo 10028" x="5380" y="3116" width="1294" height="728"/>
+	<SubTexture name="Símbolo 10029" x="6724" y="3116" width="1294" height="728"/>
+	<SubTexture name="Símbolo 10030" x="4" y="3894" width="1294" height="728"/>
+	<SubTexture name="Símbolo 10031" x="1348" y="3894" width="1294" height="728"/>
+	<SubTexture name="Símbolo 10032" x="2692" y="3894" width="1294" height="728"/>
+	<SubTexture name="Símbolo 10033" x="4036" y="3894" width="1294" height="728"/>
+	<SubTexture name="Símbolo 10034" x="5380" y="3894" width="1294" height="728"/>
+	<SubTexture name="Símbolo 10035" x="6724" y="3894" width="1294" height="728"/>
+	<SubTexture name="Símbolo 10036" x="4" y="4672" width="1294" height="728"/>
+	<SubTexture name="Símbolo 10037" x="1348" y="4672" width="1294" height="728"/>
+	<SubTexture name="Símbolo 10038" x="2692" y="4672" width="1294" height="728"/>
+	<SubTexture name="Símbolo 10039" x="4036" y="4672" width="1294" height="728"/>
+	<SubTexture name="Símbolo 10040" x="5380" y="4672" width="1294" height="728"/>
+	<SubTexture name="Símbolo 10041" x="6724" y="4672" width="1294" height="728"/>
+	<SubTexture name="Símbolo 10042" x="4" y="5450" width="1294" height="728"/>
+	<SubTexture name="Símbolo 10043" x="1348" y="5450" width="1294" height="728"/>
+	<SubTexture name="Símbolo 10044" x="2692" y="5450" width="1294" height="728"/>
+	<SubTexture name="Símbolo 10045" x="4036" y="5450" width="1294" height="728"/>
+	<SubTexture name="Símbolo 10046" x="5380" y="5450" width="1294" height="728"/>
+	<SubTexture name="Símbolo 10047" x="6724" y="5450" width="1294" height="728"/>
+	<SubTexture name="Símbolo 10048" x="4" y="6228" width="1294" height="728"/>
+	<SubTexture name="Símbolo 10049" x="1348" y="6228" width="1294" height="728"/>
+	<SubTexture name="Símbolo 10050" x="2692" y="6228" width="1294" height="728"/>
+	<SubTexture name="Símbolo 10051" x="4036" y="6228" width="1294" height="728"/>
+	<SubTexture name="Símbolo 10052" x="5380" y="6228" width="1294" height="728"/>
+	<SubTexture name="Símbolo 10053" x="6724" y="6228" width="1294" height="728"/>
+	<SubTexture name="Símbolo 10054" x="4" y="7006" width="1294" height="728"/>
+	<SubTexture name="Símbolo 10055" x="1348" y="7006" width="1294" height="728"/>
+	<SubTexture name="Símbolo 10056" x="2692" y="7006" width="1294" height="728"/>
+	<SubTexture name="Símbolo 10057" x="4036" y="7006" width="1294" height="728"/>
+	<SubTexture name="Símbolo 10058" x="5380" y="7006" width="1294" height="728"/>
+	<SubTexture name="Símbolo 10059" x="6724" y="7006" width="1294" height="728"/>
+</TextureAtlas>

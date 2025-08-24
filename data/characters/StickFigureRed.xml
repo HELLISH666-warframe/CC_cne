@@ -1,0 +1,21 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="CC/StickFigureRed" icon="face" color="#c90000" x="80" y="120" camy="50" holdTime="6.1" scale="1.2">
+	<anim name="idle" anim="red phase 1 idle"/>
+	<anim name="singLEFT" anim="red phase 1 left" x="85.83333333333334" y="5"/>
+	<anim name="singDOWN" anim="red phase 1 down" x="1.6666666666666667" y="-90.83333333333334"/>
+	<anim name="singRIGHT" anim="red phase 1 right" x="24.166666666666668" y="-40.833333333333336"/>
+	<anim name="singUP" anim="red phase 1 up" x="46.66666666666667" y="-0.8333333333333334"/>
+	<anim name="phase2Transition" anim="red phase transition 1" x="203.33333333333334" y="1.6666666666666667"/>
+	<anim name="idle-alt" anim="red phase 2 idle" x="207.5" y="-261.6666666666667"/>
+	<anim name="singLEFT-alt" anim="red phase 2 left" x="208.33333333333334" y="-261.6666666666667"/>
+	<anim name="singDOWN-alt" anim="red phase 2 down" x="203.33333333333334" y="-262.5"/>
+	<anim name="singRIGHT-alt" anim="red phase 2 right" x="202.5" y="-261.6666666666667"/>
+	<anim name="singUP-alt" anim="red phase 2 up" x="203.33333333333334" y="-209.16666666666669"/>
+	<anim name="idle-alt2" anim="red phase 3 idle" x="265.83333333333337" y="2.5"/>
+	<anim name="singLEFT-alt2" anim="red phase 3 left" x="707.5" y="3.3333333333333335"/>
+	<anim name="singDOWN-alt2" anim="red phase 3 down" x="280.83333333333337" y="46.66666666666667"/>
+	<anim name="singRIGHT-alt2" anim="red phase 3 right" x="260" y="-3.3333333333333335"/>
+	<anim name="phase3Transition" anim="red phase transition 2" x="308.33333333333337" y="81.66666666666667"/>
+	<anim name="singUP-alt2" anim="red phase 3 up" x="348.33333333333337" y="68.33333333333334"/>
+</character>

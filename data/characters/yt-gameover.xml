@@ -1,0 +1,7 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="CC/extras/youtube_death" icon="bf" color="#31b0d1" x="-280" y="-440" flipX="true" camx="120" camy="270" holdTime="6.1" scale="2.2">
+	<anim name="deathConfirm" anim="death loop confirm" x="-12.727272727272727" y="-603.6363636363636"/>
+	<anim name="deathLoop" anim="death loop0" x="-12.727272727272727" y="-601.8181818181818" loop="true"/>
+	<anim name="firstDeath" anim="death anim" fps="12"/>
+</character>

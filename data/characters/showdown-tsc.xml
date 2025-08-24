@@ -1,0 +1,10 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="CC/extras/collab/showdown/showdown_tsc" icon="showdowntsc" color="#ff6200" x="-70" y="175" camx="-350" camy="100" holdTime="6.1" scale="1.1">
+	<anim name="idle" anim="Idle"/>
+	<anim name="singLEFT" anim="Left" x="-8.181818181818182" y="-6.363636363636363"/>
+	<anim name="singDOWN" anim="Down" x="-18.18181818181818" y="-31.818181818181817"/>
+	<anim name="singUP" anim="Up" x="-20.909090909090907" y="2.727272727272727"/>
+	<anim name="singRIGHT" anim="Right" x="-11.818181818181817" y="0"/>
+	<anim name="shoot" anim="Shoot" x="38.18181818181818" y="2.727272727272727"/>
+</character>

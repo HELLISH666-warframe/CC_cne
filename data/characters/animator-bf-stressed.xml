@@ -1,0 +1,13 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="CC/BF_Stressed" icon="bf" color="#31b0d1" x="-290" y="555" flipX="true" camx="550" camy="10">
+	<anim name="idle" anim="BF idle dance" x="-5" y="0"/>
+	<anim name="singLEFT" anim="BF NOTE LEFT0" x="-10" y="-1"/>
+	<anim name="singDOWN" anim="BF NOTE DOWN0" x="-304" y="170"/>
+	<anim name="singUP" anim="BF NOTE UP0" x="-307" y="268"/>
+	<anim name="singRIGHT" anim="BF NOTE RIGHT0" x="-3" y="0"/>
+	<anim name="singLEFTmiss" anim="BF NOTE LEFT MISS" x="-5" y="-22"/>
+	<anim name="singDOWNmiss" anim="BF NOTE DOWN MISS" x="-291" y="146"/>
+	<anim name="singUPmiss" anim="BF NOTE UP MISS" x="-317" y="263"/>
+	<anim name="singRIGHTmiss" anim="BF NOTE RIGHT MISS" x="11" y="-8"/>
+</character>

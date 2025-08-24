@@ -1,0 +1,7 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="bfPixelsDEAD" icon="bf-pixel" color="#7bd6f6" y="350" flipX="true" antialiasing="false" camx="50" camy="-60" scale="6">
+	<anim name="deathConfirm" anim="RETRY CONFIRM" x="-4.333333333333333" y="-2"/>
+	<anim name="deathLoop" anim="Retry Loop" x="-5" y="-2" loop="true"/>
+	<anim name="firstDeath" anim="BF Dies pixel"/>
+</character>

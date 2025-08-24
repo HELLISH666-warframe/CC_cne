@@ -1,0 +1,13 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="DADDY_DEAREST" icon="dad" color="#af66ce" holdTime="6.1">
+	<anim name="singLEFT" anim="Dad Sing Note LEFT" x="-9" y="10"/>
+	<anim name="singDOWN" anim="Dad Sing Note DOWN" x="0" y="-30"/>
+	<anim name="singUP" anim="Dad Sing Note UP" x="-6" y="50"/>
+	<anim name="singRIGHT" anim="Dad Sing Note RIGHT" x="0" y="27"/>
+	<anim name="idle" anim="Dad idle dance"/>
+	<anim name="idle-loop" anim="Dad idle dance" loop="true" indices="10..12,12"/>
+	<anim name="singLEFT-loop" anim="Dad Sing Note LEFT" x="-9" y="10" loop="true" indices="12..15"/>
+	<anim name="singRIGHT-loop" anim="Dad Sing Note RIGHT" x="0" y="27" loop="true" indices="15..18"/>
+	<anim name="singUP-loop" anim="Dad Sing Note UP" x="-6" y="50" loop="true" indices="56..59"/>
+</character>

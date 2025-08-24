@@ -1,0 +1,12 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="CC/GF_assets_new" icon="gfCC" color="#c71366" x="-3" y="-24">
+	<anim name="cheer" anim="GF Cheer" x="0" y="-13"/>
+	<anim name="singLEFT" anim="GF left note" x="0" y="-7"/>
+	<anim name="singDOWN" anim="GF Down Note" x="0" y="-31"/>
+	<anim name="singUP" anim="GF Up Note" x="0" y="-10"/>
+	<anim name="singRIGHT" anim="GF Right Note" x="0" y="-31"/>
+	<anim name="sad" anim="gf sad" x="-2" y="-20" indices="0..12"/>
+	<anim name="danceLeft" anim="GF Dancing Beat" x="0" y="-9" indices="30,0..14"/>
+	<anim name="danceRight" anim="GF Dancing Beat" x="0" y="-9" indices="15..29"/>
+</character>

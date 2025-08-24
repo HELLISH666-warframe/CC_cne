@@ -1,0 +1,14 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="CC/old/TheDarkLord" icon="tdl" color="#eb0000" camx="-310" camy="170" holdTime="6.1">
+	<anim name="singUP-loop" anim="TCO Up" x="110" y="100" loop="true"/>
+	<anim name="idle" anim="TDL Idle Export" x="100" y="-46" loop="true"/>
+	<anim name="singDOWN" anim="TDL Down Export" x="242" y="-250"/>
+	<anim name="singDOWN-loop" anim="TDL Down Export" x="242" y="-250" loop="true"/>
+	<anim name="singLEFT" anim="TDL Left Export" x="288" y="-120"/>
+	<anim name="singLEFT-loop" anim="TDL Left Export" x="288" y="-120" loop="true"/>
+	<anim name="singRIGHT" anim="TDL Right Export" x="202" y="-106"/>
+	<anim name="singRIGHT-loop" anim="TDL Right Export" x="202" y="-106" loop="true"/>
+	<anim name="singUP" anim="TDL Up Export" x="174" y="30"/>
+	<anim name="singUP-loop " anim="TDL Up Export" x="174" y="30" loop="true"/>
+</character>

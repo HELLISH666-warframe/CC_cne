@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Created with Funkin Packer v0.1.2 https://neeeoo.github.io/funkin-packer/
+-->
+<TextureAtlas imagePath="microsoft_sam.png" width="3196" height="2992">
+	<SubTexture name="Samidle0000" x="1445" y="2510" width="650" height="414" rotated="true" frameX="-182" frameY="-118" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="Samup0001" x="1" y="1" width="465" height="733" frameX="-159" frameY="-28" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="Samup0003" x="469" y="1" width="471" height="722" frameX="-153" frameY="-39" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="Samup0004" x="1" y="737" width="722" height="471" rotated="true" frameX="-153" frameY="-40" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="Samup0002" x="943" y="1" width="469" height="725" frameX="-154" frameY="-36" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="Samleft0000" x="726" y="729" width="494" height="687" frameX="-84" frameY="-65" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="Samleft0001" x="1" y="1211" width="691" height="481" rotated="true" frameX="-127" frameY="-61" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="Samright0000" x="1223" y="729" width="485" height="678" frameX="-223" frameY="-80" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="Samleft0002" x="1415" y="1" width="470" height="694" frameX="-145" frameY="-58" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="Samleft0003" x="1223" y="1410" width="465" height="694" frameX="-154" frameY="-58" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="Samup0000" x="1" y="1695" width="757" height="426" rotated="true" frameX="-189" frameY="-5" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="Samleft0004" x="1691" y="1410" width="464" height="695" frameX="-156" frameY="-57" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="Samright0001" x="1711" y="698" width="461" height="682" frameX="-216" frameY="-74" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="Samright0002" x="1888" y="1" width="457" height="682" frameX="-214" frameY="-74" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="Samright0004" x="761" y="1419" width="457" height="682" frameX="-212" frameY="-74" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="Samright0003" x="761" y="2107" width="681" height="456" rotated="true" frameX="-213" frameY="-74" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="Samidle0005" x="1" y="2124" width="684" height="399" rotated="true" frameX="-154" frameY="-84" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="Samidle0004" x="1445" y="2108" width="683" height="399" rotated="true" frameX="-154" frameY="-85" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="Samidle0003" x="2158" y="1383" width="400" height="680" frameX="-155" frameY="-88" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="Samidle0006" x="2175" y="686" width="397" height="685" frameX="-155" frameY="-83" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="Samidle0007" x="1" y="2526" width="685" height="397" rotated="true" frameX="-155" frameY="-83" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="Samidle0002" x="2348" y="1" width="402" height="676" frameX="-157" frameY="-92" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="Samidle0001" x="2131" y="2108" width="406" height="669" frameX="-164" frameY="-99" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="Samdown0004" x="689" y="2566" width="600" height="425" rotated="true" frameX="-245" frameY="-160" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="Samdown0003" x="2540" y="2066" width="426" height="598" frameX="-244" frameY="-162" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="Samdown0002" x="2561" y="1374" width="426" height="593" frameX="-244" frameY="-167" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="Samdown0001" x="2575" y="680" width="429" height="581" frameX="-243" frameY="-179" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="Samdown0000" x="2753" y="1" width="442" height="540" frameX="-237" frameY="-220" frameWidth="800" frameHeight="800"/>
+</TextureAtlas>

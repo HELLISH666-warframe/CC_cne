@@ -1,0 +1,11 @@
+{
+	"displayName": "proficiency",
+	"color": "#FF0000",
+	"difficulties": [
+		"SIMPLE",
+		"HARD",
+		"INSANE"
+	],
+	"background": "alan",
+	"portrait": "proficiency"
+}

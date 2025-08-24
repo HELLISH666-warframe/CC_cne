@@ -1,0 +1,9 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="CC/extras/minus/minus_angry" icon="the-chosen-one" color="#fcae00" y="-110" camx="130" camy="410" holdTime="6.1">
+	<anim name="singLEFT" anim="minus_singLEFT" x="1603" y="455"/>
+	<anim name="idle" anim="minus_idle"/>
+	<anim name="singDOWN" anim="minus_singDOWN" x="2584" y="460"/>
+	<anim name="singUP" anim="minus_singUP" x="3003" y="723"/>
+	<anim name="singRIGHT" anim="minus_singRIGHT" x="1080" y="360"/>
+</character>

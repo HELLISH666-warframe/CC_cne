@@ -1,0 +1,11 @@
+<!DOCTYPE codename-engine-week>
+<week name="Episode 2: Musical Integrity" sprite="tutorial">
+	<song>morality</song>
+	<song>stick-em-up</song>
+	<song>artistry</song>
+	<song>proficiency</song>
+	<song>masterpiece</song>
+	<difficulty name="simple"/>
+	<difficulty name="hard"/>
+	<difficulty name="insane"/>
+</week>

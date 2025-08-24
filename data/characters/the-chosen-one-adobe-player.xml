@@ -1,0 +1,9 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="CC/the-chosen-one-adobe" icon="the-chosen-one-adobe" color="#141414" x="10" y="-90" camx="-130" camy="130" holdTime="6.1">
+	<anim name="singDOWN" anim="down" x="-24" y="-70"/>
+	<anim name="singUP" anim="up" x="-23" y="-66"/>
+	<anim name="idle" anim="idle" x="0" y="-70"/>
+	<anim name="singLEFT" anim="right" x="-36" y="-87"/>
+	<anim name="singRIGHT" anim="left" x="11" y="-101"/>
+</character>

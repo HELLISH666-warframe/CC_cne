@@ -1,0 +1,9 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="CC/old/Cursor" icon="alan" color="#ffffff" x="100" y="250">
+	<anim name="singLEFT" anim="Left" x="140" y="-100"/>
+	<anim name="singDOWN" anim="Down" x="-50" y="-120"/>
+	<anim name="singUP" anim="Up" x="-50" y="25"/>
+	<anim name="singRIGHT" anim="Right" x="-70" y="-100"/>
+	<anim name="idle" anim="Idle" loop="true" indices="6..13"/>
+</character>

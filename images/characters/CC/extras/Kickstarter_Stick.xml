@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Created with Funkin Packer v0.1.2 https://neeeoo.github.io/funkin-packer/
+-->
+<TextureAtlas imagePath="Kickstarter_Stick.png" width="2611" height="2607">
+	<SubTexture name="KickstarterStickidle0000" x="1753" y="1749" width="308" height="569" frameX="-234" frameY="-147" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="KickstarterStickleft0004" x="1" y="1" width="529" height="499" frameX="-130" frameY="-217" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="KickstarterStickleft0005" x="1" y="503" width="529" height="499" frameX="-130" frameY="-217" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="KickstarterStickleft0002" x="533" y="1" width="472" height="553" rotated="true" frameX="-106" frameY="-246" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="KickstarterStickleft0003" x="533" y="557" width="472" height="553" rotated="true" frameX="-106" frameY="-246" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="KickstarterStickleft0000" x="1008" y="1" width="438" height="566" rotated="true" frameX="-93" frameY="-278" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="KickstarterStickleft0001" x="1008" y="570" width="438" height="566" rotated="true" frameX="-93" frameY="-278" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="KickstarterStickup0004" x="1" y="1113" width="673" height="358" rotated="true" frameX="-222" frameY="-45" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="KickstarterStickup0005" x="1449" y="1" width="358" height="673" frameX="-222" frameY="-45" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="KickstarterStickup0002" x="1449" y="677" width="318" height="686" frameX="-242" frameY="-31" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="KickstarterStickup0003" x="677" y="1139" width="686" height="318" rotated="true" frameX="-242" frameY="-31" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="KickstarterStickright0002" x="677" y="1460" width="535" height="385" rotated="true" frameX="-250" frameY="-182" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="KickstarterStickright0003" x="1215" y="1460" width="535" height="385" rotated="true" frameX="-250" frameY="-182" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="KickstarterStickright0004" x="1770" y="677" width="397" height="518" frameX="-268" frameY="-199" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="KickstarterStickright0005" x="1810" y="1" width="397" height="518" frameX="-268" frameY="-199" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="KickstarterStickright0000" x="1" y="1474" width="548" height="369" rotated="true" frameX="-232" frameY="-169" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="KickstarterStickright0001" x="1770" y="1198" width="369" height="548" frameX="-232" frameY="-169" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="KickstarterStickup0000" x="1" y="1848" width="700" height="276" rotated="true" frameX="-263" frameY="-17" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="KickstarterStickup0001" x="704" y="1848" width="700" height="276" rotated="true" frameX="-263" frameY="-17" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="KickstarterStickidle0001" x="1407" y="1848" width="308" height="568" frameX="-234" frameY="-147" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="KickstarterStickidle0002" x="1" y="2127" width="588" height="289" rotated="true" frameX="-249" frameY="-128" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="KickstarterStickidle0003" x="592" y="2127" width="588" height="289" rotated="true" frameX="-249" frameY="-128" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="KickstarterStickidle0004" x="2064" y="1749" width="267" height="608" frameX="-266" frameY="-107" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="KickstarterStickidle0005" x="2170" y="522" width="267" height="608" frameX="-266" frameY="-107" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="KickstarterStickdown0004" x="1718" y="2360" width="625" height="187" frameX="-92" frameY="-532" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="KickstarterStickdown0005" x="1" y="2419" width="625" height="187" frameX="-92" frameY="-532" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="KickstarterStickdown0002" x="629" y="2419" width="649" height="177" frameX="-83" frameY="-541" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="KickstarterStickdown0003" x="2334" y="1133" width="177" height="649" rotated="true" frameX="-83" frameY="-541" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="KickstarterStickdown0000" x="2440" y="1" width="170" height="673" rotated="true" frameX="-75" frameY="-549" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="KickstarterStickdown0001" x="2346" y="1785" width="170" height="673" rotated="true" frameX="-75" frameY="-549" frameWidth="800" frameHeight="800"/>
+</TextureAtlas>

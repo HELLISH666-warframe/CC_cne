@@ -1,0 +1,9 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="CC/extras/Kickstarter_Stick" icon="kickstarter" color="#141414" holdTime="6.1">
+	<anim name="singLEFT" anim="KickstarterStickleft" x="44" y="-1"/>
+	<anim name="singDOWN" anim="KickstarterStickdown" x="0" y="1"/>
+	<anim name="singUP" anim="KickstarterStickup" x="-17" y="1"/>
+	<anim name="singRIGHT" anim="KickstarterStickright" x="-58" y="0"/>
+	<anim name="idle" anim="KickstarterStickidle" fps="20"/>
+</character>

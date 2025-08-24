@@ -1,0 +1,14 @@
+{
+	"displayName": "end-process",
+	"bpm": 170.0,
+	"icon": "the-dark-lord",
+	"difficulties": [
+		"SIMPLE",
+		"HARD",
+		"INSANE"
+	],
+	"color": "#FF0000",
+	"background": "end-process",
+	"portrait": "end-process",
+	"composer": "Joa"
+}

@@ -1,0 +1,9 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="CC/extras/aol" icon="aol" color="#ffcc00" x="-150" y="560" camx="-180" camy="-100" holdTime="6.1" scale="1.5">
+	<anim name="singLEFT" anim="AOL left" x="21.333333333333332" y="32"/>
+	<anim name="singDOWN" anim="AOL down" x="-72.66666666666667" y="8"/>
+	<anim name="singUP" anim="AOL up" x="-8" y="4"/>
+	<anim name="singRIGHT" anim="AOL right" x="-54" y="99.33333333333333"/>
+	<anim name="idle" anim="AOL idle" fps="12"/>
+</character>

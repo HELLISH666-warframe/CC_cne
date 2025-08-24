@@ -1,0 +1,9 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="CC/extras/carykh/cary" icon="carykh" color="#f9e02e" y="140" holdTime="6.1" scale="1.1">
+	<anim name="idle" anim="caryIDLE"/>
+	<anim name="singLEFT" anim="caryLEFT" x="201.8181818181818" y="-20"/>
+	<anim name="singDOWN" anim="caryDOWN" x="-49.090909090909086" y="-66.36363636363636"/>
+	<anim name="singUP" anim="caryUP" x="31.818181818181817" y="107.27272727272727"/>
+	<anim name="singRIGHT" anim="caryRIGHT" x="-25.454545454545453" y="-28.18181818181818"/>
+</character>

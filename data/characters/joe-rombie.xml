@@ -1,0 +1,9 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="CC/extras/rombie" icon="rombie" color="#689ea3" y="150" camx="180" camy="30" holdTime="6.1">
+	<anim name="idle" anim="rombie idle"/>
+	<anim name="singLEFT" anim="rombie left" x="202" y="23"/>
+	<anim name="singDOWN" anim="rombie down" x="-45" y="-43"/>
+	<anim name="singUP" anim="rombie up" x="132" y="93"/>
+	<anim name="singRIGHT" anim="rombie right" x="-80" y="-57"/>
+</character>

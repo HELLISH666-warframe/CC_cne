@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Twitter.png">
+	<!-- Created with Adobe Animate version 21.0.5.40714 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Twitter0000" x="25" y="25" width="468" height="209" frameX="0" frameY="0" frameWidth="468" frameHeight="218"/>
+	<SubTexture name="Twitter0001" x="518" y="25" width="468" height="209" frameX="0" frameY="0" frameWidth="468" frameHeight="218"/>
+	<SubTexture name="Twitter0002" x="25" y="259" width="468" height="214" frameX="0" frameY="0" frameWidth="468" frameHeight="218"/>
+	<SubTexture name="Twitter0003" x="518" y="259" width="468" height="218"/>
+</TextureAtlas>

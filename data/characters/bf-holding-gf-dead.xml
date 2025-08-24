@@ -1,0 +1,7 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="bfHoldingGF-DEAD" icon="bf" color="#31b0d1" y="350" flipX="true" scale="1.05">
+	<anim name="deathLoop" anim="BF Dead with GF Loop" x="35.238095238095234" y="-2.857142857142857" loop="true"/>
+	<anim name="firstDeath" anim="BF Dies with GF" x="35.238095238095234" y="13.333333333333332"/>
+	<anim name="deathConfirm" anim="RETRY confirm holding gf" x="35.238095238095234" y="26.666666666666664"/>
+</character>

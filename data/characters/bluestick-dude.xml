@@ -1,0 +1,9 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="CC/extras/bluestick_dude" icon="bbpanzu-ava2-stick" color="#369af0" x="80" y="50" camx="180" camy="480" holdTime="4.20000000000001">
+	<anim name="idle" anim="idle" x="0" y="-170" fps="16"/>
+	<anim name="singRIGHT" anim="right" x="0" y="-169" fps="40"/>
+	<anim name="singUP" anim="up" x="0" y="-166" fps="40"/>
+	<anim name="singDOWN" anim="down" x="-52" y="-174" fps="40"/>
+	<anim name="singLEFT" anim="left" x="-1" y="-171" fps="40"/>
+</character>

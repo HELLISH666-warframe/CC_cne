@@ -1,0 +1,13 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="CC/extras/avyt_green" icon="green" color="#31b0d1" y="360" flipX="true" camx="140" camy="-120" holdTime="6.1" scale="2.2">
+	<anim name="idle" anim="idle"/>
+	<anim name="singDOWN" anim="down0" x="23.18181818181818" y="-7.727272727272727"/>
+	<anim name="singUP" anim="up0" x="-10.909090909090908" y="45.45454545454545"/>
+	<anim name="singRIGHT" anim="right0" x="-3.6363636363636362" y="-10.454545454545453"/>
+	<anim name="singUPmiss" anim="up miss" x="36.36363636363636" y="36.36363636363636"/>
+	<anim name="singLEFT" anim="left0" x="63.63636363636363" y="-3.1818181818181817"/>
+	<anim name="singLEFTmiss" anim="left miss" x="70.45454545454545" y="-10.454545454545453"/>
+	<anim name="singRIGHTmiss" anim="right miss" x="-5.454545454545454" y="-18.18181818181818"/>
+	<anim name="singDOWNmiss" anim="down miss" x="23.18181818181818" y="-20.909090909090907"/>
+</character>

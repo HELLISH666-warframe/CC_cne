@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Fancy Pants.png">
+	<!-- Created with Adobe Animate version 21.0.9.42677 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="FancyPantsidle0000" x="0" y="0" width="800" height="800"/>
+	<SubTexture name="FancyPantsidle0001" x="800" y="0" width="800" height="800"/>
+	<SubTexture name="FancyPantsidle0002" x="1600" y="0" width="800" height="800"/>
+	<SubTexture name="FancyPantsidle0003" x="2400" y="0" width="800" height="800"/>
+	<SubTexture name="FancyPantsidle0004" x="3200" y="0" width="800" height="800"/>
+	<SubTexture name="FancyPantsidle0005" x="4000" y="0" width="800" height="800"/>
+	<SubTexture name="FancyPantsidle0006" x="4800" y="0" width="800" height="800"/>
+	<SubTexture name="FancyPantsidle0007" x="5600" y="0" width="800" height="800"/>
+	<SubTexture name="FancyPantsleft0000" x="6400" y="0" width="800" height="800"/>
+	<SubTexture name="FancyPantsleft0001" x="7200" y="0" width="800" height="800"/>
+	<SubTexture name="FancyPantsleft0002" x="0" y="800" width="800" height="800"/>
+	<SubTexture name="FancyPantsleft0003" x="800" y="800" width="800" height="800"/>
+	<SubTexture name="FancyPantsleft0004" x="1600" y="800" width="800" height="800"/>
+	<SubTexture name="FancyPantsleft0005" x="2400" y="800" width="800" height="800"/>
+	<SubTexture name="FancyPantsdown0000" x="3200" y="800" width="800" height="800"/>
+	<SubTexture name="FancyPantsdown0001" x="4000" y="800" width="800" height="800"/>
+	<SubTexture name="FancyPantsdown0002" x="4800" y="800" width="800" height="800"/>
+	<SubTexture name="FancyPantsdown0003" x="5600" y="800" width="800" height="800"/>
+	<SubTexture name="FancyPantsdown0004" x="6400" y="800" width="800" height="800"/>
+	<SubTexture name="FancyPantsdown0005" x="7200" y="800" width="800" height="800"/>
+	<SubTexture name="FancyPantsup0000" x="0" y="1600" width="800" height="800"/>
+	<SubTexture name="FancyPantsup0001" x="800" y="1600" width="800" height="800"/>
+	<SubTexture name="FancyPantsup0002" x="1600" y="1600" width="800" height="800"/>
+	<SubTexture name="FancyPantsup0003" x="2400" y="1600" width="800" height="800"/>
+	<SubTexture name="FancyPantsup0004" x="3200" y="1600" width="800" height="800"/>
+	<SubTexture name="FancyPantsup0005" x="4000" y="1600" width="800" height="800"/>
+	<SubTexture name="FancyPantsright0000" x="4800" y="1600" width="800" height="800"/>
+	<SubTexture name="FancyPantsright0001" x="5600" y="1600" width="800" height="800"/>
+	<SubTexture name="FancyPantsright0002" x="6400" y="1600" width="800" height="800"/>
+	<SubTexture name="FancyPantsright0003" x="7200" y="1600" width="800" height="800"/>
+	<SubTexture name="FancyPantsright0004" x="0" y="2400" width="800" height="800"/>
+	<SubTexture name="FancyPantsright0005" x="800" y="2400" width="800" height="800"/>
+	<SubTexture name="FancyPantscheer0000" x="1600" y="2400" width="800" height="800"/>
+	<SubTexture name="FancyPantscheer0001" x="2400" y="2400" width="800" height="800"/>
+	<SubTexture name="FancyPantscheer0002" x="3200" y="2400" width="800" height="800"/>
+	<SubTexture name="FancyPantscheer0003" x="4000" y="2400" width="800" height="800"/>
+	<SubTexture name="FancyPantscheer0004" x="4800" y="2400" width="800" height="800"/>
+	<SubTexture name="FancyPantscheer0005" x="5600" y="2400" width="800" height="800"/>
+	<SubTexture name="FancyPantscheer0006" x="6400" y="2400" width="800" height="800"/>
+	<SubTexture name="FancyPantscheer0007" x="7200" y="2400" width="800" height="800"/>
+	<SubTexture name="FancyPantsow0000" x="0" y="3200" width="800" height="800"/>
+	<SubTexture name="FancyPantsow0001" x="800" y="3200" width="800" height="800"/>
+	<SubTexture name="FancyPantsow0002" x="1600" y="3200" width="800" height="800"/>
+	<SubTexture name="FancyPantsow0003" x="2400" y="3200" width="800" height="800"/>
+	<SubTexture name="FancyPantsow0004" x="3200" y="3200" width="800" height="800"/>
+	<SubTexture name="FancyPantsow0005" x="4000" y="3200" width="800" height="800"/>
+	<SubTexture name="FancyPantsow0006" x="4800" y="3200" width="800" height="800"/>
+	<SubTexture name="FancyPantsow0007" x="5600" y="3200" width="800" height="800"/>
+	<SubTexture name="FancyPantsow0008" x="6400" y="3200" width="800" height="800"/>
+	<SubTexture name="FancyPantsow0009" x="7200" y="3200" width="800" height="800"/>
+</TextureAtlas>

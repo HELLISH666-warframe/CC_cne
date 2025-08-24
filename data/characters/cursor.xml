@@ -1,0 +1,9 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="CC/mouse" icon="alan" color="#ffffff" x="10" y="140" camx="-20" camy="110" scale="0.5">
+	<anim name="singLEFT" anim="left" x="280" y="60"/>
+	<anim name="singDOWN" anim="down" x="-2" y="-30"/>
+	<anim name="singUP" anim="up" x="40" y="212"/>
+	<anim name="singRIGHT" anim="right" x="-38" y="68"/>
+	<anim name="idle" anim="idle"/>
+</character>

@@ -1,0 +1,16 @@
+<!DOCTYPE codename-engine-stage>
+<stage zoom="0.5" folder="stages/">
+    <sprite name="alanBG" x="-80" y="-1800" sprite="trojan/alan_desktop" scroll="1" scale="2" />
+    <sprite name="adobeWindow" x="-80" y="-1800" sprite="trojan/XD" scroll="1"/>
+    <sprite name="sFWindow" x="-80" y="-1800" sprite="trojan/stickFightwindow" scroll="1"/>
+     <sprite name="daFloor" x="-80" y="-1800" sprite="trojan/floor" scroll="1"/>
+    <sprite name="tscseeing" x="0" y="0" sprite="trojan/secbop" scroll="1" type="loop"/>
+         <anim name="secbop" anim="secbop " loop="true"/>
+     <sprite name="radialLine" x="0" y="0" sprite="extras/radial line" scroll="1" type="loop"/>
+         <anim name="anime_lines" anim="anime_lines" loop="true"/>
+     <sprite name="redthing" x="0" y="0" sprite="stages/victim/vignette"/>
+    <sprite name="islands" x="230" y="620" sprite="hellStreet/bloodshed_streetBroken" scroll="1" scale="2" />
+    <girlfriend x="2000" y="109"/>
+    <player x="2320" y="50"/>
+	<opponent x="1100" y="50"/>
+</stage>

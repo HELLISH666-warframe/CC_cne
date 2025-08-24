@@ -1,0 +1,13 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="CC/old/TCO_Assets" icon="tco" color="#eb8e00" camx="-130" camy="130" holdTime="6.1">
+	<anim name="idle" anim="TCO Idle" x="40" y="-66" loop="true"/>
+	<anim name="singDOWN" anim="TCO Down" x="142" y="-150"/>
+	<anim name="singDOWN-loop" anim="TCO Down" x="142" y="-150" loop="true"/>
+	<anim name="singLEFT-loop" anim="TCO Left" x="138" y="-120" loop="true"/>
+	<anim name="singLEFT" anim="TCO Left" x="138" y="-120"/>
+	<anim name="singRIGHT" anim="TCO Right" x="92" y="-112"/>
+	<anim name="singRIGHT-loop" anim="TCO Right" x="92" y="-112" loop="true"/>
+	<anim name="singUP" anim="TCO Up" x="89" y="-30"/>
+	<anim name="singUP-loop" anim="TCO Up" x="89" y="-30" loop="true"/>
+</character>

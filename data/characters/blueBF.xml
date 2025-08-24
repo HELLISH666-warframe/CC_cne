@@ -1,0 +1,15 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="CC/extras/minus/blueBF" icon="bf" color="#31b0d1" y="350" flipX="true">
+	<anim name="idle" anim="BF idle dance"/>
+	<anim name="singLEFT" anim="BF NOTE LEFT0" x="18" y="-2"/>
+	<anim name="singDOWN" anim="BF NOTE DOWN0" x="-11" y="-65"/>
+	<anim name="singUP" anim="BF NOTE UP0" x="3" y="29"/>
+	<anim name="singRIGHT" anim="BF NOTE RIGHT0" x="-17" y="-9"/>
+	<anim name="singLEFTmiss" anim="BF NOTE LEFT MISS" x="18" y="-3"/>
+	<anim name="singDOWNmiss" anim="BF NOTE DOWN MISS" x="-5" y="-70"/>
+	<anim name="singUPmiss" anim="BF NOTE UP MISS" x="-2" y="28"/>
+	<anim name="singRIGHTmiss" anim="BF NOTE RIGHT MISS" x="-17" y="-14"/>
+	<anim name="hey" anim="BF HEY" x="14" y="52"/>
+	<anim name="scared" anim="BF idle shaking" x="-8" y="0" loop="true"/>
+</character>

@@ -1,0 +1,9 @@
+<!DOCTYPE codename-engine-week>
+<week name="Episode 1: Computer Breakdown" sprite="tutorial">
+	<song>adobe</song>
+	<song>outrage</song>
+	<song>end-process</song>
+	<difficulty name="simple"/>
+	<difficulty name="hard"/>
+	<difficulty name="insane"/>
+</week>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Created with Funkin Packer v0.1.2 https://neeeoo.github.io/funkin-packer/
+-->
+<TextureAtlas imagePath="cary.png" width="2274" height="2180">
+	<SubTexture name="caryDOWN0000" x="651" y="1622" width="224" height="465" frameX="-10" frameY="-21" frameWidth="234" frameHeight="486"/>
+	<SubTexture name="caryLEFT0002" x="1" y="1" width="559" height="526" frameX="-11" frameY="-0" frameWidth="575" frameHeight="526"/>
+	<SubTexture name="caryLEFT0005" x="1" y="530" width="563" height="522" frameX="-12" frameY="-4" frameWidth="575" frameHeight="526"/>
+	<SubTexture name="caryLEFT0000" x="567" y="1" width="523" height="559" rotated="true" frameX="-0" frameY="-3" frameWidth="575" frameHeight="526"/>
+	<SubTexture name="caryUP0000" x="1" y="1055" width="655" height="300" rotated="true" frameX="-0" frameY="-0" frameWidth="301" frameHeight="655"/>
+	<SubTexture name="caryRIGHT0000" x="659" y="563" width="355" height="528" frameX="-3" frameY="-0" frameWidth="358" frameHeight="528"/>
+	<SubTexture name="caryRIGHT0001" x="1017" y="563" width="355" height="528" frameX="-3" frameY="-0" frameWidth="358" frameHeight="528"/>
+	<SubTexture name="caryRIGHT0002" x="1093" y="1" width="346" height="525" frameX="-0" frameY="-3" frameWidth="358" frameHeight="528"/>
+	<SubTexture name="caryRIGHT0003" x="659" y="1094" width="346" height="525" frameX="-0" frameY="-3" frameWidth="358" frameHeight="528"/>
+	<SubTexture name="caryRIGHT0004" x="1" y="1358" width="525" height="346" rotated="true" frameX="-0" frameY="-3" frameWidth="358" frameHeight="528"/>
+	<SubTexture name="caryRIGHT0005" x="1008" y="1094" width="336" height="523" frameX="-0" frameY="-5" frameWidth="358" frameHeight="528"/>
+	<SubTexture name="caryRIGHT0006" x="1347" y="1094" width="335" height="523" frameX="-0" frameY="-5" frameWidth="358" frameHeight="528"/>
+	<SubTexture name="caryRIGHT0007" x="1375" y="529" width="335" height="523" frameX="-0" frameY="-5" frameWidth="358" frameHeight="528"/>
+	<SubTexture name="caryRIGHT0008" x="1442" y="1" width="335" height="523" frameX="-0" frameY="-5" frameWidth="358" frameHeight="528"/>
+	<SubTexture name="caryRIGHT0009" x="1008" y="1620" width="523" height="335" rotated="true" frameX="-0" frameY="-5" frameWidth="358" frameHeight="528"/>
+	<SubTexture name="caryUP0002" x="1" y="1707" width="647" height="256" rotated="true" frameX="-9" frameY="-5" frameWidth="301" frameHeight="655"/>
+	<SubTexture name="caryUP0005" x="1685" y="1055" width="247" height="646" frameX="-11" frameY="-7" frameWidth="301" frameHeight="655"/>
+	<SubTexture name="caryIDLE0004" x="1780" y="1" width="249" height="546" frameX="-4" frameY="-1" frameWidth="254" frameHeight="548"/>
+	<SubTexture name="caryIDLE0006" x="1534" y="1704" width="546" height="245" rotated="true" frameX="-0" frameY="-0" frameWidth="254" frameHeight="548"/>
+	<SubTexture name="caryIDLE0002" x="1713" y="550" width="542" height="243" rotated="true" frameX="-11" frameY="-5" frameWidth="254" frameHeight="548"/>
+	<SubTexture name="caryIDLE0008" x="2032" y="1" width="241" height="546" frameX="-0" frameY="-0" frameWidth="254" frameHeight="548"/>
+	<SubTexture name="caryIDLE0010" x="1713" y="796" width="546" height="240" rotated="true" frameX="-0" frameY="-0" frameWidth="254" frameHeight="548"/>
+	<SubTexture name="caryIDLE0000" x="1935" y="1039" width="231" height="540" frameX="-16" frameY="-7" frameWidth="254" frameHeight="548"/>
+	<SubTexture name="caryDOWN0005" x="1" y="1966" width="486" height="213" rotated="true" frameX="-0" frameY="-0" frameWidth="234" frameHeight="486"/>
+	<SubTexture name="caryDOWN0002" x="1534" y="1952" width="484" height="213" rotated="true" frameX="-4" frameY="-2" frameWidth="234" frameHeight="486"/>
+	<SubTexture name="caryDOWN0001" x="651" y="1622" width="224" height="465" frameX="-10" frameY="-21" frameWidth="234" frameHeight="486"/>
+	<SubTexture name="caryDOWN0003" x="1534" y="1952" width="484" height="213" rotated="true" frameX="-4" frameY="-2" frameWidth="234" frameHeight="486"/>
+	<SubTexture name="caryDOWN0004" x="1534" y="1952" width="484" height="213" rotated="true" frameX="-4" frameY="-2" frameWidth="234" frameHeight="486"/>
+	<SubTexture name="caryDOWN0006" x="1" y="1966" width="486" height="213" rotated="true" frameX="-0" frameY="-0" frameWidth="234" frameHeight="486"/>
+	<SubTexture name="caryDOWN0007" x="1" y="1966" width="486" height="213" rotated="true" frameX="-0" frameY="-0" frameWidth="234" frameHeight="486"/>
+	<SubTexture name="caryDOWN0008" x="1" y="1966" width="486" height="213" rotated="true" frameX="-0" frameY="-0" frameWidth="234" frameHeight="486"/>
+	<SubTexture name="caryDOWN0009" x="1" y="1966" width="486" height="213" rotated="true" frameX="-0" frameY="-0" frameWidth="234" frameHeight="486"/>
+	<SubTexture name="caryIDLE0001" x="1935" y="1039" width="231" height="540" frameX="-16" frameY="-7" frameWidth="254" frameHeight="548"/>
+	<SubTexture name="caryIDLE0003" x="1713" y="550" width="542" height="243" rotated="true" frameX="-11" frameY="-5" frameWidth="254" frameHeight="548"/>
+	<SubTexture name="caryIDLE0005" x="1780" y="1" width="249" height="546" frameX="-4" frameY="-1" frameWidth="254" frameHeight="548"/>
+	<SubTexture name="caryIDLE0007" x="1534" y="1704" width="546" height="245" rotated="true" frameX="-0" frameY="-0" frameWidth="254" frameHeight="548"/>
+	<SubTexture name="caryIDLE0009" x="2032" y="1" width="241" height="546" frameX="-0" frameY="-0" frameWidth="254" frameHeight="548"/>
+	<SubTexture name="caryIDLE0011" x="1713" y="796" width="546" height="240" rotated="true" frameX="-0" frameY="-0" frameWidth="254" frameHeight="548"/>
+	<SubTexture name="caryLEFT0001" x="567" y="1" width="523" height="559" rotated="true" frameX="-0" frameY="-3" frameWidth="575" frameHeight="526"/>
+	<SubTexture name="caryLEFT0003" x="1" y="1" width="559" height="526" frameX="-11" frameY="-0" frameWidth="575" frameHeight="526"/>
+	<SubTexture name="caryLEFT0004" x="1" y="1" width="559" height="526" frameX="-11" frameY="-0" frameWidth="575" frameHeight="526"/>
+	<SubTexture name="caryLEFT0006" x="1" y="530" width="563" height="522" frameX="-12" frameY="-4" frameWidth="575" frameHeight="526"/>
+	<SubTexture name="caryLEFT0007" x="1" y="530" width="563" height="522" frameX="-12" frameY="-4" frameWidth="575" frameHeight="526"/>
+	<SubTexture name="caryLEFT0008" x="1" y="530" width="563" height="522" frameX="-12" frameY="-4" frameWidth="575" frameHeight="526"/>
+	<SubTexture name="caryLEFT0009" x="1" y="530" width="563" height="522" frameX="-12" frameY="-4" frameWidth="575" frameHeight="526"/>
+	<SubTexture name="caryUP0001" x="1" y="1055" width="655" height="300" rotated="true" frameX="-0" frameY="-0" frameWidth="301" frameHeight="655"/>
+	<SubTexture name="caryUP0003" x="1" y="1707" width="647" height="256" rotated="true" frameX="-9" frameY="-5" frameWidth="301" frameHeight="655"/>
+	<SubTexture name="caryUP0004" x="1" y="1707" width="647" height="256" rotated="true" frameX="-9" frameY="-5" frameWidth="301" frameHeight="655"/>
+	<SubTexture name="caryUP0006" x="1685" y="1055" width="247" height="646" frameX="-11" frameY="-7" frameWidth="301" frameHeight="655"/>
+	<SubTexture name="caryUP0007" x="1685" y="1055" width="247" height="646" frameX="-11" frameY="-7" frameWidth="301" frameHeight="655"/>
+	<SubTexture name="caryUP0008" x="1685" y="1055" width="247" height="646" frameX="-11" frameY="-7" frameWidth="301" frameHeight="655"/>
+	<SubTexture name="caryUP0009" x="1685" y="1055" width="247" height="646" frameX="-11" frameY="-7" frameWidth="301" frameHeight="655"/>
+</TextureAtlas>

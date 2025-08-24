@@ -1,0 +1,315 @@
+{
+	"song": {
+		"speed": 3,
+		"composer": "",
+		"stage": "base",
+		"player1": "animator-bf",
+		"player2": "red",
+		"player3": null,
+		"events": [
+			[
+				0,
+				[
+					[
+						"Add Camera Zoom",
+						"0.015",
+						""
+					]
+				]
+			],
+			[
+				923.076923076923,
+				[
+					[
+						"Add Camera Zoom",
+						"0.015",
+						""
+					]
+				]
+			],
+			[
+				1230.76923076923,
+				[
+					[
+						"Add Camera Zoom",
+						"0.015",
+						""
+					]
+				]
+			],
+			[
+				2461.53846153846,
+				[
+					[
+						"Add Camera Zoom",
+						"0.015",
+						""
+					]
+				]
+			],
+			[
+				3230.76923076923,
+				[
+					[
+						"Add Camera Zoom",
+						"0.015",
+						""
+					]
+				]
+			],
+			[
+				3692.30769230769,
+				[
+					[
+						"Add Camera Zoom",
+						"0.015",
+						""
+					]
+				]
+			],
+			[
+				4307.69230769231,
+				[
+					[
+						"Add Camera Zoom",
+						"0.015",
+						""
+					]
+				]
+			],
+			[
+				4923.07692307692,
+				[
+					[
+						"zoomBeatType2",
+						"",
+						""
+					]
+				]
+			],
+			[
+				19692.3076923077,
+				[
+					[
+						"Flash Camera WHITE",
+						"",
+						"1"
+					],
+					[
+						"zoomBeatType2 Cancel",
+						"",
+						""
+					],
+					[
+						"zoomBeatType1",
+						"",
+						""
+					]
+				]
+			],
+			[
+				38230.7692307692,
+				[
+					[
+						"zoomBeatType1 Cancel",
+						"",
+						""
+					]
+				]
+			],
+			[
+				39384.6153846154,
+				[
+					[
+						"zoomBeatType2",
+						"",
+						""
+					]
+				]
+			],
+			[
+				48000,
+				[
+					[
+						"zoomBeatType2 Cancel",
+						"",
+						""
+					]
+				]
+			],
+			[
+				49230.7692307693,
+				[
+					[
+						"Flash Camera WHITE",
+						"",
+						"1"
+					],
+					[
+						"zoomBeatType2",
+						"",
+						""
+					]
+				]
+			],
+			[
+				59076.9230769231,
+				[
+					[
+						"Flash Camera WHITE",
+						"",
+						"1"
+					]
+				]
+			],
+			[
+				68923.076923077,
+				[
+					[
+						"Flash Camera WHITE",
+						"",
+						"1"
+					],
+					[
+						"zoomBeatType1",
+						"",
+						""
+					],
+					[
+						"zoomBeatType2 Cancel",
+						"",
+						""
+					]
+				]
+			],
+			[
+				88615.3846153848,
+				[
+					[
+						"zoomBeatType1 Cancel",
+						"",
+						""
+					]
+				]
+			],
+			[
+				98461.5384615386,
+				[
+					[
+						"Flash Camera WHITE",
+						"",
+						"1.5"
+					],
+					[
+						"zoomBeatType1",
+						"",
+						""
+					]
+				]
+			],
+			[
+				118153.846153846,
+				[
+					[
+						"Flash Camera BLACK",
+						"",
+						"1"
+					],
+					[
+						"zoomBeatType1 Cancel",
+						"",
+						""
+					]
+				]
+			],
+			[
+				123076.923076923,
+				[
+					[
+						"Flash Camera WHITE",
+						"",
+						"1"
+					],
+					[
+						"zoomBeatType1",
+						"",
+						""
+					]
+				]
+			],
+			[
+				131769.230769231,
+				[
+					[
+						"zoomBeatType1 Cancel",
+						"",
+						""
+					]
+				]
+			],
+			[
+				132923.076923077,
+				[
+					[
+						"zoomBeatType2",
+						"",
+						""
+					]
+				]
+			],
+			[
+				141538.461538462,
+				[
+					[
+						"zoomBeatType2 Cancel",
+						"",
+						""
+					]
+				]
+			],
+			[
+				142769.230769231,
+				[
+					[
+						"Flash Camera WHITE",
+						"",
+						"1"
+					],
+					[
+						"zoomBeatType2",
+						"",
+						""
+					]
+				]
+			],
+			[
+				152615.384615385,
+				[
+					[
+						"Flash Camera WHITE",
+						"",
+						"1"
+					]
+				]
+			],
+			[
+				162455.128205128,
+				[
+					[
+						"zoomBeatType2 Cancel",
+						"",
+						""
+					]
+				]
+			]
+		],
+		"notes": [],
+		"splashSkin": null,
+		"validScore": false,
+		"gfVersion": "couch_tsc",
+		"bpm": 195,
+		"arrowSkin": null,
+		"needsVoices": true,
+		"song": "Proficiency"
+	}
+}

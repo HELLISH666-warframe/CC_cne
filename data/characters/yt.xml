@@ -1,0 +1,9 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="CC/extras/youtube" icon="youtube" color="#b52e38" x="-490" y="-420" camx="724" camy="742" holdTime="6.1">
+	<anim name="idle" anim="yt idle" x="2201" y="-318"/>
+	<anim name="singUP" anim="yt up" x="-232" y="-168"/>
+	<anim name="singDOWN" anim="yt down" x="2323" y="-218"/>
+	<anim name="singLEFT" anim="yt left" x="-726" y="-1235"/>
+	<anim name="singRIGHT" anim="yt right" x="-114" y="-132"/>
+</character>

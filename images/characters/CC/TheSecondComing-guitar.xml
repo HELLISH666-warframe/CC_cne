@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Created with Funkin Packer v0.1.3 https://neeeoo.github.io/funkin-packer/
+-->
+<TextureAtlas imagePath="TheSecondComing-guitar.png" width="2836" height="2821">
+	<SubTexture name="tsc guitar down0000" x="2515" y="351" width="316" height="343" frameX="-71" frameY="-0" frameWidth="387" frameHeight="351"/>
+	<SubTexture name="tsc guitar down0001" x="2515" y="351" width="316" height="343" frameX="-71" frameY="-0" frameWidth="387" frameHeight="351"/>
+	<SubTexture name="tsc guitar down0002" x="1479" y="1071" width="315" height="334" frameX="-18" frameY="-15" frameWidth="387" frameHeight="351"/>
+	<SubTexture name="tsc guitar down0003" x="408" y="780" width="326" height="316" frameX="-1" frameY="-33" frameWidth="387" frameHeight="351"/>
+	<SubTexture name="tsc guitar down0004" x="408" y="780" width="326" height="316" frameX="-1" frameY="-33" frameWidth="387" frameHeight="351"/>
+	<SubTexture name="tsc guitar down0005" x="408" y="780" width="326" height="316" frameX="-1" frameY="-33" frameWidth="387" frameHeight="351"/>
+	<SubTexture name="tsc guitar down0006" x="2515" y="2121" width="319" height="326" frameX="-0" frameY="-24" frameWidth="387" frameHeight="351"/>
+	<SubTexture name="tsc guitar down0007" x="2513" y="697" width="321" height="335" frameX="-1" frameY="-15" frameWidth="387" frameHeight="351"/>
+	<SubTexture name="tsc guitar down0008" x="2513" y="697" width="321" height="335" frameX="-1" frameY="-15" frameWidth="387" frameHeight="351"/>
+	<SubTexture name="tsc guitar down0009" x="2515" y="1780" width="320" height="338" frameX="-1" frameY="-12" frameWidth="387" frameHeight="351"/>
+	<SubTexture name="tsc guitar down0010" x="2515" y="1780" width="320" height="338" frameX="-1" frameY="-12" frameWidth="387" frameHeight="351"/>
+	<SubTexture name="tsc guitar down0011" x="2515" y="1435" width="320" height="342" frameX="-4" frameY="-8" frameWidth="387" frameHeight="351"/>
+	<SubTexture name="tsc guitar down0012" x="2515" y="1435" width="320" height="342" frameX="-4" frameY="-8" frameWidth="387" frameHeight="351"/>
+	<SubTexture name="tsc guitar down0013" x="2515" y="1" width="320" height="347" frameX="-6" frameY="-2" frameWidth="387" frameHeight="351"/>
+	<SubTexture name="tsc guitar down0014" x="2515" y="1" width="320" height="347" frameX="-6" frameY="-2" frameWidth="387" frameHeight="351"/>
+	<SubTexture name="tsc guitar end0000" x="1407" y="2503" width="346" height="286" frameX="-9" frameY="-59" frameWidth="398" frameHeight="345"/>
+	<SubTexture name="tsc guitar end0001" x="739" y="1456" width="361" height="301" frameX="-0" frameY="-44" frameWidth="398" frameHeight="345"/>
+	<SubTexture name="tsc guitar end0002" x="1129" y="371" width="313" height="366" rotated="true" frameX="-5" frameY="-32" frameWidth="398" frameHeight="345"/>
+	<SubTexture name="tsc guitar end0003" x="372" y="1101" width="367" height="322" frameX="-8" frameY="-23" frameWidth="398" frameHeight="345"/>
+	<SubTexture name="tsc guitar end0004" x="1" y="1101" width="368" height="328" frameX="-11" frameY="-17" frameWidth="398" frameHeight="345"/>
+	<SubTexture name="tsc guitar end0005" x="742" y="782" width="367" height="338" frameX="-13" frameY="-7" frameWidth="398" frameHeight="345"/>
+	<SubTexture name="tsc guitar end0006" x="367" y="1773" width="362" height="342" frameX="-19" frameY="-3" frameWidth="398" frameHeight="345"/>
+	<SubTexture name="tsc guitar end0007" x="367" y="1773" width="362" height="342" frameX="-19" frameY="-3" frameWidth="398" frameHeight="345"/>
+	<SubTexture name="tsc guitar end0008" x="2155" y="1789" width="357" height="340" frameX="-24" frameY="-5" frameWidth="398" frameHeight="345"/>
+	<SubTexture name="tsc guitar end0009" x="2143" y="1087" width="358" height="338" frameX="-28" frameY="-5" frameWidth="398" frameHeight="345"/>
+	<SubTexture name="tsc guitar end0010" x="2143" y="1428" width="337" height="358" rotated="true" frameX="-30" frameY="-6" frameWidth="398" frameHeight="345"/>
+	<SubTexture name="tsc guitar end0011" x="1435" y="1459" width="359" height="335" frameX="-30" frameY="-8" frameWidth="398" frameHeight="345"/>
+	<SubTexture name="tsc guitar end0012" x="1435" y="1459" width="359" height="335" frameX="-30" frameY="-8" frameWidth="398" frameHeight="345"/>
+	<SubTexture name="tsc guitar end0013" x="729" y="2123" width="358" height="337" frameX="-32" frameY="-6" frameWidth="398" frameHeight="345"/>
+	<SubTexture name="tsc guitar end0014" x="729" y="2123" width="358" height="337" frameX="-32" frameY="-6" frameWidth="398" frameHeight="345"/>
+	<SubTexture name="tsc guitar end0015" x="739" y="1760" width="339" height="360" rotated="true" frameX="-32" frameY="-4" frameWidth="398" frameHeight="345"/>
+	<SubTexture name="tsc guitar end0016" x="739" y="1760" width="339" height="360" rotated="true" frameX="-32" frameY="-4" frameWidth="398" frameHeight="345"/>
+	<SubTexture name="tsc guitar end0017" x="1812" y="1" width="342" height="359" rotated="true" frameX="-36" frameY="-1" frameWidth="398" frameHeight="345"/>
+	<SubTexture name="tsc guitar end0018" x="1812" y="1" width="342" height="359" rotated="true" frameX="-36" frameY="-1" frameWidth="398" frameHeight="345"/>
+	<SubTexture name="tsc guitar end0019" x="1812" y="1" width="342" height="359" rotated="true" frameX="-36" frameY="-1" frameWidth="398" frameHeight="345"/>
+	<SubTexture name="tsc guitar end0020" x="1797" y="1071" width="343" height="359" rotated="true" frameX="-39" frameY="-0" frameWidth="398" frameHeight="345"/>
+	<SubTexture name="tsc guitar end0021" x="1797" y="1071" width="343" height="359" rotated="true" frameX="-39" frameY="-0" frameWidth="398" frameHeight="345"/>
+	<SubTexture name="tsc guitar end0022" x="1797" y="1071" width="343" height="359" rotated="true" frameX="-39" frameY="-0" frameWidth="398" frameHeight="345"/>
+	<SubTexture name="tsc guitar end0023" x="1797" y="1433" width="343" height="359" rotated="true" frameX="-39" frameY="-0" frameWidth="398" frameHeight="345"/>
+	<SubTexture name="tsc guitar end0024" x="1797" y="1433" width="343" height="359" rotated="true" frameX="-39" frameY="-0" frameWidth="398" frameHeight="345"/>
+	<SubTexture name="tsc guitar end0025" x="1797" y="1433" width="343" height="359" rotated="true" frameX="-39" frameY="-0" frameWidth="398" frameHeight="345"/>
+	<SubTexture name="tsc guitar end0026" x="1797" y="1433" width="343" height="359" rotated="true" frameX="-39" frameY="-0" frameWidth="398" frameHeight="345"/>
+	<SubTexture name="tsc guitar end0027" x="1797" y="1433" width="343" height="359" rotated="true" frameX="-39" frameY="-0" frameWidth="398" frameHeight="345"/>
+	<SubTexture name="tsc guitar end0028" x="1797" y="1433" width="343" height="359" rotated="true" frameX="-39" frameY="-0" frameWidth="398" frameHeight="345"/>
+	<SubTexture name="tsc guitar end0029" x="1797" y="1433" width="343" height="359" rotated="true" frameX="-39" frameY="-0" frameWidth="398" frameHeight="345"/>
+	<SubTexture name="tsc guitar end0030" x="1797" y="1433" width="343" height="359" rotated="true" frameX="-39" frameY="-0" frameWidth="398" frameHeight="345"/>
+	<SubTexture name="tsc guitar end0031" x="1797" y="1433" width="343" height="359" rotated="true" frameX="-39" frameY="-0" frameWidth="398" frameHeight="345"/>
+	<SubTexture name="tsc guitar end0032" x="1797" y="1433" width="343" height="359" rotated="true" frameX="-39" frameY="-0" frameWidth="398" frameHeight="345"/>
+	<SubTexture name="tsc guitar end0033" x="1797" y="1433" width="343" height="359" rotated="true" frameX="-39" frameY="-0" frameWidth="398" frameHeight="345"/>
+	<SubTexture name="tsc guitar end0034" x="1797" y="1433" width="343" height="359" rotated="true" frameX="-39" frameY="-0" frameWidth="398" frameHeight="345"/>
+	<SubTexture name="tsc guitar end0035" x="1797" y="1433" width="343" height="359" rotated="true" frameX="-39" frameY="-0" frameWidth="398" frameHeight="345"/>
+	<SubTexture name="tsc guitar end0036" x="1797" y="1433" width="343" height="359" rotated="true" frameX="-39" frameY="-0" frameWidth="398" frameHeight="345"/>
+	<SubTexture name="tsc guitar end0037" x="1797" y="1433" width="343" height="359" rotated="true" frameX="-39" frameY="-0" frameWidth="398" frameHeight="345"/>
+	<SubTexture name="tsc guitar end0038" x="1797" y="1433" width="343" height="359" rotated="true" frameX="-39" frameY="-0" frameWidth="398" frameHeight="345"/>
+	<SubTexture name="tsc guitar end0039" x="1797" y="1433" width="343" height="359" rotated="true" frameX="-39" frameY="-0" frameWidth="398" frameHeight="345"/>
+	<SubTexture name="tsc guitar end0040" x="1797" y="1433" width="343" height="359" rotated="true" frameX="-39" frameY="-0" frameWidth="398" frameHeight="345"/>
+	<SubTexture name="tsc guitar end0041" x="1797" y="1433" width="343" height="359" rotated="true" frameX="-39" frameY="-0" frameWidth="398" frameHeight="345"/>
+	<SubTexture name="tsc guitar end0042" x="1797" y="1433" width="343" height="359" rotated="true" frameX="-39" frameY="-0" frameWidth="398" frameHeight="345"/>
+	<SubTexture name="tsc guitar end0043" x="1797" y="1433" width="343" height="359" rotated="true" frameX="-39" frameY="-0" frameWidth="398" frameHeight="345"/>
+	<SubTexture name="tsc guitar left0000" x="2504" y="1087" width="324" height="345" rotated="true" frameX="-23" frameY="-44" frameWidth="370" frameHeight="377"/>
+	<SubTexture name="tsc guitar left0001" x="2115" y="2480" width="349" height="329" frameX="-21" frameY="-41" frameWidth="370" frameHeight="377"/>
+	<SubTexture name="tsc guitar left0002" x="1059" y="2463" width="345" height="351" rotated="true" frameX="-16" frameY="-26" frameWidth="370" frameHeight="377"/>
+	<SubTexture name="tsc guitar left0003" x="1081" y="1760" width="351" height="360" frameX="-13" frameY="-8" frameWidth="370" frameHeight="377"/>
+	<SubTexture name="tsc guitar left0004" x="1129" y="1" width="347" height="367" frameX="-10" frameY="-3" frameWidth="370" frameHeight="377"/>
+	<SubTexture name="tsc guitar left0005" x="1112" y="1109" width="364" height="347" rotated="true" frameX="-14" frameY="-8" frameWidth="370" frameHeight="377"/>
+	<SubTexture name="tsc guitar left0006" x="1112" y="1109" width="364" height="347" rotated="true" frameX="-14" frameY="-8" frameWidth="370" frameHeight="377"/>
+	<SubTexture name="tsc guitar left0007" x="766" y="407" width="348" height="372" frameX="-16" frameY="-5" frameWidth="370" frameHeight="377"/>
+	<SubTexture name="tsc guitar left0008" x="766" y="407" width="348" height="372" frameX="-16" frameY="-5" frameWidth="370" frameHeight="377"/>
+	<SubTexture name="tsc guitar left0009" x="408" y="408" width="347" height="369" frameX="-15" frameY="-1" frameWidth="370" frameHeight="377"/>
+	<SubTexture name="tsc guitar left0010" x="408" y="408" width="347" height="369" frameX="-15" frameY="-1" frameWidth="370" frameHeight="377"/>
+	<SubTexture name="tsc guitar left0011" x="1" y="1773" width="363" height="347" rotated="true" frameX="-10" frameY="-2" frameWidth="370" frameHeight="377"/>
+	<SubTexture name="tsc guitar left0012" x="1" y="2123" width="359" height="349" rotated="true" frameX="-13" frameY="-6" frameWidth="370" frameHeight="377"/>
+	<SubTexture name="tsc guitar left0013" x="1407" y="2155" width="351" height="345" frameX="-18" frameY="-18" frameWidth="370" frameHeight="377"/>
+	<SubTexture name="tsc guitar left0014" x="1407" y="2155" width="351" height="345" frameX="-18" frameY="-18" frameWidth="370" frameHeight="377"/>
+	<SubTexture name="tsc guitar left0015" x="1761" y="2157" width="351" height="345" frameX="-18" frameY="-18" frameWidth="370" frameHeight="377"/>
+	<SubTexture name="tsc guitar left0016" x="1761" y="2157" width="351" height="345" frameX="-18" frameY="-18" frameWidth="370" frameHeight="377"/>
+	<SubTexture name="tsc guitar right0000" x="1" y="1" width="404" height="373" frameX="-0" frameY="-1" frameWidth="406" frameHeight="374"/>
+	<SubTexture name="tsc guitar right0001" x="1" y="1" width="404" height="373" frameX="-0" frameY="-1" frameWidth="406" frameHeight="374"/>
+	<SubTexture name="tsc guitar right0002" x="1" y="377" width="404" height="373" frameX="-0" frameY="-1" frameWidth="406" frameHeight="374"/>
+	<SubTexture name="tsc guitar right0003" x="766" y="1" width="360" height="403" rotated="true" frameX="-0" frameY="-14" frameWidth="406" frameHeight="374"/>
+	<SubTexture name="tsc guitar right0004" x="408" y="1" width="355" height="404" rotated="true" frameX="-0" frameY="-19" frameWidth="406" frameHeight="374"/>
+	<SubTexture name="tsc guitar right0005" x="1" y="753" width="404" height="345" frameX="-2" frameY="-29" frameWidth="406" frameHeight="374"/>
+	<SubTexture name="tsc guitar right0006" x="1" y="753" width="404" height="345" frameX="-2" frameY="-29" frameWidth="406" frameHeight="374"/>
+	<SubTexture name="tsc guitar right0007" x="1" y="753" width="404" height="345" frameX="-2" frameY="-29" frameWidth="406" frameHeight="374"/>
+	<SubTexture name="tsc guitar right0008" x="1" y="753" width="404" height="345" frameX="-2" frameY="-29" frameWidth="406" frameHeight="374"/>
+	<SubTexture name="tsc guitar up0000" x="1117" y="740" width="338" height="366" frameX="-17" frameY="-1" frameWidth="355" frameHeight="367"/>
+	<SubTexture name="tsc guitar up0001" x="1" y="1432" width="366" height="338" rotated="true" frameX="-17" frameY="-1" frameWidth="355" frameHeight="367"/>
+	<SubTexture name="tsc guitar up0002" x="1" y="1432" width="366" height="338" rotated="true" frameX="-17" frameY="-1" frameWidth="355" frameHeight="367"/>
+	<SubTexture name="tsc guitar up0003" x="370" y="1432" width="366" height="338" rotated="true" frameX="-17" frameY="-1" frameWidth="355" frameHeight="367"/>
+	<SubTexture name="tsc guitar up0004" x="742" y="1123" width="364" height="330" rotated="true" frameX="-23" frameY="-3" frameWidth="355" frameHeight="367"/>
+	<SubTexture name="tsc guitar up0005" x="742" y="1123" width="364" height="330" rotated="true" frameX="-23" frameY="-3" frameWidth="355" frameHeight="367"/>
+	<SubTexture name="tsc guitar up0006" x="1445" y="371" width="364" height="330" rotated="true" frameX="-23" frameY="-3" frameWidth="355" frameHeight="367"/>
+	<SubTexture name="tsc guitar up0007" x="1479" y="1" width="330" height="364" frameX="-23" frameY="-3" frameWidth="355" frameHeight="367"/>
+	<SubTexture name="tsc guitar up0008" x="1479" y="1" width="330" height="364" frameX="-23" frameY="-3" frameWidth="355" frameHeight="367"/>
+	<SubTexture name="tsc guitar up0009" x="1479" y="704" width="330" height="364" frameX="-23" frameY="-3" frameWidth="355" frameHeight="367"/>
+	<SubTexture name="tsc guitar up0010" x="1797" y="1795" width="355" height="359" frameX="-0" frameY="-8" frameWidth="355" frameHeight="367"/>
+	<SubTexture name="tsc guitar up0011" x="1797" y="1795" width="355" height="359" frameX="-0" frameY="-8" frameWidth="355" frameHeight="367"/>
+	<SubTexture name="tsc guitar up0012" x="1435" y="1797" width="359" height="355" rotated="true" frameX="-0" frameY="-8" frameWidth="355" frameHeight="367"/>
+	<SubTexture name="tsc guitar up0013" x="1435" y="1797" width="359" height="355" rotated="true" frameX="-0" frameY="-8" frameWidth="355" frameHeight="367"/>
+	<SubTexture name="tsc guitar up0014" x="2157" y="1" width="355" height="359" frameX="-0" frameY="-8" frameWidth="355" frameHeight="367"/>
+	<SubTexture name="tsc guitar up0015" x="2157" y="1" width="355" height="359" frameX="-0" frameY="-8" frameWidth="355" frameHeight="367"/>
+	<SubTexture name="tsc guitar up0016" x="2155" y="363" width="355" height="359" frameX="-0" frameY="-8" frameWidth="355" frameHeight="367"/>
+	<SubTexture name="tsc guitar up0017" x="363" y="2463" width="345" height="357" frameX="-8" frameY="-10" frameWidth="355" frameHeight="367"/>
+	<SubTexture name="tsc guitar up0018" x="363" y="2463" width="345" height="357" frameX="-8" frameY="-10" frameWidth="355" frameHeight="367"/>
+	<SubTexture name="tsc guitar up0019" x="2155" y="2132" width="357" height="345" rotated="true" frameX="-8" frameY="-10" frameWidth="355" frameHeight="367"/>
+	<SubTexture name="tsc guitar up0020" x="1" y="2475" width="357" height="345" rotated="true" frameX="-8" frameY="-10" frameWidth="355" frameHeight="367"/>
+	<SubTexture name="tsc guitar up0021" x="1" y="2475" width="357" height="345" rotated="true" frameX="-8" frameY="-10" frameWidth="355" frameHeight="367"/>
+	<SubTexture name="tsc guitar up0022" x="711" y="2463" width="345" height="357" frameX="-8" frameY="-10" frameWidth="355" frameHeight="367"/>
+	<SubTexture name="tsc guitar up0023" x="1812" y="363" width="336" height="359" frameX="-12" frameY="-8" frameWidth="355" frameHeight="367"/>
+	<SubTexture name="tsc guitar up0024" x="1812" y="363" width="336" height="359" frameX="-12" frameY="-8" frameWidth="355" frameHeight="367"/>
+	<SubTexture name="tsc guitar up0025" x="1812" y="725" width="359" height="336" rotated="true" frameX="-12" frameY="-8" frameWidth="355" frameHeight="367"/>
+	<SubTexture name="tsc guitar up0026" x="2174" y="725" width="336" height="359" frameX="-12" frameY="-8" frameWidth="355" frameHeight="367"/>
+	<SubTexture name="tsc guitar up0027" x="2174" y="725" width="336" height="359" frameX="-12" frameY="-8" frameWidth="355" frameHeight="367"/>
+	<SubTexture name="tsc guitar up0028" x="367" y="2118" width="359" height="336" rotated="true" frameX="-12" frameY="-8" frameWidth="355" frameHeight="367"/>
+	<SubTexture name="tsc guitar up0029" x="367" y="2118" width="359" height="336" rotated="true" frameX="-12" frameY="-8" frameWidth="355" frameHeight="367"/>
+</TextureAtlas>

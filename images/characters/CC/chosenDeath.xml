@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Created with Funkin Packer v0.1.2 https://neeeoo.github.io/funkin-packer/
+-->
+<TextureAtlas imagePath="chosenDeath.png" width="3805" height="3630">
+	<SubTexture name="TCO Death0000" x="1780" y="2265" width="290" height="539" frameX="-38" frameY="-118" frameWidth="1026" frameHeight="687"/>
+	<SubTexture name="TCO Death0018" x="1" y="1" width="775" height="225" frameX="-222" frameY="-458" frameWidth="1026" frameHeight="687"/>
+	<SubTexture name="TCO Death0021" x="1" y="229" width="750" height="259" frameX="-276" frameY="-422" frameWidth="1026" frameHeight="687"/>
+	<SubTexture name="TCO Death0019" x="1" y="491" width="745" height="225" frameX="-268" frameY="-458" frameWidth="1026" frameHeight="687"/>
+	<SubTexture name="TCO Death0020" x="1" y="719" width="745" height="259" frameX="-274" frameY="-422" frameWidth="1026" frameHeight="687"/>
+	<SubTexture name="TCO Death0023" x="779" y="1" width="741" height="393" frameX="-276" frameY="-288" frameWidth="1026" frameHeight="687"/>
+	<SubTexture name="TCO Death0024" x="754" y="397" width="741" height="395" frameX="-276" frameY="-286" frameWidth="1026" frameHeight="687"/>
+	<SubTexture name="TCO Death0022" x="1" y="981" width="738" height="388" frameX="-276" frameY="-293" frameWidth="1026" frameHeight="687"/>
+	<SubTexture name="TCO Death0017" x="749" y="795" width="698" height="226" frameX="-156" frameY="-458" frameWidth="1026" frameHeight="687"/>
+	<SubTexture name="TCO Death0005" x="1" y="1372" width="272" height="655" frameX="-1" frameY="-1" frameWidth="1026" frameHeight="687"/>
+	<SubTexture name="TCO Death0007" x="276" y="1372" width="272" height="655" frameX="-1" frameY="-1" frameWidth="1026" frameHeight="687"/>
+	<SubTexture name="TCO Death0008" x="551" y="1372" width="219" height="636" frameX="-24" frameY="-20" frameWidth="1026" frameHeight="687"/>
+	<SubTexture name="TCO Death0006" x="773" y="1024" width="219" height="633" frameX="-27" frameY="-23" frameWidth="1026" frameHeight="687"/>
+	<SubTexture name="TCO Death0013" x="995" y="1024" width="219" height="633" frameX="-30" frameY="-22" frameWidth="1026" frameHeight="687"/>
+	<SubTexture name="TCO Death0015" x="1217" y="1024" width="269" height="620" frameX="-46" frameY="-38" frameWidth="1026" frameHeight="687"/>
+	<SubTexture name="TCO Death End0015" x="1523" y="1" width="613" height="438" frameX="-2" frameY="-158" frameWidth="639" frameHeight="659"/>
+	<SubTexture name="TCO Death End0011" x="1498" y="442" width="611" height="459" frameX="-2" frameY="-174" frameWidth="639" frameHeight="659"/>
+	<SubTexture name="TCO Death End0012" x="1489" y="904" width="611" height="456" frameX="-2" frameY="-167" frameWidth="639" frameHeight="659"/>
+	<SubTexture name="TCO Death End0013" x="1489" y="1363" width="611" height="453" frameX="-2" frameY="-161" frameWidth="639" frameHeight="659"/>
+	<SubTexture name="TCO Death End0014" x="1" y="2030" width="611" height="457" frameX="-2" frameY="-157" frameWidth="639" frameHeight="659"/>
+	<SubTexture name="TCO Death End0006" x="615" y="2011" width="601" height="449" frameX="-2" frameY="-176" frameWidth="639" frameHeight="659"/>
+	<SubTexture name="TCO Death End0008" x="1219" y="1819" width="598" height="443" frameX="-2" frameY="-182" frameWidth="639" frameHeight="659"/>
+	<SubTexture name="TCO Death End0007" x="2139" y="1" width="596" height="446" frameX="-2" frameY="-179" frameWidth="639" frameHeight="659"/>
+	<SubTexture name="TCO Death End0005" x="2112" y="450" width="595" height="450" frameX="-2" frameY="-171" frameWidth="639" frameHeight="659"/>
+	<SubTexture name="TCO Death End0004" x="2112" y="903" width="588" height="448" frameX="-2" frameY="-165" frameWidth="639" frameHeight="659"/>
+	<SubTexture name="TCO Death End0003" x="2103" y="1354" width="580" height="446" frameX="-2" frameY="-158" frameWidth="639" frameHeight="659"/>
+	<SubTexture name="TCO Death End0002" x="2103" y="1803" width="572" height="456" frameX="-2" frameY="-134" frameWidth="639" frameHeight="659"/>
+	<SubTexture name="TCO Death0016" x="1" y="2490" width="568" height="315" frameX="-108" frameY="-344" frameWidth="1026" frameHeight="687"/>
+	<SubTexture name="TCO Death End0001" x="1219" y="2265" width="558" height="473" frameX="-2" frameY="-100" frameWidth="639" frameHeight="659"/>
+	<SubTexture name="TCO Death End0000" x="2738" y="1" width="543" height="544" frameX="-2" frameY="-8" frameWidth="639" frameHeight="659"/>
+	<SubTexture name="TCO Death0002" x="2073" y="2262" width="296" height="538" frameX="-38" frameY="-120" frameWidth="1026" frameHeight="687"/>
+	<SubTexture name="TCO Death0003" x="2372" y="2262" width="370" height="538" frameX="-6" frameY="-120" frameWidth="1026" frameHeight="687"/>
+	<SubTexture name="TCO Death0004" x="2745" y="548" width="296" height="530" frameX="-29" frameY="-126" frameWidth="1026" frameHeight="687"/>
+	<SubTexture name="TCO Death Loop0000" x="2745" y="1081" width="520" height="398" frameX="-2" frameY="-40" frameWidth="529" frameHeight="444"/>
+	<SubTexture name="TCO Death Loop0001" x="2745" y="1482" width="520" height="400" frameX="-2" frameY="-38" frameWidth="529" frameHeight="444"/>
+	<SubTexture name="TCO Death Loop0002" x="2745" y="1885" width="520" height="405" frameX="-2" frameY="-33" frameWidth="529" frameHeight="444"/>
+	<SubTexture name="TCO Death Loop0003" x="2745" y="2293" width="520" height="411" frameX="-2" frameY="-27" frameWidth="529" frameHeight="444"/>
+	<SubTexture name="TCO Death Loop0004" x="1" y="2808" width="520" height="416" frameX="-2" frameY="-22" frameWidth="529" frameHeight="444"/>
+	<SubTexture name="TCO Death Loop0005" x="524" y="2808" width="520" height="416" frameX="-2" frameY="-22" frameWidth="529" frameHeight="444"/>
+	<SubTexture name="TCO Death Loop0006" x="1047" y="2807" width="520" height="411" frameX="-2" frameY="-27" frameWidth="529" frameHeight="444"/>
+	<SubTexture name="TCO Death Loop0007" x="2745" y="2707" width="520" height="398" frameX="-2" frameY="-40" frameWidth="529" frameHeight="444"/>
+	<SubTexture name="TCO Death Loop0008" x="1570" y="2807" width="520" height="390" frameX="-2" frameY="-48" frameWidth="529" frameHeight="444"/>
+	<SubTexture name="TCO Death Loop0009" x="2093" y="2803" width="520" height="412" frameX="-2" frameY="-26" frameWidth="529" frameHeight="444"/>
+	<SubTexture name="TCO Death Loop0010" x="1570" y="3200" width="520" height="416" frameX="-2" frameY="-22" frameWidth="529" frameHeight="444"/>
+	<SubTexture name="TCO Death Loop0011" x="2616" y="3108" width="520" height="427" frameX="-2" frameY="-11" frameWidth="529" frameHeight="444"/>
+	<SubTexture name="TCO Death Loop0012" x="1047" y="3221" width="520" height="408" frameX="-2" frameY="-30" frameWidth="529" frameHeight="444"/>
+	<SubTexture name="TCO Death Loop0013" x="2093" y="3218" width="520" height="397" frameX="-2" frameY="-41" frameWidth="529" frameHeight="444"/>
+	<SubTexture name="TCO Death0025" x="1" y="3227" width="520" height="395" frameX="-276" frameY="-286" frameWidth="1026" frameHeight="687"/>
+	<SubTexture name="TCO Death0026" x="524" y="3227" width="520" height="397" frameX="-276" frameY="-284" frameWidth="1026" frameHeight="687"/>
+	<SubTexture name="TCO Death0027" x="3284" y="1" width="520" height="397" frameX="-276" frameY="-284" frameWidth="1026" frameHeight="687"/>
+	<SubTexture name="TCO Death0028" x="3284" y="401" width="520" height="397" frameX="-276" frameY="-284" frameWidth="1026" frameHeight="687"/>
+	<SubTexture name="TCO Death0029" x="3268" y="801" width="520" height="397" frameX="-276" frameY="-284" frameWidth="1026" frameHeight="687"/>
+	<SubTexture name="TCO Death0030" x="3268" y="1201" width="520" height="397" frameX="-276" frameY="-284" frameWidth="1026" frameHeight="687"/>
+	<SubTexture name="TCO Death End0009" x="1219" y="1819" width="598" height="443" frameX="-2" frameY="-182" frameWidth="639" frameHeight="659"/>
+	<SubTexture name="TCO Death End0010" x="1219" y="1819" width="598" height="443" frameX="-2" frameY="-182" frameWidth="639" frameHeight="659"/>
+	<SubTexture name="TCO Death End0016" x="1523" y="1" width="613" height="438" frameX="-2" frameY="-158" frameWidth="639" frameHeight="659"/>
+	<SubTexture name="TCO Death End0017" x="1523" y="1" width="613" height="438" frameX="-2" frameY="-158" frameWidth="639" frameHeight="659"/>
+	<SubTexture name="TCO Death End0018" x="1523" y="1" width="613" height="438" frameX="-2" frameY="-158" frameWidth="639" frameHeight="659"/>
+	<SubTexture name="TCO Death End0019" x="1523" y="1" width="613" height="438" frameX="-2" frameY="-158" frameWidth="639" frameHeight="659"/>
+	<SubTexture name="TCO Death End0020" x="1523" y="1" width="613" height="438" frameX="-2" frameY="-158" frameWidth="639" frameHeight="659"/>
+	<SubTexture name="TCO Death End0021" x="1523" y="1" width="613" height="438" frameX="-2" frameY="-158" frameWidth="639" frameHeight="659"/>
+	<SubTexture name="TCO Death End0022" x="1523" y="1" width="613" height="438" frameX="-2" frameY="-158" frameWidth="639" frameHeight="659"/>
+	<SubTexture name="TCO Death End0023" x="1523" y="1" width="613" height="438" frameX="-2" frameY="-158" frameWidth="639" frameHeight="659"/>
+	<SubTexture name="TCO Death Loop0014" x="2745" y="1081" width="520" height="398" frameX="-2" frameY="-40" frameWidth="529" frameHeight="444"/>
+	<SubTexture name="TCO Death Loop0015" x="2745" y="1081" width="520" height="398" frameX="-2" frameY="-40" frameWidth="529" frameHeight="444"/>
+	<SubTexture name="TCO Death Loop0016" x="2745" y="1081" width="520" height="398" frameX="-2" frameY="-40" frameWidth="529" frameHeight="444"/>
+	<SubTexture name="TCO Death Loop0017" x="2745" y="1081" width="520" height="398" frameX="-2" frameY="-40" frameWidth="529" frameHeight="444"/>
+	<SubTexture name="TCO Death Loop0018" x="2745" y="1081" width="520" height="398" frameX="-2" frameY="-40" frameWidth="529" frameHeight="444"/>
+	<SubTexture name="TCO Death Loop0019" x="2745" y="1081" width="520" height="398" frameX="-2" frameY="-40" frameWidth="529" frameHeight="444"/>
+	<SubTexture name="TCO Death Loop0020" x="2745" y="1081" width="520" height="398" frameX="-2" frameY="-40" frameWidth="529" frameHeight="444"/>
+	<SubTexture name="TCO Death Loop0021" x="2745" y="1081" width="520" height="398" frameX="-2" frameY="-40" frameWidth="529" frameHeight="444"/>
+	<SubTexture name="TCO Death Loop0022" x="2745" y="1081" width="520" height="398" frameX="-2" frameY="-40" frameWidth="529" frameHeight="444"/>
+	<SubTexture name="TCO Death Loop0023" x="2745" y="1081" width="520" height="398" frameX="-2" frameY="-40" frameWidth="529" frameHeight="444"/>
+	<SubTexture name="TCO Death Loop0024" x="2745" y="1081" width="520" height="398" frameX="-2" frameY="-40" frameWidth="529" frameHeight="444"/>
+	<SubTexture name="TCO Death Loop0038" x="2745" y="1081" width="520" height="398" frameX="-2" frameY="-40" frameWidth="529" frameHeight="444"/>
+	<SubTexture name="TCO Death Loop0039" x="2745" y="1081" width="520" height="398" frameX="-2" frameY="-40" frameWidth="529" frameHeight="444"/>
+	<SubTexture name="TCO Death Loop0040" x="2745" y="1081" width="520" height="398" frameX="-2" frameY="-40" frameWidth="529" frameHeight="444"/>
+	<SubTexture name="TCO Death Loop0041" x="2745" y="1081" width="520" height="398" frameX="-2" frameY="-40" frameWidth="529" frameHeight="444"/>
+	<SubTexture name="TCO Death Loop0042" x="2745" y="1081" width="520" height="398" frameX="-2" frameY="-40" frameWidth="529" frameHeight="444"/>
+	<SubTexture name="TCO Death Loop0043" x="2745" y="1081" width="520" height="398" frameX="-2" frameY="-40" frameWidth="529" frameHeight="444"/>
+	<SubTexture name="TCO Death Loop0044" x="2745" y="1081" width="520" height="398" frameX="-2" frameY="-40" frameWidth="529" frameHeight="444"/>
+	<SubTexture name="TCO Death Loop0045" x="2745" y="1081" width="520" height="398" frameX="-2" frameY="-40" frameWidth="529" frameHeight="444"/>
+	<SubTexture name="TCO Death Loop0046" x="2745" y="1081" width="520" height="398" frameX="-2" frameY="-40" frameWidth="529" frameHeight="444"/>
+	<SubTexture name="TCO Death Loop0047" x="2745" y="1081" width="520" height="398" frameX="-2" frameY="-40" frameWidth="529" frameHeight="444"/>
+	<SubTexture name="TCO Death0031" x="2745" y="1081" width="520" height="398" frameX="-276" frameY="-283" frameWidth="1026" frameHeight="687"/>
+	<SubTexture name="TCO Death0032" x="2745" y="1081" width="520" height="398" frameX="-276" frameY="-283" frameWidth="1026" frameHeight="687"/>
+	<SubTexture name="TCO Death0033" x="2745" y="1081" width="520" height="398" frameX="-276" frameY="-283" frameWidth="1026" frameHeight="687"/>
+	<SubTexture name="TCO Death0034" x="2745" y="1081" width="520" height="398" frameX="-276" frameY="-283" frameWidth="1026" frameHeight="687"/>
+	<SubTexture name="TCO Death Loop0025" x="2745" y="1482" width="520" height="400" frameX="-2" frameY="-38" frameWidth="529" frameHeight="444"/>
+	<SubTexture name="TCO Death Loop0026" x="2745" y="1885" width="520" height="405" frameX="-2" frameY="-33" frameWidth="529" frameHeight="444"/>
+	<SubTexture name="TCO Death Loop0027" x="2745" y="2293" width="520" height="411" frameX="-2" frameY="-27" frameWidth="529" frameHeight="444"/>
+	<SubTexture name="TCO Death Loop0028" x="1" y="2808" width="520" height="416" frameX="-2" frameY="-22" frameWidth="529" frameHeight="444"/>
+	<SubTexture name="TCO Death Loop0029" x="524" y="2808" width="520" height="416" frameX="-2" frameY="-22" frameWidth="529" frameHeight="444"/>
+	<SubTexture name="TCO Death Loop0030" x="1047" y="2807" width="520" height="411" frameX="-2" frameY="-27" frameWidth="529" frameHeight="444"/>
+	<SubTexture name="TCO Death Loop0031" x="2745" y="2707" width="520" height="398" frameX="-2" frameY="-40" frameWidth="529" frameHeight="444"/>
+	<SubTexture name="TCO Death Loop0032" x="1570" y="2807" width="520" height="390" frameX="-2" frameY="-48" frameWidth="529" frameHeight="444"/>
+	<SubTexture name="TCO Death Loop0033" x="2093" y="2803" width="520" height="412" frameX="-2" frameY="-26" frameWidth="529" frameHeight="444"/>
+	<SubTexture name="TCO Death Loop0034" x="1570" y="3200" width="520" height="416" frameX="-2" frameY="-22" frameWidth="529" frameHeight="444"/>
+	<SubTexture name="TCO Death Loop0035" x="2616" y="3108" width="520" height="427" frameX="-2" frameY="-11" frameWidth="529" frameHeight="444"/>
+	<SubTexture name="TCO Death Loop0036" x="1047" y="3221" width="520" height="408" frameX="-2" frameY="-30" frameWidth="529" frameHeight="444"/>
+	<SubTexture name="TCO Death Loop0037" x="2093" y="3218" width="520" height="397" frameX="-2" frameY="-41" frameWidth="529" frameHeight="444"/>
+	<SubTexture name="TCO Death0001" x="1780" y="2265" width="290" height="539" frameX="-38" frameY="-118" frameWidth="1026" frameHeight="687"/>
+	<SubTexture name="TCO Death0009" x="551" y="1372" width="219" height="636" frameX="-24" frameY="-20" frameWidth="1026" frameHeight="687"/>
+	<SubTexture name="TCO Death0010" x="551" y="1372" width="219" height="636" frameX="-24" frameY="-20" frameWidth="1026" frameHeight="687"/>
+	<SubTexture name="TCO Death0011" x="551" y="1372" width="219" height="636" frameX="-24" frameY="-20" frameWidth="1026" frameHeight="687"/>
+	<SubTexture name="TCO Death0012" x="551" y="1372" width="219" height="636" frameX="-24" frameY="-20" frameWidth="1026" frameHeight="687"/>
+	<SubTexture name="TCO Death0014" x="995" y="1024" width="219" height="633" frameX="-30" frameY="-22" frameWidth="1026" frameHeight="687"/>
+</TextureAtlas>

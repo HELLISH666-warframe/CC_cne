@@ -1,0 +1,9 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="CC/extras/microsoft_sam" icon="mcsam" color="#141414" x="-230" y="-20" holdTime="6.1">
+	<anim name="singRIGHT" anim="Samright" x="63" y="0"/>
+	<anim name="idle" anim="Samidle" fps="16"/>
+	<anim name="singLEFT" anim="Samleft" x="87" y="-17" fps="16"/>
+	<anim name="singDOWN" anim="Samdown" x="20" y="-1" fps="16"/>
+	<anim name="singUP" anim="Samup" x="74" y="-7" fps="16"/>
+</character>

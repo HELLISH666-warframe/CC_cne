@@ -1,0 +1,10 @@
+<!DOCTYPE codename-engine-stage>
+<stage zoom="0.55" folder="stages/collab/showdown/" startCamPosY="600" startCamPosX="200">
+    <sprite name="flashTop" x="0" y="0" sprite="flashBg" scroll="1" scale="2.5"/>
+    <sprite name="tcoPlataform" x="0" y="0" sprite="platform_tco" scroll="1"/>
+	<sprite name="tcoPlataform2" x="0" y="0" sprite="platform_tco" scroll="1"/>
+	<sprite name="bfGfPlataform" x="0" y="0" sprite="platform_bfgf" scroll="1"/>
+    <girlfriend x="730" y="-400" camxoffset="0" camyoffset="0"/>
+	<opponent x="-570" y="-470" camxoffset="0" camyoffset="0"/>
+	<player x="1250" y="-350" camxoffset="0" camyoffset="0"/>
+</stage>

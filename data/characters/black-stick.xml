@@ -1,0 +1,9 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="CC/extras/black_STICK" icon="3dblackstick" color="#ffffff" x="-180" y="90" camx="90" camy="-170" holdTime="6.1" scale="1.5">
+	<anim name="idle" anim="sidle"/>
+	<anim name="singLEFT" anim="sleft" x="-0.6666666666666666" y="-1.3333333333333333"/>
+	<anim name="singDOWN" anim="sdown" x="-32.666666666666664" y="68"/>
+	<anim name="singUP" anim="sup" x="-10.666666666666666" y="60"/>
+	<anim name="singRIGHT" anim="sright" x="-23.333333333333332" y="-4"/>
+</character>

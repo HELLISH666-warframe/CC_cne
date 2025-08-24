@@ -1,0 +1,9 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="CC/StickFigureYellow" icon="face" color="#a1a1a1" x="80" y="170" camy="80" holdTime="6.1" scale="1.15">
+	<anim name="singUP" anim="up" x="31.30434782608696" y="0" fps="30"/>
+	<anim name="singRIGHT" anim="right" x="10.434782608695652" y="-216.5217391304348" fps="28"/>
+	<anim name="singDOWN" anim="down" x="-22.608695652173914" y="-178.2608695652174"/>
+	<anim name="singLEFT" anim="left" x="48.69565217391305" y="-115.65217391304348"/>
+	<anim name="idle" anim="idle" fps="18"/>
+</character>

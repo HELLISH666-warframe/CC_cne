@@ -1,0 +1,7 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="CC/chosenDeath" icon="the-chosen-one" color="#fcae00" x="-630" y="60" camx="-480" camy="250" holdTime="6.1">
+	<anim name="deathConfirm" anim="TCO Death End" x="-113" y="-144" fps="16"/>
+	<anim name="firstDeath" anim="TCO Death0" fps="16"/>
+	<anim name="deathLoop" anim="TCO Death Loop" x="-223" y="-243" fps="16" loop="true"/>
+</character>

@@ -1,0 +1,9 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="CC/extras/virabot" icon="virabot" color="#92191c" y="320" camx="135" camy="326">
+	<anim name="singUP" anim="ViraUp" x="-5" y="-216"/>
+	<anim name="singRIGHT" anim="ViraRight" x="-25" y="-209"/>
+	<anim name="singLEFT" anim="ViraLeft" x="-5" y="-214"/>
+	<anim name="singDOWN" anim="ViraDown" x="2" y="-213"/>
+	<anim name="idle" anim="ViraIdle" x="-5" y="-214"/>
+</character>

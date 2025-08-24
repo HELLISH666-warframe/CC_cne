@@ -1,0 +1,14 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="CC/stick_bf" icon="stick-bf" color="#69afd1" y="240" flipX="true" camx="-50" camy="100" scale="0.8">
+	<anim name="idle" anim="bfstick idle" x="-6.25" y="0"/>
+	<anim name="singLEFT" anim="bfstick left0" x="196.25" y="-7.5"/>
+	<anim name="singDOWN" anim="bfstick down0" x="-10" y="-45"/>
+	<anim name="singUP" anim="bfstick up0" x="-17.5" y="12.5"/>
+	<anim name="singRIGHT" anim="bfstick right0" x="-153.75" y="-28.75"/>
+	<anim name="singLEFTmiss" anim="bfstick left MISS" x="197.5" y="40"/>
+	<anim name="singDOWNmiss" anim="bfstick down MISS" x="-8.75" y="6.25"/>
+	<anim name="singUPmiss" anim="bfstick up MISS" x="-13.75" y="68.75"/>
+	<anim name="singRIGHTmiss" anim="bfstick right MISS" x="-161.25" y="-5"/>
+	<anim name="hey" anim="bfstick HEY!!" x="-18.75" y="-5"/>
+</character>

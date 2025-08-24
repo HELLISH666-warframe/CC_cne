@@ -1,0 +1,7 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="gfPixel" icon="gf" color="#a5004d" antialiasing="false" camx="-20" camy="80" scale="5.99999999999999">
+	<anim name="danceLeft" anim="GF IDLE" indices="30,0..14"/>
+	<anim name="danceRight" anim="GF IDLE" indices="15..29"/>
+	<anim name="singUP" anim="GF IDLE"/>
+</character>

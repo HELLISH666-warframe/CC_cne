@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Google.png">
+	<!-- Created with Adobe Animate version 21.0.5.40714 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Window0000" x="25" y="25" width="505" height="329" frameX="0" frameY="-25" frameWidth="505" frameHeight="354"/>
+	<SubTexture name="Window0001" x="555" y="25" width="505" height="343" frameX="0" frameY="-11" frameWidth="505" frameHeight="354"/>
+	<SubTexture name="Window0002" x="1085" y="25" width="505" height="354"/>
+	<SubTexture name="Window0003" x="25" y="404" width="505" height="321" frameX="0" frameY="-33" frameWidth="505" frameHeight="354"/>
+</TextureAtlas>

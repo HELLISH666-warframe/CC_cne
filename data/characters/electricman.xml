@@ -1,0 +1,9 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="CC/extras/Electricman" icon="electro" color="#fff302" x="-50" y="160" camx="-150" camy="-50" holdTime="6.1" scale="1.1">
+	<anim name="singLEFT" anim="electro left" x="126.36363636363636" y="10.909090909090908"/>
+	<anim name="singDOWN" anim="electro down" x="347.27272727272725" y="-0.9090909090909091"/>
+	<anim name="singUP" anim="electro up" x="92.72727272727272" y="218.18181818181816"/>
+	<anim name="singRIGHT" anim="electro right" x="0.9090909090909091" y="10.909090909090908"/>
+	<anim name="idle" anim="electro idle" loop="true"/>
+</character>

@@ -1,0 +1,11 @@
+{
+	"displayName": "stick-em-up",
+	"color": "#FCAE00",
+	"background": "messenger",
+	"difficulties": [
+		"SIMPLE",
+		"HARD",
+		"INSANE"
+	],
+	"portrait": "stick-em-up"
+}

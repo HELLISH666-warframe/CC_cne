@@ -1,0 +1,389 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="stick_bf.png">
+	<!-- Created with Adobe Animate version 21.0.0.35450 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="bfstick HEY!!0000" x="5" y="5" width="393" height="538"/>
+	<SubTexture name="bfstick HEY!!0001" x="5" y="5" width="393" height="538"/>
+	<SubTexture name="bfstick HEY!!0002" x="438" y="5" width="393" height="538"/>
+	<SubTexture name="bfstick HEY!!0003" x="438" y="5" width="393" height="538"/>
+	<SubTexture name="bfstick HEY!!0004" x="871" y="5" width="393" height="538"/>
+	<SubTexture name="bfstick HEY!!0005" x="871" y="5" width="393" height="538"/>
+	<SubTexture name="bfstick HEY!!0006" x="871" y="5" width="393" height="538"/>
+	<SubTexture name="bfstick HEY!!0007" x="871" y="5" width="393" height="538"/>
+	<SubTexture name="bfstick HEY!!0008" x="871" y="5" width="393" height="538"/>
+	<SubTexture name="bfstick HEY!!0009" x="871" y="5" width="393" height="538"/>
+	<SubTexture name="bfstick HEY!!0010" x="871" y="5" width="393" height="538"/>
+	<SubTexture name="bfstick HEY!!0011" x="871" y="5" width="393" height="538"/>
+	<SubTexture name="bfstick HEY!!0012" x="871" y="5" width="393" height="538"/>
+	<SubTexture name="bfstick HEY!!0013" x="871" y="5" width="393" height="538"/>
+	<SubTexture name="bfstick HEY!!0014" x="871" y="5" width="393" height="538"/>
+	<SubTexture name="bfstick HEY!!0015" x="871" y="5" width="393" height="538"/>
+	<SubTexture name="bfstick HEY!!0016" x="871" y="5" width="393" height="538"/>
+	<SubTexture name="bfstick HEY!!0017" x="871" y="5" width="393" height="538"/>
+	<SubTexture name="bfstick HEY!!0018" x="871" y="5" width="393" height="538"/>
+	<SubTexture name="bfstick HEY!!0019" x="871" y="5" width="393" height="538"/>
+	<SubTexture name="bfstick HEY!!0020" x="871" y="5" width="393" height="538"/>
+	<SubTexture name="bfstick HEY!!0021" x="871" y="5" width="393" height="538"/>
+	<SubTexture name="bfstick HEY!!0022" x="871" y="5" width="393" height="538"/>
+	<SubTexture name="bfstick HEY!!0023" x="871" y="5" width="393" height="538"/>
+	<SubTexture name="bfstick HEY!!0024" x="871" y="5" width="393" height="538"/>
+	<SubTexture name="bfstick HEY!!0025" x="871" y="5" width="393" height="538"/>
+	<SubTexture name="bfstick HEY!!0026" x="871" y="5" width="393" height="538"/>
+	<SubTexture name="bfstick HEY!!0027" x="871" y="5" width="393" height="538"/>
+	<SubTexture name="bfstick HEY!!0028" x="871" y="5" width="393" height="538"/>
+	<SubTexture name="bfstick HEY!!0029" x="871" y="5" width="393" height="538"/>
+	<SubTexture name="bfstick HEY!!0030" x="871" y="5" width="393" height="538"/>
+	<SubTexture name="bfstick HEY!!0031" x="871" y="5" width="393" height="538"/>
+	<SubTexture name="bfstick HEY!!0032" x="871" y="5" width="393" height="538"/>
+	<SubTexture name="bfstick HEY!!0033" x="871" y="5" width="393" height="538"/>
+	<SubTexture name="bfstick down0000" x="1304" y="5" width="358" height="498"/>
+	<SubTexture name="bfstick down0001" x="1304" y="5" width="358" height="498"/>
+	<SubTexture name="bfstick down0002" x="1702" y="5" width="358" height="498"/>
+	<SubTexture name="bfstick down0003" x="1702" y="5" width="358" height="498"/>
+	<SubTexture name="bfstick down0004" x="1702" y="5" width="358" height="498"/>
+	<SubTexture name="bfstick down0005" x="1702" y="5" width="358" height="498"/>
+	<SubTexture name="bfstick down0006" x="1702" y="5" width="358" height="498"/>
+	<SubTexture name="bfstick down0007" x="1702" y="5" width="358" height="498"/>
+	<SubTexture name="bfstick down0008" x="1702" y="5" width="358" height="498"/>
+	<SubTexture name="bfstick down0009" x="1702" y="5" width="358" height="498"/>
+	<SubTexture name="bfstick down0010" x="1702" y="5" width="358" height="498"/>
+	<SubTexture name="bfstick down0011" x="1702" y="5" width="358" height="498"/>
+	<SubTexture name="bfstick down0012" x="1702" y="5" width="358" height="498"/>
+	<SubTexture name="bfstick down0013" x="1702" y="5" width="358" height="498"/>
+	<SubTexture name="bfstick down0014" x="1702" y="5" width="358" height="498"/>
+	<SubTexture name="bfstick down0015" x="1702" y="5" width="358" height="498"/>
+	<SubTexture name="bfstick down0016" x="1702" y="5" width="358" height="498"/>
+	<SubTexture name="bfstick down0017" x="1702" y="5" width="358" height="498"/>
+	<SubTexture name="bfstick down0018" x="1702" y="5" width="358" height="498"/>
+	<SubTexture name="bfstick down0019" x="1702" y="5" width="358" height="498"/>
+	<SubTexture name="bfstick down0020" x="1702" y="5" width="358" height="498"/>
+	<SubTexture name="bfstick down0021" x="1702" y="5" width="358" height="498"/>
+	<SubTexture name="bfstick down0022" x="1702" y="5" width="358" height="498"/>
+	<SubTexture name="bfstick down0023" x="1702" y="5" width="358" height="498"/>
+	<SubTexture name="bfstick down0024" x="1702" y="5" width="358" height="498"/>
+	<SubTexture name="bfstick down0025" x="1702" y="5" width="358" height="498"/>
+	<SubTexture name="bfstick down0026" x="1702" y="5" width="358" height="498"/>
+	<SubTexture name="bfstick down0027" x="1702" y="5" width="358" height="498"/>
+	<SubTexture name="bfstick down0028" x="1702" y="5" width="358" height="498"/>
+	<SubTexture name="bfstick down0029" x="1702" y="5" width="358" height="498"/>
+	<SubTexture name="bfstick down0030" x="1702" y="5" width="358" height="498"/>
+	<SubTexture name="bfstick down0031" x="1702" y="5" width="358" height="498"/>
+	<SubTexture name="bfstick down0032" x="1702" y="5" width="358" height="498"/>
+	<SubTexture name="bfstick down0033" x="1702" y="5" width="358" height="498"/>
+	<SubTexture name="bfstick down0034" x="1702" y="5" width="358" height="498"/>
+	<SubTexture name="bfstick down0035" x="1702" y="5" width="358" height="498"/>
+	<SubTexture name="bfstick down0036" x="1702" y="5" width="358" height="498"/>
+	<SubTexture name="bfstick down0037" x="1702" y="5" width="358" height="498"/>
+	<SubTexture name="bfstick down0038" x="1702" y="5" width="358" height="498"/>
+	<SubTexture name="bfstick down0039" x="1702" y="5" width="358" height="498"/>
+	<SubTexture name="bfstick down0040" x="1702" y="5" width="358" height="498"/>
+	<SubTexture name="bfstick down0041" x="1702" y="5" width="358" height="498"/>
+	<SubTexture name="bfstick down0042" x="1702" y="5" width="358" height="498"/>
+	<SubTexture name="bfstick down0043" x="1702" y="5" width="358" height="498"/>
+	<SubTexture name="bfstick down0044" x="1702" y="5" width="358" height="498"/>
+	<SubTexture name="bfstick down0045" x="1702" y="5" width="358" height="498"/>
+	<SubTexture name="bfstick down0046" x="1702" y="5" width="358" height="498"/>
+	<SubTexture name="bfstick down0047" x="1702" y="5" width="358" height="498"/>
+	<SubTexture name="bfstick down0048" x="1702" y="5" width="358" height="498"/>
+	<SubTexture name="bfstick down0049" x="1702" y="5" width="358" height="498"/>
+	<SubTexture name="bfstick down MISS0000" x="2100" y="5" width="360" height="550"/>
+	<SubTexture name="bfstick down MISS0001" x="2500" y="5" width="360" height="550"/>
+	<SubTexture name="bfstick down MISS0002" x="2900" y="5" width="360" height="550"/>
+	<SubTexture name="bfstick down MISS0003" x="3300" y="5" width="360" height="550"/>
+	<SubTexture name="bfstick down MISS0004" x="3700" y="5" width="360" height="550"/>
+	<SubTexture name="bfstick down MISS0005" x="2900" y="5" width="360" height="550"/>
+	<SubTexture name="bfstick down MISS0006" x="3300" y="5" width="360" height="550"/>
+	<SubTexture name="bfstick down MISS0007" x="3700" y="5" width="360" height="550"/>
+	<SubTexture name="bfstick down MISS0008" x="2900" y="5" width="360" height="550"/>
+	<SubTexture name="bfstick down MISS0009" x="3300" y="5" width="360" height="550"/>
+	<SubTexture name="bfstick down MISS0010" x="3700" y="5" width="360" height="550"/>
+	<SubTexture name="bfstick down MISS0011" x="2900" y="5" width="360" height="550"/>
+	<SubTexture name="bfstick down MISS0012" x="3300" y="5" width="360" height="550"/>
+	<SubTexture name="bfstick down MISS0013" x="3700" y="5" width="360" height="550"/>
+	<SubTexture name="bfstick down MISS0014" x="2900" y="5" width="360" height="550"/>
+	<SubTexture name="bfstick down MISS0015" x="3300" y="5" width="360" height="550"/>
+	<SubTexture name="bfstick down MISS0016" x="3700" y="5" width="360" height="550"/>
+	<SubTexture name="bfstick down MISS0017" x="2900" y="5" width="360" height="550"/>
+	<SubTexture name="bfstick down MISS0018" x="3300" y="5" width="360" height="550"/>
+	<SubTexture name="bfstick down MISS0019" x="3700" y="5" width="360" height="550"/>
+	<SubTexture name="bfstick down MISS0020" x="2900" y="5" width="360" height="550"/>
+	<SubTexture name="bfstick down MISS0021" x="3300" y="5" width="360" height="550"/>
+	<SubTexture name="bfstick down MISS0022" x="3700" y="5" width="360" height="550"/>
+	<SubTexture name="bfstick down MISS0023" x="2900" y="5" width="360" height="550"/>
+	<SubTexture name="bfstick down MISS0024" x="3300" y="5" width="360" height="550"/>
+	<SubTexture name="bfstick down MISS0025" x="3700" y="5" width="360" height="550"/>
+	<SubTexture name="bfstick down MISS0026" x="2900" y="5" width="360" height="550"/>
+	<SubTexture name="bfstick down MISS0027" x="3300" y="5" width="360" height="550"/>
+	<SubTexture name="bfstick down MISS0028" x="3700" y="5" width="360" height="550"/>
+	<SubTexture name="bfstick down MISS0029" x="2900" y="5" width="360" height="550"/>
+	<SubTexture name="bfstick down MISS0030" x="3300" y="5" width="360" height="550"/>
+	<SubTexture name="bfstick down MISS0031" x="3700" y="5" width="360" height="550"/>
+	<SubTexture name="bfstick down MISS0032" x="2900" y="5" width="360" height="550"/>
+	<SubTexture name="bfstick down MISS0033" x="3300" y="5" width="360" height="550"/>
+	<SubTexture name="bfstick idle0000" x="5" y="595" width="367" height="543"/>
+	<SubTexture name="bfstick idle0001" x="5" y="595" width="367" height="543"/>
+	<SubTexture name="bfstick idle0002" x="412" y="595" width="367" height="543"/>
+	<SubTexture name="bfstick idle0003" x="412" y="595" width="367" height="543"/>
+	<SubTexture name="bfstick idle0004" x="819" y="595" width="367" height="543"/>
+	<SubTexture name="bfstick idle0005" x="819" y="595" width="367" height="543"/>
+	<SubTexture name="bfstick idle0006" x="1226" y="595" width="367" height="543"/>
+	<SubTexture name="bfstick idle0007" x="1226" y="595" width="367" height="543"/>
+	<SubTexture name="bfstick idle0008" x="1633" y="595" width="367" height="543"/>
+	<SubTexture name="bfstick idle0009" x="1633" y="595" width="367" height="543"/>
+	<SubTexture name="bfstick idle0010" x="1633" y="595" width="367" height="543"/>
+	<SubTexture name="bfstick idle0011" x="1633" y="595" width="367" height="543"/>
+	<SubTexture name="bfstick idle0012" x="1633" y="595" width="367" height="543"/>
+	<SubTexture name="bfstick idle0013" x="1633" y="595" width="367" height="543"/>
+	<SubTexture name="bfstick left0000" x="2040" y="595" width="444" height="536"/>
+	<SubTexture name="bfstick left0001" x="2040" y="595" width="444" height="536"/>
+	<SubTexture name="bfstick left0002" x="2524" y="595" width="444" height="536"/>
+	<SubTexture name="bfstick left0003" x="2524" y="595" width="444" height="536"/>
+	<SubTexture name="bfstick left0004" x="2524" y="595" width="444" height="536"/>
+	<SubTexture name="bfstick left0005" x="2524" y="595" width="444" height="536"/>
+	<SubTexture name="bfstick left0006" x="2524" y="595" width="444" height="536"/>
+	<SubTexture name="bfstick left0007" x="2524" y="595" width="444" height="536"/>
+	<SubTexture name="bfstick left0008" x="2524" y="595" width="444" height="536"/>
+	<SubTexture name="bfstick left0009" x="2524" y="595" width="444" height="536"/>
+	<SubTexture name="bfstick left0010" x="2524" y="595" width="444" height="536"/>
+	<SubTexture name="bfstick left0011" x="2524" y="595" width="444" height="536"/>
+	<SubTexture name="bfstick left0012" x="2524" y="595" width="444" height="536"/>
+	<SubTexture name="bfstick left0013" x="2524" y="595" width="444" height="536"/>
+	<SubTexture name="bfstick left0014" x="2524" y="595" width="444" height="536"/>
+	<SubTexture name="bfstick left0015" x="2524" y="595" width="444" height="536"/>
+	<SubTexture name="bfstick left0016" x="2524" y="595" width="444" height="536"/>
+	<SubTexture name="bfstick left0017" x="2524" y="595" width="444" height="536"/>
+	<SubTexture name="bfstick left0018" x="2524" y="595" width="444" height="536"/>
+	<SubTexture name="bfstick left0019" x="2524" y="595" width="444" height="536"/>
+	<SubTexture name="bfstick left0020" x="2524" y="595" width="444" height="536"/>
+	<SubTexture name="bfstick left0021" x="2524" y="595" width="444" height="536"/>
+	<SubTexture name="bfstick left0022" x="2524" y="595" width="444" height="536"/>
+	<SubTexture name="bfstick left0023" x="2524" y="595" width="444" height="536"/>
+	<SubTexture name="bfstick left0024" x="2524" y="595" width="444" height="536"/>
+	<SubTexture name="bfstick left0025" x="2524" y="595" width="444" height="536"/>
+	<SubTexture name="bfstick left0026" x="2524" y="595" width="444" height="536"/>
+	<SubTexture name="bfstick left0027" x="2524" y="595" width="444" height="536"/>
+	<SubTexture name="bfstick left0028" x="2524" y="595" width="444" height="536"/>
+	<SubTexture name="bfstick left0029" x="2524" y="595" width="444" height="536"/>
+	<SubTexture name="bfstick left0030" x="2524" y="595" width="444" height="536"/>
+	<SubTexture name="bfstick left0031" x="2524" y="595" width="444" height="536"/>
+	<SubTexture name="bfstick left0032" x="2524" y="595" width="444" height="536"/>
+	<SubTexture name="bfstick left0033" x="2524" y="595" width="444" height="536"/>
+	<SubTexture name="bfstick left0034" x="2524" y="595" width="444" height="536"/>
+	<SubTexture name="bfstick left0035" x="2524" y="595" width="444" height="536"/>
+	<SubTexture name="bfstick left0036" x="2524" y="595" width="444" height="536"/>
+	<SubTexture name="bfstick left0037" x="2524" y="595" width="444" height="536"/>
+	<SubTexture name="bfstick left0038" x="2524" y="595" width="444" height="536"/>
+	<SubTexture name="bfstick left0039" x="2524" y="595" width="444" height="536"/>
+	<SubTexture name="bfstick left0040" x="2524" y="595" width="444" height="536"/>
+	<SubTexture name="bfstick left0041" x="2524" y="595" width="444" height="536"/>
+	<SubTexture name="bfstick left0042" x="2524" y="595" width="444" height="536"/>
+	<SubTexture name="bfstick left0043" x="2524" y="595" width="444" height="536"/>
+	<SubTexture name="bfstick left0044" x="2524" y="595" width="444" height="536"/>
+	<SubTexture name="bfstick left0045" x="2524" y="595" width="444" height="536"/>
+	<SubTexture name="bfstick left0046" x="2524" y="595" width="444" height="536"/>
+	<SubTexture name="bfstick left0047" x="2524" y="595" width="444" height="536"/>
+	<SubTexture name="bfstick left0048" x="2524" y="595" width="444" height="536"/>
+	<SubTexture name="bfstick left0049" x="2524" y="595" width="444" height="536"/>
+	<SubTexture name="bfstick left MISS0000" x="3008" y="595" width="443" height="585"/>
+	<SubTexture name="bfstick left MISS0001" x="3491" y="595" width="443" height="585"/>
+	<SubTexture name="bfstick left MISS0002" x="5" y="1220" width="443" height="585"/>
+	<SubTexture name="bfstick left MISS0003" x="488" y="1220" width="443" height="585"/>
+	<SubTexture name="bfstick left MISS0004" x="971" y="1220" width="443" height="585"/>
+	<SubTexture name="bfstick left MISS0005" x="5" y="1220" width="443" height="585"/>
+	<SubTexture name="bfstick left MISS0006" x="488" y="1220" width="443" height="585"/>
+	<SubTexture name="bfstick left MISS0007" x="971" y="1220" width="443" height="585"/>
+	<SubTexture name="bfstick left MISS0008" x="5" y="1220" width="443" height="585"/>
+	<SubTexture name="bfstick left MISS0009" x="488" y="1220" width="443" height="585"/>
+	<SubTexture name="bfstick left MISS0010" x="971" y="1220" width="443" height="585"/>
+	<SubTexture name="bfstick left MISS0011" x="5" y="1220" width="443" height="585"/>
+	<SubTexture name="bfstick left MISS0012" x="488" y="1220" width="443" height="585"/>
+	<SubTexture name="bfstick left MISS0013" x="971" y="1220" width="443" height="585"/>
+	<SubTexture name="bfstick left MISS0014" x="5" y="1220" width="443" height="585"/>
+	<SubTexture name="bfstick left MISS0015" x="488" y="1220" width="443" height="585"/>
+	<SubTexture name="bfstick left MISS0016" x="971" y="1220" width="443" height="585"/>
+	<SubTexture name="bfstick left MISS0017" x="5" y="1220" width="443" height="585"/>
+	<SubTexture name="bfstick left MISS0018" x="488" y="1220" width="443" height="585"/>
+	<SubTexture name="bfstick left MISS0019" x="971" y="1220" width="443" height="585"/>
+	<SubTexture name="bfstick left MISS0020" x="5" y="1220" width="443" height="585"/>
+	<SubTexture name="bfstick left MISS0021" x="488" y="1220" width="443" height="585"/>
+	<SubTexture name="bfstick left MISS0022" x="971" y="1220" width="443" height="585"/>
+	<SubTexture name="bfstick left MISS0023" x="5" y="1220" width="443" height="585"/>
+	<SubTexture name="bfstick left MISS0024" x="488" y="1220" width="443" height="585"/>
+	<SubTexture name="bfstick left MISS0025" x="971" y="1220" width="443" height="585"/>
+	<SubTexture name="bfstick left MISS0026" x="5" y="1220" width="443" height="585"/>
+	<SubTexture name="bfstick left MISS0027" x="488" y="1220" width="443" height="585"/>
+	<SubTexture name="bfstick left MISS0028" x="971" y="1220" width="443" height="585"/>
+	<SubTexture name="bfstick left MISS0029" x="5" y="1220" width="443" height="585"/>
+	<SubTexture name="bfstick left MISS0030" x="488" y="1220" width="443" height="585"/>
+	<SubTexture name="bfstick left MISS0031" x="971" y="1220" width="443" height="585"/>
+	<SubTexture name="bfstick left MISS0032" x="5" y="1220" width="443" height="585"/>
+	<SubTexture name="bfstick left MISS0033" x="488" y="1220" width="443" height="585"/>
+	<SubTexture name="bfstick right0000" x="1454" y="1220" width="472" height="514"/>
+	<SubTexture name="bfstick right0001" x="1454" y="1220" width="472" height="514"/>
+	<SubTexture name="bfstick right0002" x="1966" y="1220" width="472" height="514"/>
+	<SubTexture name="bfstick right0003" x="1966" y="1220" width="472" height="514"/>
+	<SubTexture name="bfstick right0004" x="1966" y="1220" width="472" height="514"/>
+	<SubTexture name="bfstick right0005" x="1966" y="1220" width="472" height="514"/>
+	<SubTexture name="bfstick right0006" x="1966" y="1220" width="472" height="514"/>
+	<SubTexture name="bfstick right0007" x="1966" y="1220" width="472" height="514"/>
+	<SubTexture name="bfstick right0008" x="1966" y="1220" width="472" height="514"/>
+	<SubTexture name="bfstick right0009" x="1966" y="1220" width="472" height="514"/>
+	<SubTexture name="bfstick right0010" x="1966" y="1220" width="472" height="514"/>
+	<SubTexture name="bfstick right0011" x="1966" y="1220" width="472" height="514"/>
+	<SubTexture name="bfstick right0012" x="1966" y="1220" width="472" height="514"/>
+	<SubTexture name="bfstick right0013" x="1966" y="1220" width="472" height="514"/>
+	<SubTexture name="bfstick right0014" x="1966" y="1220" width="472" height="514"/>
+	<SubTexture name="bfstick right0015" x="1966" y="1220" width="472" height="514"/>
+	<SubTexture name="bfstick right0016" x="1966" y="1220" width="472" height="514"/>
+	<SubTexture name="bfstick right0017" x="1966" y="1220" width="472" height="514"/>
+	<SubTexture name="bfstick right0018" x="1966" y="1220" width="472" height="514"/>
+	<SubTexture name="bfstick right0019" x="1966" y="1220" width="472" height="514"/>
+	<SubTexture name="bfstick right0020" x="1966" y="1220" width="472" height="514"/>
+	<SubTexture name="bfstick right0021" x="1966" y="1220" width="472" height="514"/>
+	<SubTexture name="bfstick right0022" x="1966" y="1220" width="472" height="514"/>
+	<SubTexture name="bfstick right0023" x="1966" y="1220" width="472" height="514"/>
+	<SubTexture name="bfstick right0024" x="1966" y="1220" width="472" height="514"/>
+	<SubTexture name="bfstick right0025" x="1966" y="1220" width="472" height="514"/>
+	<SubTexture name="bfstick right0026" x="1966" y="1220" width="472" height="514"/>
+	<SubTexture name="bfstick right0027" x="1966" y="1220" width="472" height="514"/>
+	<SubTexture name="bfstick right0028" x="1966" y="1220" width="472" height="514"/>
+	<SubTexture name="bfstick right0029" x="1966" y="1220" width="472" height="514"/>
+	<SubTexture name="bfstick right0030" x="1966" y="1220" width="472" height="514"/>
+	<SubTexture name="bfstick right0031" x="1966" y="1220" width="472" height="514"/>
+	<SubTexture name="bfstick right0032" x="1966" y="1220" width="472" height="514"/>
+	<SubTexture name="bfstick right0033" x="1966" y="1220" width="472" height="514"/>
+	<SubTexture name="bfstick right0034" x="1966" y="1220" width="472" height="514"/>
+	<SubTexture name="bfstick right0035" x="1966" y="1220" width="472" height="514"/>
+	<SubTexture name="bfstick right0036" x="1966" y="1220" width="472" height="514"/>
+	<SubTexture name="bfstick right0037" x="1966" y="1220" width="472" height="514"/>
+	<SubTexture name="bfstick right0038" x="1966" y="1220" width="472" height="514"/>
+	<SubTexture name="bfstick right0039" x="1966" y="1220" width="472" height="514"/>
+	<SubTexture name="bfstick right0040" x="1966" y="1220" width="472" height="514"/>
+	<SubTexture name="bfstick right0041" x="1966" y="1220" width="472" height="514"/>
+	<SubTexture name="bfstick right0042" x="1966" y="1220" width="472" height="514"/>
+	<SubTexture name="bfstick right0043" x="1966" y="1220" width="472" height="514"/>
+	<SubTexture name="bfstick right0044" x="1966" y="1220" width="472" height="514"/>
+	<SubTexture name="bfstick right0045" x="1966" y="1220" width="472" height="514"/>
+	<SubTexture name="bfstick right0046" x="1966" y="1220" width="472" height="514"/>
+	<SubTexture name="bfstick right0047" x="1966" y="1220" width="472" height="514"/>
+	<SubTexture name="bfstick right0048" x="1966" y="1220" width="472" height="514"/>
+	<SubTexture name="bfstick right0049" x="1966" y="1220" width="472" height="514"/>
+	<SubTexture name="bfstick right MISS0000" x="2478" y="1220" width="466" height="538"/>
+	<SubTexture name="bfstick right MISS0001" x="2984" y="1220" width="466" height="538"/>
+	<SubTexture name="bfstick right MISS0002" x="3490" y="1220" width="466" height="538"/>
+	<SubTexture name="bfstick right MISS0003" x="5" y="1845" width="466" height="538"/>
+	<SubTexture name="bfstick right MISS0004" x="511" y="1845" width="466" height="538"/>
+	<SubTexture name="bfstick right MISS0005" x="3490" y="1220" width="466" height="538"/>
+	<SubTexture name="bfstick right MISS0006" x="5" y="1845" width="466" height="538"/>
+	<SubTexture name="bfstick right MISS0007" x="511" y="1845" width="466" height="538"/>
+	<SubTexture name="bfstick right MISS0008" x="3490" y="1220" width="466" height="538"/>
+	<SubTexture name="bfstick right MISS0009" x="5" y="1845" width="466" height="538"/>
+	<SubTexture name="bfstick right MISS0010" x="511" y="1845" width="466" height="538"/>
+	<SubTexture name="bfstick right MISS0011" x="3490" y="1220" width="466" height="538"/>
+	<SubTexture name="bfstick right MISS0012" x="5" y="1845" width="466" height="538"/>
+	<SubTexture name="bfstick right MISS0013" x="511" y="1845" width="466" height="538"/>
+	<SubTexture name="bfstick right MISS0014" x="3490" y="1220" width="466" height="538"/>
+	<SubTexture name="bfstick right MISS0015" x="5" y="1845" width="466" height="538"/>
+	<SubTexture name="bfstick right MISS0016" x="511" y="1845" width="466" height="538"/>
+	<SubTexture name="bfstick right MISS0017" x="3490" y="1220" width="466" height="538"/>
+	<SubTexture name="bfstick right MISS0018" x="5" y="1845" width="466" height="538"/>
+	<SubTexture name="bfstick right MISS0019" x="511" y="1845" width="466" height="538"/>
+	<SubTexture name="bfstick right MISS0020" x="3490" y="1220" width="466" height="538"/>
+	<SubTexture name="bfstick right MISS0021" x="5" y="1845" width="466" height="538"/>
+	<SubTexture name="bfstick right MISS0022" x="511" y="1845" width="466" height="538"/>
+	<SubTexture name="bfstick right MISS0023" x="3490" y="1220" width="466" height="538"/>
+	<SubTexture name="bfstick right MISS0024" x="5" y="1845" width="466" height="538"/>
+	<SubTexture name="bfstick right MISS0025" x="511" y="1845" width="466" height="538"/>
+	<SubTexture name="bfstick right MISS0026" x="3490" y="1220" width="466" height="538"/>
+	<SubTexture name="bfstick right MISS0027" x="5" y="1845" width="466" height="538"/>
+	<SubTexture name="bfstick right MISS0028" x="511" y="1845" width="466" height="538"/>
+	<SubTexture name="bfstick right MISS0029" x="3490" y="1220" width="466" height="538"/>
+	<SubTexture name="bfstick right MISS0030" x="5" y="1845" width="466" height="538"/>
+	<SubTexture name="bfstick right MISS0031" x="511" y="1845" width="466" height="538"/>
+	<SubTexture name="bfstick right MISS0032" x="3490" y="1220" width="466" height="538"/>
+	<SubTexture name="bfstick right MISS0033" x="5" y="1845" width="466" height="538"/>
+	<SubTexture name="bfstick up0000" x="1017" y="1845" width="371" height="557"/>
+	<SubTexture name="bfstick up0001" x="1017" y="1845" width="371" height="557"/>
+	<SubTexture name="bfstick up0002" x="1428" y="1845" width="371" height="557"/>
+	<SubTexture name="bfstick up0003" x="1428" y="1845" width="371" height="557"/>
+	<SubTexture name="bfstick up0004" x="1428" y="1845" width="371" height="557"/>
+	<SubTexture name="bfstick up0005" x="1428" y="1845" width="371" height="557"/>
+	<SubTexture name="bfstick up0006" x="1428" y="1845" width="371" height="557"/>
+	<SubTexture name="bfstick up0007" x="1428" y="1845" width="371" height="557"/>
+	<SubTexture name="bfstick up0008" x="1428" y="1845" width="371" height="557"/>
+	<SubTexture name="bfstick up0009" x="1428" y="1845" width="371" height="557"/>
+	<SubTexture name="bfstick up0010" x="1428" y="1845" width="371" height="557"/>
+	<SubTexture name="bfstick up0011" x="1428" y="1845" width="371" height="557"/>
+	<SubTexture name="bfstick up0012" x="1428" y="1845" width="371" height="557"/>
+	<SubTexture name="bfstick up0013" x="1428" y="1845" width="371" height="557"/>
+	<SubTexture name="bfstick up0014" x="1428" y="1845" width="371" height="557"/>
+	<SubTexture name="bfstick up0015" x="1428" y="1845" width="371" height="557"/>
+	<SubTexture name="bfstick up0016" x="1428" y="1845" width="371" height="557"/>
+	<SubTexture name="bfstick up0017" x="1428" y="1845" width="371" height="557"/>
+	<SubTexture name="bfstick up0018" x="1428" y="1845" width="371" height="557"/>
+	<SubTexture name="bfstick up0019" x="1428" y="1845" width="371" height="557"/>
+	<SubTexture name="bfstick up0020" x="1428" y="1845" width="371" height="557"/>
+	<SubTexture name="bfstick up0021" x="1428" y="1845" width="371" height="557"/>
+	<SubTexture name="bfstick up0022" x="1428" y="1845" width="371" height="557"/>
+	<SubTexture name="bfstick up0023" x="1428" y="1845" width="371" height="557"/>
+	<SubTexture name="bfstick up0024" x="1428" y="1845" width="371" height="557"/>
+	<SubTexture name="bfstick up0025" x="1428" y="1845" width="371" height="557"/>
+	<SubTexture name="bfstick up0026" x="1428" y="1845" width="371" height="557"/>
+	<SubTexture name="bfstick up0027" x="1428" y="1845" width="371" height="557"/>
+	<SubTexture name="bfstick up0028" x="1428" y="1845" width="371" height="557"/>
+	<SubTexture name="bfstick up0029" x="1428" y="1845" width="371" height="557"/>
+	<SubTexture name="bfstick up0030" x="1428" y="1845" width="371" height="557"/>
+	<SubTexture name="bfstick up0031" x="1428" y="1845" width="371" height="557"/>
+	<SubTexture name="bfstick up0032" x="1428" y="1845" width="371" height="557"/>
+	<SubTexture name="bfstick up0033" x="1428" y="1845" width="371" height="557"/>
+	<SubTexture name="bfstick up0034" x="1428" y="1845" width="371" height="557"/>
+	<SubTexture name="bfstick up0035" x="1428" y="1845" width="371" height="557"/>
+	<SubTexture name="bfstick up0036" x="1428" y="1845" width="371" height="557"/>
+	<SubTexture name="bfstick up0037" x="1428" y="1845" width="371" height="557"/>
+	<SubTexture name="bfstick up0038" x="1428" y="1845" width="371" height="557"/>
+	<SubTexture name="bfstick up0039" x="1428" y="1845" width="371" height="557"/>
+	<SubTexture name="bfstick up0040" x="1428" y="1845" width="371" height="557"/>
+	<SubTexture name="bfstick up0041" x="1428" y="1845" width="371" height="557"/>
+	<SubTexture name="bfstick up0042" x="1428" y="1845" width="371" height="557"/>
+	<SubTexture name="bfstick up0043" x="1428" y="1845" width="371" height="557"/>
+	<SubTexture name="bfstick up0044" x="1428" y="1845" width="371" height="557"/>
+	<SubTexture name="bfstick up0045" x="1428" y="1845" width="371" height="557"/>
+	<SubTexture name="bfstick up0046" x="1428" y="1845" width="371" height="557"/>
+	<SubTexture name="bfstick up0047" x="1428" y="1845" width="371" height="557"/>
+	<SubTexture name="bfstick up0048" x="1428" y="1845" width="371" height="557"/>
+	<SubTexture name="bfstick up0049" x="1428" y="1845" width="371" height="557"/>
+	<SubTexture name="bfstick up MISS0000" x="1839" y="1845" width="376" height="613"/>
+	<SubTexture name="bfstick up MISS0001" x="2255" y="1845" width="376" height="613"/>
+	<SubTexture name="bfstick up MISS0002" x="2671" y="1845" width="376" height="613"/>
+	<SubTexture name="bfstick up MISS0003" x="3087" y="1845" width="376" height="613"/>
+	<SubTexture name="bfstick up MISS0004" x="3503" y="1845" width="376" height="613"/>
+	<SubTexture name="bfstick up MISS0005" x="2671" y="1845" width="376" height="613"/>
+	<SubTexture name="bfstick up MISS0006" x="3087" y="1845" width="376" height="613"/>
+	<SubTexture name="bfstick up MISS0007" x="3503" y="1845" width="376" height="613"/>
+	<SubTexture name="bfstick up MISS0008" x="2671" y="1845" width="376" height="613"/>
+	<SubTexture name="bfstick up MISS0009" x="3087" y="1845" width="376" height="613"/>
+	<SubTexture name="bfstick up MISS0010" x="3503" y="1845" width="376" height="613"/>
+	<SubTexture name="bfstick up MISS0011" x="2671" y="1845" width="376" height="613"/>
+	<SubTexture name="bfstick up MISS0012" x="3087" y="1845" width="376" height="613"/>
+	<SubTexture name="bfstick up MISS0013" x="3503" y="1845" width="376" height="613"/>
+	<SubTexture name="bfstick up MISS0014" x="2671" y="1845" width="376" height="613"/>
+	<SubTexture name="bfstick up MISS0015" x="3087" y="1845" width="376" height="613"/>
+	<SubTexture name="bfstick up MISS0016" x="3503" y="1845" width="376" height="613"/>
+	<SubTexture name="bfstick up MISS0017" x="2671" y="1845" width="376" height="613"/>
+	<SubTexture name="bfstick up MISS0018" x="3087" y="1845" width="376" height="613"/>
+	<SubTexture name="bfstick up MISS0019" x="3503" y="1845" width="376" height="613"/>
+	<SubTexture name="bfstick up MISS0020" x="2671" y="1845" width="376" height="613"/>
+	<SubTexture name="bfstick up MISS0021" x="3087" y="1845" width="376" height="613"/>
+	<SubTexture name="bfstick up MISS0022" x="3503" y="1845" width="376" height="613"/>
+	<SubTexture name="bfstick up MISS0023" x="2671" y="1845" width="376" height="613"/>
+	<SubTexture name="bfstick up MISS0024" x="3087" y="1845" width="376" height="613"/>
+	<SubTexture name="bfstick up MISS0025" x="3503" y="1845" width="376" height="613"/>
+	<SubTexture name="bfstick up MISS0026" x="2671" y="1845" width="376" height="613"/>
+	<SubTexture name="bfstick up MISS0027" x="3087" y="1845" width="376" height="613"/>
+	<SubTexture name="bfstick up MISS0028" x="3503" y="1845" width="376" height="613"/>
+	<SubTexture name="bfstick up MISS0029" x="2671" y="1845" width="376" height="613"/>
+	<SubTexture name="bfstick up MISS0030" x="3087" y="1845" width="376" height="613"/>
+	<SubTexture name="bfstick up MISS0031" x="3503" y="1845" width="376" height="613"/>
+	<SubTexture name="bfstick up MISS0032" x="2671" y="1845" width="376" height="613"/>
+	<SubTexture name="bfstick up MISS0033" x="3087" y="1845" width="376" height="613"/>
+</TextureAtlas>

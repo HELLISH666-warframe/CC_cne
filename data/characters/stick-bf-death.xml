@@ -1,0 +1,7 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="CC/stickbf_dead" icon="stick-bf" color="#69afd1" y="240" flipX="true" camx="-50" camy="100" scale="0.8">
+	<anim name="deathLoop" anim="BF stick Dead Loop" x="38.75" y="-153.75"/>
+	<anim name="deathConfirm" anim="BF stick Dead confirm" x="40" y="212.5"/>
+	<anim name="firstDeath" anim="BF stick dies" x="42.5" y="-6.25"/>
+</character>

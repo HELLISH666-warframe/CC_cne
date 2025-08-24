@@ -1,0 +1,19 @@
+<!DOCTYPE codename-engine-character>
+<character x="-300" y="555" sprite="CC/animator-bf" flipX="true" camx="531" camy="9" isPlayer="true" icon="bf" color="#30B0D1">
+	<anim name="idle" anim="BF idle dance" x="-5" y="0" fps="24" loop="false"/>
+	<anim name="singLEFT" anim="BF NOTE LEFT" x="-7" y="0" fps="24" loop="false"/>
+	<anim name="singDOWN" anim="BF NOTE DOWN" x="-307" y="171" fps="24" loop="false"/>
+	<anim name="singUP" anim="BF NOTE UP" x="-317" y="268" fps="24" loop="false"/>
+	<anim name="singRIGHT" anim="BF NOTE RIGHT" x="-3" y="1" fps="24" loop="false"/>
+	<anim name="singLEFTmiss" anim="BF NOTE LEFT MISS" x="-10" y="-8" fps="24" loop="false"/>
+	<anim name="singDOWNmiss" anim="BF-NOTE-DOWN-MISS" x="-312" y="175" fps="24" loop="false"/>
+	<anim name="singUPmiss" anim="BF-NOTE-UP-MISS" x="-314" y="266" fps="24" loop="false"/>
+	<anim name="singRIGHTmiss" anim="BF NOTE RIGHT MISS" x="-3" y="2" fps="24" loop="false"/>
+	<anim name="hey" anim="BF HEY" x="-39" y="10" fps="24" loop="false"/>
+	<anim name="dodge" anim="boyfriend dodge" x="-313" y="188" fps="24" loop="false"/>
+	<anim name="singLEFT-alt" anim="BFCOOLLEFT" x="-320" y="8" fps="24" loop="false"/>
+	<anim name="singDOWN-alt" anim="BFCOOLDOWN" x="-362" y="66" fps="24" loop="false"/>
+	<anim name="singUP-alt" anim="BFCOOLUP" x="-320" y="151" fps="24" loop="false"/>
+	<anim name="singRIGHT-alt" anim="BFCOOLRIGHT" x="-834" y="275" fps="24" loop="false"/>
+	<anim name="idle-alt" anim="BFCOOLIDLE" x="-4" y="0" fps="24" loop="false"/>
+</character>

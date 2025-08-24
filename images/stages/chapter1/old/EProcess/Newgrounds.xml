@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Newgrounds.png">
+	<!-- Created with Adobe Animate version 21.0.5.40714 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Newgrounds0000" x="25" y="25" width="531" height="366" frameX="0" frameY="0" frameWidth="533" frameHeight="366"/>
+	<SubTexture name="Newgrounds0001" x="581" y="25" width="533" height="351" frameX="0" frameY="-15" frameWidth="533" frameHeight="366"/>
+	<SubTexture name="Newgrounds0002" x="1139" y="25" width="533" height="354" frameX="0" frameY="-12" frameWidth="533" frameHeight="366"/>
+	<SubTexture name="Newgrounds0003" x="25" y="416" width="527" height="357" frameX="0" frameY="-9" frameWidth="533" frameHeight="366"/>
+</TextureAtlas>
