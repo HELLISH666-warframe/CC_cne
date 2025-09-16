@@ -43,7 +43,7 @@ var vignette = new FlxSprite().loadGraphic(Paths.image('menus/titlescreen/vignet
 
 function startIntro() {
 	if (!initialized && FlxG.sound.music == null)
-			FlxG.sound.playMusic(Paths.music('freakyMenu'), 0);
+		FlxG.sound.playMusic(Paths.music('freakyMenu'), 0);
 
 	Conductor.changeBPM(126);
 

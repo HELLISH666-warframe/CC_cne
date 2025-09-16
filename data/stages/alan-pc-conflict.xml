@@ -1,0 +1,10 @@
+<!DOCTYPE codename-engine-stage>
+<stage zoom="0.8" folder="stages/">
+    <sprite name="alanBG" x="-80" y="-1800" sprite="trojan/alan_desktop" scroll="1"/>
+    <sprite name="fires1" x="1230" y="-240" sprite="victim/BGFire" scroll="0.9" type="loop" />
+        <anim name="fires1" anim="Symbol 1 instance 1" loop="true"/>
+    <sprite name="fires2" x="-400" y="-240" sprite="victim/BGFire" scroll="0.9" type="loop" />
+        <anim name="fires2" anim="Symbol 1 instance 1" loop="true"/>
+    <sprite name="daFloor" x="-80" y="-1800" sprite="trojan/floor" scroll="1"/>
+    <sprite name="bsod" x="0" y="0" sprite="extras/error_conflict" scroll="1"/>
+</stage>

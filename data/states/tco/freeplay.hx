@@ -4,7 +4,6 @@ import flixel.text.FlxTextBorderStyle;
 import flixel.graphics.FlxGraphic;
 import funkin.backend.chart.Chart;
 import openfl.Lib;
-import funkin.savedata.FunkinSave;
 
 var grpSongs2 = new FlxTypedGroup();
 var iconArray2:Array<HealthIcon> = [];
@@ -53,6 +52,7 @@ var preload = [];
 var preload2 = [];
  
 function create() {
+	FlxG.sound.playMusic(Paths.music('freakyMenu'), 0);
 	add(bg);
 
 	scrollingThing = new FlxBackdrop(Paths.image('menus/FAMenu/scroll'), FlxAxes.XY, 0, 0);
@@ -164,22 +164,14 @@ function create() {
 	curSelected_freeplay=0;
 }
 function update(elapsed:Float) {
-	if (FlxG.sound.music.volume < 0.7) FlxG.sound.music.volume += 0.5 * elapsed;
-
-	lerpScore = Math.floor(FlxMath.lerp(lerpScore, intendedScore, FlxMath.bound(elapsed * 24, 0, 1)));
-	lerpRating = FlxMath.lerp(lerpRating, intendedRating, FlxMath.bound(elapsed * 12, 0, 1));
+	if (FlxG.sound.music!=null && FlxG.sound.music.volume < 0.7) FlxG.sound.music.volume += 0.5 * elapsed;
 
 	scrollingThing.x -= 0.45 * 60 * elapsed;
 	scrollingThing.y -= 0.16 * 60 * elapsed;
 
 	scrollingThing.alpha = 0.7;
 
-	if (Math.abs(lerpScore - intendedScore) <= 10)
-		lerpScore = intendedScore;
-	if (Math.abs(lerpRating - intendedRating) <= 0.01)
-		lerpRating = intendedRating;
-
-	scoreText.text = 'PERSONAL BEST: \n' + lerpScore + ' (' + Math.round(lerpScore) + '%)';
+	scoreText.text = 'PERSONAL BEST: \n (WIP)';
 	positionHighscore();
 
 	if(!selectedSmth && finishedZoom) {
@@ -278,9 +270,6 @@ function changeSelection(change:Int = 0, playSound:Bool = true){
 			alphaTween = null;
 		}
 	});
-
-	intendedScore = FunkinSave.getSongHighscore(songs[curSelected_freeplay].name, songs[curSelected_freeplay].difficulties[curDifficulty]).score;
-	intendedRating = FunkinSave.getSongHighscore(songs[curSelected_freeplay].name, songs[curSelected_freeplay].difficulties[curDifficulty]).score;
 
 	var bullShit:Int = 0;
 

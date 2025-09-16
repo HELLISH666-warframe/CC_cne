@@ -1,35 +1,17 @@
 import flixel.addons.display.FlxBackdrop;
 //trojan:
-var scroll:FlxBackdrop;
+public var scroll:FlxBackdrop;
 var viraScroll:FlxBackdrop;
-var vignettMid:FlxSprite;
+public var vignettMid:FlxSprite;
 var vignetteFin:FlxSprite;
 var SpinAmount:Float = 0;
 var isPlayersSpinning:Bool = false;
-var filter:FlxSprite;
+public var filter:FlxSprite;
+public var coolShit:FlxSprite;
 function postCreate() {
 	lightsColors = [0xFFE5BE01, 0xFF00AAE4, 0xFF76BD17, 0xFFFF0000, 0xFFFF8000];
-	alanBG.setGraphicSize(Std.int(alanBG.width * 5));
 
-	adobeWindow.setGraphicSize(Std.int(adobeWindow.width * 2));
-	adobeWindow.screenCenter();
-	adobeWindow.y -= 900;
-	adobeWindow.x += 1500;
-
-	sFWindow.screenCenter();
-	sFWindow.y -= 900;
-	sFWindow.x += 900;
-	sFWindow.setGraphicSize(Std.int(sFWindow.width * 1.5));
-
-	daFloor.screenCenter();
-	daFloor.y += 710;
-	daFloor.x += 2300;
-
-	tscseeing.setGraphicSize(Std.int(tscseeing.width * 1.3));
-    tscseeing.screenCenter();
 	tscseeing.updateHitbox();
-	tscseeing.x += 2480;
-	tscseeing.y += 95;
 	tscseeing.antialiasing = true;
 
 	radialLine.setGraphicSize(Std.int(radialLine.width * 1.7));
