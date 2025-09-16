@@ -2,6 +2,11 @@
 	"displayName": "enmity",
 	"bpm": 185.0,
 	"icon": "showdowntco",
+	"difficulties": [
+		"SIMPLE",
+		"HARD",
+		"INSANE"
+	],
 	"color": "#FCAE00",
 	"background": "enmity",
 	"portrait": "enmity",
