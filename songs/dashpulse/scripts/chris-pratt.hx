@@ -1,3 +1,8 @@
+import openfl.Lib;
+import lime.app.Application;
+import flixel.system.scaleModes.RatioScaleMode;
+import flixel.system.scaleModes.StageSizeScaleMode;
+
 var angleshit = 1;
 var anglevar = 2;
 
@@ -62,4 +67,14 @@ function beatHit(curBeat:Int) {
 		case 364:
 			camGame.alpha = 0;
 	}
+}
+
+function destroy() {
+	Lib.application.window.resizable = true;
+	FlxG.scaleMode = new RatioScaleMode(false);
+	FlxG.resizeGame(1280, 720);
+	FlxG.resizeWindow(1280, 720);
+	FlxG.camera.width = 1280;
+	FlxG.camera.height = 720;
+	
 }
