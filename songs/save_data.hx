@@ -1,4 +1,4 @@
-function create() {
+function onSongEnd() {
 	trace(FlxG.save.data.songsUnlocked);
 	if(!FlxG.save.data.songsUnlocked.contains(curSong))
 	{
