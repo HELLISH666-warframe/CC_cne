@@ -12,6 +12,8 @@ function new()
     if (FlxG.save.data.screenShake_cc == null) FlxG.save.data.screenShake_cc = true;
     if (FlxG.save.data.flashing_cc == null) FlxG.save.data.flashing_cc = true;
     if (FlxG.save.data.noMechanics_cc == null) FlxG.save.data.noMechanics_cc = true;
+    if (FlxG.save.data.songsUnlocked_mainWeek == null) FlxG.save.data.songsUnlocked_mainWeek = false;
+    if (FlxG.save.data.songsUnlocked == null) FlxG.save.data.songsUnlocked = [];
 }
 function update(elapsed:Float){
 if (FlxG.keys.justPressed.F5) FlxG.resetState();
@@ -23,7 +25,6 @@ if (FlxG.keys.justPressed.F6){
 		FlxG.camera.width = 1280;
 		FlxG.camera.height = 720;
 }
-if (FlxG.keys.justPressed.EIGHT) FlxG.resetState();
 }
 
 var redirectStates:Map<FlxState, String> = [

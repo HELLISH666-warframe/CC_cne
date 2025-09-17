@@ -1,6 +1,5 @@
-import flixel.effects.particles.FlxParticle;
-import flixel.effects.particles.FlxTypedEmitter;
-
+public var redthing = new FlxSprite(0, 0).loadGraphic(Paths.image('stages/victim/vignette'));
+var time:Float=0;
 function postCreate() {
 	//defaultCamZoom = 0.7;
 	alanBG.setGraphicSize(Std.int(alanBG.width * 5));
@@ -19,7 +18,6 @@ function postCreate() {
 	//bsod.antialiasing = ClientPrefs.globalAntialiasing;
 	bsod.alpha = 0.0001;
 
-	redthing = new FlxSprite(0, 0).loadGraphic(Paths.image('stages/victim/vignette'));
 	//redthing.antialiasing = ClientPrefs.globalAntialiasing;
 	redthing.camera = camBars;
 	add(redthing);
@@ -47,4 +45,13 @@ function postCreate() {
 	bottomBarsALT.screenCenter();
 	bottomBarsALT.y += 450;
 	add(bottomBarsALT);
+
+	if (FlxG.save.data.shaders){
+		bsod.shader = new CustomShader("CRT");
+	}
+}
+function update(elapsed:Float) {
+	time +=elapsed;
+	bsod.shader.data.iTime.value = [time];
+	confBSODShake(1.0);
 }

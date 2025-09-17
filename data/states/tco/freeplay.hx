@@ -50,36 +50,38 @@ var fisheye:CustomShader = new CustomShader("fisheye");
 
 var preload = [];
 var preload2 = [];
+
+static var prevSong:String = "";
  
 function create() {
-	FlxG.sound.playMusic(Paths.music('freakyMenu'), 0);
+	if (FlxG.sound.music==null)FlxG.sound.playMusic(Paths.music('freakyMenu'), 0);
 	add(bg);
 
 	scrollingThing = new FlxBackdrop(Paths.image('menus/FAMenu/scroll'), FlxAxes.XY, 0, 0);
 	scrollingThing.scrollFactor.set(0, 0.07);
 	scrollingThing.setGraphicSize(Std.int(scrollingThing.width * 0.8));
-	//scrollingThing.antialiasing = ClientPrefs.globalAntialiasing;
+	scrollingThing.antialiasing = Options.antialiasing;
 	add(scrollingThing);
 
 	add(featuredChar);
 
 	var vignetteCircle:FlxSprite = new FlxSprite().loadGraphic(Paths.image('menus/freeplayArt/freeplayImages/dea'));
-	//vignetteCircle.antialiasing = ClientPrefs.globalAntialiasing;
+	vignetteCircle.antialiasing = Options.antialiasing;
 	add(vignetteCircle);
 	vignetteCircle.screenCenter();
 
 	var upBar:FlxSprite = new FlxSprite().loadGraphic(Paths.image('menus/freeplayArt/freeplayImages/upBar'));
-	//upBar.antialiasing = ClientPrefs.globalAntialiasing;
+	upBar.antialiasing = Options.antialiasing;
 	add(upBar);
 	upBar.screenCenter();
 
 	var downBar:FlxSprite = new FlxSprite().loadGraphic(Paths.image('menus/freeplayArt/freeplayImages/downBar'));
-	//downBar.antialiasing = ClientPrefs.globalAntialiasing;
+	downBar.antialiasing = Options.antialiasing;
 	add(downBar);
 	downBar.screenCenter();
 
 	barName = new FlxSprite().loadGraphic(Paths.image('menus/freeplayArt/freeplayImages/type of freeplay/'+FlxG.save.data.freeplaything_cc));
-	//barName.antialiasing = ClientPrefs.globalAntialiasing;
+	barName.antialiasing = Options.antialiasing;
 	add(barName);
 	barName.screenCenter();
 		
@@ -91,11 +93,12 @@ function create() {
 		chris_pratt.scrollFactor.set(1, 0);
 		add(chris_pratt);
 		grpSongs2.add(chris_pratt);
+		var wasPlayed:Bool = FlxG.save.data.songsUnlocked.contains(songs[i].name);
 
-		var icon:HealthIcon = new HealthIcon(songs[i].icon);
+		var icon:HealthIcon = new HealthIcon(wasPlayed ? songs[i].icon : 'interrogaciones');
 		icon.y -= 70;
 		icon.sprTracker = chris_pratt;
-		//icon.yAdd -= 10;
+		icon.sprTrackerOffset.set(30,-50);
 
 		iconArray2.push(icon);
 		icon.x -= 380;
@@ -108,7 +111,7 @@ function create() {
 	arrow.animation.addByPrefix('smash', 'arrow press', 24, false);
 	arrow.setGraphicSize(Std.int(arrow.width * 0.4));
 	arrow.scrollFactor.set();
-	//arrow.antialiasing = ClientPrefs.globalAntialiasing;
+	arrow.antialiasing = Options.antialiasing;
 	add(arrow);
 
 	flippedArrow = new FlxSprite(0, 593);
@@ -118,7 +121,7 @@ function create() {
 	flippedArrow.setGraphicSize(Std.int(flippedArrow.width * 0.4));
 	flippedArrow.scrollFactor.set();
 	flippedArrow.flipX = true;
-	//flippedArrow.antialiasing = ClientPrefs.globalAntialiasing;
+	flippedArrow.antialiasing = Options.antialiasing;
 	add(flippedArrow);
 
 	scoreText = new FlxText(FlxG.width * 0.7, 405, 0, "", 24);
@@ -158,11 +161,24 @@ function create() {
 	    preload.push(graphic);
 	    preload2.push(graphic2);
 	}
+	trace(curSelected_freeplay);
 
 	changeSelection(0);
 	changeDiff(0);
+	trace(curSelected_freeplay);
 	curSelected_freeplay=0;
 }
+
+static var curPlayingInst = Paths.inst(songs[curSelected_freeplay].name, songs[curSelected_freeplay].difficulties[curDifficulty]);
+
+function postCreate() {
+	prevchar = curPlayingInst;
+	if(curPlayingInst!=prevSong)
+	FlxG.sound.playMusic(curPlayingInst, 0);
+	curSelected_freeplay=0;
+	changeSelection(0);
+}
+
 function update(elapsed:Float) {
 	if (FlxG.sound.music!=null && FlxG.sound.music.volume < 0.7) FlxG.sound.music.volume += 0.5 * elapsed;
 
@@ -225,16 +241,16 @@ function changeSelection(change:Int = 0, playSound:Bool = true){
 
 	curSelected_freeplay += change;
 
-	if (curSelected_freeplay < 0)
-		curSelected_freeplay = songs.length - 1;
-	if (curSelected_freeplay >= songs.length)
-		curSelected_freeplay = 0;
+	if (curSelected_freeplay < 0) curSelected_freeplay = songs.length - 1;
+	if (curSelected_freeplay >= songs.length) curSelected_freeplay = 0;
 
 	if(zoomTween != null) zoomTween.cancel();
 	if(tweenX != null) tweenX.cancel();
 	if(alphaTween != null) alphaTween.cancel();
 
-	var newColor:Int = songs[curSelected_freeplay].color;
+	var songHasBeenPlayed:Bool = FlxG.save.data.songsUnlocked.contains(songs[curSelected_freeplay].name);
+
+	var newColor:Int = songHasBeenPlayed ? songs[curSelected_freeplay].color : -1;
 
 	if(newColor != intendedColor) {
 		if(colorTween != null) colorTween.cancel();
@@ -246,12 +262,16 @@ function changeSelection(change:Int = 0, playSound:Bool = true){
 		});
 	}
 
-	bg.loadGraphic(preload2[curSelected_freeplay]);
-	//bg.antialiasing = ClientPrefs.globalAntialiasing;
+	var daBG:String = songHasBeenPlayed ? preload2[curSelected_freeplay] : Paths.image('menus/freeplayArt/freeplayImages/bgs/no bg');
+
+	bg.loadGraphic(daBG);
+	bg.antialiasing = Options.antialiasing;
 	bg.screenCenter();
 
-	featuredChar.loadGraphic(preload[curSelected_freeplay]);
-	//featuredChar.antialiasing = ClientPrefs.globalAntialiasing;
+	var featuredImage:String = songHasBeenPlayed ? preload[curSelected_freeplay] : Paths.image('menus/freeplayArt/freeplayImages/art/no one');
+
+	featuredChar.loadGraphic(featuredImage);
+	featuredChar.antialiasing = Options.antialiasing;
 	featuredChar.setGraphicSize(Std.int(featuredChar.width * 0.8));
 	featuredChar.screenCenter();
 	featuredChar.x -= 150;
@@ -311,6 +331,11 @@ function changeSelection(change:Int = 0, playSound:Bool = true){
 				}
 			});
 		}
+	}
+	curPlayingInst = Paths.inst(songs[curSelected_freeplay].name, songs[curSelected_freeplay].difficulties[curDifficulty]);
+	if(curPlayingInst!=prevSong){
+		FlxG.sound.playMusic(curPlayingInst, 1);
+		prevSong=curPlayingInst;
 	}
 }
 

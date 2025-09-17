@@ -133,7 +133,7 @@
 },
 {
 "SI": {
-"SN": "BF NOTE LEFT MISS",
+"SN": "BF MISS LEFT",
 "IN": "",
 "ST": "G",
 "FF": 0,
@@ -193,7 +193,7 @@
 },
 {
 "SI": {
-"SN": "BF NOTE RIGHT MISS",
+"SN": "BF MISS RIGHT",
 "IN": "",
 "ST": "MC",
 "TRP": {
@@ -10242,7 +10242,7 @@
 }
 },
 {
-"SN": "BF NOTE LEFT MISS",
+"SN": "BF MISS LEFT",
 "TL": {
 "L": [
 {
@@ -14969,7 +14969,7 @@
 }
 },
 {
-"SN": "BF NOTE RIGHT MISS",
+"SN": "BF MISS RIGHT",
 "TL": {
 "L": [
 {

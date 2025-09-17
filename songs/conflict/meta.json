@@ -1,9 +1,19 @@
 {
-	"displayName": "conflict",
-	"bpm": 160.0,
-	"icon": "the-chosen-one",
+	"composer": "JaceLOL",
 	"color": "#FCAE1C",
-	"background": "outrage",
+	"opponentModeAllowed": false,
+	"difficulties": [
+		"simple",
+		"insane",
+		"hard"
+	],
+	"icon": "the-chosen-one",
 	"portrait": "outrage",
-	"composer": "JaceLOL"
+	"coopAllowed": false,
+	"stepsPerBeat": 4,
+	"displayName": "conflict",
+	"beatsPerMeasure": 4,
+	"needsVoices": true,
+	"background": "outrage",
+	"bpm": 160
 }
