@@ -5,7 +5,6 @@ import flixel.addons.display.FlxBackdrop;
 import funkin.editors.charter.Charter;
 import flixel.text.FlxTextBorderStyle;
 import funkin.options.OptionsMenu;
-import funkin.options.TreeMenu;
 
 var grpMenuShit = new FlxTypedGroup();
 
@@ -128,8 +127,7 @@ function update(elapsed:Float) {
 			case "CHANGE CONTROLS":
 				persistentDraw = false;
 				openSubState(new KeybindsOptions());
-			case "CHANGE OPTIONS": TreeMenu.lastState = PlayState;
-		        FlxG.switchState(new OptionsMenu());
+			case "CHANGE OPTIONS": FlxG.switchState(new OptionsMenu((_) -> FlxG.switchState(new PlayState())));
 			case "EXIT TO MENU":  oldVideoResolution=false;
 				PlayState.deathCounter = 0;
 				PlayState.seenCutscene = false;

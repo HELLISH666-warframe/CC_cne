@@ -110,13 +110,15 @@ function create() {
     FlxG.cameras.add(camBars = new HudCamera(), false);
     camBars.bgColor = 0x00000000;
     FlxG.cameras.add(camHUD, false);
+	FlxG.cameras.add(camOther = new HudCamera(), false);
+    camOther.bgColor = 0x00000000;
     if(oldVideoResolution) {
 	if(FlxG.fullscreen)	FlxG.fullscreen = false;
 		Lib.application.window.resizable = false;
 		FlxG.scaleMode = new StageSizeScaleMode();
 		FlxG.resizeGame(960, 720);
 		FlxG.resizeWindow(960, 720);
-		camHUD.width=960;
+		//camHUD.width=720;
 	}
     Lib.application.window.title = "Computerized Conflict -"+curSong+ "- Composed by: "+curSong.composer;
 }

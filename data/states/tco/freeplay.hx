@@ -13,7 +13,7 @@ var songRealList = [
 	["adobe","outrage","end-process","morality","stick-em-up","artistry","proficiency","masterpiece"],
 	["trojan","conflict","dashpulse","time-travel","contrivance","messenger","amity","voltagen","tune-in","unfaithful","rombie","fancy-funk","catto","alan"],
 	["enmity","doppelganger","aurora","phantasm"],
-	[""]
+	["adobe-(old)","outrage-(old)","alan-(old)"]
 ];
 
 for(s in songRealList[FlxG.save.data.freeplaything_cc])
@@ -87,13 +87,13 @@ function create() {
 		
 	add(grpSongs2);
 	for (i in 0...songs.length){
-		var chris_pratt:FlxText = new FlxText(500, 650, 500, songs[i].displayName.toUpperCase(),44);
+		var wasPlayed:Bool = FlxG.save.data.songsUnlocked.contains(songs[i].name);
+		var chris_pratt:FlxText = new FlxText(500, 650, 500, wasPlayed ? songs[i].name.toUpperCase() : '???',44);
 		chris_pratt.screenCenter(FlxAxes.X);
 		chris_pratt.setFormat(Paths.font("phantommuff.ttf"), 44, FlxColor.WHITE, "center", FlxTextBorderStyle.OUTLINE, FlxColor.TRANSPARENT);
 		chris_pratt.scrollFactor.set(1, 0);
 		add(chris_pratt);
 		grpSongs2.add(chris_pratt);
-		var wasPlayed:Bool = FlxG.save.data.songsUnlocked.contains(songs[i].name);
 
 		var icon:HealthIcon = new HealthIcon(wasPlayed ? songs[i].icon : 'interrogaciones');
 		icon.y -= 70;
@@ -173,8 +173,6 @@ static var curPlayingInst = Paths.inst(songs[curSelected_freeplay].name, songs[c
 
 function postCreate() {
 	prevchar = curPlayingInst;
-	if(curPlayingInst!=prevSong)
-	FlxG.sound.playMusic(curPlayingInst, 0);
 	curSelected_freeplay=0;
 	changeSelection(0);
 }
@@ -195,6 +193,7 @@ function update(elapsed:Float) {
 			changeSelection(controls.RIGHT_P ? 1 : -1);
 			controls.LEFT_P ?flippedArrow.animation.play('smash') :arrow.animation.play('smash');
 			FlxG.sound.play(Paths.sound('scrollMenu'));
+			changeDiff(0);
 		}
 		if (controls.UP_P||controls.DOWN_P){
 			changeDiff(controls.DOWN_P ? 1 : -1);
@@ -209,7 +208,7 @@ function update(elapsed:Float) {
 			FlxTween.tween(FlxG.camera, {zoom: -2}, 1.5, {ease: FlxEase.expoIn});
 			FlxG.camera.fade(FlxColor.BLACK, 0.8, false, function()
 			{
-				FlxG.switchState(new ModState('FreeplayMenu'));
+				FlxG.switchState(new ModState('tco/FreeplayMenu'));
 			});
 		}
 		if (controls.ACCEPT){
@@ -332,13 +331,15 @@ function changeSelection(change:Int = 0, playSound:Bool = true){
 			});
 		}
 	}
-	if(FlxG.save.data.songsUnlocked.contains(songs[curSelected_freeplay].name))
+	if(FlxG.save.data.songsUnlocked.contains(songs[curSelected_freeplay].name.toLowerCase())){
+		trace("fheruifhiurgfiuhhgiu");
 	curPlayingInst = Paths.inst(songs[curSelected_freeplay].name, songs[curSelected_freeplay].difficulties[curDifficulty]);
 	if(curPlayingInst!=prevSong){
 		FlxG.sound.playMusic(curPlayingInst, 1);
 		prevSong=curPlayingInst;
 	}
-}
+}}
+
 
 function beatHit(){
 	FlxTween.tween(FlxG.camera, {zoom:1.02}, 0.3, {ease: FlxEase.quadOut, type: FlxEase.BACKWARD});

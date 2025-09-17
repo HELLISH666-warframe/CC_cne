@@ -514,11 +514,11 @@ function loadState() {
 						if (newToTheMod) createGFPopup();
 						else //FlxG.switchState(new ModState('TCOStoryState'));
 						FlxG.switchState(new StoryMenuState());
-					case 'freeplay': FlxG.switchState(new ModState('FreeplayMenu'));
+					case 'freeplay': FlxG.switchState(new ModState('tco/FreeplayMenu'));
 					case 'awards': //FlxG.switchState(new ModState('AchievementsMenuState'));
 					trace("NO_SOFTLOCK!!!");
 					FlxG.resetState();
-					case 'art_gallery': FlxG.switchState(new ModState('FanArtState'));
+					case 'art_gallery': FlxG.switchState(new ModState('tco/FanArtState'));
 					//trace("NO_SOFTLOCK!!!"); FlxG.resetState();
 					case 'credits':FlxG.switchState(new ModState('TCOCreditsState'));
 					//trace("NO_SOFTLOCK!!!");FlxG.resetState();

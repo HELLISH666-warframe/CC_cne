@@ -1,0 +1,9 @@
+<!DOCTYPE codename-engine-stage>
+<stage zoom="0.6" folder="stages/aol/">
+	<sprite name="aolBG" x="-906" y="-720" sprite="messenger_bg" scrollx="0.6" scrolly="1"/>
+	<sprite name="aolBack" x="343.5" y="210.5" sprite="messenger_back" scroll="1" scale="3"/>
+	<sprite name="aolFloor" x="130.5" y="221.5" sprite="messenger_floor" scroll="1" scalex="2.5" scaley="2"/>
+	<girlfriend x="400" y="130"/>
+	<opponent x="350" y="110"/>
+	<player x="1320" y="130"/>
+</stage>

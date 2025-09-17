@@ -1,9 +1,19 @@
 {
-	"displayName": "messenger",
-	"bpm": 140.0,
-	"icon": "aol",
+	"composer": "Eclyptic",
 	"color": "#FFCC00",
-	"background": "messenger",
+	"opponentModeAllowed": false,
+	"difficulties": [
+		"simple",
+		"insane",
+		"hard"
+	],
+	"icon": "aol",
 	"portrait": "messenger",
-	"composer": "Eclyptic"
+	"coopAllowed": false,
+	"stepsPerBeat": 4,
+	"displayName": "messenger",
+	"needsVoices": true,
+	"background": "messenger",
+	"beatsPerMeasure": 4,
+	"bpm": 140
 }
