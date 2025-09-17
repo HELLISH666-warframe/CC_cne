@@ -332,6 +332,7 @@ function changeSelection(change:Int = 0, playSound:Bool = true){
 			});
 		}
 	}
+	if(FlxG.save.data.songsUnlocked.contains(songs[curSelected_freeplay].name))
 	curPlayingInst = Paths.inst(songs[curSelected_freeplay].name, songs[curSelected_freeplay].difficulties[curDifficulty]);
 	if(curPlayingInst!=prevSong){
 		FlxG.sound.playMusic(curPlayingInst, 1);
