@@ -2,6 +2,7 @@
 	"displayName": "voltagen",
 	"color": "#141414",
 	"bpm":200,
+	"icon":"electro",
 	"background": "messenger",
 	"portrait": "voltagen"
 }

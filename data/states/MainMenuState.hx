@@ -7,7 +7,7 @@ import funkin.menus.StoryMenuState;
 import funkin.options.OptionsMenu;
 import flixel.math.FlxMath;
 import flixel.FlxObject;
-import openfl.Lib;
+import funkin.editors.ui.UIState;
 
 static var curSelected:Int = 0;
 
@@ -84,7 +84,7 @@ function create() {
 
 	persistentUpdate = persistentDraw = true;
 
-	Lib.application.window.title = "Computerized Conflict - Main Menu - Theme by: DangDoodle";
+	window.title = "Computerized Conflict - Main Menu - Theme by: DangDoodle";
 	FlxG.camera.zoom = 5;
 
 	bg.scrollFactor.set();
@@ -502,9 +502,7 @@ function loadState() {
 				var shit:FlxSound = new FlxSound().loadEmbedded(Paths.sound('glitch'));
 				shit.play(true);
 				shit.onComplete = function() {
-					//FlxG.switchState(new ModState('VaultState'));
-					trace("NO_SOFTLOCK!!!");
-					FlxG.resetState();
+					FlxG.switchState(new UIState(true, "tco/VaultState"));
 				}
 			}
 
@@ -518,9 +516,7 @@ function loadState() {
 					trace("NO_SOFTLOCK!!!");
 					FlxG.resetState();
 					case 'art_gallery': FlxG.switchState(new ModState('tco/FanArtState'));
-					//trace("NO_SOFTLOCK!!!"); FlxG.resetState();
-					case 'credits':FlxG.switchState(new ModState('TCOCreditsState'));
-					//trace("NO_SOFTLOCK!!!");FlxG.resetState();
+					case 'credits':FlxG.switchState(new ModState('tco/TCOCreditsState'));
 					case 'options': FlxG.switchState(new OptionsMenu());
 				}
 			});
