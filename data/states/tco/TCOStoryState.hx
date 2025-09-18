@@ -28,7 +28,7 @@ public var camHUD:FlxCamera;
 var selectedSmth:Bool = false;
 
 static var lastDifficultyName:String = '';
-public static var curDifficulty:Int = 0;
+static var curDifficulty_storymode:Int = 0;
 var outline:FlxSprite;
 var crtShader = new CustomShader("CRT"); 
 public static var difficulties:Array<String> = ['Simple','Hard','Insane'];
@@ -220,25 +220,25 @@ function changeDifficulty(change:Int = 0, ?stop:Bool = false):Void {
 		
 	FlxG.sound.play(Paths.sound('scrollMenu'));
 
-	curDifficulty += change;
+	curDifficulty_storymode += change;
 
-	if (curDifficulty < 0) curDifficulty = difficulties.length-1;
-	if (curDifficulty >= difficulties.length) curDifficulty = 0;
+	if (curDifficulty_storymode < 0) curDifficulty_storymode = difficulties.length-1;
+	if (curDifficulty_storymode >= difficulties.length) curDifficulty_storymode = 0;
 
-	var diff:String = difficulties[curDifficulty];
+	var diff:String = difficulties[curDifficulty_storymode];
 
 	sprDifficulty.loadGraphic(Paths.image('menus/storymenu/difficulties/'+diff));
 	sprDifficulty.antialiasing = Options.antialiasing;
 	sprDifficulty.x = 40;
 	sprDifficulty.y = 230;
 
-	weekImages.loadGraphic(Paths.image('menus/storymenu/chapterImages/'+curWeek+"-"+curDifficulty));
+	weekImages.loadGraphic(Paths.image('menus/storymenu/chapterImages/'+curWeek+"-"+curDifficulty_storymode));
 	weekImages.screenCenter(FlxAxes.Y);
 	weekImages.x = FlxG.width - weekImages.width;
 	weekImages.antialiasing = Options.antialiasing;
 	weekImages.setGraphicSize(Std.int(weekImages.width * 0.8));
 
-	switch(curDifficulty) {
+	switch(curDifficulty_storymode) {
 		case 0: FlxG.cameras.flash(FlxColor.BLACK, 0.50);
 		fires.alpha = 0.0001;
 		bgSprite.alpha = 1;
@@ -269,7 +269,7 @@ function changeWeek(change:Int = 0, ?stop:Bool = false):Void {
 	if (curWeek < 0) curWeek = weeklist.weeks.length-1;
 	if (curWeek >= weeklist.weeks.length) curWeek = 0;
 
-	weekImages.loadGraphic(Paths.image('menus/storymenu/chapterImages/'+curWeek+"-"+curDifficulty));
+	weekImages.loadGraphic(Paths.image('menus/storymenu/chapterImages/'+curWeek+"-"+curDifficulty_storymode));
 	weekImages.screenCenter(FlxAxes.Y);
 	weekImages.x = FlxG.width - weekImages.width;
 	weekImages.antialiasing = Options.antialiasing;
@@ -283,6 +283,6 @@ function changeWeek(change:Int = 0, ?stop:Bool = false):Void {
 }
 
 function play() {
-	PlayState.loadWeek(weeklist.weeks[curWeek], difficulties[curDifficulty]);
+	PlayState.loadWeek(weeklist.weeks[curWeek], difficulties[curDifficulty_storymode]);
 	FlxG.switchState(new PlayState());
 }

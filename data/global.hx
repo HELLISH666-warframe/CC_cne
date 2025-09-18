@@ -19,14 +19,6 @@ function new()
 }
 function update(elapsed:Float){
 if (FlxG.keys.justPressed.F5) FlxG.resetState();
-if (FlxG.keys.justPressed.F6){
-    Lib.application.window.resizable = true;
-		FlxG.scaleMode = new RatioScaleMode(false);
-		FlxG.resizeGame(1280, 720);
-		FlxG.resizeWindow(1280, 720);
-		FlxG.camera.width = 1280;
-		FlxG.camera.height = 720;
-}
 }
 
 var redirectStates:Map<FlxState, String> = [
