@@ -11,10 +11,12 @@ var iconArray2:Array<HealthIcon> = [];
 songs = [];
 var songRealList = [	
 	["adobe","outrage","end-process","morality","stick-em-up","artistry","proficiency","masterpiece"],
-	["trojan","conflict","dashpulse","time-travel","contrivance","messenger","amity","voltagen","tune-in","unfaithful","rombie","fancy-funk","catto","alan"],
+	["trojan","conflict","dashpulse","time-travel","contrivance","messenger","amity","voltagen","tune-in","unfaithful","rombie","fancy-funk","catto"],
 	["enmity","doppelganger","aurora","phantasm"],
 	["adobe-(old)","outrage-(old)","alan-(old)"]
 ];
+if(FlxG.save.data.alanUnlocked)
+songRealList[1].push("alan");
 
 for(s in songRealList[FlxG.save.data.freeplaything_cc])
 	songs.push(Chart.loadChartMeta(s, "hard", true));
