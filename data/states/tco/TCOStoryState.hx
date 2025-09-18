@@ -1,9 +1,9 @@
 import flixel.addons.transition.FlxTransitionableState;
+import funkin.menus.StoryMenuState.StoryWeeklist;
 import flixel.addons.display.FlxBackdrop;
 import funkin.backend.utils.DiscordUtil;
 import funkin.menus.StoryMenuState;
 import flixel.math.FlxMath;
-import openfl.Lib;
 
 var scoreText:FlxText;
 var weekName:FlxText;
@@ -22,57 +22,64 @@ var spikes1:FlxBackdrop;
 var spikes2:FlxBackdrop;
 
 public var camGame:FlxCamera;
+//public var camGameShaders:Array<ShaderEffect> = [];
+public var camHUD:FlxCamera;
 
 var selectedSmth:Bool = false;
 
-public static var lastDifficultyName:String = '';
-static var curDifficulty:Int = 0;
+static var lastDifficultyName:String = '';
+public static var curDifficulty:Int = 0;
 var outline:FlxSprite;
+var crtShader = new CustomShader("CRT"); 
+public static var difficulties:Array<String> = ['Simple','Hard','Insane'];
 
-public static var difficulties:Array<String> =['Simple','Hard','Insane'];
+var checkpointSystemON:Bool;
 
+var blackThing:FlxSprite;
 var text:FlxText;
-
-public static var weeks:Array<WeekInfo> = [];
 
 var chapterThingyText:FlxText;
 
 var finishedZoom:Bool = false;
 
-override function create() {
+public var weekList:StoryWeeklist;
+
+static var curWeek:Int = 0;
+
+function create() {
 	DiscordUtil.changePresence('In the Story Mode', null);
-
-	weeks =
-	[new WeekInfo('week 1', ['Adobe', 'Outrage', 'End Process'], 'Episode 1: Computer Breakdown'),
-	new WeekInfo('week 2', ['Adobe', 'Outrage', 'End Process'], 'Episode 1: Computer Breakdown'),
-	];
-
-	PlayState.isStoryMode = true;
-
-	Lib.application.window.title = "Computerized Conflict - Story Menu - Theme by: DangDoodle";
+	
+	weeklist = StoryWeeklist.get(true, false);
+	trace(weeklist.weeks[1].songs);
+	window.title = "Computerized Conflict - Story Menu - Theme by: DangDoodle";
 
 	camGame = new FlxCamera();
+	camHUD = new FlxCamera();
+	camHUD.bgColor = 0;
 	FlxG.cameras.reset(camGame);
 	FlxCamera.defaultCameras = [camGame];
+	FlxG.cameras.add(camHUD, false);
+	checkpointSystemON = FlxG.save.data.checkpoint != null;
 
 	FlxG.camera.zoom = 1.5;
+	camHUD.zoom = 1.5;
 
 	bgSprite = new FlxSprite().loadGraphic(Paths.image('menus/storymenu/week1BG'));
 	bgSprite.updateHitbox();
 	bgSprite.screenCenter();
-	bgSprite.antialiasing = true;
-		
+	bgSprite.antialiasing = Options.antialiasing;
+
 	scrollingThing = new FlxBackdrop(Paths.image('menus/storymenu/scroll'), FlxAxes.XY, 0, 0);
 	scrollingThing.scrollFactor.set(0, 0.07);
-		
+
 	scrollingThing.setGraphicSize(Std.int(scrollingThing.width * 0.8));
 	scrollingThing.alpha = 0.85;
-		
+
 	circleTiles = new FlxSprite().loadGraphic(Paths.image('menus/storymenu/circlesTiles'));
 	circleTiles.updateHitbox();
 	circleTiles.screenCenter();
-	circleTiles.antialiasing = true;
-		
+	circleTiles.antialiasing = Options.antialiasing;
+
 	fires = new FlxSprite();
 	fires.frames = Paths.getSparrowAtlas('menus/storymenu/StoryMenuFire');
 	fires.animation.addByPrefix('tCoGoesInsane', 'StoryMenuFire', 24, true);
@@ -82,48 +89,49 @@ override function create() {
 	fires.screenCenter();
 	fires.y += 200;
 	fires.alpha = 0.0001;
-	fires.antialiasing = true;
+	fires.antialiasing = Options.antialiasing;
 
 	spikes1 = new FlxBackdrop(Paths.image('menus/mainmenu/spikes'), FlxAxes.X, 0, 0);
 	spikes1.y -= 60;
 	spikes1.scrollFactor.set(0, 0);
 	spikes1.flipY = true;
-		
+
 	upperBar = new FlxSprite().loadGraphic(Paths.image('menus/storymenu/upperBar'));
 	upperBar.updateHitbox();
 	upperBar.screenCenter();
-	upperBar.antialiasing = true;
-		
+	upperBar.antialiasing = Options.antialiasing;
+
 	spikes2 = new FlxBackdrop(Paths.image('menus/mainmenu/spikes'), FlxAxes.X, 0, 0);
 	spikes2.y += 630;
 	spikes2.scrollFactor.set(0, 0);
-		
+
 	songsBG = new FlxSprite().loadGraphic(Paths.image('menus/storymenu/songBG'));
 	songsBG.updateHitbox();
 	songsBG.x = 0;
 	songsBG.y = FlxG.height - songsBG.height - 90;
-	songsBG.antialiasing = true;
+	songsBG.antialiasing = Options.antialiasing;
 
 	scoreText = new FlxText(10, 10, 0, "SCORE: 49324858", 36);
 	scoreText.setFormat("VCR OSD Mono", 32);
 
-	chapterThingyText = new FlxText(10, 15, 0, weeks[0].desc, 36);
+	chapterThingyText = new FlxText(10, 15, 0, weeklist.weeks[curWeek].name, 36);
 	chapterThingyText.setFormat("VCR OSD Mono", 32);
-		
+
 	txtTracklist = new FlxText(FlxG.width * 0.05, songsBG.y + 60, 0, "", 32);
 	txtTracklist.alignment = 'center';
 	txtTracklist.color = 0xFFe55777;
 
 	txtTracklist.text = 'Tracks:';
-	txtTracklist.font = 'Small Print.ttf';
-	for (i in 0...weeks[0].songs.length) {
-		txtTracklist.text = txtTracklist.text + '\n' + weeks[0].songs[i];
+	txtTracklist.font = Paths.font("Small Print.ttf");
+
+	for (i in weeklist.weeks[curWeek].songs) {
+		txtTracklist.text = txtTracklist.text + '\n' + i.name;
 		txtTracklist.updateHitbox();
 	}
 	//TO DO: FIX THIS
 	txtTracklist.y = songsBG.y + (songsBG.height - txtTracklist.height) / 2;
 	txtTracklist.x -= 20;
-		
+
 	add(bgSprite);
 	add(scrollingThing);
 	add(circleTiles);
@@ -150,12 +158,16 @@ override function create() {
 	weekImages = new FlxSprite();
 	add(weekImages);
 
-	trace(diff);
-
 	changeDifficulty(0);
+	changeWeek(0);
+
+	if(FlxG.save.data.crt_cc){FlxG.camera.addShader(crtShader);
+	camHUD.addShader(crtShader);
+	}
 
 	FlxTween.tween(FlxG.camera, {zoom: 1}, 0.8, {ease: FlxEase.expoIn});
-	FlxG.camera.fade(FlxColor.BLACK, 0.8, true, function() {
+	FlxTween.tween(camHUD, {zoom: 1}, 0.8, {ease: FlxEase.expoIn});
+	camHUD.fade(FlxColor.BLACK, 0.8, true, function() {
 		finishedZoom = true;
 	});
 }
@@ -166,11 +178,8 @@ function update(elapsed:Float) {
 
 	spikes1.x -= 0.45 * 60 * elapsed;
 	spikes2.x -= 0.45 * 60 * elapsed;
-		
-	lerpScore = Math.floor(FlxMath.lerp(lerpScore, intendedScore, FlxMath.bound(elapsed * 30, 0, 1)));
-	if(Math.abs(intendedScore - lerpScore) < 10) lerpScore = intendedScore;
-		
-	scoreText.text = "WEEK SCORE:" + lerpScore;
+
+	scoreText.text = "WEEK SCORE:" + "Placeholderegb";
 	scoreText.screenCenter(FlxAxes.X);
 	scoreText.y = FlxG.height - scoreText.height - 15;
 
@@ -181,20 +190,26 @@ function update(elapsed:Float) {
 			FlxG.sound.play(Paths.sound('cancelMenu'));
 
 			FlxTween.tween(FlxG.camera, {zoom: -2}, 1.5, {ease: FlxEase.expoIn});
-			FlxG.camera.fade(FlxColor.BLACK, 0.8, false, function() {
+			FlxTween.tween(camHUD, {zoom: -2}, 1.5, {ease: FlxEase.expoIn});
+			camHUD.fade(FlxColor.BLACK, 0.8, false, function() {
 				FlxG.switchState(new ModState('MainMenuState'));
 			});
 		}
-		if (controls.RIGHT_P||controls.LEFT_P){
-			changeDifficulty(controls.RIGHT_P ? 1 : -1);
+		if (controls.UP_P||controls.DOWN_P){
+			changeWeek(controls.DOWN_P ? 1 : -1);
+		}
+		else if (controls.RIGHT_P) {
+			changeDifficulty(1, checkpointSystemON);
+		}
+		else if (controls.LEFT_P) {
+			changeDifficulty(-1, checkpointSystemON);
 		}
 		else if (controls.ACCEPT) {
 			selectedSmth = true;
 			FlxG.sound.play(Paths.sound('confirmMenu'));
 			FlxTween.tween(FlxG.camera, {zoom: 3}, 1, {ease: FlxEase.expoIn});
-			FlxG.camera.fade(FlxColor.BLACK, 0.8, false, function()
-			{
-				playSongs(weeks[0].songs, 0, 0, curDifficulty, true);
+			FlxG.camera.fade(FlxColor.BLACK, 0.8, false, function() {
+				play();
 			});
 		}
 	}
@@ -207,96 +222,67 @@ function changeDifficulty(change:Int = 0, ?stop:Bool = false):Void {
 
 	curDifficulty += change;
 
-	if (curDifficulty < 0)
-		curDifficulty = difficulties.length-1;
-	if (curDifficulty >= difficulties.length)
-		curDifficulty = 0;
+	if (curDifficulty < 0) curDifficulty = difficulties.length-1;
+	if (curDifficulty >= difficulties.length) curDifficulty = 0;
 
 	var diff:String = difficulties[curDifficulty];
 
-	sprDifficulty.loadGraphic(Paths.image('menus/storymenu/difficult/' +diff));
-	sprDifficulty.antialiasing = true;
+	sprDifficulty.loadGraphic(Paths.image('menus/storymenu/difficulties/'+diff));
+	sprDifficulty.antialiasing = Options.antialiasing;
 	sprDifficulty.x = 40;
 	sprDifficulty.y = 230;
 
-	weekImages.loadGraphic(Paths.image('menus/storymenu/chapterImages/w1-'+diff));
+	weekImages.loadGraphic(Paths.image('menus/storymenu/chapterImages/'+curWeek+"-"+curDifficulty));
 	weekImages.screenCenter(FlxAxes.Y);
 	weekImages.x = FlxG.width - weekImages.width;
-	weekImages.antialiasing = true;
+	weekImages.antialiasing = Options.antialiasing;
 	weekImages.setGraphicSize(Std.int(weekImages.width * 0.8));
 
 	switch(curDifficulty) {
-		case 0:
-			FlxG.cameras.flash(FlxColor.BLACK, 0.50);
-			fires.alpha = 0.0001;
-			bgSprite.alpha = 1;
-			bgSprite.color = FlxColor.WHITE;
-			circleTiles.color = FlxColor.WHITE;
-			scrollingThing.color = FlxColor.WHITE;
-			FlxG.sound.music.fadeIn(1, FlxG.sound.music.volume * 1);
-		case 1:
-			FlxG.cameras.flash(FlxColor.WHITE, 0.50);
-			fires.alpha = 0.0001;
-			bgSprite.alpha = 1;
-			bgSprite.color = FlxColor.WHITE;
-			circleTiles.color = FlxColor.WHITE;
-			scrollingThing.color = FlxColor.WHITE;
-		case 2:
-		    FlxG.cameras.flash(FlxColor.RED, 0.50);
-			fires.alpha = 1;
-			bgSprite.color = 0xFF2C2425;
-			circleTiles.color = 0xFF2C2425;
-			scrollingThing.color = 0xFF2C2425;
+		case 0: FlxG.cameras.flash(FlxColor.BLACK, 0.50);
+		fires.alpha = 0.0001;
+		bgSprite.alpha = 1;
+		bgSprite.color = FlxColor.WHITE;
+		circleTiles.color = FlxColor.WHITE;
+		scrollingThing.color = FlxColor.WHITE;
+		FlxG.sound.music.fadeIn(1, FlxG.sound.music.volume * 1);
+		case 1: FlxG.cameras.flash(FlxColor.WHITE, 0.50);
+		fires.alpha = 0.0001;
+		bgSprite.alpha = 1;
+		bgSprite.color = FlxColor.WHITE;
+		circleTiles.color = FlxColor.WHITE;
+		scrollingThing.color = FlxColor.WHITE;
+		case 2: FlxG.cameras.flash(FlxColor.RED, 0.50);
+		fires.alpha = 1;
+		bgSprite.color = 0xFF2C2425;
+		circleTiles.color = 0xFF2C2425;
+		scrollingThing.color = 0xFF2C2425;
 	}
-		
 	lastDifficultyName = diff;
-
-	var weekPlusDiffName:String = weeks[0].name + '-'+difficulties[curDifficulty];
-	//var weekScore:Int = CoolUtil.songsUnlocked.data.weeksData.get(weekPlusDiffName);
-	var weekScore:Int = 0;
-
-	intendedScore = weekScore;
-}
-	
-var lerpScore:Int = 0;
-var intendedScore:Int = 0;
-
-function playSongs(songlist:Array<String>, campaignScore:Int, campaignMisses:Int, difficultyStory:Int, introCutscene:Bool) {
-	PlayState.storyPlaylist = songlist;
-	PlayState.isStoryMode = true;
-	PlayState.vaultSong = false;
-	PlayState.storyDifficulty = difficultyStory;
-
-	PlayState.SONG = Song.loadFromJson(PlayState.storyPlaylist[0].toLowerCase() + '-' + difficulties[difficultyStory], PlayState.storyPlaylist[0].toLowerCase());
-	PlayState.campaignScore = campaignScore;
-	PlayState.campaignMisses = campaignMisses;
-	PlayState.storyWeek = 0;
-	PlayState.seenCutscene = false;
-	PlayState.weekNames = 'Episode 1: Computer Breakdown';
-
-	if (introCutscene) {
-		LoadingState.loadAndSwitchState(new CutsceneState('adobe', true, function() //this is still playing somehow
-			{
-				LoadingState.loadAndSwitchState(new PlayState(), true);
-			}), true);
-	}
-	else {
-		LoadingState.loadAndSwitchState(new PlayState(), true);
-	}
-
-	FreeplayState.destroyFreeplayVocals();
-	CoolUtil.difficulties = CoolUtil.defaultDifficulties.copy();
 }
 
-class WeekInfo {
-	public var name:String = "";
-	public var songs:Array<String> = [];
-	public var desc:String = "";
+function changeWeek(change:Int = 0, ?stop:Bool = false):Void {
+	if(stop) return;
 
-	public function new(name:String, songs:Array<String>, desc:String)
-	{
-		this.name = name;
-		this.songs = songs;
-		this.desc = desc;
+	curWeek += change;
+
+	if (curWeek < 0) curWeek = weeklist.weeks.length-1;
+	if (curWeek >= weeklist.weeks.length) curWeek = 0;
+
+	weekImages.loadGraphic(Paths.image('menus/storymenu/chapterImages/'+curWeek+"-"+curDifficulty));
+	weekImages.screenCenter(FlxAxes.Y);
+	weekImages.x = FlxG.width - weekImages.width;
+	weekImages.antialiasing = Options.antialiasing;
+	weekImages.setGraphicSize(Std.int(weekImages.width * 0.8));
+	txtTracklist.text="";
+	for (i in weeklist.weeks[curWeek].songs) {
+		txtTracklist.text = txtTracklist.text + '\n' + i.name;
+		txtTracklist.updateHitbox();
 	}
+	chapterThingyText.text = weeklist.weeks[curWeek].name;
+}
+
+function play() {
+	PlayState.loadWeek(weeklist.weeks[curWeek], difficulties[curDifficulty]);
+	FlxG.switchState(new PlayState());
 }

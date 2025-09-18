@@ -14,6 +14,8 @@ function new()
     if (FlxG.save.data.noMechanics_cc == null) FlxG.save.data.noMechanics_cc = true;
     if (FlxG.save.data.songsUnlocked_mainWeek == null) FlxG.save.data.songsUnlocked_mainWeek = false;
     if (FlxG.save.data.songsUnlocked == null) FlxG.save.data.songsUnlocked = [];
+    if (FlxG.save.data.checkpoint_cc == null) FlxG.save.data.checkpoint_cc = null;
+    if (FlxG.save.data.crt_cc == null) FlxG.save.data.crt_cc = true;
 }
 function update(elapsed:Float){
 if (FlxG.keys.justPressed.F5) FlxG.resetState();

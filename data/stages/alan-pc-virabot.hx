@@ -62,7 +62,7 @@ function postCreate() {
 	scroll = new FlxBackdrop(Paths.image('stages/trojan/scrollmidsong'), FlxAxes.XY, 0, 0);
 	scroll.setGraphicSize(Std.int(scroll.width * 0.9));
 	scroll.alpha = 0.0001;
-	add(scroll);
+	insert(7,scroll);
 
 	vignettMid = new FlxSprite(0, 0).loadGraphic(Paths.image('stages/trojan/vigMidSong'));
 	vignettMid.antialiasing = true;
@@ -85,4 +85,11 @@ function postCreate() {
 
 	//colorShad = new ColorSwap();
 	//if(SONG.song.toLowerCase() == 'trojan') camGame.alpha = 0;
+}
+
+function update(elapsed:Float) {
+	scroll.x -= 0.45 * 60 * elapsed;
+	scroll.y -= 0.16 * 60 * elapsed;
+	viraScroll.x -= 0.45 * 240 * elapsed;
+	viraScroll.y -= 0.16 * 240 * elapsed;
 }

@@ -56,12 +56,12 @@ function beatHit(curBeat:Int) {
 		coolShit.alpha = 0;
 		bestPart2 = false;
 		filter.alpha = 0.0001;
-		amChar.flash(FlxColor.WHITE, 0.85);
+		//camChar.flash(FlxColor.WHITE, 0.85);
 		boyfriend.setColorTransform(1, 1, 1, 1, 255, 255, 255, 0);
 		dad.setColorTransform(1, 1, 1, 1, 255, 255, 255, 0);
 		gf.alpha = 0.0001;
 		case 288:
-		camChar.flash(FlxColor.WHITE, 0.85);
+		//camChar.flash(FlxColor.WHITE, 0.85);
 		case 318:
 		camGame.alpha = 0;
 		boyfriend.setColorTransform(1, 1, 1, 1, 0, 0, 0, 0);

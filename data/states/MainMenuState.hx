@@ -512,8 +512,7 @@ function loadState() {
 				switch (optionShit[curSelected]) {
 					case 'storymode':
 						if (newToTheMod) createGFPopup();
-						else //FlxG.switchState(new ModState('TCOStoryState'));
-						FlxG.switchState(new StoryMenuState());
+						else FlxG.switchState(new ModState('tco/TCOStoryState'));
 					case 'freeplay': FlxG.switchState(new ModState('tco/FreeplayMenu'));
 					case 'awards': //FlxG.switchState(new ModState('AchievementsMenuState'));
 					trace("NO_SOFTLOCK!!!");

@@ -51,7 +51,7 @@ var fisheye:CustomShader = new CustomShader("fisheye");
 var preload = [];
 var preload2 = [];
 
-static var prevSong:String = "";
+static var prevSong:String = "balls";
  
 function create() {
 	if (FlxG.sound.music==null)FlxG.sound.playMusic(Paths.music('freakyMenu'), 0);
@@ -163,19 +163,13 @@ function create() {
 	}
 	trace(curSelected_freeplay);
 
+	curSelected_freeplay=0;
 	changeSelection(0);
 	changeDiff(0);
 	trace(curSelected_freeplay);
-	curSelected_freeplay=0;
 }
 
 static var curPlayingInst = Paths.inst(songs[curSelected_freeplay].name, songs[curSelected_freeplay].difficulties[curDifficulty]);
-
-function postCreate() {
-	prevchar = curPlayingInst;
-	curSelected_freeplay=0;
-	changeSelection(0);
-}
 
 function update(elapsed:Float) {
 	if (FlxG.sound.music!=null && FlxG.sound.music.volume < 0.7) FlxG.sound.music.volume += 0.5 * elapsed;
@@ -212,6 +206,7 @@ function update(elapsed:Float) {
 			});
 		}
 		if (controls.ACCEPT){
+			prevSong="FUCK";
 			PlayState.loadSong(songs[curSelected_freeplay].name, songs[curSelected_freeplay].difficulties[curDifficulty].toLowerCase());
 
 			selectedSmth = true;
@@ -332,8 +327,8 @@ function changeSelection(change:Int = 0, playSound:Bool = true){
 		}
 	}
 	if(FlxG.save.data.songsUnlocked.contains(songs[curSelected_freeplay].name.toLowerCase())){
-		trace("fheruifhiurgfiuhhgiu");
 	curPlayingInst = Paths.inst(songs[curSelected_freeplay].name, songs[curSelected_freeplay].difficulties[curDifficulty]);
+	trace(prevSong);
 	if(curPlayingInst!=prevSong){
 		FlxG.sound.playMusic(curPlayingInst, 1);
 		prevSong=curPlayingInst;

@@ -1,7 +1,9 @@
 import openfl.Lib;
 import lime.app.Application;
-import flixel.system.scaleModes.StageSizeScaleMode;
+import flixel.text.FlxTextBorderStyle;
+import flixel.addons.text.FlxTypeText;
 import flixel.system.scaleModes.RatioScaleMode;
+import flixel.system.scaleModes.StageSizeScaleMode;
 public var stopTweens:Array<FlxTween> = [];
 var intensity:Float = 0;
 public function colorTween(object:Array<FlxSprite>, duration:Float, colorToSayGoodbye:FlxColor, colorToSayHello:FlxColor) {
@@ -18,6 +20,7 @@ public function alphaTween(object:Array<FlxSprite>, duration:Float, alpha:Float)
 
 public var camChar = new FlxCamera();
 public var camBars:HudCamera;
+public var camLYRICS = new FlxCamera();
 public var camOther:HudCamera;
 
 public var vignetteTrojan:FlxSprite; //USED IN TROJAN AND OTHER COOL SONGS
@@ -110,6 +113,8 @@ function create() {
     FlxG.cameras.add(camBars = new HudCamera(), false);
     camBars.bgColor = 0x00000000;
     FlxG.cameras.add(camHUD, false);
+	FlxG.cameras.add(camLYRICS, false);
+	camLYRICS.bgColor = 0;
 	FlxG.cameras.add(camOther = new HudCamera(), false);
     camOther.bgColor = 0x00000000;
     if(oldVideoResolution) {
@@ -179,4 +184,55 @@ public function confBSODShake(intensity:Float = 1.0) {
 	new FlxTimer().start(0.25, function(tmr:FlxTimer) {
 		stage.getSprite("bsod").y -= (1 * intensity);
 	});
+}
+
+//remove the lyrics
+public var lyricsDestroyTimer:FlxTimer;
+public var textTween:FlxTween;
+public var textTweenAlpha:FlxTween;
+
+public var textLyrics:FlxTypeText; //the dialog text
+
+public function dialogOnSong(dialog:String, duration:Float, color:FlxColor) {
+	if (lyricsDestroyTimer != null) lyricsDestroyTimer.cancel();
+	if (textTween != null) textTween.cancel();
+	if (textTweenAlpha != null) textTweenAlpha.cancel();
+	if (textLyrics != null) {remove(textLyrics); textLyrics.destroy();}
+	textLyrics = new FlxTypeText(0, -40, FlxG.width, dialog, 24);
+	textLyrics.setFormat(Paths.font("phantommuff.ttf"), 32, FlxColor.WHITE, 'center', FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+	textLyrics.cameras = [camLYRICS];
+	textLyrics.screenCenter();
+	textLyrics.y += 250;
+	textLyrics.scrollFactor.set();
+	textLyrics.color = color;
+	add(textLyrics);
+	textLyrics.alpha = 0;
+
+	textLyrics.start(0.03, true);
+	textTweenAlpha = FlxTween.tween(textLyrics, {alpha:1}, 0.3);
+
+	lyricsDestroyTimer = new FlxTimer().start(duration, function(A:FlxTimer) {
+		textTween = FlxTween.tween(textLyrics, {alpha: 0}, 0.3, {
+		ease: FlxEase.linear,
+		onComplete: function(twn:FlxTween) {
+			remove(textLyrics);
+			textLyrics.destroy();
+		}});
+	});
+}
+
+public function blackBars(yes:Int) {
+	if (topBars != null && bottomBars != null) {
+		if (yes == 1) {
+			FlxTween.tween(topBars, {y: -200}, 1, {ease: FlxEase.quadInOut});
+			FlxTween.tween(bottomBars, {y: 550}, 1, {ease: FlxEase.quadInOut});
+		}else {
+			FlxTween.tween(topBars, {y: -650}, 0.5, {ease: FlxEase.quadInOut});
+			FlxTween.tween(bottomBars, {y: 850}, 0.5, {ease: FlxEase.quadInOut});
+		}
+	}
+}
+
+public function objectColor(object:Array<FlxSprite>, shitColor:FlxColor) {
+	for (i in 0...object.length) object[i].color = shitColor;
 }
