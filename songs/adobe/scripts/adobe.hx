@@ -26,7 +26,8 @@ function stepHit(curStep:Int) {
 		spotlightdad.alpha = 0.8;
 		spotlightbf.alpha = 0.8;
 		case 1024:
-		//if (ClientPrefs.shaders) addShaderToCamera(['camgame', 'camhud'], new ChromaticAberrationEffect(0));
+		chromaticAberration.rOffset=0;
+		chromaticAberration.bOffset=0;
 		FlxG.camera.flash(FlxColor.WHITE, 1);
 		colorTween([gf, dad, boyfriend, stage.getSprite("crowd"), stage.getSprite("background1"), stage.getSprite("floor")], 0.7, 0xFF191919, FlxColor.WHITE);
 		blackBars(0);

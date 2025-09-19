@@ -24,7 +24,10 @@ function postCreate(){
 		spotlightdad.alpha = 0.0001;
 		spotlightbf.alpha = 0.0001;
 
-		//if (ClientPrefs.shaders) addShaderToCamera(['camgame', 'camhud'], new ChromaticAberrationEffect(0.0005));
+		/*if (ClientPrefs.shaders)*/camHUD.addShader(chromaticAberration);
+		FlxG.camera.addShader(chromaticAberration);
+		chromaticAberration.rOffset=0.0005;
+		chromaticAberration.bOffset=0.0005;
 		FlxG.camera.fade(FlxColor.BLACK, 0, false);
 		add(spotlightbf);
 		add(spotlightdad);
@@ -63,8 +66,8 @@ function onStartCountdown() {
     spotlightdad.x = dad.x - 400;
 	spotlightdad.y = dad.y + dad.height - 1550;
 
-	spotlightbf.x = boyfriend.x - 50;
-	spotlightbf.y = boyfriend.y + boyfriend.height - 1000;
+	spotlightbf.x = boyfriend.x - 200;
+	spotlightbf.y = boyfriend.y + boyfriend.height - 750;
 }
 
 /*

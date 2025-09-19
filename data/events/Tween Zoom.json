@@ -1,0 +1,13 @@
+{
+	"params": [
+		{
+			"name": "zoom",
+			"type": "String",
+			"defaultValue": 1
+		},{
+			"name": "speed",
+			"type": "String",
+			"defaultValue": 1
+		}
+	]
+}

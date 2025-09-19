@@ -1,0 +1,996 @@
+{
+	"events": [
+		{
+			"params": [
+				"zoomtype",
+				"1"
+			],
+			"time": 0,
+			"name": "HScript Call"
+		},
+		{
+			"params": [
+				"0.55"
+			],
+			"time": 0,
+			"name": "Set Cam Zoom"
+		},
+		{
+			"params": [
+				"0.7"
+			],
+			"time": 3428.57142857143,
+			"name": "Set Cam Zoom"
+		},
+		{
+			"params": [
+				"0.55"
+			],
+			"time": 6857.14285714286,
+			"name": "Set Cam Zoom"
+		},
+		{
+			"params": [
+				"0.7"
+			],
+			"time": 10285.7142857143,
+			"name": "Set Cam Zoom"
+		},
+		{
+			"params": [
+				"0.55"
+			],
+			"time": 13714.2857142857,
+			"name": "Set Cam Zoom"
+		},
+		{
+			"params": [
+				"0.7"
+			],
+			"time": 17142.8571428571,
+			"name": "Set Cam Zoom"
+		},
+		{
+			"params": [
+				"0.55"
+			],
+			"time": 20571.4285714286,
+			"name": "Set Cam Zoom"
+		},
+		{
+			"params": [
+				"0.7"
+			],
+			"time": 24000,
+			"name": "Set Cam Zoom"
+		},
+		{
+			"params": [
+				"1",
+				"0.5"
+			],
+			"time": 25714.2857142857,
+			"name": "Tween Zoom"
+		},
+		{
+			"params": [
+				"0.9",
+				"3"
+			],
+			"time": 25714.2857142857,
+			"name": "Tween Zoom"
+		},
+		{
+			"params": [
+				"0.7"
+			],
+			"time": 27428.5714285714,
+			"name": "Set Cam Zoom"
+		},
+		{
+			"params": [
+				"zoomtype",
+				"1"
+			],
+			"time": 27428.5714285714,
+			"name": "HScript Call"
+		},
+		{
+			"params": [
+				"zoomtype",
+				"0"
+			],
+			"time": 27428.5714285714,
+			"name": "HScript Call"
+		},
+		{
+			"params": [
+				"0.03",
+				""
+			],
+			"time": 27428.5714285714,
+			"name": "add_cam_zoom"
+		},
+		{
+			"params": [
+				"0.8"
+			],
+			"time": 29142.8571428571,
+			"name": "Set Cam Zoom"
+		},
+		{
+			"params": [
+				"0.9"
+			],
+			"time": 30857.1428571429,
+			"name": "Set Cam Zoom"
+		},
+		{
+			"params": [
+				"0.7"
+			],
+			"time": 32571.4285714286,
+			"name": "Set Cam Zoom"
+		},
+		{
+			"params": [
+				"0.8"
+			],
+			"time": 33642.8571428571,
+			"name": "Set Cam Zoom"
+		},
+		{
+			"params": [
+				"0.7"
+			],
+			"time": 34285.7142857143,
+			"name": "Set Cam Zoom"
+		},
+		{
+			"params": [
+				"0.8"
+			],
+			"time": 36000,
+			"name": "Set Cam Zoom"
+		},
+		{
+			"params": [
+				"0.9"
+			],
+			"time": 37714.2857142857,
+			"name": "Set Cam Zoom"
+		},
+		{
+			"params": [
+				"0.7"
+			],
+			"time": 39428.5714285714,
+			"name": "Set Cam Zoom"
+		},
+		{
+			"params": [
+				"0.8"
+			],
+			"time": 40500,
+			"name": "Set Cam Zoom"
+		},
+		{
+			"params": [
+				"0.75"
+			],
+			"time": 41142.8571428572,
+			"name": "Set Cam Zoom"
+		},
+		{
+			"params": [
+				"0.65"
+			],
+			"time": 42857.1428571429,
+			"name": "Set Cam Zoom"
+		},
+		{
+			"params": [
+				"0.75"
+			],
+			"time": 44571.4285714286,
+			"name": "Set Cam Zoom"
+		},
+		{
+			"params": [
+				"0.85"
+			],
+			"time": 46285.7142857143,
+			"name": "Set Cam Zoom"
+		},
+		{
+			"params": [
+				"0.75"
+			],
+			"time": 48000,
+			"name": "Set Cam Zoom"
+		},
+		{
+			"params": [
+				"0.65"
+			],
+			"time": 49714.2857142857,
+			"name": "Set Cam Zoom"
+		},
+		{
+			"params": [
+				"0.85"
+			],
+			"time": 53142.8571428572,
+			"name": "Set Cam Zoom"
+		},
+		{
+			"params": [
+				"0.7"
+			],
+			"time": 54857.1428571429,
+			"name": "Set Cam Zoom"
+		},
+		{
+			"params": [
+				"zoomtype",
+				"0"
+			],
+			"time": 54857.1428571429,
+			"name": "HScript Call"
+		},
+		{
+			"params": [
+				"zoomtype",
+				"1"
+			],
+			"time": 54857.1428571429,
+			"name": "HScript Call"
+		},
+		{
+			"params": [
+				"0.85"
+			],
+			"time": 55285.7142857143,
+			"name": "Set Cam Zoom"
+		},
+		{
+			"params": [
+				"0.8"
+			],
+			"time": 57000,
+			"name": "Set Cam Zoom"
+		},
+		{
+			"params": [
+				"0.7"
+			],
+			"time": 58285.7142857143,
+			"name": "Set Cam Zoom"
+		},
+		{
+			"params": [
+				"0.85"
+			],
+			"time": 61714.2857142858,
+			"name": "Set Cam Zoom"
+		},
+		{
+			"params": [
+				"0.95"
+			],
+			"time": 63428.5714285715,
+			"name": "Set Cam Zoom"
+		},
+		{
+			"params": [
+				"0.75"
+			],
+			"time": 65142.8571428572,
+			"name": "Set Cam Zoom"
+		},
+		{
+			"params": [
+				"0.85"
+			],
+			"time": 66857.1428571429,
+			"name": "Set Cam Zoom"
+		},
+		{
+			"params": [
+				"0.7"
+			],
+			"time": 68571.4285714286,
+			"name": "Set Cam Zoom"
+		},
+		{
+			"params": [
+				"0.85"
+			],
+			"time": 69000.0000000001,
+			"name": "Set Cam Zoom"
+		},
+		{
+			"params": [
+				"0.8"
+			],
+			"time": 70714.2857142858,
+			"name": "Set Cam Zoom"
+		},
+		{
+			"params": [
+				"0.7"
+			],
+			"time": 72000,
+			"name": "Set Cam Zoom"
+		},
+		{
+			"params": [
+				"0.95",
+				"4"
+			],
+			"time": 72857.1428571429,
+			"name": "Tween Zoom"
+		},
+		{
+			"params": [
+				"0.85"
+			],
+			"time": 75428.5714285715,
+			"name": "Set Cam Zoom"
+		},
+		{
+			"params": [
+				"0.95"
+			],
+			"time": 77142.8571428572,
+			"name": "Set Cam Zoom"
+		},
+		{
+			"params": [
+				"0.75"
+			],
+			"time": 78857.1428571429,
+			"name": "Set Cam Zoom"
+		},
+		{
+			"params": [
+				"0.85"
+			],
+			"time": 80571.4285714286,
+			"name": "Set Cam Zoom"
+		},
+		{
+			"params": [
+				"1"
+			],
+			"time": 81857.1428571429,
+			"name": "Set Cam Zoom"
+		},
+		{
+			"params": [
+				"zoomtype",
+				"1"
+			],
+			"time": 82071.4285714286,
+			"name": "HScript Call"
+		},
+		{
+			"params": [
+				"1.25"
+			],
+			"time": 82285.7142857143,
+			"name": "Set Cam Zoom"
+		},
+		{
+			"params": [
+				"zoomtype",
+				"2"
+			],
+			"time": 82285.7142857143,
+			"name": "HScript Call"
+		},
+		{
+			"params": [
+				"0.02",
+				""
+			],
+			"time": 82285.7142857143,
+			"name": "add_cam_zoom"
+		},
+		{
+			"params": [
+				"0.02",
+				""
+			],
+			"time": 82714.2857142857,
+			"name": "add_cam_zoom"
+		},
+		{
+			"params": [
+				"0.02",
+				""
+			],
+			"time": 83571.4285714286,
+			"name": "add_cam_zoom"
+		},
+		{
+			"params": [
+				"1"
+			],
+			"time": 84000,
+			"name": "Set Cam Zoom"
+		},
+		{
+			"params": [
+				"0.02",
+				""
+			],
+			"time": 84428.5714285714,
+			"name": "add_cam_zoom"
+		},
+		{
+			"params": [
+				"0.02",
+				""
+			],
+			"time": 85285.7142857143,
+			"name": "add_cam_zoom"
+		},
+		{
+			"params": [
+				"1.25"
+			],
+			"time": 85714.2857142857,
+			"name": "Set Cam Zoom"
+		},
+		{
+			"params": [
+				"0.02",
+				""
+			],
+			"time": 86142.8571428572,
+			"name": "add_cam_zoom"
+		},
+		{
+			"params": [
+				"0.02",
+				""
+			],
+			"time": 87000,
+			"name": "add_cam_zoom"
+		},
+		{
+			"params": [
+				"1.15"
+			],
+			"time": 87428.5714285714,
+			"name": "Set Cam Zoom"
+		},
+		{
+			"params": [
+				"0.02",
+				""
+			],
+			"time": 87857.1428571429,
+			"name": "add_cam_zoom"
+		},
+		{
+			"params": [
+				"0.02",
+				""
+			],
+			"time": 88714.2857142857,
+			"name": "add_cam_zoom"
+		},
+		{
+			"params": [
+				"1.25"
+			],
+			"time": 89142.8571428571,
+			"name": "Set Cam Zoom"
+		},
+		{
+			"params": [
+				"0.02",
+				""
+			],
+			"time": 89571.4285714286,
+			"name": "add_cam_zoom"
+		},
+		{
+			"params": [
+				"0.02",
+				""
+			],
+			"time": 90428.5714285714,
+			"name": "add_cam_zoom"
+		},
+		{
+			"params": [
+				"1"
+			],
+			"time": 90857.1428571429,
+			"name": "Set Cam Zoom"
+		},
+		{
+			"params": [
+				"1"
+			],
+			"time": 90857.1428571429,
+			"name": "Set Cam Zoom"
+		},
+		{
+			"params": [
+				"0.02",
+				""
+			],
+			"time": 91285.7142857143,
+			"name": "add_cam_zoom"
+		},
+		{
+			"params": [
+				"0.02",
+				""
+			],
+			"time": 92142.8571428571,
+			"name": "add_cam_zoom"
+		},
+		{
+			"params": [
+				"1.25"
+			],
+			"time": 92571.4285714286,
+			"name": "Set Cam Zoom"
+		},
+		{
+			"params": [
+				"0.02",
+				""
+			],
+			"time": 93000,
+			"name": "add_cam_zoom"
+		},
+		{
+			"params": [
+				"0.02",
+				""
+			],
+			"time": 93857.1428571429,
+			"name": "add_cam_zoom"
+		},
+		{
+			"params": [
+				"1"
+			],
+			"time": 94285.7142857143,
+			"name": "Set Cam Zoom"
+		},
+		{
+			"params": [
+				"0.02",
+				""
+			],
+			"time": 94714.2857142857,
+			"name": "add_cam_zoom"
+		},
+		{
+			"params": [
+				"0.02",
+				""
+			],
+			"time": 95571.4285714286,
+			"name": "add_cam_zoom"
+		},
+		{
+			"params": [
+				"1.25"
+			],
+			"time": 96000,
+			"name": "Set Cam Zoom"
+		},
+		{
+			"params": [
+				"0.02",
+				""
+			],
+			"time": 96428.5714285714,
+			"name": "add_cam_zoom"
+		},
+		{
+			"params": [
+				"0.02",
+				""
+			],
+			"time": 97285.7142857143,
+			"name": "add_cam_zoom"
+		},
+		{
+			"params": [
+				"1"
+			],
+			"time": 97714.2857142857,
+			"name": "Set Cam Zoom"
+		},
+		{
+			"params": [
+				"0.02",
+				""
+			],
+			"time": 98142.8571428571,
+			"name": "add_cam_zoom"
+		},
+		{
+			"params": [
+				"0.02",
+				""
+			],
+			"time": 99000,
+			"name": "add_cam_zoom"
+		},
+		{
+			"params": [
+				"1.25"
+			],
+			"time": 99428.5714285714,
+			"name": "Set Cam Zoom"
+		},
+		{
+			"params": [
+				"0.02",
+				""
+			],
+			"time": 99857.1428571428,
+			"name": "add_cam_zoom"
+		},
+		{
+			"params": [
+				"0.02",
+				""
+			],
+			"time": 100714.285714286,
+			"name": "add_cam_zoom"
+		},
+		{
+			"params": [
+				"1.15"
+			],
+			"time": 101142.857142857,
+			"name": "Set Cam Zoom"
+		},
+		{
+			"params": [
+				"0.02",
+				""
+			],
+			"time": 101571.428571429,
+			"name": "add_cam_zoom"
+		},
+		{
+			"params": [
+				"0.02",
+				""
+			],
+			"time": 102428.571428571,
+			"name": "add_cam_zoom"
+		},
+		{
+			"params": [
+				"1.25"
+			],
+			"time": 102857.142857143,
+			"name": "Set Cam Zoom"
+		},
+		{
+			"params": [
+				"0.02",
+				""
+			],
+			"time": 103285.714285714,
+			"name": "add_cam_zoom"
+		},
+		{
+			"params": [
+				"0.02",
+				""
+			],
+			"time": 104142.857142857,
+			"name": "add_cam_zoom"
+		},
+		{
+			"params": [
+				"1"
+			],
+			"time": 104571.428571429,
+			"name": "Set Cam Zoom"
+		},
+		{
+			"params": [
+				"0.02",
+				""
+			],
+			"time": 105000,
+			"name": "add_cam_zoom"
+		},
+		{
+			"params": [
+				"0.02",
+				""
+			],
+			"time": 105857.142857143,
+			"name": "add_cam_zoom"
+		},
+		{
+			"params": [
+				"1.25"
+			],
+			"time": 106285.714285714,
+			"name": "Set Cam Zoom"
+		},
+		{
+			"params": [
+				"0.02",
+				""
+			],
+			"time": 106714.285714286,
+			"name": "add_cam_zoom"
+		},
+		{
+			"params": [
+				"0.02",
+				""
+			],
+			"time": 107571.428571429,
+			"name": "add_cam_zoom"
+		},
+		{
+			"params": [
+				"1"
+			],
+			"time": 108000,
+			"name": "Set Cam Zoom"
+		},
+		{
+			"params": [
+				"0.02",
+				""
+			],
+			"time": 108428.571428571,
+			"name": "add_cam_zoom"
+		},
+		{
+			"params": [
+				"0.02",
+				""
+			],
+			"time": 108857.142857143,
+			"name": "add_cam_zoom"
+		},
+		{
+			"params": [
+				"0.02",
+				""
+			],
+			"time": 109071.428571429,
+			"name": "add_cam_zoom"
+		},
+		{
+			"params": [
+				"0.02",
+				""
+			],
+			"time": 109285.714285714,
+			"name": "add_cam_zoom"
+		},
+		{
+			"params": [
+				"0.03",
+				""
+			],
+			"time": 109500,
+			"name": "add_cam_zoom"
+		},
+		{
+			"params": [
+				"0.75"
+			],
+			"time": 109714.285714286,
+			"name": "Set Cam Zoom"
+		},
+		{
+			"params": [
+				"zoomtype",
+				"2"
+			],
+			"time": 109714.285714286,
+			"name": "HScript Call"
+		},
+		{
+			"params": [
+				"zoomtype",
+				"1"
+			],
+			"time": 109714.285714286,
+			"name": "HScript Call"
+		},
+		{
+			"params": [
+				"0.05",
+				""
+			],
+			"time": 109714.285714286,
+			"name": "add_cam_zoom"
+		},
+		{
+			"params": [
+				"0.85"
+			],
+			"time": 111428.571428571,
+			"name": "Set Cam Zoom"
+		},
+		{
+			"params": [
+				"0.75"
+			],
+			"time": 113142.857142857,
+			"name": "Set Cam Zoom"
+		},
+		{
+			"params": [
+				"0.85"
+			],
+			"time": 114857.142857143,
+			"name": "Set Cam Zoom"
+		},
+		{
+			"params": [
+				"0.7"
+			],
+			"time": 116571.428571429,
+			"name": "Set Cam Zoom"
+		},
+		{
+			"params": [
+				"0.9"
+			],
+			"time": 118285.714285714,
+			"name": "Set Cam Zoom"
+		},
+		{
+			"params": [
+				"0.9"
+			],
+			"time": 121714.285714286,
+			"name": "Set Cam Zoom"
+		},
+		{
+			"params": [
+				"0.75"
+			],
+			"time": 123428.571428571,
+			"name": "Set Cam Zoom"
+		},
+		{
+			"params": [
+				"0.85"
+			],
+			"time": 125142.857142857,
+			"name": "Set Cam Zoom"
+		},
+		{
+			"params": [
+				"0.75"
+			],
+			"time": 126857.142857143,
+			"name": "Set Cam Zoom"
+		},
+		{
+			"params": [
+				"0.85"
+			],
+			"time": 128571.428571428,
+			"name": "Set Cam Zoom"
+		},
+		{
+			"params": [
+				"0.7"
+			],
+			"time": 130285.714285714,
+			"name": "Set Cam Zoom"
+		},
+		{
+			"params": [
+				"0.9"
+			],
+			"time": 132000,
+			"name": "Set Cam Zoom"
+		},
+		{
+			"params": [
+				"0.7"
+			],
+			"time": 133714.285714286,
+			"name": "Set Cam Zoom"
+		},
+		{
+			"params": [
+				"0.9"
+			],
+			"time": 135428.571428571,
+			"name": "Set Cam Zoom"
+		},
+		{
+			"params": [
+				"zoomtype",
+				"1"
+			],
+			"time": 136821.428571428,
+			"name": "HScript Call"
+		},
+		{
+			"params": [
+				1,
+				"tzen_coolerbf",
+				true,
+				"0,0",
+				true
+			],
+			"time": 84000,
+			"name": "Change Character"
+		},
+		{
+			"params": [
+				1,
+				"animator-bf",
+				true,
+				"0,0",
+				true
+			],
+			"time": 98571.4285714286,
+			"name": "Change Character"
+		},
+		{
+			"params": [
+				1,
+				"tzen_coolerbf",
+				true,
+				"0,0",
+				true
+			],
+			"time": 99375,
+			"name": "Change Character"
+		},
+		{
+			"params": [
+				1,
+				"animator-bf",
+				true,
+				"0,0",
+				true
+			],
+			"time": 100272.321428571,
+			"name": "Change Character"
+		},
+		{
+			"params": [
+				1,
+				"tzen_coolerbf",
+				true,
+				"0,0",
+				true
+			],
+			"time": 105883.928571429,
+			"name": "Change Character"
+		},
+		{
+			"params": [
+				1,
+				"animator-bf",
+				true,
+				"0,0",
+				true
+			],
+			"time": 108000,
+			"name": "Change Character"
+		}
+	]
+}
