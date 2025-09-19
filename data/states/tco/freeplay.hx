@@ -13,8 +13,8 @@ var songRealList = [
 	["adobe","outrage","end-process","morality","stick-em-up","artistry","proficiency","masterpiece"],
 	["trojan","conflict","dashpulse","time-travel","cubify","kickstarter","contrivance","messenger","amity","royalty","voltagen","doombringer","issue","tune-in","unfaithful","rombie","fancy-funk","powerup","justice","catto"],
 	["enmity","doppelganger","aurora","phantasm"],
-	["adobe-(old)","outrage-(old)","alan-(old)","end-process-(old)","catto-(old)"],
-	["operation","rewrite"]
+	["adobe-(old)","outrage-(older)","alan-(old)","outrage-(old)","end-process-(old)","catto-(old)"],
+	["operation","rewrite"]//41_songs_holy_shit.
 ];
 if(FlxG.save.data.alanUnlocked)
 songRealList[1].push("alan");

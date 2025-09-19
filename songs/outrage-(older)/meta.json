@@ -1,6 +1,6 @@
 {
-	"displayName": "outrage-(old)",
-	"bpm": 155.0,
+	"displayName": "outrage-(older)",
+	"bpm": 150,
 	"icon": "the-chosen-one",
 	"difficulties": [
 		"SIMPLE",
@@ -9,6 +9,6 @@
 	],
 	"color": "#FCAE00",
 	"background": "outrage",
-	"portrait": "outrage",
+	"portrait": "outrage (old)",
 	"composer": "amaarzadjali"
 }
