@@ -151,6 +151,7 @@ function destroy() {
 	FlxG.scaleMode = new RatioScaleMode(false);
 	FlxG.resizeGame(1280, 720);
 	FlxG.resizeWindow(1280, 720);
+	oldVideoResolution=false;
 	}
 }
 public function tcoBSOD(fuck:Bool) {
