@@ -27,6 +27,14 @@ function postCreate(){
 	scaredCrowd.visible=false;
 	bsod.alpha = 0.0001;
 
+	googleBurn.alpha = 0.0001;
+	twitterBurn.alpha = 0.0001;
+	newgroundsBurn.alpha = 0.0001;
+	corruptBG.alpha = 0.0001;
+	corruptFloor.alpha = 0.0001;
+	bsodStatic.alpha = 0.0001;
+	rsod.alpha = 0.0001;
+
 	switch(curSong){
 		case "adobe": noCurLight = true;
 		crowd.updateHitbox();
@@ -55,6 +63,48 @@ function postCreate(){
 		FlxG.camera.addShader(chromaticAberration);
 		chromaticAberration.rOffset=0.0005;
 		chromaticAberration.bOffset=0.0005;
+
+		case "end-process-(old)": FlxG.mouse.visible = true;
+		fires1.visible = false;
+		fires2.visible = false;
+		fires2.x=-1500;
+		googleBurn.screenCenter();
+		googleBurn.y -= 900;
+		googleBurn.x += 250;
+		googleBurn.angle = -4;
+		FlxTween.angle(googleBurn, googleBurn.angle, 4, 2, {ease: FlxEase.quartInOut, type: FlxEase.PINGPONG});
+
+		twitterBurn.angle = -4;
+		FlxTween.angle(twitterBurn, twitterBurn.angle, 4, 2, {ease: FlxEase.quartInOut, type: FlxEase.PINGPONG});
+
+		newgroundsBurn.angle = -4;
+		FlxTween.angle(newgroundsBurn, newgroundsBurn.angle, 4, 2, {ease: FlxEase.quartInOut, type: FlxEase.PINGPONG});
+
+		corruptBG.color = 0xFF7B6CAD;
+		corruptBG.alpha = 0.0001;
+		/*if (ClientPrefs.shaders)*/ corruptBG.shader = new CustomShader("CRT");
+		corruptFloor.color = 0xFF7B6CAD;
+		corruptFloor.alpha = 0.0001;
+		/*if (ClientPrefs.shaders)*/ corruptFloor.shader = new CustomShader("CRT");
+
+		bsodStatic.alpha = 0.0001;
+		/*if (ClientPrefs.shaders)*/ bsodStatic.shader = new CustomShader("CRT");
+
+		rsod.alpha = 0.0001;
+
+		redthing = new FlxSprite(0, 0).loadGraphic(Paths.image('stages/victim/vignette'));
+		//redthing.antialiasing = Options.antialiasing;
+		redthing.cameras = [camBars];
+		redthing.alpha = 0.0001;
+		add(redthing);
+
+		/*if (ClientPrefs.shaders)*/ rsod.shader = new CustomShader("CRT");
+
+
+		/*if (ClientPrefs.shaders)*/ camHUD.addShader(chromaticAberration);
+		FlxG.camera.addShader(chromaticAberration);
+		chromaticAberration.rOffset=0.0045;
+		chromaticAberration.bOffset=0.0045;
 
 		case "phantasm": defaultCamZoom = 1.8;
 		//GameOverSubstate.deathSoundName = 'aurora_loss_sfx';
@@ -99,7 +149,12 @@ function update(elapsed:Float) {
 	time += elapsed;
 	if(curSong == "outrage-(old)")
 	bsod.shader.data.iTime.value = [time];
+	if(curSong == "end-process-(old)"){
+		for(i in [bsodStatic,corruptFloor,corruptBG,rsod])
+			i.shader.data.iTime.value = [time];
+	}
 }
+
 
 /*
 function stepHit(curStep:Int) {

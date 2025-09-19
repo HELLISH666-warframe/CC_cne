@@ -11,11 +11,31 @@
         <anim name="scaredCrowd" anim="BG Guys Scared" loop="true"/>
 
 
+	<sprite name="virabot1" x="-50" y="455" sprite="EProcess/virabop" scroll="0.9" type="beat" scale="1.3"/>
+        <anim name="virabot1" anim="ViraBop" loop="true"/>
+	<sprite name="virabot4" x="-650" y="455" sprite="EProcess/virabop" scroll="0.9" type="beat" scale="1.3"/>
+        <anim name="virabot4" anim="ViraBop" loop="true"/>
+	<sprite name="virabot2" x="1250" y="455" sprite="EProcess/virabop" scroll="0.9" type="beat" scale="1.3"/>
+        <anim name="virabot2" anim="ViraBop" loop="true"/>
+	<sprite name="virabot3" x="1750" y="455" sprite="EProcess/virabop" scroll="0.9" type="beat" scale="1.3"/>
+        <anim name="virabot3" anim="ViraBop" loop="true"/>
+	<sprite name="googleBurn" x="0" y="-1100" sprite="EProcess/GoogleBurning" type="loop" scale="0.7"/>
+        <anim name="googleBurn" fps="16" anim="Symbol 2 instance 10" loop="true"/>
+	<sprite name="twitterBurn" x="1300" y="-820" sprite="EProcess/TwitterBurning" type="loop" scale="0.7"/>
+        <anim name="twitterBurn" fps="16" anim="Symbol 4 instance 10" loop="true"/>
+	<sprite name="newgroundsBurn" x="-1000" y="-1020" sprite="EProcess/NewgroundsBurning" type="loop" scale="0.7"/>
+        <anim name="newgroundsBurn" fps="16" anim="Symbol 3 instance 10" loop="true"/>
+
 
 	<sprite name="floor" x="-750" y="713" sprite="chapter1/floor" scroll="1" scale="1.2"/>
-<sprite name="stickpage" x="-50" y="-90" sprite="victim/distorted_stickpage_bg" scroll="0.9" scale="2.4"/>
+	<sprite name="stickpage" x="-50" y="-90" sprite="victim/distorted_stickpage_bg" scroll="0.9" scale="2.4"/>
 	<sprite name="stickpageFloor" x="-350" y="600" sprite="victim/dsp_floor" scroll="1" scale="1.25"/>
 	<sprite name="bsod" x="-650" y="-500" sprite="victim/error" scroll="1" scale="1.1"/>
+
+	<sprite name="corruptBG" x="-650" y="-600" sprite="chapter1/bgCorrupted" scroll="0.9" scale="1.1"/>
+	<sprite name="corruptFloor" x="-750" y="-405" sprite="chapter1/floorCorrupted" scroll="1" scale="1.2"/>
+	<sprite name="bsodStatic" x="-50" y="-90" sprite="EProcess/error_3rdsong" scroll="1" scale="2.4"/>
+	<sprite name="rsod" x="-50" y="-90" sprite="EProcess/rsod" scroll="1" scale="2.4"/>
 	<girlfriend x="400" y="10" camxoffset="0" camyoffset="0"/>
 	<opponent x="50" y="-40" camxoffset="0" camyoffset="0"/>
 	<player x="970" y="-50" camxoffset="0" camyoffset="0"/>

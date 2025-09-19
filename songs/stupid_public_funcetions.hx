@@ -259,3 +259,33 @@ public function tcoStickPage(show:Bool) {
 		redthing.color = 0xFFFFFFFF;
 	}
 }
+/*public function setCamShake(shit:Array<FlxCamera>, intensity:Float, duration:Float, intensityAlt:Float) {
+	for (i in 0...shit.length) {
+		if (SONG.notes[curSection].mustHitSection) {
+			camGame.shake(intensityAlt, duration);
+		}
+		else
+		{
+			shit[i].shake(intensity, duration);
+		}
+	}
+}*/
+
+public function endProcessBSODS(fuck:Bool, type:Int) {
+	switch(type) {
+		case 1:
+			if (fuck && stage.getSprite("bsodStatic") != null) alphaTween([stage.getSprite("bsodStatic")], 1, 1);
+			else alphaTween([stage.getSprite("bsodStatic")], 0, 1);
+		case 2:
+			if (fuck && stage.getSprite("rsod") != null) alphaTween([stage.getSprite("rsod")], 1, 1);
+			else alphaTween([stage.getSprite("rsod")], 0, 1);
+	}
+}
+
+public function showUpCorruptBackground(fuck:Bool) {
+	if (fuck) {
+		if (stage.getSprite("corruptBG") != null) setAlpha([stage.getSprite("corruptBG"), stage.getSprite("corruptFloor")], 1);
+	} else {
+		if (stage.getSprite("corruptBG") != null) setAlpha([stage.getSprite("corruptBG"), stage.getSprite("corruptFloor")], 0);
+	}
+}
