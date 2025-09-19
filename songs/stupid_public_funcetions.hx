@@ -237,3 +237,25 @@ public function blackBars(yes:Int) {
 public function objectColor(object:Array<FlxSprite>, shitColor:FlxColor) {
 	for (i in 0...object.length) object[i].color = shitColor;
 }
+public function setAlpha(object:Array<FlxSprite>, visibility:Int) {
+	for (i in 0...object.length) object[i].alpha = visibility;
+}
+public function setVisible(object:Array<FlxSprite>, visibility:Bool) {
+	for (i in 0...object.length) object[i].visible = visibility;
+}
+
+public function tcoStickPage(show:Bool) {
+	if (stage.getSprite("stickpage") != null) setAlpha([stage.getSprite("stickpage"), stage.getSprite("stickpageFloor")], 1);
+	//if (stage.getSprite("stickpage") != null) triggerEventNote('Change Character', 'bf', 'stick-bf');
+	if (stage.getSprite("stickpage") != null) boyfriend.color = 0xFF2C2425;
+	if (stage.getSprite("stickpage") != null) redthing.color = 0xFF000000;
+
+	if (!show && stage.getSprite("bsod") != null && stage.getSprite("stickpage") != null) {
+		setAlpha([stage.getSprite("stickpage"), stage.getSprite("stickpageFloor")], 0);
+		remove(stage.getSprite("stickpage"));
+		stage.getSprite("stickpage").destroy();
+
+		//triggerEventNote('Change Character', 'bf', 'animator-bf-stressed');
+		redthing.color = 0xFFFFFFFF;
+	}
+}

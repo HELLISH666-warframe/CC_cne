@@ -3,8 +3,19 @@
     <sprite name="background1" x="-600" y="-600" sprite="adobe/bg" scroll="0.9" scale="1.1"/>
 	<sprite name="crowd" x="-400" y="7" sprite="chapter1/theBGGuyz" scroll="0.95" type="beat" scale="1.1"/>
         <anim name="crowd" anim="BG  Guys0" loop="false"/>
+	<sprite name="fires1" x="870" y="-240" sprite="victim/BGFire" scroll="0.9" type="loop" scale="1.4"/>
+        <anim name="fires1" anim="Symbol 1 instance 1" loop="true"/>
+	<sprite name="fires2" x="-1600" y="-240" sprite="victim/BGFire" scroll="0.9" type="loop" scale="1.4"/>
+        <anim name="fires2" anim="Symbol 1 instance 1" loop="true"/>
+	<sprite name="scaredCrowd" x="-265" y="105" sprite="chapter1/theBGGuyz" scroll="0.95" type="beat" scale="1.1"/>
+        <anim name="scaredCrowd" anim="BG Guys Scared" loop="true"/>
+
+
 
 	<sprite name="floor" x="-750" y="713" sprite="chapter1/floor" scroll="1" scale="1.2"/>
+<sprite name="stickpage" x="-50" y="-90" sprite="victim/distorted_stickpage_bg" scroll="0.9" scale="2.4"/>
+	<sprite name="stickpageFloor" x="-350" y="600" sprite="victim/dsp_floor" scroll="1" scale="1.25"/>
+	<sprite name="bsod" x="-650" y="-500" sprite="victim/error" scroll="1" scale="1.1"/>
 	<girlfriend x="400" y="10" camxoffset="0" camyoffset="0"/>
 	<opponent x="50" y="-40" camxoffset="0" camyoffset="0"/>
 	<player x="970" y="-50" camxoffset="0" camyoffset="0"/>

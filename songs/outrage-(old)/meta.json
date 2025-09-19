@@ -1,14 +1,19 @@
 {
-	"displayName": "outrage-(old)",
-	"bpm": 155.0,
+	"composer": "amaarzadjali",
+	"color": "#FCAE00",
+	"opponentModeAllowed": false,
 	"icon": "the-chosen-one",
 	"difficulties": [
 		"SIMPLE",
 		"HARD",
 		"INSANE"
 	],
-	"color": "#FCAE00",
-	"background": "outrage",
 	"portrait": "outrage",
-	"composer": "amaarzadjali"
+	"coopAllowed": false,
+	"stepsPerBeat": 4,
+	"displayName": "outrage-(old)",
+	"beatsPerMeasure": 4,
+	"needsVoices": true,
+	"background": "outrage",
+	"bpm": 155
 }
