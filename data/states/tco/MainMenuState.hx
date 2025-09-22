@@ -308,9 +308,11 @@ function createGFPopup()
 
 var selectedSomethin:Bool = false;
 
-var time:Float = 0;
+var elapsed_1:Float = 0;
 
-override function update(elapsed:Float){time += elapsed;
+function update(elapsed:Float){
+	elapsed_1=elapsed;
+	trace(elapsed_1);
 	if (FlxG.keys.justPressed.SEVEN) {
 		persistentUpdate = false;
 		persistentDraw = true;
@@ -362,7 +364,7 @@ override function update(elapsed:Float){time += elapsed;
 			selectedSomethin = true;
 			FlxTween.tween(FlxG.camera, {zoom: -2}, 1.5, {ease: FlxEase.expoIn});
 			FlxG.camera.fade(FlxColor.BLACK, 0.8, false, function(){
-				FlxG.switchState(new ModState('TitleState'));});
+				FlxG.switchState(new ModState('tco/TitleState'));});
 			FlxG.sound.play(Paths.sound('cancelMenu'));
 		}
 		if (controls.ACCEPT) loadState();
@@ -384,12 +386,12 @@ override function update(elapsed:Float){time += elapsed;
 			spr.updateHitbox();
 
 			if (spr.ID != curSelected){
-				spr.scale.x += (0.23-spr.scale.x)/(1*time);
+				spr.scale.x += (0.23-spr.scale.x)/(250*elapsed_1);
 				spr.scale.y = spr.scale.x;
 			}else{
 				spr.alpha = 1;
 
-				spr.scale.x += (0.26-spr.scale.x)/(1*time);
+				spr.scale.x += (0.26-spr.scale.x)/(250*elapsed_1);
 				spr.scale.y = spr.scale.x;
 
 				spr.centerOffsets();
@@ -400,7 +402,7 @@ override function update(elapsed:Float){time += elapsed;
 				FlxTween.tween(bg, {alpha:0}, 0.4);
 				FlxTween.tween(vignette, {alpha:0}, 0.4);
 
-				shaderFloat += Math.sin(time)* 0.00003;
+				shaderFloat += Math.sin(elapsed_1)* 0.0015;
 				chromb.rOffset=shaderFloat;
 				chromb.bOffset=shaderFloat*-1;
 			    if (shaderFloat > 0.000001) shaderFloat = 0.000001;
@@ -411,7 +413,7 @@ override function update(elapsed:Float){time += elapsed;
 				FlxG.camera.zoom = 1;
 				FlxTween.tween(bg, {alpha:1}, 0.4);
 				FlxTween.tween(vignette, {alpha:1}, 0.4);
-				shaderFloat -= time * 0.0015;
+				shaderFloat -= elapsed_1 * 0.0015;
 				if (shaderFloat < 0) shaderFloat = 0;
 				chromb.rOffset=shaderFloat;
 				chromb.bOffset=shaderFloat*-1;

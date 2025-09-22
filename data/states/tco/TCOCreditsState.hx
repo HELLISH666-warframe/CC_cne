@@ -287,7 +287,7 @@ function update(elapsed:Float) {
 		persistentUpdate = false;
 		FlxG.sound.play(Paths.sound('cancelMenu'));
 		//CustomFadeTransition.nextCamera = camSpecialThanks;
-		FlxG.switchState(new ModState('MainMenuState'));
+		FlxG.switchState(new ModState('tco/MainMenuState'));
 	}
 }
 

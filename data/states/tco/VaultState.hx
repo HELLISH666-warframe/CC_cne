@@ -254,7 +254,7 @@ function update(elapsed:Float) {
 			var shit:FlxSound = new FlxSound().loadEmbedded(Paths.sound('glitch'));
 			shit.play(true);
 			shit.onComplete = function() {
-				FlxG.switchState(new ModState('MainMenuState'));
+				FlxG.switchState(new ModState('tco/MainMenuState'));
 				FlxG.sound.playMusic(Paths.music('freakyMenu'));
 			}
 				

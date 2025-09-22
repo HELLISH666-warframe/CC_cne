@@ -132,7 +132,7 @@ function update(elapsed:Float) {
 
 			FlxTween.tween(FlxG.camera, {zoom: -2}, 1.5, {ease: FlxEase.expoIn});
 			FlxG.camera.fade(FlxColor.BLACK, 0.8, false, function() {
-				FlxG.switchState(new ModState('MainMenuState'));
+				FlxG.switchState(new ModState('tco/MainMenuState'));
 			});
 			goodBye();
 			selectedSmth = true;

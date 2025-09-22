@@ -17,18 +17,5 @@ function new()
     if (FlxG.save.data.checkpoint_cc == null) FlxG.save.data.checkpoint_cc = null;
     if (FlxG.save.data.crt_cc == null) FlxG.save.data.crt_cc = true;
     if (FlxG.save.data.alanUnlocked == null) FlxG.save.data.alanUnlocked = false;
-}
-function update(elapsed:Float){
-if (FlxG.keys.justPressed.F5) FlxG.resetState();
-}
-
-var redirectStates:Map<FlxState, String> = [
-    MainMenuState => "MainMenuState", 
-TitleState => "TitleState"
-];
-
-function preStateSwitch() {
-for (redirectState in redirectStates.keys())
-if (FlxG.game._requestedState is redirectState)
-FlxG.game._requestedState = new ModState(redirectStates.get(redirectState));
+    if (FlxG.save.data.code_songs_cc == null) FlxG.save.data.code_songs_cc = [];
 }
