@@ -95,6 +95,7 @@ function create() {
 		chris_pratt.screenCenter(FlxAxes.X);
 		chris_pratt.setFormat(Paths.font("phantommuff.ttf"), 44, FlxColor.WHITE, "center", FlxTextBorderStyle.OUTLINE, FlxColor.TRANSPARENT);
 		chris_pratt.scrollFactor.set(1, 0);
+		if(songs[i].name.toLowerCase()=='trojan'&&wasPlayed&&FlxG.random.int(1, 4) == 1)chris_pratt.text='Power-gain';
 		add(chris_pratt);
 		grpSongs2.add(chris_pratt);
 

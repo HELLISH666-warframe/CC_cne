@@ -4,5 +4,5 @@ function onGamePause(event) {
     persistentDraw = true;
     paused = true;
         
-    openSubState(new ModSubState("PauseSubState"));
+    openSubState(new ModSubState("tco/substates/PauseSubState"));
 }

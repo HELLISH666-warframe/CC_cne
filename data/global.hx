@@ -1,21 +1,25 @@
-//
-import funkin.menus.TitleState;
-import openfl.Lib;
-import lime.app.Application;
-import flixel.system.scaleModes.RatioScaleMode;
-import flixel.system.scaleModes.StageSizeScaleMode;
+function new() {   
+    FlxG.save.data.songsUnlocked_seenCredits ??= false;
+    FlxG.save.data.songsUnlocked_mainWeek ??= false;
+    FlxG.save.data.screenShake_cc ??= true;
+    FlxG.save.data.flashing_cc ??= true;
+    FlxG.save.data.noMechanics_cc ??= true;
+    FlxG.save.data.songsUnlocked_mainWeek ??= false;
+    FlxG.save.data.songsUnlocked ??= [];
+    FlxG.save.data.checkpoint_cc = null;
+    FlxG.save.data.crt_cc ??= true;
+    FlxG.save.data.alanUnlocked ??= false;
+    FlxG.save.data.code_songs_cc ??= [];//GUARANTEE this won't be needed later.
+}
 
-function new()
-{   
-    if (FlxG.save.data.songsUnlocked_seenCredits == null) FlxG.save.data.songsUnlocked_seenCredits = false;
-    if (FlxG.save.data.songsUnlocked_mainWeek == null) FlxG.save.data.songsUnlocked_mainWeek = false;
-    if (FlxG.save.data.screenShake_cc == null) FlxG.save.data.screenShake_cc = true;
-    if (FlxG.save.data.flashing_cc == null) FlxG.save.data.flashing_cc = true;
-    if (FlxG.save.data.noMechanics_cc == null) FlxG.save.data.noMechanics_cc = true;
-    if (FlxG.save.data.songsUnlocked_mainWeek == null) FlxG.save.data.songsUnlocked_mainWeek = false;
-    if (FlxG.save.data.songsUnlocked == null) FlxG.save.data.songsUnlocked = [];
-    if (FlxG.save.data.checkpoint_cc == null) FlxG.save.data.checkpoint_cc = null;
-    if (FlxG.save.data.crt_cc == null) FlxG.save.data.crt_cc = true;
-    if (FlxG.save.data.alanUnlocked == null) FlxG.save.data.alanUnlocked = false;
-    if (FlxG.save.data.code_songs_cc == null) FlxG.save.data.code_songs_cc = [];
+public static function mouseShit(pa:String,?size:Float=1,?offsets=[0,0]){   
+    size??=1;offsets??=[0,0];
+    // STUPID ASS HSCRIPT DOESNT LET ME ADD DEFAULT PARAMETERS. FUK.//Thanks PJ Party for letting me know.
+    FlxG.mouse.useSystemCursor = false;
+    FlxG.mouse.load(Assets.getBitmapData(Paths.image(pa)),size,offsets[0],offsets[1]);
+}
+
+function destroy(){
+    FlxG.mouse.useSystemCursor = true;
+    FlxG.mouse.visible = false;
 }

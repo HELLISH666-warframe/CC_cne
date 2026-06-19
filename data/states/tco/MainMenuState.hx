@@ -312,23 +312,15 @@ var elapsed_1:Float = 0;
 
 function update(elapsed:Float){
 	elapsed_1=elapsed;
-	trace(elapsed_1);
-	if (FlxG.keys.justPressed.SEVEN) {
-		persistentUpdate = false;
-		persistentDraw = true;
-		import funkin.editors.EditorPicker;
-		openSubState(new EditorPicker());
-	}
 	if (FlxG.keys.justPressed.SIX) {
 		FlxG.switchState(new FreeplayState());
 		FlxG.save.data.songsUnlocked_mainWeek=true;
 		trace("DON'T_FORGET_TO_REMOVE_THIS_IN_THE_FINAL");
 	}
-	if (controls.SWITCHMOD) {
-		import funkin.menus.ModSwitchMenu;
-		openSubState(new ModSwitchMenu());
-		persistentUpdate = false;
-		persistentDraw = true;
+	if (controls.SWITCHMOD||FlxG.keys.justPressed.SEVEN) {
+		import funkin.menus.ModSwitchMenu; import funkin.editors.EditorPicker;
+		controls.SWITCHMOD ? openSubState(new ModSubState('substates/ModSwitch')) :openSubState(new EditorPicker());
+		persistentUpdate = !persistentDraw;
 	}
 	if (FlxG.sound.music.volume < 0.8)  FlxG.sound.music.volume += 0.5 * elapsed;
 
@@ -364,7 +356,7 @@ function update(elapsed:Float){
 			selectedSomethin = true;
 			FlxTween.tween(FlxG.camera, {zoom: -2}, 1.5, {ease: FlxEase.expoIn});
 			FlxG.camera.fade(FlxColor.BLACK, 0.8, false, function(){
-				FlxG.switchState(new ModState('tco/TitleState'));});
+				FlxG.switchState(new TitleState());});
 			FlxG.sound.play(Paths.sound('cancelMenu'));
 		}
 		if (controls.ACCEPT) loadState();
@@ -469,7 +461,7 @@ function update(elapsed:Float){
 			targetAlphaCamPopup = 0;
 
 			gfMoment = false;
-			MusicBeatState.switchState(new TCOStoryState());
+			MusicBeatState.switchState(new StoryMenuState());
 		}
 		if (controls.ACCEPT) loadTutorial();
 	}
@@ -512,13 +504,13 @@ function loadState() {
 				switch (optionShit[curSelected]) {
 					case 'storymode':
 						if (newToTheMod) createGFPopup();
-						else FlxG.switchState(new ModState('tco/TCOStoryState'));
+						else FlxG.switchState(new StoryMenuState());
 					case 'freeplay': FlxG.switchState(new ModState('tco/FreeplayMenu'));
 					case 'awards': //FlxG.switchState(new ModState('AchievementsMenuState'));
 					trace("NO_SOFTLOCK!!!");
 					FlxG.resetState();
 					case 'art_gallery': FlxG.switchState(new ModState('tco/FanArtState'));
-					case 'credits':FlxG.switchState(new ModState('tco/TCOCreditsState'));
+					case 'credits':FlxG.switchState(new CreditsMain());
 					case 'options': FlxG.switchState(new OptionsMenu());
 				}
 			});

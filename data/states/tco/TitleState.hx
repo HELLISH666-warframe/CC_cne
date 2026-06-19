@@ -158,7 +158,7 @@ function update(elapsed:Float) {
 			zoomPerSec = 1.5;
 
 			FlxG.camera.fade(FlxColor.BLACK, 0.8, false, function() {
-				FlxG.switchState(new ModState('tco/MainMenuState'));
+				FlxG.switchState(new MainMenuState());
 				doNotZoom = false;
 			});
 			FlxG.mouse.visible = false;

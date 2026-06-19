@@ -134,7 +134,7 @@ function update(elapsed:Float) {
 				if (PlayState.chartingMode && Charter.undos.unsaved)
                     PlayState.instance.saveWarn(false);
 				else if(PlayState.isStoryMode)
-					FlxG.switchState(new ModState("MainMenuState"));
+					FlxG.switchState(new MainMenuState());
 				else FlxG.switchState(new FreeplayState());
 		}
 	}

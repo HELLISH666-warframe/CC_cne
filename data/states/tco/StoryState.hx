@@ -192,7 +192,7 @@ function update(elapsed:Float) {
 			FlxTween.tween(FlxG.camera, {zoom: -2}, 1.5, {ease: FlxEase.expoIn});
 			FlxTween.tween(camHUD, {zoom: -2}, 1.5, {ease: FlxEase.expoIn});
 			camHUD.fade(FlxColor.BLACK, 0.8, false, function() {
-				FlxG.switchState(new ModState('tco/MainMenuState'));
+				FlxG.switchState(new MainMenuState());
 			});
 		}
 		if (controls.UP_P||controls.DOWN_P){
