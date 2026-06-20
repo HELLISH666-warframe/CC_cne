@@ -1,3 +1,4 @@
+import haxe.io.Path;
 function new() {   
     FlxG.save.data.songsUnlocked_mainWeek ??= false;
     FlxG.save.data.songsUnlocked_seenCredits ??= false;
@@ -10,6 +11,18 @@ function new() {
     FlxG.save.data.alanUnlocked ??= false;
     FlxG.save.data.code_songs_cc ??= [];//GUARANTEE this won't be needed later.
     FlxG.save.data.shaders ??= true;
+    FlxG.save.data.gameplaySettings??=[
+		'scrollspeed' => 1.0,
+		'scrolltype' => 'multiplicative', 
+		'songspeed' => 1.0,
+		'healthgain' => 1.0,
+		'healthloss' => 1.0,
+		'instakill' => false,
+		'practice' => false,
+		'botplay' => false,
+		'opponentplay' => false
+	];
+    for (i in Paths.getFolderContent('data/global')) importScript("data/global/"+Path.withoutExtension(i)); //import different global scripts for organization reasons
 }
 
 public static function mouseShit(pa:String,?size:Float=1,?offsets=[0,0]){   
