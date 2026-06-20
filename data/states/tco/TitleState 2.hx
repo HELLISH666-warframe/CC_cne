@@ -1,16 +1,9 @@
 import flixel.addons.transition.FlxTransitionableState;
-import flixel.group.FlxGroup.FlxTypedGroup;
 import flixel.addons.display.FlxBackdrop;
 import funkin.options.OptionsMenu;
 import openfl.display.BlendMode;
-import openfl.display.Bitmap;
 
 public static var initialized:Bool = false;
-
-var spikes1:FlxBackdrop;
-var spikes2:FlxBackdrop;
-var chosenOne:FlxSprite;
-var darkLord:FlxSprite;
 var socialItems = new FlxTypedGroup<FlxSprite>();
 
 var socialMedia = [['gamebanana','x','gamejolt'],['https://gamebanana.com/mods/468922','https://x.com/FNFCompConflict','https://gamejolt.com/games/VsTheChosenOne/687592']];
@@ -25,7 +18,6 @@ var curWacky:Array<String> = [];
 var optionShortCut:FlxSprite;
 
 public var titleOptions:Bool = false;
-var bump:Bool = false;
 
 var zoomLerpTo:Float = 1;
 var zoomPerSec:Float = 1;
@@ -86,28 +78,19 @@ function startIntro() {
 	smite.alpha = 0.00001;
 	add(smite);
 
-	logoBl = new FlxSprite(-1280, -55).loadGraphic(Paths.image('menus/title/logo'));
-	logoBl.antialiasing = Options.antialiasing;
+	add(logoBl = new FlxSprite(-1280,-55).loadGraphic(Paths.image('menus/title/logo'))).antialiasing = Options.antialiasing;
 	logoBl.setGraphicSize(Std.int(logoBl.width * 0.45));
-	add(logoBl);
 
-	titleText = new FlxSprite().loadGraphic(Paths.image('menus/title/startText'));
-	titleText.antialiasing = Options.antialiasing;
+	add(titleText = new FlxSprite().loadGraphic(Paths.image('menus/title/startText'))).antialiasing = Options.antialiasing;
 	titleText.screenCenter();
 	titleText.y += 200;
 	titleText.alpha = 0.00001;
-	add(titleText);
 		
-	spikes1 = new FlxBackdrop(Paths.image('menus/mainmenu/spikes'), FlxAxes.X, 0, 0);
-	spikes1.y -= 60;
-	spikes1.scrollFactor.set(0, 0);
+	add(spikes1 = new FlxBackdrop(Paths.image('menus/mainmenu/spikes'),FlxAxes.X,0,0)).y -= 60;
 	spikes1.flipY = true;
-	add(spikes1);
 
-	spikes2 = new FlxBackdrop(Paths.image('menus/mainmenu/spikes'), FlxAxes.X, 0, 0);
-	spikes2.y += 630;
-	spikes2.scrollFactor.set(0, 0);
-	add(spikes2);
+	add(spikes2 = new FlxBackdrop(Paths.image('menus/mainmenu/spikes'), FlxAxes.X, 0, 0)).y += 630;
+	for(i in [spikes1,spikes2])i.scrollFactor.set(0, 0);
 
 	add(socialItems);
 
@@ -129,9 +112,7 @@ function startIntro() {
 
 	credGroup.add(blackScreen = new FlxSprite().makeSolid(FlxG.width, FlxG.height, FlxColor.BLACK));
 
-	alanSpr = new FlxSprite(0, FlxG.height * 0.52).loadGraphic(Paths.image('menus/title/alanCursor'));
-	add(alanSpr);
-	alanSpr.visible = false;
+	add(alanSpr = new FlxSprite(0, FlxG.height * 0.52).loadGraphic(Paths.image('menus/title/alanCursor'))).visible = false;
 	alanSpr.screenCenter(FlxAxes.X);
 	alanSpr.antialiasing = Options.antialiasing;
 
@@ -148,7 +129,7 @@ function getIntroTextShit(){
 
 var transitioning:Bool = false;
 
-var newTitle:Bool = false;
+var newTitle:Bool = true;//Why_was_this_false_anyway.
 var titleTimer:Float = 0;
 
 function update(elapsed:Float) {
@@ -158,11 +139,10 @@ function update(elapsed:Float) {
 	for (i in 0...socialMedia[0].length) {
 		checkIfClicked(socialItems.members[i], i);
 
-		if(i == 1) //Twitter/X (ew X)
-		{
+		if(i == 1) { //Twitter/X (ew X)
 			if(FlxG.keys.justPressed.SHIFT)  {
 				socialItems.members[i].ID = socialItems.members[i].ID == 0 ? 1 : 0; //change between twitter and X
-				socialItems.members[i].loadGraphic(Paths.image('menus/title/${['twitter', 'x'][socialItems.members[i].ID]}')); //dumb but I think it works
+				socialItems.members[i].loadGraphic(Paths.image('menus/title/${['twitter','x'][socialItems.members[i].ID]}')); //dumb but I think it works
 			}
 		}
 	}
@@ -171,19 +151,15 @@ function update(elapsed:Float) {
 		FlxG.sound.play(Paths.sound('mouseClick'));
 		FlxG.switchState(new OptionsMenu((_) -> FlxG.switchState(new TitleState())));
 		titleOptions = true;
-		bump = false;
 		closedState = true;
 	}
 
 	var pressedEnter:Bool = FlxG.keys.justPressed.ENTER || controls.ACCEPT;
 
-	if (newTitle) {
-		titleTimer += FlxMath.bound(elapsed, 0, 1);
-		if (titleTimer > 2) titleTimer -= 2;
-	}
-
 	if (initialized && !transitioning && skippedIntro) {
 		if (newTitle && !pressedEnter) {
+			titleTimer += FlxMath.bound(elapsed, 0, 1);
+			if (titleTimer > 2) titleTimer -= 2;
 			var timer:Float = titleTimer;
 			if (timer >= 1) timer = (-timer) + 2;
 
@@ -205,7 +181,6 @@ function update(elapsed:Float) {
 			FlxG.camera.fade(FlxColor.BLACK, 0.8, false, function() {
 				FlxG.switchState(new MainMenuState());
 				titleOptions = false;
-				bump = false;
 				doNotZoom = false;
 			});
 
@@ -256,15 +231,7 @@ function deleteCoolText() {
 private var sickBeats:Int = 0; //Basically curBeat but won't be skipped if you hold the tab or resize the screen
 public static var closedState:Bool = false;
 function beatHit() {
-	if (!closedState && !doNotZoom) {
-		zoomLerpTo = 1.02;
-		zoomPerSec = 0.3;
-	}
-
-	if(!closedState && bump) {
-		if (chosenOne != null)  FlxTween.tween(chosenOne, { y: -7.3 }, Conductor.crochet * 0.1000 * 2, { type: FlxTween.LOOPING, ease: FlxEase.quadInOut});
-		if (darkLord != null)  FlxTween.tween(darkLord, { y: -7.3 }, Conductor.crochet * 0.1000 * 2, { type: FlxTween.LOOPING, ease: FlxEase.quadInOut});
-	}
+	if (!closedState && !doNotZoom) {zoomLerpTo = 1.02; zoomPerSec = 0.3;}
 
 	if(!closedState) {
 		sickBeats++;
@@ -308,7 +275,7 @@ function beatHit() {
 			createCoolText(['Vs. The Chosen One?'], 15);
 			case 24:addMoreText('More like...', 15);
 			case 25:if (credGroup != null) remove(credGroup);
-			if (logoBl != null) FlxTween.tween(logoBl, {x: 166}, 2, { type: FlxTween.ONESHOT, ease: FlxEase.backInOut});
+			if (logoBl != null) FlxTween.tween(logoBl, {x: 166}, 2, {type: FlxTween.ONESHOT, ease: FlxEase.backInOut});
 			case 28:if(!skippedIntro) {
 				doNotZoom = true;
 				zoomLerpTo = 0.7;
@@ -321,8 +288,8 @@ function beatHit() {
 			skipIntro();
 			zoomLerpTo = 1;
 			zoomPerSec = 1000;
-			if (darkLord != null) FlxTween.tween(darkLord, {y: 0}, 1, { type: FlxTween.ONESHOT, ease: FlxEase.backInOut, startDelay: 0.5});
-			if (chosenOne != null) FlxTween.tween(chosenOne, {y: 0}, 1, { type: FlxTween.ONESHOT, ease: FlxEase.backInOut, startDelay: 0.5});
+			if (darkLord != null) FlxTween.tween(darkLord, {y: 0}, 1, {type: FlxTween.ONESHOT, ease: FlxEase.backInOut, startDelay: 0.5});
+			if (chosenOne != null) FlxTween.tween(chosenOne, {y: 0}, 1, {type: FlxTween.ONESHOT, ease: FlxEase.backInOut, startDelay: 0.5});
 		}
 	}
 }
@@ -351,6 +318,5 @@ function skipIntro() {
 function checkIfClicked(object:FlxSprite, id:Int) {
 	if(!FlxG.mouse.justPressed||!FlxG.mouse.overlaps(object)) return;
 	FlxG.sound.play(Paths.sound('mouseClick'));
-
 	CoolUtil.openURL(socialMedia[1][id]);
 }
