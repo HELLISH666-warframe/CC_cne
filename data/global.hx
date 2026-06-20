@@ -1,10 +1,9 @@
 function new() {   
-    FlxG.save.data.songsUnlocked_seenCredits ??= false;
     FlxG.save.data.songsUnlocked_mainWeek ??= false;
+    FlxG.save.data.songsUnlocked_seenCredits ??= false;
     FlxG.save.data.screenShake_cc ??= true;
     FlxG.save.data.flashing_cc ??= true;
     FlxG.save.data.noMechanics_cc ??= true;
-    FlxG.save.data.songsUnlocked_mainWeek ??= false;
     FlxG.save.data.songsUnlocked ??= [];
     FlxG.save.data.checkpoint_cc = null;
     FlxG.save.data.crt_cc ??= true;

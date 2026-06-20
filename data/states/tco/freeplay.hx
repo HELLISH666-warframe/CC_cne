@@ -30,7 +30,7 @@ var lerpRating:Float = 0;
 var intendedScore:Int = 0;
 var intendedRating:Float = 0;
 
-static var curSelected_freeplay:Int = 0;
+static var curSelFP:Int = 0;
 var curDifficulty:Int = -1;
 static var lastDifficultyName:String = '';
 
@@ -48,8 +48,7 @@ var flippedArrow:FlxSprite;
 var selectedSmth:Bool = false;
 var finishedZoom = false;
 
-var crtShader:CustomShader = new CustomShader("CRT"); 
-var fisheye:CustomShader = new CustomShader("fisheye"); 
+var fisheye = new CustomShader("fisheye"); 
 
 var preload = [];
 var preload2 = [];
@@ -141,8 +140,8 @@ function create() {
 
 	add(scoreText);
 
-	if (curSelected_freeplay >= songs.length) curSelected_freeplay = 0;
-	scrollingThing.color = songs[curSelected_freeplay].color;
+	if (curSelFP >= songs.length) curSelFP = 0;
+	scrollingThing.color = songs[curSelFP].color;
 	intendedColor = scrollingThing.color;
 
 	//if(lastDifficultyName == '') lastDifficultyName = CoolUtil.defaultDifficulty;
@@ -154,7 +153,7 @@ function create() {
 		finishedZoom = true;
 	});
 
-	FlxG.camera.addShader(crtShader);
+	FlxG.camera.addShader(crtShader = new CustomShader("CRTShader"));
 	FlxG.camera.addShader(fisheye);
 	fisheye.MAX_POWER=0.05;
 
@@ -165,15 +164,12 @@ function create() {
 	    preload.push(graphic);
 	    preload2.push(graphic2);
 	}
-	trace(curSelected_freeplay);
 
-	curSelected_freeplay=0;
 	changeSelection(0);
 	changeDiff(0);
-	trace(curSelected_freeplay);
 }
 
-static var curPlayingInst = Paths.inst(songs[curSelected_freeplay].name, songs[curSelected_freeplay].difficulties[curDifficulty]);
+static var curPlayingInst = Paths.inst(songs[curSelFP].name, songs[curSelFP].difficulties[curDifficulty]);
 
 function update(elapsed:Float) {
 	if (FlxG.sound.music!=null && FlxG.sound.music.volume < 0.7) FlxG.sound.music.volume += 0.5 * elapsed;
@@ -211,14 +207,14 @@ function update(elapsed:Float) {
 		}
 		if (controls.ACCEPT){
 			prevSong="FUCK";
-			PlayState.loadSong(songs[curSelected_freeplay].name, songs[curSelected_freeplay].difficulties[curDifficulty].toLowerCase());
+			PlayState.loadSong(songs[curSelFP].name, songs[curSelFP].difficulties[curDifficulty].toLowerCase());
 
 			selectedSmth = true;
 		
 				FlxTween.tween(FlxG.camera, {zoom: 3}, 1.5, {ease: FlxEase.expoIn});
 				FlxG.camera.fade(FlxColor.BLACK, 0.8, false, function()
 				{
-					//if (songs[curSelected_freeplay].name == "amity".toLowerCase()) MusicBeatState.switchState(new MinusCharSelector());
+					//if (songs[curSelFP].name == "amity".toLowerCase()) MusicBeatState.switchState(new MinusCharSelector());
 					//else {
 						FlxG.switchState(new PlayState());
 
@@ -237,18 +233,15 @@ function update(elapsed:Float) {
 function changeSelection(change:Int = 0, playSound:Bool = true){
 	if(playSound) FlxG.sound.play(Paths.sound('scrollMenu'), 0.4);
 
-	curSelected_freeplay += change;
-
-	if (curSelected_freeplay < 0) curSelected_freeplay = songs.length - 1;
-	if (curSelected_freeplay >= songs.length) curSelected_freeplay = 0;
+	curSelFP = FlxMath.wrap(curSelFP+change, 0, songs.length - 1);
 
 	if(zoomTween != null) zoomTween.cancel();
 	if(tweenX != null) tweenX.cancel();
 	if(alphaTween != null) alphaTween.cancel();
 
-	var songHasBeenPlayed:Bool = FlxG.save.data.songsUnlocked.contains(songs[curSelected_freeplay].name);
+	var songHasBeenPlayed:Bool = FlxG.save.data.songsUnlocked.contains(songs[curSelFP].name);
 
-	var newColor:Int = songHasBeenPlayed ? songs[curSelected_freeplay].color : -1;
+	var newColor:Int = songHasBeenPlayed ? songs[curSelFP].color : -1;
 
 	if(newColor != intendedColor) {
 		if(colorTween != null) colorTween.cancel();
@@ -260,13 +253,13 @@ function changeSelection(change:Int = 0, playSound:Bool = true){
 		});
 	}
 
-	var daBG:String = songHasBeenPlayed ? preload2[curSelected_freeplay] : Paths.image('menus/freeplayArt/freeplayImages/bgs/no bg');
+	var daBG:String = songHasBeenPlayed ? preload2[curSelFP] : Paths.image('menus/freeplayArt/freeplayImages/bgs/no bg');
 
 	bg.loadGraphic(daBG);
 	bg.antialiasing = Options.antialiasing;
 	bg.screenCenter();
 
-	var featuredImage:String = songHasBeenPlayed ? preload[curSelected_freeplay] : Paths.image('menus/freeplayArt/freeplayImages/art/no one');
+	var featuredImage:String = songHasBeenPlayed ? preload[curSelFP] : Paths.image('menus/freeplayArt/freeplayImages/art/no one');
 
 	featuredChar.loadGraphic(featuredImage);
 	featuredChar.antialiasing = Options.antialiasing;
@@ -298,8 +291,8 @@ function changeSelection(change:Int = 0, playSound:Bool = true){
 		iconArray2[i].scale.y = 0.55;
 	}
 
-	iconArray2[curSelected_freeplay].alpha = 1;
-	zoomTween = FlxTween.tween(iconArray2[curSelected_freeplay], {"scale.x": 0.75, "scale.y": 0.75}, 0.2, {
+	iconArray2[curSelFP].alpha = 1;
+	zoomTween = FlxTween.tween(iconArray2[curSelFP], {"scale.x": 0.75, "scale.y": 0.75}, 0.2, {
 			ease: FlxEase.quadOut,
 			onComplete: function(twn:FlxTween) {
 				zoomTween = null;
@@ -307,7 +300,7 @@ function changeSelection(change:Int = 0, playSound:Bool = true){
 		});
 
 	for (item in grpSongs2.members) {
-		var shit = bullShit - curSelected_freeplay;
+		var shit = bullShit - curSelFP;
 		bullShit++;
 
 		item.alpha = 0;
@@ -330,8 +323,8 @@ function changeSelection(change:Int = 0, playSound:Bool = true){
 			});
 		}
 	}
-	if(FlxG.save.data.songsUnlocked.contains(songs[curSelected_freeplay].name.toLowerCase())){
-	curPlayingInst = Paths.inst(songs[curSelected_freeplay].name, songs[curSelected_freeplay].difficulties[curDifficulty]);
+	if(FlxG.save.data.songsUnlocked.contains(songs[curSelFP].name.toLowerCase())){
+	curPlayingInst = Paths.inst(songs[curSelFP].name, songs[curSelFP].difficulties[curDifficulty]);
 	trace(prevSong);
 	if(curPlayingInst!=prevSong){
 		FlxG.sound.playMusic(curPlayingInst, 1);
@@ -347,13 +340,13 @@ function beatHit(){
 function changeDiff(change:Int = 0) {
 	curDifficulty += change;
 
-	if (curDifficulty < 0) curDifficulty = songs[curSelected_freeplay].difficulties.length-1;
-	if (curDifficulty >= songs[curSelected_freeplay].difficulties.length) curDifficulty = 0;
+	if (curDifficulty < 0) curDifficulty = songs[curSelFP].difficulties.length-1;
+	if (curDifficulty >= songs[curSelFP].difficulties.length) curDifficulty = 0;
 
 
 	//lastDifficultyName = CoolUtil.difficulties[curDifficulty];
 
-	diffText.text = '^ \n' + songs[curSelected_freeplay].difficulties[curDifficulty]+ '\nv';
+	diffText.text = '^ \n' + songs[curSelFP].difficulties[curDifficulty]+ '\nv';
 }
 
 function positionHighscore() {
