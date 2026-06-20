@@ -10,7 +10,7 @@ import funkin.options.OptionsMenu;
 import funkin.editors.ui.UIState;
 import flixel.util.FlxSave;
 import flixel.FlxObject;
-import Shaders;
+//import Shaders;
 
 var curSelMM:Int = 0;
 
@@ -55,9 +55,9 @@ public static var POPUP_TEXT = 'Hey!, Would you like to sing with me on my new T
 public static var gfMoment:Bool;
 var targetAlphaCamPopup:Int = 0;
 
-var chrom:ChromaticAberrationEffect;
-public static var crtShader = new CRTShader();
-var shaderFilter = new ShaderFilter(crtShader);
+var chrom = new CustomShader("ChromaticAberrationShader");
+//var chrom:ChromaticAberrationEffect;
+var crtShader = new CustomShader("CRTShader"); 
 var finishedZoom = false;
 var star:FlxSprite;
 
@@ -66,15 +66,21 @@ var colorsMap:Map<String, FlxColor> =['storymode' => FlxColor.ORANGE,'freeplay' 
 
 var starThingOpened = false;
 
+function setChrome(shader:Dynamic,chromeOffset) {
+	shader.rOffset=chromeOffset;
+	shader.gOffset=0;
+	shader.bOffset=chromeOffset * -1;
+}
+
 function create() {
 	DiscordUtil.changePresenceSince("In the Menus", null);
 
 	camGame = new FlxCamera();
 	camGF = new FlxCamera();
-	camGF.bgColor.alpha = 0;
+	camGF.bgColor = 0;
 
 	camHUD = new FlxCamera();
-	camHUD.bgColor.alpha = 0;
+	camHUD.bgColor = 0;
 
 	FlxG.cameras.reset(camGame);
 	FlxG.cameras.add(camHUD, false);
@@ -268,13 +274,17 @@ function create() {
 	glitchBG.alpha = 0.0001;
 	add(glitchBG);
 
-	chrom = new ChromaticAberrationEffect(0);
+	chrom.rOffset=0;
+	chrom.gOffset=0;
+	chrom.bOffset=-0;
+	//chrom = new ChromaticAberrationEffect(0);
 
-	if (ClientPrefs.shaders) addShaderToCamera('camgame', chrom);
+	if (FlxG.save.data.shaders) camgame.setFilters(chrom);
+	//if (FlxG.save.data.shaders) addShaderToCamera('camgame', chrom);
 
 	changeItem(0);
 
-	if (ClientPrefs.shaders) FlxG.camera.setFilters([shaderFilter]);
+	if (FlxG.save.data.shaders) FlxG.camera.addShader(crtShader);
 
 	FlxTween.tween(FlxG.camera, {zoom: 1}, 0.8, {ease: FlxEase.expoIn});
 	FlxG.camera.fade(FlxColor.BLACK, 0.8, true, function(){finishedZoom = true;});
@@ -525,7 +535,7 @@ function loadTutorial() {targetAlphaCamPopup = 0;
 	FlxG.sound.play(Paths.sound('confirmMenu'));
 
 	PlayState.loadSong("practice time", "hard");
-	FlxG.switchState(new PlayState())
+	FlxG.switchState(new PlayState());
 }
 
 function changeItem(huh:Int = 0) {
@@ -556,16 +566,6 @@ public function addShaderToCamera(cam:String, effect:ShaderEffect){//STOLE FROM 
 		camGameShaders.push(effect);
 		var newCamEffects:Array<BitmapFilter>=[]; // IT SHUTS HAXE UP IDK WHY BUT WHATEVER IDK WHY I CANT JUST ARRAY<SHADERFILTER>
 		for(i in camGameShaders) newCamEffects.push(new ShaderFilter(i.shader));
-		camGame.setFilters(newCamEffects);
-	}
-}
-
-public function removeShaderFromCamera(cam:String, effect:ShaderEffect){
-	switch(cam.toLowerCase()) {
-		case 'camgame'|'game':
-		camGameShaders.remove(effect);
-		var newCamEffects:Array<BitmapFilter> = [];
-		for (i in camGameShaders) newCamEffects.push(new ShaderFilter(i.shader));
 		camGame.setFilters(newCamEffects);
 	}
 }

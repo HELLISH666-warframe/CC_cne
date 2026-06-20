@@ -10,6 +10,7 @@ function new() {
     FlxG.save.data.crt_cc ??= true;
     FlxG.save.data.alanUnlocked ??= false;
     FlxG.save.data.code_songs_cc ??= [];//GUARANTEE this won't be needed later.
+    FlxG.save.data.shaders ??= true;
 }
 
 public static function mouseShit(pa:String,?size:Float=1,?offsets=[0,0]){   
