@@ -1,6 +1,6 @@
 {
 	"displayName": "Masterpiece",
-	"difficulties": ["simple","hard","insane"],
+	"difficulties": ["hard"],
 	"bpm": 198,
 	"icon": "tsc",
 	"color": "#FF0000",
