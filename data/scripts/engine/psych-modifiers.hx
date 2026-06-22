@@ -21,8 +21,3 @@ function onPlayerHit(e) {
 	if(practiceMode)validScore=false;
 	e.healthGain*=FlxG.save.data.gameplaySettings.get('healthgain');
 }
-
-function onSubstateClose(e) {
-	if(practiceMode)validScore=false;//So_
-	trace(validScore);
-}

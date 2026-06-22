@@ -1,6 +1,6 @@
 <!DOCTYPE codename-engine-stage>
 <stage zoom="0.65" folder="stages/" startCamPosY="600" startCamPosX="200">
-    <sprite name="background1" x="-600" y="-600" sprite="adobe/bg" scroll="0.9" scale="1.1"/>
+    <!--<sprite name="background1" x="-600" y="-600" sprite="adobe/bg" scroll="0.9" scale="1.1"/>
 	<sprite name="crowd" x="-400" y="7" sprite="chapter1/theBGGuyz" scroll="0.95" type="beat" scale="1.1"/>
         <anim name="crowd" anim="BG  Guys0" loop="false"/>
 	<sprite name="fires1" x="870" y="-240" sprite="victim/BGFire" scroll="0.9" type="loop" scale="1.4"/>
@@ -35,7 +35,7 @@
 	<sprite name="corruptBG" x="-650" y="-600" sprite="chapter1/bgCorrupted" scroll="0.9" scale="1.1"/>
 	<sprite name="corruptFloor" x="-750" y="-405" sprite="chapter1/floorCorrupted" scroll="1" scale="1.2"/>
 	<sprite name="bsodStatic" x="-50" y="-90" sprite="EProcess/error_3rdsong" scroll="1" scale="2.4"/>
-	<sprite name="rsod" x="-50" y="-90" sprite="EProcess/rsod" scroll="1" scale="2.4"/>
+	<sprite name="rsod" x="-50" y="-90" sprite="EProcess/rsod" scroll="1" scale="2.4"/>-->
 	<girlfriend x="400" y="10" camxoffset="0" camyoffset="0"/>
 	<opponent x="50" y="-40" camxoffset="0" camyoffset="0"/>
 	<player x="970" y="-50" camxoffset="0" camyoffset="0"/>

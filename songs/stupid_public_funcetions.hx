@@ -19,7 +19,6 @@ public function alphaTween(object:Array<FlxSprite>, duration:Float, alpha:Float)
 }
 
 public var camChar = new FlxCamera();
-public var camBars:HudCamera;
 public var camLYRICS = new FlxCamera();
 public var camOther:HudCamera;
 
@@ -76,31 +75,6 @@ function beatHit(curBeat:Int) {
 			coolShit.color = lightsColors[curLight];
 		}
 	}
-	if (zoomType1) {
-		FlxG.camera.zoom += 0.06;
-		camHUD.zoom += 0.08;
-	}
-	if (curBeat % 2 == 0 && zoomType2) {
-		FlxG.camera.zoom += 0.06;
-		camHUD.zoom += 0.08;
-	}
-	if (curBeat % 1 == 0 && zoomType3) {
-		FlxG.camera.zoom += 0.06;
-		camHUD.zoom += 0.08;
-	}
-}
-
-public var lossingHealth:Bool = false;
-
-public var multiplierDrain:Float = 1;
-
-public function healthDrainLolz(drain:Float, min:Float, mult:Float) {
-	if(!lossingHealth) return;
-	if(PlayState.difficulty.toUpperCase() == 'SIMPLE') return;
-	if(PlayState.difficulty.toUpperCase()== 'HARD' && FlxG.save.data.noMechanics_cc) return;
-	if(health <= min) return;
-
-	health -= drain * multiplierDrain;
 }
 
 public var curLight:Int = -1;
@@ -110,8 +84,6 @@ function create() {
     FlxG.cameras.remove(camHUD, false);
     camChar.bgColor = 0x00000000;
 	FlxG.cameras.add(camChar, false);
-    FlxG.cameras.add(camBars = new HudCamera(), false);
-    camBars.bgColor = 0x00000000;
     FlxG.cameras.add(camHUD, false);
 	FlxG.cameras.add(camLYRICS, false);
 	camLYRICS.bgColor = 0;
@@ -125,26 +97,13 @@ function create() {
 		FlxG.resizeWindow(960, 720);
 		//camHUD.width=720;
 	}
-    Lib.application.window.title = "Computerized Conflict -"+curSong+ "- Composed by: "+curSong.composer;
 }
 var time:Float=0;
 function update(elapsed:Float) {
 	time+=elapsed;
-    healthDrainLolz(0.09 * elapsed, 0.2, multiplierDrain);
 	endingShader.uTime= time;
 }
 
-public var zoomType1:Bool = false;
-public var zoomType2:Bool = false;
-public var zoomType3:Bool = false;
-
-public function zoomtype(number:String) {
-    switch(number){
-		case '0': zoomType1 = !zoomType1;
-		case '1': zoomType2 = !zoomType2;
-		case '2': zoomType3 = !zoomType3;
-	}
-}
 function destroy() {
 	if(oldVideoResolution){
 	Lib.application.window.resizable = true;

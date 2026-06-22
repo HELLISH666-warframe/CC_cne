@@ -1,3 +1,4 @@
+import psych.BGSprite;
 public var whiteScreen:FlxSprite;
 public var spotlightdad = new FlxSprite().loadGraphic(Paths.image("stages/spotlight"));
 public var spotlightbf = new FlxSprite().loadGraphic(Paths.image("stages/spotlight"));
@@ -9,10 +10,63 @@ public var bottomBarsALT:FlxSprite;
 var time:Float = 0;
 public var redthing:FlxSprite;
 function create() {
+	trace("LOADED_ADOBE.");
+	defaultCamZoom = 0.65;
+
 	whiteScreen = new FlxSprite(0, 0).makeSolid(Std.int(FlxG.width * 2), Std.int(FlxG.height * 2), FlxColor.WHITE);
 	whiteScreen.scrollFactor.set();
 	whiteScreen.screenCenter();
-	insert(0,whiteScreen);
+	add(whiteScreen);
+
+	Background1 = new BGSprite('chapter1/bg', -600, -600, 0.9, 0.9);
+	//Background1.setGraphicSize(Std.int(Background1.width * 1.1));
+	Background1.antialiasing = Options.antialiasing;
+	add(Background1);
+
+	whiteScreen.color = Background1.color;
+
+	switch(PlayState.SONG.meta.name.toLowerCase()){
+		case 'adobe':noCurLight = true;
+		Crowd = new BGSprite('chapter1/theBGGuyz', -400, 7, 0.95, 0.95, ['BG  Guys']);
+		Crowd.setGraphicSize(Std.int(Crowd.width * 1.1));
+		Crowd.updateHitbox();
+		Crowd.antialiasing = Options.antialiasing;
+		add(Crowd);
+
+		spotlightdad = new FlxSprite().loadGraphic(Paths.image("spotlight"));
+		spotlightdad.alpha = 0.0001;
+
+		spotlightbf = new FlxSprite().loadGraphic(Paths.image("spotlight"));
+		spotlightbf.alpha = 0.0001;
+
+		//bbgColor = 0xFF929292;
+
+		//if (FlxG.save.data.shaders) addShaderToCamera(['camgame', 'camhud'], new ChromaticAberrationEffect(0.0005));//LATER_BRO.
+
+		FlxG.camera.fade(FlxColor.BLACK, 0, false);
+	}
+
+	Floor = new BGSprite('chapter1/floor', -750, 713, 1, 1);
+	Floor.setGraphicSize(Std.int(Floor.width * 1.2));
+	add(Floor);
+
+	topBars = new FlxSprite().makeSolid(2580, 320, FlxColor.BLACK);
+	topBars.camera = camBars;
+	topBars.screenCenter();
+	topBars.y -= 850;
+	add(topBars);			
+
+	bottomBars = new FlxSprite().makeSolid(2580, 320, FlxColor.BLACK);
+	bottomBars.camera = camBars;
+	bottomBars.screenCenter();
+	bottomBars.y += 850;
+	add(bottomBars);
+
+	topBarsALT = new FlxSprite().makeSolid(2580,320, FlxColor.BLACK);
+	topBarsALT.camera = camBars;
+	topBarsALT.screenCenter();
+	topBarsALT.y -= 450;
+	add(topBarsALT);
 }
 
 function postCreate(){

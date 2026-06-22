@@ -1,10 +1,48 @@
 <!DOCTYPE codename-mod-options>
-<menu name="" desc="">
-	<checkbox id="flashing_cc" name="Flashing lights"/>
-	<choice id="TimeBar" name="Time Bar" desc="What should the Time Bar display?">
-		<value name="Time Left" value="left"/>
-		<value name="Time Elapsed" value="elapsed"/>
-		<value name="Song Name" value="songName"/>
-		<value name="Disabled" value="disabled"/>
+<menu name="Placeholder Options" desc="Placeholder till I make this a custom state.">
+	<menu name="Note Colors" desc="Placeholder"></menu>
+	<menu name="Controls" desc="Placeholder"></menu>
+	<menu name="Graphics" desc="Placeholder">
+	<checkbox id="Shaders" name="Shaders" desc="If unchecked, disables shaders.\nIt\'s used for some visual effects, and also CPU intensive for weaker PCs"/>
+	<checkbox id="advancedShaders" name="Advanced Shaders" desc="If checked, enables shaders which might be laggy or even might crash your game."/>
+	</menu>
+	<menu name="Visuals and UI" desc="Placeholder">
+	<checkbox id="noteSplashes" name="Note Splashes" desc="Placeholder"/>
+	<checkbox id="hideHud" name="Hide HUD" desc="If checked, hides most HUD elements."/>
+	<choice id="timeBarType" name="Time Bar" desc="What should the Time Bar display?">
+		<value name="Time Left" value="Time Left"/>
+		<value name="Time Elapsed" value="Time Elapsed"/>
+		<value name="Song Name" value="Song Name"/>
+		<value name="Disabled" value="Disabled"/>
 	</choice>
+	<checkbox id="flashing" name="Flashing Lights" desc="Uncheck this if you're sensitive to flashing lights!"/>
+	<checkbox id="screenShake" name="Screen Shake" desc="Uncheck this if you don't want the screen to shake!"/>
+	<checkbox id="camZooms" name="Camera Zooms" desc="If unchecked, the camera won't zoom in on a beat hit."/>
+	<checkbox id="scoreZoom" name="Score Text Zoom on Hit" desc="If unchecked, disables the Score text zooming\neverytime you hit a note."/>
+	<number id="healthBarAlpha" name="Health Bar Transparency" desc="How much transparent should the health bar and icons be." min="0" max="1" change="0.1"/>
+	<checkbox id="comboStacking" name="Combo Stacking" desc="If unchecked, Ratings and Combo won't stack, saving on System Memory and making them easier to read"/>
+	<checkbox id="lagText" name="Laggy Text" desc="Uncheck this if you don't want that warning text\n telling you to turn off shaders to appear.\n(It can be very annoying sometimes)."/>
+	<checkbox id="showFPS" name="FPS Counter" desc="If unchecked, hides FPS Counter."/>
+	<checkbox id="showExtraInfo" name="Extra FPS info" desc="If checked, shows the current state."/>
+	</menu>
+	<menu name="Gameplay" desc="Placeholder">
+	<checkbox id="cameraMovement" name="Camera Movement" desc="If checked, the game camera will move depending on the animation of a character."/>
+	<checkbox id="wideScreenSongs" name="Window Size Changes" desc="If checked, the game window will change its resolution to some specific songs."/>
+	<checkbox id="controllerMode" name="Controller Mode" desc="Check this if you want to play with\na controller instead of using your Keyboard."/>
+	<checkbox id="downScroll" name="DownScroll" desc="If checked, notes go Down instead of Up, simple enough."/>
+	<checkbox id="middleScroll" name="Middlescroll" desc="If checked, your notes get centered."/>
+	<checkbox id="noMechanics" name="Disable Mechanics" desc="If checked, disables the mechanics (ONLY HARD MODE!!!)"/>
+	<checkbox id="judCounter" name="Enable Judgement Counter" desc="If checked, a judgement counter will appear on the HUD, wooahh.."/>
+	<checkbox id="laneunderlay" name="Enable Lane Underlay" desc="Enables a black underlay behind the notes\nfor better reading!\n(Similar to Funky Friday's Scroll Underlay or osu!mania's thing)"/>
+	<number id="laneTransparency" name="Lane Underlay Transparency" desc="Set the Lane Underlay Transparency (Lane Underlay must be enabled)" min="0" max="1" change="0.1"/>
+	<checkbox id="ghostTapping" name="Ghost Tapping" desc="If checked, you won't get misses from pressing keys\nwhile there are no notes able to be hit."/>
+	<checkbox id="opponentStrums" name="Opponent Notes" desc="If unchecked, opponent notes get hidden."/>
+	<checkbox id="noReset" name="Disable Reset Button" desc="If checked, pressing Reset won't do anything."/>
+	<number id="hitsoundVolume" name="Hitsound Volume" desc="Placeholder" min="0" max="1" change="0.1"/>
+	<number id="ratingOffset" name="Rating Offset" desc="Placeholder" min="-30" max="30" change="1"/>
+	<number id="sickWindow" name="Sick! Hit Window" desc="Placeholder" min="15" max="45" change="1"/>
+	<number id="goodWindow" name="Placeholder" desc="Good Hit Window" min="15" max="90" change="1"/>
+	<number id="badWindow" name="Bad Hit Window" desc="Placeholder" min="15" max="135" change="1"/>
+	<number id="safeFrames" name="Safe Frames" desc="Changes how many frames you have for\nhitting a note earlier or late." min="2" max="10" change="0.1"/>
+	</menu>
 </menu>

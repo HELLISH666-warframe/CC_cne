@@ -1,4 +1,5 @@
 import flixel.text.FlxTextBorderStyle;
+import flixel.ui.FlxBarFillDirection;
 import flixel.util.FlxStringUtil;
 import psych.AttachedSprite;
 import flixel.ui.FlxBar;
@@ -24,9 +25,10 @@ var rankingTexts = [
 	['Perfect!!', 1] //The value on this one isn't used actually, since Perfect is always "1"
 ];
 var songPercent:Float = 0;
+var uiType:String = 'default';
 
 function postCreate() {
-	var showTime:Bool = (FlxG.save.data.TimeBar != 'Disabled');
+	var showTime:Bool = (FlxG.save.data.timeBarType != 'Disabled');
 	timeTxt = new FlxText(42 + (FlxG.width / 2) - 248, 9, 400, "", 32);
 	timeTxt.setFormat(Paths.font("phantommuff.ttf"), 32, FlxColor.WHITE, 'center', FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 	timeTxt.scrollFactor.set();
@@ -58,14 +60,14 @@ function postCreate() {
 	timeBar.visible = showTime;
 	add(timeBar);
 
-	//if (uiType == 'default') {
+	if (uiType == 'default') {
 		timeBar.setGraphicSize(Std.int(timeBar.width * 0.85));
 		reloadTimeBarColors();
-	//}
+	}
 		
 	add(timeTxt);
 
-	if(FlxG.save.data.TimeBar == 'Song Name') {
+	if(FlxG.save.data.timeBarType == 'Song Name') {
 		timeTxt.size = 24;
 		timeTxt.y += 3;
 	}
@@ -73,21 +75,74 @@ function postCreate() {
 	timeBar.cameras = [camHUD];
 	timeBarBG.cameras = [camHUD];
 	timeTxt.cameras = [camHUD];
+	remove(healthBar);
 
-	fakeScoreText = new FlxText(healthBar.x + (healthBar.width * 0.28), 0, FlxG.width, "A", 20);
-	fakeScoreText.setFormat(Paths.font('phantommuff.ttf'), Std.int(20), 0xFFFFFFFF, 'center', FlxTextBorderStyle.OUTLINE, 0xFF000000);
-	fakeScoreText.borderSize = 1.5;
-	fakeScoreText.camera = camHUD;
-	fakeScoreText.screenCenter();
-	fakeScoreText.y = healthBarBG.y + 30;
-	add(fakeScoreText);
+	switch (uiType){
+		case 'psychDef':healthBarB = new AttachedSprite('game/healthBars/healthBarLarger');
+		healthBarB.y = FlxG.height * 0.89;
+		healthBarB.screenCenter(FlxAxes.X);
+		healthBarB.scrollFactor.set();
+		healthBarB.visible = !FlxG.save.data.hideHud;
+		healthBarB.xAdd = -4;
+		healthBarB.yAdd = -4;
+		add(healthBarB);
+		default:healthBarB = new AttachedSprite('game/healthBars/healthBar');
+		healthBarB.y = FlxG.height * 0.89;
+		healthBarB.screenCenter(FlxAxes.X);
+		healthBarB.scrollFactor.set();
+		healthBarB.visible = !FlxG.save.data.hideHud;
+		healthBarB.xAdd = -4;
+		healthBarB.yAdd = -4;
+		healthBarB.xAdd = -26;
+		healthBarB.yAdd = -12;
+		healthBarB.x += 150;
+
+		healthBar = new FlxBar(healthBarB.x + 4, healthBarB.y + 8, FlxBarFillDirection.RIGHT_TO_LEFT, Std.int(healthBarB.width - 50), Std.int(healthBarB.height - 28), this,'health', 0, 2);
+		healthBar.scrollFactor.set();
+		// healthBar
+		healthBar.visible = !FlxG.save.data.hideHud;
+		healthBar.alpha = FlxG.save.data.healthBarAlpha;
+		healthBar.screenCenter(FlxAxes.X);
+		healthBar.x += 150;
+		healthBar.y += 10;
+
+		healthBar.scale.set(0.7, 0.4);
+
+		healthBarB.setGraphicSize(Std.int(healthBarB.width * 0.7));
+
+		healthBarB.sprTracker = healthBar;
+	}
+	var leftColor:Int = dad != null && dad.iconColor != null && Options.colorHealthBar ? dad.iconColor : (opponentMode ? 0xFF66FF33 : 0xFFFF0000);
+	var rightColor:Int = boyfriend != null && boyfriend.iconColor != null && Options.colorHealthBar ? boyfriend.iconColor : (opponentMode ? 0xFFFF0000 : 0xFF66FF33); // switch the colors
+	healthBar.createFilledBar(leftColor, rightColor);
+	insert(members.indexOf(healthBarBG), healthBar).camera=camHUD;
+	add(healthBarB).camera=camHUD;
+
+	switch (uiType){
+		case 'psychDef':fakeScoreText = new FlxText(0, healthBarB.y + 36, FlxG.width, "", 20);
+		fakeScoreText.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.WHITE, 'center', FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		fakeScoreText.borderSize = 1.25;
+		fakeScoreText.visible = !FlxG.save.data.hideHud;
+		default:fakeScoreText = new FlxText(20, 0, 0, "", 20);
+		fakeScoreText.setFormat(Paths.font("phantommuff.ttf"), 22, FlxColor.WHITE, 'left', FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		fakeScoreText.borderSize = 2;
+		fakeScoreText.screenCenter(FlxAxes.Y);
+		fakeScoreText.y += 270;
+	}
+
+	add(fakeScoreText).camera = camHUD;
 	fakeScoreText.alpha = 0;
-	FlxTween.tween(fakeScoreText, {alpha: 1}, 0.75, {ease: FlxEase.quartInOut});
+	healthBar.alpha = 0;
+	healthBarB.alpha = 0;
 	fakeScoreText.text = 'Score: ' + songScore + ' | Misses: ' + misses + ' | Rating: ?';
 
 	scoreTxt.visible = false;
 	accuracyTxt.visible=false;
 	missesTxt.visible=false;
+	healthBarBG.visible=false;
+
+	iconP1.alpha = 0;
+	iconP2.alpha = 0;
 
 	remove(comboGroup, true); 
 	comboGroup.scale.set(0.7,0.7);
@@ -104,9 +159,19 @@ function postCreate() {
 	for (i in ratingManager.ratingData) hits[i.name]=0;
 }
 
+function beatHit() {
+	for(i in [iconP1,iconP2])FlxTween.cancelTweensOf(i,['angle']);
+	if (curBeat % 4 == 0 && uiType != 'psychDef') {// icon bop coollll shittt t t t t
+		FlxTween.angle(iconP1, -30, 0, Conductor.crochet / 1300 * gfSpeed, {ease: FlxEase.quadOut});
+		FlxTween.angle(iconP2, -30, 0, Conductor.crochet / 1300 * gfSpeed, {ease: FlxEase.quadOut});
+	}
+}
+
 function onSongStart() {
-	FlxTween.tween(timeBar, {alpha: 1}, 0.5, {ease: FlxEase.circOut});
-	FlxTween.tween(timeTxt, {alpha: 1}, 0.5, {ease: FlxEase.circOut});
+	if (PlayState.SONG.meta.name.toLowerCase() != 'time travel' && PlayState.SONG.meta.name.toLowerCase()!= 'messenger'){
+		for(i in [timeBar,timeTxt,healthBar,iconP1,iconP2,fakeScoreText])
+		FlxTween.tween(i, {alpha:1}, 0.5, {ease: FlxEase.circOut});
+	}
 }
 
 function postUpdate(elapsed:Float) {
@@ -125,10 +190,13 @@ function postUpdate(elapsed:Float) {
 	//}
 	comboGroup.cameras = [camHUD];
     add(comboGroup);
+
+	iconP1.x = (healthBar.x + 80) + ((healthBar.width - 160) * FlxMath.remapToRange(healthBar.percent, 0, 100, 100, 0) * 0.01) + (150 * iconP1.scale.x - 150) / 2 - Flags.ICON_OFFSET;
+	iconP2.x = (healthBar.x + 80) + ((healthBar.width - 160) * FlxMath.remapToRange(healthBar.percent, 0, 100, 100, 0) * 0.01) - (150 * iconP2.scale.x) / 2 - Flags.ICON_OFFSET * 2;
 }
 
 var accuracyText = '?';
-function onPlayerMiss(e) {
+function onPostPlayerMiss(e) {
 	calculateRating();
 	fakeScoreText.text = 'Score: ' + songScore + ' | Misses: ' + misses+ ' | Rating: ' + accuracyText;
 }
@@ -163,20 +231,13 @@ function calculateRating() {
 	}
 
 	var advancedRating = "";
-    if (misses > 0) {
-        if (misses == 0) {
-            var t = "FC";
-            for (r in ratings) {
-                if (hits[r.name] > 0 && r.fcRating != null) {
-                    t = r.fcRating;
-                    }
-                }
-            advancedRating = t;
-        }
-    	else if (misses < 10) advancedRating = "SDCB"
-		else if (misses > 0) advancedRating = "Clear";
+    if (misses == 0) {
+		advancedRating = "FC";
+		if(accuracy==1)advancedRating="SFC";
+		else if(hits['good']>0)advancedRating="GFC";
     }
-
+	else if (misses < 10) advancedRating = "SDCB"
+	else if (misses > 0) advancedRating = "Clear";
 
 	accuracyText = ratingName + ' (' + (Math.floor(accuracy * 10000) / 100) + '%) - ' + advancedRating;
 }
