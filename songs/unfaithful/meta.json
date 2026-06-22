@@ -1,7 +1,11 @@
 {
 	"displayName": "unfaithful",
-	"bpm": 191.0,
+	"difficulties": ["simple","hard","insane"],
+	"bpm": 191,
 	"icon": "ash",
+	"color": "#292F88",
+	"coopAllowed": true,
+	"opponentModeAllowed": true,
 	"background": "unfaithful",
 	"portrait": "unfaithful",
 	"composer": "SharkFaceGaming"

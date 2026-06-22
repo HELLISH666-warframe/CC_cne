@@ -1,19 +1,12 @@
 {
-	"composer": "Eclyptic",
-	"color": "#FFCC00",
-	"opponentModeAllowed": false,
-	"difficulties": [
-		"simple",
-		"insane",
-		"hard"
-	],
+	"displayName": "Messenger",
+	"difficulties": ["simple","hard","insane"],
+	"bpm": 140,
 	"icon": "aol",
-	"portrait": "messenger",
-	"coopAllowed": false,
-	"stepsPerBeat": 4,
-	"displayName": "messenger",
-	"needsVoices": true,
+	"color": "#FFCC00",
+	"coopAllowed": true,
+	"opponentModeAllowed": true,
 	"background": "messenger",
-	"beatsPerMeasure": 4,
-	"bpm": 140
+	"portrait": "messenger",
+	"composer": "Eclyptic"
 }

@@ -1,0 +1,12 @@
+{
+	"displayName": "Practice-time",
+	"difficulties": ["simple","hard","insane"],
+	"bpm": 100,
+	"icon": "gfCC",
+	"color": "#A5004D",
+	"coopAllowed": true,
+	"opponentModeAllowed": true,
+	"background": "practice-time",
+	"portrait": "practice-time",
+	"composer": "SharkFaceGaming"
+}

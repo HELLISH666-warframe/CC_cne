@@ -1,13 +1,11 @@
 {
-	"displayName": "end-process",
-	"bpm": 170.0,
+	"displayName": "End-process",
+	"difficulties": ["simple","hard","insane"],
+	"bpm": 170,
 	"icon": "the-dark-lord",
-	"difficulties": [
-		"SIMPLE",
-		"HARD",
-		"INSANE"
-	],
 	"color": "#FF0000",
+	"coopAllowed": true,
+	"opponentModeAllowed": true,
 	"background": "end-process",
 	"portrait": "end-process",
 	"composer": "Joa"

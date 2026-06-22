@@ -1,7 +1,11 @@
 {
-	"displayName": "rombie",
-	"bpm": 150.0,
+	"displayName": "Rombie",
+	"difficulties": ["simple","hard","insane"],
+	"bpm": 150,
 	"icon": "rombie",
+	"color": "#006764",
+	"coopAllowed": true,
+	"opponentModeAllowed": true,
 	"background": "rombie",
 	"portrait": "rombie",
 	"composer": "Prod.kxri"

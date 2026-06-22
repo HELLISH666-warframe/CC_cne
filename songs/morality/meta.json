@@ -1,6 +1,12 @@
 {
-	"displayName": "morality",
+	"displayName": "Morality",
+	"difficulties": ["hard"],
+	"bpm": 211,
+	"icon": "the-chosen-one-adobe",
 	"color": "#141414",
-	"background": "messenger",
-	"portrait": "morality"
+	"coopAllowed": true,
+	"opponentModeAllowed": true,
+	"background": "no bg",
+	"portrait": "morality",
+	"composer": ""
 }

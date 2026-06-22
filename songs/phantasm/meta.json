@@ -1,9 +1,12 @@
 {
-	"displayName": "phantasm",
-	"bpm": 160.0,
-	"icon": "tco",
+	"displayName": "Phantasm",
+	"difficulties": ["simple","hard","insane"],
+	"bpm": 160,
+	"icon": "the-chosen-one",
 	"color": "#FCAE00",
+	"coopAllowed": true,
+	"opponentModeAllowed": true,
 	"background": "phantasm",
 	"portrait": "phantasm",
-	"composer": "Biddle3 & Magbros"
+	"composer": "Biddle3, magbros.ogg"
 }

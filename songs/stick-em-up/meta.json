@@ -1,11 +1,12 @@
 {
-	"displayName": "stick-em-up",
+	"displayName": "Stick-em-up",
+	"difficulties": ["simple","hard","insane"],
+	"bpm": 155,
+	"icon": "green",
 	"color": "#FCAE00",
-	"background": "messenger",
-	"difficulties": [
-		"SIMPLE",
-		"HARD",
-		"INSANE"
-	],
-	"portrait": "stick-em-up"
+	"coopAllowed": true,
+	"opponentModeAllowed": true,
+	"background": "no bg",
+	"portrait": "stick-em-up",
+	"composer": "???"
 }

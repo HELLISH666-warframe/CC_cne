@@ -1,13 +1,11 @@
 {
-	"displayName": "adobe",
+	"displayName": "Adobe",
+	"difficulties": ["simple","hard","insane"],
 	"bpm": 140.0,
 	"icon": "the-chosen-one-adobe",
-	"difficulties": [
-		"SIMPLE",
-		"HARD",
-		"INSANE"
-	],
-	"color": "##141414",
+	"color": "#141414",
+	"coopAllowed": true,
+	"opponentModeAllowed": true,
 	"background": "adobe",
 	"portrait": "adobe",
 	"composer": "amaarzadjali"

@@ -1,8 +1,12 @@
 {
 	"displayName": "tune-in",
-	"bpm": 155.0,
+	"difficulties": ["simple","hard","insane"],
+	"bpm": 155,
 	"icon": "youtube",
+	"color": "#B52E38",
+	"coopAllowed": true,
+	"opponentModeAllowed": true,
 	"background": "tune-in",
 	"portrait": "tune-in",
-	"composer": "JaceLOL & SharkFaceGaming"
+	"composer": "JaceLOL, SharkFaceGaming"
 }

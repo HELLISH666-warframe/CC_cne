@@ -1,6 +1,12 @@
 {
-	"displayName": "artistry",
+	"displayName": "Artistry",
+	"difficulties": ["simple","hard","insane"],
+	"bpm": 178,
+	"icon": "the-dark-lord",
 	"color": "#FF0000",
-	"background": "unfaithful",
-	"portrait": "artistry"
+	"coopAllowed": true,
+	"opponentModeAllowed": true,
+	"background": "no bg",
+	"portrait": "artistry",
+	"composer": ""
 }

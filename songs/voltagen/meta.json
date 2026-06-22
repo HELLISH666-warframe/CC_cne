@@ -1,9 +1,12 @@
 {
 	"displayName": "voltagen",
-	"color": "#141414",
+	"difficulties": ["insane"],
 	"bpm":200,
 	"icon":"electro",
-	"background": "messenger",
+	"color": "#141414",
+	"coopAllowed": true,
+	"opponentModeAllowed": true,
+	"background": "no bg",
 	"portrait": "voltagen",
 	"composer": "rhulol"
 }

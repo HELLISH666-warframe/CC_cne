@@ -1,9 +1,12 @@
 {
-	"displayName": "aurora",
+	"displayName": "Aurora",
+	"difficulties": ["simple","hard","insane"],
 	"bpm": 160.0,
 	"icon": "the-dark-lord",
-	"color": "#141414",
+	"color": "#FF0000",
+	"coopAllowed": true,
+	"opponentModeAllowed": true,
 	"background": "aurora",
 	"portrait": "end-process",
-	"composer": "Armydillo & JaceLOL"
+	"composer": "Armydillo, JaceLOL"
 }

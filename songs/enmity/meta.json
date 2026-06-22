@@ -1,13 +1,11 @@
 {
-	"displayName": "enmity",
-	"bpm": 185.0,
-	"icon": "showdowntco",
-	"difficulties": [
-		"SIMPLE",
-		"HARD",
-		"INSANE"
-	],
+	"displayName": "Enmity",
+	"difficulties": ["simple","hard","insane"],
+	"bpm": 185,
+	"icon": "the-chosen-one-adobe",
 	"color": "#FCAE00",
+	"coopAllowed": true,
+	"opponentModeAllowed": true,
 	"background": "enmity",
 	"portrait": "enmity",
 	"composer": "SharkFaceGaming"

@@ -1,8 +1,11 @@
 {
-	"displayName": "amity",
+	"displayName": "Amity",
+	"difficulties": ["simple","hard","insane"],
 	"bpm": 211.0,
 	"icon": "tco",
 	"color": "#141414",
+	"coopAllowed": true,
+	"opponentModeAllowed": true,
 	"background": "amity",
 	"portrait": "amity",
 	"composer": "SharkFaceGaming"

@@ -1,8 +1,11 @@
 {
-	"displayName": "kickstarter",
-	"bpm": 275.0,
+	"displayName": "Kickstarter",
+	"difficulties": ["simple","hard","insane"],
+	"bpm": 275,
 	"icon": "kickstarter",
 	"color": "#141414",
+	"coopAllowed": true,
+	"opponentModeAllowed": true,
 	"background": "kickstarter",
 	"portrait": "kickstarter",
 	"composer": "Prod.kxri"

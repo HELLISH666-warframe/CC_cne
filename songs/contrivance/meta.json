@@ -1,8 +1,11 @@
 {
-	"displayName": "contrivance",
-	"bpm": 140.0,
+	"displayName": "Contrivance",
+	"difficulties": ["simple","hard","insane"],
+	"bpm": 140,
 	"icon": "mcsam",
 	"color": "#9271FD",
+	"coopAllowed": true,
+	"opponentModeAllowed": true,
 	"background": "contrivance",
 	"portrait": "contrivance",
 	"composer": "JaceLOL & Natz"

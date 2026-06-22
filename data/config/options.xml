@@ -1,5 +1,10 @@
 <!DOCTYPE codename-mod-options>
-<!-- TEMPLATE FOR CUSTOM OPTIONS!!! -->
-<menu name="Mod Options" desc="Modify mod options here">
-	<checkbox id="flashing_cc" name="Flashing lights" />
+<menu name="" desc="">
+	<checkbox id="flashing_cc" name="Flashing lights"/>
+	<choice id="TimeBar" name="Time Bar" desc="What should the Time Bar display?">
+		<value name="Time Left" value="left"/>
+		<value name="Time Elapsed" value="elapsed"/>
+		<value name="Song Name" value="songName"/>
+		<value name="Disabled" value="disabled"/>
+	</choice>
 </menu>

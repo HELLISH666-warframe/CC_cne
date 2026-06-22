@@ -1,7 +1,11 @@
 {
-	"displayName": "fancy-funk",
-	"bpm": 172.0,
+	"displayName": "Fancy-funk",
+	"difficulties": ["simple","hard","insane"],
+	"bpm": 172,
 	"icon": "fancypants",
+	"color": "#FF9933",
+	"coopAllowed": true,
+	"opponentModeAllowed": true,
 	"background": "fancy-funk",
 	"portrait": "fancy-funk",
 	"composer": "SharkFaceGaming"

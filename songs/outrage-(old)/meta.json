@@ -1,19 +1,12 @@
 {
-	"composer": "amaarzadjali",
-	"color": "#FCAE00",
-	"opponentModeAllowed": false,
+	"displayName": "Outrage-(old)",
+	"difficulties": ["simple","hard","insane"],
+	"bpm": 155,
 	"icon": "the-chosen-one",
-	"difficulties": [
-		"SIMPLE",
-		"HARD",
-		"INSANE"
-	],
-	"portrait": "outrage",
-	"coopAllowed": false,
-	"stepsPerBeat": 4,
-	"displayName": "outrage-(old)",
-	"beatsPerMeasure": 4,
-	"needsVoices": true,
+	"color": "#FCAE00",
+	"coopAllowed": true,
+	"opponentModeAllowed": true,
 	"background": "outrage",
-	"bpm": 155
+	"portrait": "outrage",
+	"composer": "amaarzadjali"
 }

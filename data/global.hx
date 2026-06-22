@@ -11,6 +11,7 @@ function new() {
     FlxG.save.data.alanUnlocked ??= false;
     FlxG.save.data.code_songs_cc ??= [];//GUARANTEE this won't be needed later.
     FlxG.save.data.shaders ??= true;
+    FlxG.save.data.wideScreenSongs ??= false;
     FlxG.save.data.gameplaySettings??=[
 		'scrollspeed' => 1.0,
 		'scrolltype' => 'multiplicative', 
@@ -22,6 +23,9 @@ function new() {
 		'botplay' => false,
 		'opponentplay' => false
 	];
+    FlxG.save.data.hideHud??=false;
+    FlxG.save.data.healthBarAlpha??=1;
+    FlxG.save.data.TimeBar ??= "Disabled";
     for (i in Paths.getFolderContent('data/global')) importScript("data/global/"+Path.withoutExtension(i)); //import different global scripts for organization reasons
 }
 

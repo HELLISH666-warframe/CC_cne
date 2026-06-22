@@ -1,8 +1,12 @@
 {
-	"displayName": "doppelganger",
-	"bpm": 160.0,
-	"icon": "the-dark-lord",
-	"color": "#141414",
-	"background": "messenger",
-	"portrait": "no one"
+	"displayName": "Doppelganger",
+	"difficulties": ["simple","hard","insane"],
+	"bpm": 145,
+	"icon": "showdowntsc",
+	"color": "#FCAE00",
+	"coopAllowed": true,
+	"opponentModeAllowed": true,
+	"background": "no bg",
+	"portrait": "no one",
+	"composer": "MagBros"
 }

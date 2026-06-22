@@ -10,14 +10,15 @@ import funkin.backend.chart.Chart;
 songs = [];
 var songRealList = [	
 	["adobe","outrage","end-process","morality","stick-em-up","artistry","proficiency","masterpiece"],
-	["trojan","conflict","dashpulse","time-travel","cubify","kickstarter","contrivance","messenger","amity","royalty","voltagen","doombringer","issue","tune-in","unfaithful","rombie","fancy-funk","powerup","justice","catto"],
+	["trojan","conflict","dashpulse","time-travel","cubify","kickstarter","contrivance","messenger","amity","voltagen","issue","tune-in","unfaithful","rombie","fancy-funk","powerup","catto"],
 	["enmity","doppelganger","aurora","phantasm"],
-	["adobe-(old)","outrage-(older)","alan-(old)","outrage-(old)","end-process-(old)","catto-(old)"],
-	["operation","rewrite"]//41_songs_holy_shit.
+	["adobe-(old)","outrage-(older)","alan-(old)","outrage-(old)","end-process-(old)"],
+	["rewrite"]//35_songs_holy_shit.
 ];
 
-if(FlxG.save.data.alanUnlocked)
-songRealList[1].push("alan");
+if(FlxG.save.data.songsUnlocked.contains('redzone-error'))songRealList[1].push("redzone-error");
+if(FlxG.save.data.alanUnlocked)songRealList[1].push("alan");
+if(FlxG.save.data.songsUnlocked.contains('catto'))songRealList[3].push("catto-(old)");
 
 for(s in songRealList[FlxG.save.data.freeplaything_cc])
 	songs.push(Chart.loadChartMeta(s, "hard", true));
@@ -56,8 +57,6 @@ var finishedZoom = false;
 var fishEyeshader = new CustomShader("fishEyeshader"); 
 
 public static var alanSongs:Array<String> = ['trojan', 'conflict', 'dashpulse', 'time travel', 'cubify', 'kickstarter', 'contrivance', 'messenger', 'amity', 'tune in', 'unfaithful', 'rombie', 'fancy funk', 'catto', 'enmity', 'phantasm', 'aurora'];
-
-public static var alreadyShowedSongs:Array<String> = ['adobe', 'outrage', 'end process', 'practice time', 'adobe (old)', 'outrage (old)', 'alan (old)'];
 
 public static var minimizeWindowArray:Array<String> = ['dashpulse', 'messenger', 'rombie', 'powerup'];
 
@@ -111,7 +110,7 @@ function create() {
 		var songText = new FlxText(500, 650,500, wasPlayed ? songs[i].name.toUpperCase() : '???').setFormat(Paths.font("phantommuff.ttf"), 44, FlxColor.WHITE, 'center', FlxTextBorderStyle.OUTLINE, FlxColor.TRANSPARENT);
 		songText.screenCenter(FlxAxes.X);
 		songText.scrollFactor.set(1, 0);
-		if(songs[i].name.toLowerCase()=='trojan'&&wasPlayed&&FlxG.random.int(1, 4) == 1)songText.text='Power-gain';
+		if(songs[i].name.toLowerCase()=='trojan'&&wasPlayed&&FlxG.random.int(1, 4) == 1)songText.text='POWER-GAIN';
 		add(songText);
 		grpSongs.add(songText);
 
@@ -119,7 +118,6 @@ function create() {
 		icon.y -= 70;
 		icon.sprTracker = songText;
 		icon.sprTrackerOffset.set(0,-40);
-		//icon.yAdd -= 10;//FUCK_OFF.
 
 		iconArray.push(icon);
 		icon.x -= 380;
@@ -197,10 +195,9 @@ function checkIfAlanIsLocked() {
 	FlxG.save.data.alanUnlocked = true;
 }
 	
-function beatHit() if(finishedZoom)FlxTween.tween(FlxG.camera, {zoom:1.02}, 0.3, {ease: FlxEase.quadOut, type: FlxTween.BACKWARD});
+function beatHit() if(finishedZoom&&!selectedSmth)FlxTween.tween(FlxG.camera, {zoom:1.02}, 0.3, {ease: FlxEase.quadOut, type: FlxTween.BACKWARD});
 
 var instPlaying:Int = -1;
-public static var vocals:FlxSound = null;
 var holdTime:Float = 0;
 function update(elapsed:Float) {
 	if (FlxG.sound.music.volume < 0.7) FlxG.sound.music.volume += 0.5 * elapsed;
@@ -274,7 +271,6 @@ function update(elapsed:Float) {
 				if(!FlxG.save.data.songsUnlocked.contains(songs[curSelFP].name.toLowerCase()))return;
 				if(instPlaying != curSelFP) {
 					#if PRELOAD_ALL
-					destroyFreeplayVocals();
 					FlxG.sound.music.volume = 0;
 					Conductor.changeBPM(songs[curSelFP].bpm);
 					Conductor.songPosition = FlxG.sound.music.time;
@@ -296,11 +292,11 @@ function update(elapsed:Float) {
 		
 				FlxTween.tween(FlxG.camera, {zoom: 3}, 1.5, {ease: FlxEase.expoIn});
 				FlxG.camera.fade(FlxColor.BLACK, 0.8, false, function() {
-					if (songs[curSelFP].songName == "amity".toLowerCase()) FlxG.switchState(new ModState('tco/MinusCharSelector'));
+					if (songs[curSelFP].name.toLowerCase() == "amity") FlxG.switchState(new ModState('tco/MinusCharSelector'));
 					else {
 						FlxG.switchState(new PlayState());
 
-						if(minimizeWindowArray.contains(songs[curSelFP].songName.toLowerCase()) && !ClientPrefs.wideScreenSongs) {
+						if(minimizeWindowArray.contains(songs[curSelFP].name.toLowerCase()) && !FlxG.save.data.wideScreenSongs) {
 							window.resizable = false;
 							FlxG.scaleMode = new StageSizeScaleMode();
 							FlxG.resizeGame(360, 720);
@@ -309,21 +305,12 @@ function update(elapsed:Float) {
 					}
 				});
 				FlxG.sound.music.volume = 0;
-				destroyFreeplayVocals();
 			} else if(controls.RESET) {
 				persistentUpdate = false;
 				openSubState(new ResetScoreSubState(songs[curSelFP].songName, curDiffFP, songs[curSelFP].songCharacter));
 				FlxG.sound.play(Paths.sound('scrollMenu'));
 			}
 	}
-}
-
-public static function destroyFreeplayVocals() {
-	if(vocals != null) {
-		vocals.stop();
-		vocals.destroy();
-	}
-	vocals = null;
 }
 
 function changeDiff(a) {curDiffFP = FlxMath.wrap(curDiffFP+a,0,songs[curSelFP].difficulties.length - 1);
@@ -341,9 +328,7 @@ function changeSelection(a:Int = 0, playSound:Bool = true) {
 	curSelFPR[FlxG.save.data.freeplaything_cc]=curSelFP;
 
 	if(zoomTween != null) zoomTween.cancel();
-
 	if(tweenX != null) tweenX.cancel();
-
 	if(alphaTween != null) alphaTween.cancel();
 
 	var songHasBeenPlayed:Bool = FlxG.save.data.songsUnlocked.contains(songs[curSelFP].name);
@@ -363,7 +348,7 @@ function changeSelection(a:Int = 0, playSound:Bool = true) {
 	bg.antialiasing = Options.antialiasing;
 	bg.screenCenter();
 
-	var featuredImage:String = songHasBeenPlayed ? preload[curSelFP] : Paths.image('menus/freeplayArt/freeplayImages/art/no one');
+	var featuredImage = songHasBeenPlayed ? preload[curSelFP] : Paths.image('menus/freeplayArt/freeplayImages/art/no one');
 
 	featuredChar.loadGraphic(featuredImage);
 	featuredChar.antialiasing = Options.antialiasing;
@@ -386,12 +371,11 @@ function changeSelection(a:Int = 0, playSound:Bool = true) {
 
 	for (i in 0...iconArray.length) {
 		iconArray[i].alpha = 0;
-
 		iconArray[i].scale.set(0.55,0.55);
 	}
 
 	iconArray[curSelFP].alpha = 1;
-	zoomTween = FlxTween.tween(iconArray[curSelFP], {"scale.x": 0.75, "scale.y": 0.75}, 0.2, {
+	zoomTween = FlxTween.tween(iconArray[curSelFP].scale, {x: 0.75, y: 0.75}, 0.2, {
 			ease: FlxEase.quadOut,onComplete: function(twn:FlxTween) {zoomTween = null;}
 		});
 
@@ -401,14 +385,14 @@ function changeSelection(a:Int = 0, playSound:Bool = true) {
 
 		item.alpha = 0;
 
-		zoomTween = FlxTween.tween(item, {"scale.x": 0.85, "scale.y": 0.85}, 0.2, {
+		zoomTween = FlxTween.tween(item.scale, {x: 0.85, y: 0.85}, 0.2, {
 			ease: FlxEase.quadOut,onComplete: function(twn:FlxTween) {zoomTween = null;}
 		});
 
 		if (shit == 0) {
 			item.alpha = 1;
 
-			zoomTween = FlxTween.tween(item, {"scale.x": 1, "scale.y": 1}, 0.2, {
+			zoomTween = FlxTween.tween(item.scale, {x: 1, y: 1}, 0.2, {
 			ease: FlxEase.quadOut,onComplete: function(twn:FlxTween) {zoomTween = null;}
 			});
 		}

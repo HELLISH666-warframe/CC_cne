@@ -1,7 +1,11 @@
 {
-	"displayName": "catto",
-	"bpm": 205.0,
+	"displayName": "Catto",
+	"difficulties": ["hard","insane"],
+	"bpm": 206,
 	"icon": "wongmau",
+	"color": "#D6CFBF",
+	"coopAllowed": true,
+	"opponentModeAllowed": true,
 	"background": "catto",
 	"portrait": "catto",
 	"composer": "SharkFaceGaming"

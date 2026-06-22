@@ -1,8 +1,11 @@
 {
 	"displayName": "time-travel",
-	"bpm": 160.0,
+	"difficulties": ["simple","hard","insane"],
+	"bpm": 160,
 	"icon": "carykh",
 	"color": "#F9E02E",
+	"coopAllowed": true,
+	"opponentModeAllowed": true,
 	"background": "time-travel",
 	"portrait": "time-travel",
 	"composer": "ProfessorBonnie"

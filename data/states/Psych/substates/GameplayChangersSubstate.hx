@@ -53,6 +53,9 @@ function getOptions() {
 	option.displayFormat = '%vX';
 	optionsArray.push(option);
 
+	var option:GameplayOption = new GameplayOption('Pratice Mode', 'practiceMode', 'bool', false);
+	optionsArray.push(option);
+
 	var option = new GameplayOption('Instakill on Miss', 'instakill', 'bool', false);
 	optionsArray.push(option);
 
@@ -86,7 +89,7 @@ function create() {
 
 	for (i in 0...optionsArray.length) {
 		var optionText = new Alphabetp(200, 360, optionsArray[i].name, true);
-		if(optionsArray[i].name.toLowerCase()=='botplay'||optionsArray[i].name.toLowerCase()=='instakill on miss')optionText.xAdd+=100;
+		if(optionsArray[i].name.toLowerCase()=='botplay'||optionsArray[i].name.toLowerCase()=='instakill on miss'||optionsArray[i].name.toLowerCase()=='pratice mode')optionText.xAdd+=100;
 		optionText.isMenuItem = true;
 		optionText.scale.set(0.8,0.8);
 		optionText.targetY = i;

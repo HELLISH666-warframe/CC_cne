@@ -1,9 +1,12 @@
 {
-	"displayName": "issue",
-	"color": "#141414",
-	"background": "messenger",
+	"displayName": "Issue",
+	"difficulties": ["simple","hard","insane"],
 	"bpm": 140,
-	"portrait": "no one",
 	"icon":"electro",
+	"color": "#141414",
+	"coopAllowed": true,
+	"opponentModeAllowed": true,
+	"background": "no bg",
+	"portrait": "no one",
 	"composer":"JaceLOL"
 }

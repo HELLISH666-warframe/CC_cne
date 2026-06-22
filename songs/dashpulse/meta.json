@@ -1,8 +1,11 @@
 {
-	"displayName": "dashpulse",
-	"bpm": 170.0,
+	"displayName": "Dashpulse",
+	"difficulties": ["simple","hard","insane"],
+	"bpm": 170,
 	"icon": "bbpanzu-ava2-stick",
 	"color": "#369AF0",
+	"coopAllowed": true,
+	"opponentModeAllowed": true,
 	"background": "dashpulse",
 	"portrait": "dashpulse",
 	"composer": "ROCKY & MagBros"

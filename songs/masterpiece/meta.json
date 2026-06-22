@@ -1,6 +1,12 @@
 {
-	"displayName": "masterpiece",
+	"displayName": "Masterpiece",
+	"difficulties": ["simple","hard","insane"],
+	"bpm": 198,
+	"icon": "tsc",
 	"color": "#FF0000",
-	"background": "messenger",
-	"portrait": "proficiency"
+	"coopAllowed": true,
+	"opponentModeAllowed": true,
+	"background": "no bg",
+	"portrait": "masterpiece",
+	"composer": ""
 }

@@ -1,8 +1,12 @@
 {
 	"displayName": "alan",
+	"difficulties": ["simple","hard","insane"],
 	"bpm": 200.0,
 	"icon": "alan",
+	"color": "#A1A1A1",
+	"coopAllowed": true,
+	"opponentModeAllowed": true,
 	"background": "alan",
 	"portrait": "alan",
-	"composer": "Puppet Master & DTunes"
+	"composer": "Puppet Master, DTunes"
 }

@@ -1,8 +1,12 @@
 {
-	"displayName": "powerup",
-	"color": "#141414",
-	"background": "messenger",
+	"displayName": "Powerup",
+	"difficulties": ["simple","hard","insane"],
 	"bpm": 155,
+	"icon": "mario",
+	"color": "#FF9933",
+	"coopAllowed": true,
+	"opponentModeAllowed": true,
+	"background": "no bg",
 	"portrait": "no one",
 	"composer":"SpoonDiceMusic"
 }

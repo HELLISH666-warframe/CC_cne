@@ -1,8 +1,11 @@
 {
 	"displayName": "trojan",
-	"bpm": 158.0,
+	"difficulties": ["simple","hard","insane"],
+	"bpm": 158,
 	"icon": "virabot",
 	"color": "#92191C",
+	"coopAllowed": true,
+	"opponentModeAllowed": true,
 	"background": "alan",
 	"portrait": "trojan",
 	"composer": "Deltom"

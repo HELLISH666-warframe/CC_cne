@@ -1,11 +1,12 @@
 {
-	"displayName": "proficiency",
+	"displayName": "Proficiency",
+	"difficulties": ["simple","hard","insane"],
+	"bpm": 195,
+	"icon": "the-dark-lord",
 	"color": "#FF0000",
-	"difficulties": [
-		"SIMPLE",
-		"HARD",
-		"INSANE"
-	],
-	"background": "alan",
-	"portrait": "proficiency"
+	"coopAllowed": true,
+	"opponentModeAllowed": true,
+	"background": "no bg",
+	"portrait": "no one",
+	"composer": "???"
 }

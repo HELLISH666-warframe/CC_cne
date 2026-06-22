@@ -1,7 +1,12 @@
 {
-	"displayName": "alan-(-old)",
+	"displayName": "Alan-(-old)",
+	"difficulties": ["simple","hard","insane"],
 	"bpm": 224.6,
 	"icon": "alan",
+	"color": "#FFFFFF",
+	"coopAllowed": true,
+	"opponentModeAllowed": true,
 	"background": "alan (old)",
-	"portrait": "alan (old)"
+	"portrait": "alan (old)",
+	"composer": "Joa"
 }

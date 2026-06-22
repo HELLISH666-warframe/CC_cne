@@ -1,0 +1,12 @@
+{
+	"displayName": "Rewrite",
+	"difficulties": ["hard"],
+	"bpm": 160,
+	"icon": "youtube",
+	"color": "#B52E38",
+	"coopAllowed": true,
+	"opponentModeAllowed": true,
+	"background": "no bg",
+	"portrait": "no one",
+	"composer": "JaceLOL, Nini, Natz"
+}

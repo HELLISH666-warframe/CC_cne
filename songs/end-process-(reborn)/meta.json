@@ -1,6 +1,6 @@
 {
-	"displayName": "End-process-(old)",
-	"difficulties": ["simple","hard","insane"],
+	"displayName": "End-process-(reborn)",
+	"difficulties": ["reborn"],
 	"bpm": 170,
 	"icon": "the-dark-lord",
 	"color": "#FF0000",
@@ -8,5 +8,5 @@
 	"opponentModeAllowed": true,
 	"background": "end-process",
 	"portrait": "end-process",
-	"composer": "Joa"
+	"composer": "SwoleBoi"
 }

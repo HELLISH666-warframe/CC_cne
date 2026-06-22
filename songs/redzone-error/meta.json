@@ -1,5 +1,11 @@
 {
-	"displayName": "redzone-error",
-	"bpm": 165.0,
-	"icon": "face"
+	"displayName": "Redzone-error",
+	"difficulties": ["insane"],
+	"bpm": 165,
+	"icon": "interrogaciones",
+	"coopAllowed": false,
+	"opponentModeAllowed": false,
+	"portrait": "no one",
+	"background": "no bg",
+	"composer": "???"
 }

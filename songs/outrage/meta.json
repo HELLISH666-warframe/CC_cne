@@ -1,13 +1,11 @@
 {
-	"displayName": "outrage",
-	"bpm": 155.0,
+	"displayName": "Outrage",
+	"difficulties": ["simple","hard","insane"],
+	"bpm": 155,
 	"icon": "the-chosen-one",
-	"difficulties": [
-		"SIMPLE",
-		"HARD",
-		"INSANE"
-	],
 	"color": "#FCAE00",
+	"coopAllowed": true,
+	"opponentModeAllowed": true,
 	"background": "outrage",
 	"portrait": "outrage",
 	"composer": "amaarzadjali"

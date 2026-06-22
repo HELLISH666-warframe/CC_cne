@@ -1,7 +1,12 @@
 {
 	"displayName": "adobe-(old)",
+	"difficulties": ["simple","hard","insane"],
 	"bpm": 140.0,
-	"icon": "the-chosen-one-adobe",
+	"icon": "tco",
+	"color": "#EB8E00",
+	"coopAllowed": true,
+	"opponentModeAllowed": true,
 	"background": "adobe (old)",
-	"portrait": "adobe (old)"
+	"portrait": "adobe (old)",
+	"composer": "amaarzadjali, Scorpzie"
 }
