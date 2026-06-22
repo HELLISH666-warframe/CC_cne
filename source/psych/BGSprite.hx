@@ -7,6 +7,7 @@ class BGSprite extends FlxSprite
 	public function new(image:String, x:Float = 0, y:Float = 0, ?scrollX:Float = 1, ?scrollY:Float = 1, ?animArray:Array<String> = null, ?loop:Bool = false) {
 		scrollX??=1;
 		scrollY??=1;
+		animArray??=null;
 		loop??=false;
 		super(x, y);
 

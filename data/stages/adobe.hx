@@ -9,8 +9,7 @@ public var topBarsALT:FlxSprite;
 public var bottomBarsALT:FlxSprite;
 var time:Float = 0;
 public var redthing:FlxSprite;
-function create() {
-	trace("LOADED_ADOBE.");
+function afterNew() {
 	defaultCamZoom = 0.65;
 
 	whiteScreen = new FlxSprite(0, 0).makeSolid(Std.int(FlxG.width * 2), Std.int(FlxG.height * 2), FlxColor.WHITE);
@@ -50,6 +49,35 @@ function create() {
 	Floor.setGraphicSize(Std.int(Floor.width * 1.2));
 	add(Floor);
 
+	if (PlayState.SONG.meta.name.toLowerCase() == 'phantasm') {
+		defaultCamZoom = 1.8;
+		GameOverSubstate.deathSoundName = 'aurora_loss_sfx';
+	}
+
+	needsBlackBG = true;
+
+	oldSongs = false;
+
+	switch(PlayState.SONG.meta.name.toLowerCase()) {
+		case 'outrage':add(stickpage); add(stickpageFloor); add(bsod);
+		case 'phantasm':add(bsod);
+		case 'end process':add(corruptBG); add(corruptFloor); add(bsodStatic); add(rsod);
+	}
+
+	if (needsBlackBG) {
+		blackBG = new FlxSprite(-120, -120).makeSolid(Std.int(FlxG.width * 100), Std.int(FlxG.height * 150), 0xFF000000);
+		blackBG.scrollFactor.set();
+		blackBG.alpha = 0;
+		blackBG.screenCenter();
+		add(blackBG);
+	}
+
+	switch(PlayState.SONG.meta.name.toLowerCase()) {
+		case 'adobe':add(spotlightbf); add(spotlightdad);
+	}
+}
+
+function create() {
 	topBars = new FlxSprite().makeSolid(2580, 320, FlxColor.BLACK);
 	topBars.camera = camBars;
 	topBars.screenCenter();
@@ -67,136 +95,67 @@ function create() {
 	topBarsALT.screenCenter();
 	topBarsALT.y -= 450;
 	add(topBarsALT);
-}
-
-function postCreate(){
-	whiteScreen.color = background1.color;
-
-	crowd.visible = false;
-
-	fires1.visible = false;
-	fires2.visible = false;
-	stickpage.alpha = 0.0001;
-	stickpageFloor.alpha = 0.0001;
-	scaredCrowd.visible=false;
-	bsod.alpha = 0.0001;
-
-	googleBurn.alpha = 0.0001;
-	twitterBurn.alpha = 0.0001;
-	newgroundsBurn.alpha = 0.0001;
-	corruptBG.alpha = 0.0001;
-	corruptFloor.alpha = 0.0001;
-	bsodStatic.alpha = 0.0001;
-	rsod.alpha = 0.0001;
-
-	switch(curSong){
-		case "adobe": noCurLight = true;
-		crowd.updateHitbox();
-		crowd.visible=true;
-
-		spotlightdad.alpha = 0.0001;
-		spotlightbf.alpha = 0.0001;
-
-		/*if (ClientPrefs.shaders)*/camHUD.addShader(chromaticAberration);
-		FlxG.camera.addShader(chromaticAberration);
-		chromaticAberration.rOffset=0.0005;
-		chromaticAberration.bOffset=0.0005;
-		FlxG.camera.fade(FlxColor.BLACK, 0, false);
-		add(spotlightbf);
-		add(spotlightdad);
-		case "outrage-(old)": scaredCrowd.visible=true;
-		/*if (ClientPrefs.shaders)*/ bsod.shader = new CustomShader("CRT");
-
-		redthing = new FlxSprite(0, 0).loadGraphic(Paths.image('stages/victim/vignette'));
-		redthing.antialiasing = Options.antialiasing;
-		redthing.cameras = [camBars];
-		redthing.alpha = 0.0001;
-		add(redthing);
-
-		/*if (ClientPrefs.shaders)*/ camHUD.addShader(chromaticAberration);
-		FlxG.camera.addShader(chromaticAberration);
-		chromaticAberration.rOffset=0.0005;
-		chromaticAberration.bOffset=0.0005;
-
-		case "end-process-(old)": FlxG.mouse.visible = true;
-		fires1.visible = false;
-		fires2.visible = false;
-		fires2.x=-1500;
-		googleBurn.screenCenter();
-		googleBurn.y -= 900;
-		googleBurn.x += 250;
-		googleBurn.angle = -4;
-		FlxTween.angle(googleBurn, googleBurn.angle, 4, 2, {ease: FlxEase.quartInOut, type: FlxEase.PINGPONG});
-
-		twitterBurn.angle = -4;
-		FlxTween.angle(twitterBurn, twitterBurn.angle, 4, 2, {ease: FlxEase.quartInOut, type: FlxEase.PINGPONG});
-
-		newgroundsBurn.angle = -4;
-		FlxTween.angle(newgroundsBurn, newgroundsBurn.angle, 4, 2, {ease: FlxEase.quartInOut, type: FlxEase.PINGPONG});
-
-		corruptBG.color = 0xFF7B6CAD;
-		corruptBG.alpha = 0.0001;
-		/*if (ClientPrefs.shaders)*/ corruptBG.shader = new CustomShader("CRT");
-		corruptFloor.color = 0xFF7B6CAD;
-		corruptFloor.alpha = 0.0001;
-		/*if (ClientPrefs.shaders)*/ corruptFloor.shader = new CustomShader("CRT");
-
-		bsodStatic.alpha = 0.0001;
-		/*if (ClientPrefs.shaders)*/ bsodStatic.shader = new CustomShader("CRT");
-
-		rsod.alpha = 0.0001;
-
-		redthing = new FlxSprite(0, 0).loadGraphic(Paths.image('stages/victim/vignette'));
-		//redthing.antialiasing = Options.antialiasing;
-		redthing.cameras = [camBars];
-		redthing.alpha = 0.0001;
-		add(redthing);
-
-		/*if (ClientPrefs.shaders)*/ rsod.shader = new CustomShader("CRT");
-
-
-		/*if (ClientPrefs.shaders)*/ camHUD.addShader(chromaticAberration);
-		FlxG.camera.addShader(chromaticAberration);
-		chromaticAberration.rOffset=0.0045;
-		chromaticAberration.bOffset=0.0045;
-
-		case "phantasm": defaultCamZoom = 1.8;
-		//GameOverSubstate.deathSoundName = 'aurora_loss_sfx';
-	}
-
-	topBars = new FlxSprite().makeSolid(2580, 320, FlxColor.BLACK);
-	topBars.cameras = [camBars];
-	topBars.screenCenter();
-	topBars.y -= 850;
-	add(topBars);
-
-	bottomBars = new FlxSprite().makeSolid(2580, 320, FlxColor.BLACK);
-	bottomBars.cameras = [camBars];
-	bottomBars.screenCenter();
-	bottomBars.y += 850;
-	add(bottomBars);
-
-	topBarsALT = new FlxSprite().makeSolid(2580,320, FlxColor.BLACK);
-	topBarsALT.cameras = [camBars];
-	topBarsALT.screenCenter();
-	topBarsALT.y -= 450;
-	add(topBarsALT);
-
+	
 	bottomBarsALT = new FlxSprite().makeSolid(2580,320, FlxColor.BLACK);
-	bottomBarsALT.cameras = [camBars];
+	bottomBarsALT.camera = camBars;
 	bottomBarsALT.screenCenter();
 	bottomBarsALT.y += 450;
 	add(bottomBarsALT);
-
-	needsBlackBG = true;
 }
-function onStartCountdown() {
-	trace(dad.x);
-    spotlightdad.x = dad.x - 400;
-	spotlightdad.y = dad.y + dad.height - 1550;
 
-	spotlightbf.x = boyfriend.x - 200;
-	spotlightbf.y = boyfriend.y + boyfriend.height - 750;
+function onStartCountdown() {
+	switch(PlayState.SONG.meta.name.toLowerCase()) {
+		case 'adobe':spotlightdad.x = dad.x - 400;
+		spotlightdad.y = dad.y + dad.height - 1550;
+
+		spotlightbf.x = boyfriend.x - 50;
+		spotlightbf.y = boyfriend.y + boyfriend.height - 1450;
+	}
+}
+
+function stepHit() {
+	switch(PlayState.SONG.meta.name.toLowerCase()) {
+		case 'adobe':
+			switch(curStep){
+				case 1:FlxG.camera.fade(FlxColor.BLACK, 3, true);
+				Crowd.color = 0xFF3A3A3A;
+				gf.color = 0xFF3A3A3A;
+				Background1.color = 0xFF3A3A3A;
+				whiteScreen.color = 0xFF3A3A3A;
+
+				spotlightdad.alpha = 0.7;
+				spotlightbf.alpha = 0.7;
+				case 256:Crowd.color = 0xFFFFFFFF;
+				gf.color = 0xFFFFFFFF;
+				Background1.color = 0xFFFFFFFF;
+				whiteScreen.color = 0xFFFFFFFF;
+				if(FlxG.save.data.flashing) FlxG.camera.flash(FlxColor.WHITE, 1);
+				spotlightdad.alpha = 0;
+				spotlightbf.alpha = 0;
+				case 576:FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom}, 2.5);
+				case 768:if(FlxG.save.data.flashing) FlxG.camera.flash(FlxColor.WHITE, 1);
+				if(FlxG.save.data.screenShake) FlxG.camera.shake(0.0175, 0.15);
+				blackBars(1);
+				colorTween([gf, dad, Crowd, Background1, Floor], 0.7, FlxColor.WHITE, 0xFF191919);
+				spotlightdad.alpha = 0.8;
+				spotlightbf.alpha = 0.8;
+				case 1024:if (FlxG.save.data.shaders) addShaderToCamera(['camgame', 'camhud'], new ChromaticAberrationEffect(0));
+				if(FlxG.save.data.flashing) FlxG.camera.flash(FlxColor.WHITE, 1);
+				colorTween([gf, dad, boyfriend, Crowd, Background1, Floor], 0.7, 0xFF191919, FlxColor.WHITE);
+				blackBars(0);
+				spotlightdad.alpha = 0;
+				spotlightbf.alpha = 0;
+			}
+	}
+}
+function beatHit() {
+	switch(PlayState.SONG.meta.name.toLowerCase()) {
+		case 'adobe':if (curBeat % 1 == 0 && Crowd != null) setDance([Crowd], true);
+		case 'end process':if (!FlxG.save.data.lowQuality){
+			if (curBeat % 2 == 0 && virabot1 != null && virabot2 != null && virabot3 != null
+			&& virabot4 != null) setDance([virabot1, virabot2, virabot3, virabot4], true);
+		}
+	}
 }
 
 function update(elapsed:Float) {
@@ -208,13 +167,3 @@ function update(elapsed:Float) {
 			i.shader.data.iTime.value = [time];
 	}
 }
-
-
-/*
-function stepHit(curStep:Int) {
-	switch(curSong){
-		case "adobe":
-	if (curBeat % 1 == 0 && stage.getSprite("crowd") != null) stage.getSprite("crowd").animation.play("BG  Guys");
-	}
-}*/
-//if_and_presses_fire2_x+100;

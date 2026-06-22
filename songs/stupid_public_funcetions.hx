@@ -4,15 +4,7 @@ import flixel.text.FlxTextBorderStyle;
 import flixel.addons.text.FlxTypeText;
 import flixel.system.scaleModes.RatioScaleMode;
 import flixel.system.scaleModes.StageSizeScaleMode;
-public var stopTweens:Array<FlxTween> = [];
 var intensity:Float = 0;
-public function colorTween(object:Array<FlxSprite>, duration:Float, colorToSayGoodbye:FlxColor, colorToSayHello:FlxColor) {
-	for (i in 0...object.length) {
-		var newTweenColor = FlxTween.color(object[i], duration, colorToSayGoodbye, colorToSayHello);
-
-		stopTweens.push(newTweenColor);
-	}
-}
 
 public function alphaTween(object:Array<FlxSprite>, duration:Float, alpha:Float){
 	for (i in 0...object.length) FlxTween.tween(object[i], {alpha:duration}, alpha, {ease: FlxEase.sineInOut});
@@ -179,18 +171,6 @@ public function dialogOnSong(dialog:String, duration:Float, color:FlxColor) {
 			textLyrics.destroy();
 		}});
 	});
-}
-
-public function blackBars(yes:Int) {
-	if (topBars != null && bottomBars != null) {
-		if (yes == 1) {
-			FlxTween.tween(topBars, {y: -200}, 1, {ease: FlxEase.quadInOut});
-			FlxTween.tween(bottomBars, {y: 550}, 1, {ease: FlxEase.quadInOut});
-		}else {
-			FlxTween.tween(topBars, {y: -650}, 0.5, {ease: FlxEase.quadInOut});
-			FlxTween.tween(bottomBars, {y: 850}, 0.5, {ease: FlxEase.quadInOut});
-		}
-	}
 }
 
 public function objectColor(object:Array<FlxSprite>, shitColor:FlxColor) {

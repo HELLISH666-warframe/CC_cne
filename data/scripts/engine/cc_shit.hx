@@ -8,6 +8,7 @@ function new() {
 	if (songsWithCamChar.contains(PlayState.SONG.meta.name.toLowerCase())) FlxG.cameras.add(camChar, false);
 
 	FlxG.cameras.add(camBars, false);//Before_camHUD.
+	scripts.call('afterNew');
 }
 
 function postCreate() {
@@ -56,5 +57,29 @@ public function zoomtype(number:String) {
 		case '0': zoomType1 = !zoomType1;
 		case '1': zoomType2 = !zoomType2;
 		case '2': zoomType3 = !zoomType3;
+	}
+}
+
+public function blackBars(yes:Int) {
+	if (topBars != null && bottomBars != null) {
+		if (yes == 1) {
+			FlxTween.tween(topBars, {y: -200}, 1, {ease: FlxEase.quadInOut});
+			FlxTween.tween(bottomBars, {y: 550}, 1, {ease: FlxEase.quadInOut});
+		}else {
+			FlxTween.tween(topBars, {y: -650}, 0.5, {ease: FlxEase.quadInOut});
+			FlxTween.tween(bottomBars, {y: 850}, 0.5, {ease: FlxEase.quadInOut});
+		}
+	}
+}
+
+public var stopTweens:Array<FlxTween> = [];
+
+public function setDance(object:Array<BGSprite>, dance:Bool) for (i in 0...object.length) object[i].dance(dance);
+
+public function colorTween(object:Array<FlxSprite>, duration:Float, colorToSayGoodbye:FlxColor, colorToSayHello:FlxColor) {
+	for (i in 0...object.length) {
+		var newTweenColor = FlxTween.color(object[i], duration, colorToSayGoodbye, colorToSayHello);
+
+		stopTweens.push(newTweenColor);
 	}
 }

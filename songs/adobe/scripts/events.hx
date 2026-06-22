@@ -1,3 +1,4 @@
+return;
 function stepHit(curStep:Int) {
 	switch(curStep) {
 		case 1: FlxG.camera.fade(FlxColor.BLACK, 3, true);
