@@ -1,6 +1,6 @@
 import psych.BGSprite;
-public var Crowd:BGSprite;
-public var Background1:BGSprite;
+public var Crowd;
+public var Background1:FlxSprite;
 public var Floor:BGSprite;
 public var spotlightdad = new FlxSprite().loadGraphic(Paths.image("stages/spotlight"));
 public var spotlightbf = new FlxSprite().loadGraphic(Paths.image("stages/spotlight"));
@@ -15,16 +15,15 @@ function postNew() {
 	whiteScreen.screenCenter();
 	add(whiteScreen);
 
-	Background1 = new BGSprite('chapter1/bg', -600, -600, 0.9, 0.9);
-	//Background1.setGraphicSize(Std.int(Background1.width * 1.1));
+	Background1 = new FlxSprite(-600,-600).loadGraphic(Paths.image("chapter1/bg"));
 	Background1.antialiasing = Options.antialiasing;
-	add(Background1);
+	add(Background1).scrollFactor.set(0.9,0.9);
 
 	whiteScreen.color = Background1.color;
 
 	switch(PlayState.SONG.meta.name.toLowerCase()){
 		case 'adobe':noCurLight = true;
-		Crowd = new BGSprite('chapter1/theBGGuyz', -400, 7, 0.95, 0.95, ['BG  Guys']);
+		Crowd = makeBGSprite('chapter1/theBGGuyz', -400, 7, 0.95, 0.95, ['BG  Guys']);
 		Crowd.setGraphicSize(Std.int(Crowd.width * 1.1));
 		Crowd.updateHitbox();
 		Crowd.antialiasing = Options.antialiasing;
@@ -152,7 +151,7 @@ function stepHit() {
 }
 function beatHit() {
 	switch(PlayState.SONG.meta.name.toLowerCase()) {
-		case 'adobe':if (curBeat % 1 == 0 && Crowd != null) setDance([Crowd], true);
+		case 'adobe':if (curBeat % 1 == 0 && Crowd != null) Crowd.animation.play(idleAnim, true);
 		case 'end process':if (!FlxG.save.data.lowQuality){
 			if (curBeat % 2 == 0 && virabot1 != null && virabot2 != null && virabot3 != null
 			&& virabot4 != null) setDance([virabot1, virabot2, virabot3, virabot4], true);

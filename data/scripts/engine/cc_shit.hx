@@ -179,37 +179,11 @@ function flash(color:FlxColor, duration:Float) if(FlxG.save.data.flashing) FlxG.
 
 function colorTween(object:Array<FlxSprite>, duration:Float, colorToSayGoodbye:FlxColor, colorToSayHello:FlxColor){
 	for (i in 0...object.length){
+		object[0].color=FlxColor.WHITE;
 		var newTweenColor = FlxTween.color(object[i], duration, colorToSayGoodbye, colorToSayHello);
+		FlxTween.color(object[0], duration, object[0].color, FlxColor.RED);
 		trace(object[0].color);
-		//object[i].color=colorToSayGoodbye;
-		//FlxTween.tween(object[i], {color:colorToSayHello}, duration, {ease: FlxEase.sineInOut});
 	}
-}
-
-public function makeBGSprite(image:String, x:Float = 0, y:Float = 0, ?scrollX:Float = 1, ?scrollY:Float = 1, ?animArray:Array<String> = null, ?loop:Bool = false){
-	scrollX??=1;
-	scrollY??=1;
-	animArray??=null;
-	loop??=false;
-
-	spr = new FlxSprite(x,y);
-
-	if (animArray != null) {
-		spr.frames = Paths.getSparrowAtlas(image); //fix for the story cutscenes
-		for (i in 0...animArray.length) {
-			var anim:String = animArray[i];
-			spr.animation.addByPrefix(anim, anim, 24, loop);
-			if(idleAnim == null) {
-				spr.idleAnim = anim;
-				spr.animation.play(anim);
-			}
-		}
-	} else {
-		spr.loadGraphic(Paths.image(image));
-	}
-
-	spr.set(scrollX, scrollY);
-	return spr;
 }
 
 function objectColor(object:Array<FlxSprite>, shitColor:FlxColor) for (i in 0...object.length) object[i].color = shitColor;
