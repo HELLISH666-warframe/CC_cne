@@ -25,8 +25,6 @@ var bottomBarsALT:FlxSprite; //THIS TOO
 var vignetteTrojan:FlxSprite; //USED IN TROJAN AND OTHER COOL SONGS
 var coolShit:FlxSprite; //USED IN TROJAN AND OTHER COOL SONGS
 
-public var stopTweens:Array<FlxTween> = [];
-
 function new() {
 	camLYRICS.bgColor = 0;
 	camOther.bgColor = 0;
@@ -179,12 +177,39 @@ function pushBlackBars2(yes:Int) {
 
 function flash(color:FlxColor, duration:Float) if(FlxG.save.data.flashing) FlxG.cameras.flash(color, duration);
 
-function colorTween(object:Array<FlxSprite>, duration:Float, colorToSayGoodbye:FlxColor, colorToSayHello:FlxColor) {
-	for (i in 0...object.length) {
+function colorTween(object:Array<FlxSprite>, duration:Float, colorToSayGoodbye:FlxColor, colorToSayHello:FlxColor){
+	for (i in 0...object.length){
 		var newTweenColor = FlxTween.color(object[i], duration, colorToSayGoodbye, colorToSayHello);
-
-		stopTweens.push(newTweenColor);
+		trace(object[0].color);
+		//object[i].color=colorToSayGoodbye;
+		//FlxTween.tween(object[i], {color:colorToSayHello}, duration, {ease: FlxEase.sineInOut});
 	}
+}
+
+public function makeBGSprite(image:String, x:Float = 0, y:Float = 0, ?scrollX:Float = 1, ?scrollY:Float = 1, ?animArray:Array<String> = null, ?loop:Bool = false){
+	scrollX??=1;
+	scrollY??=1;
+	animArray??=null;
+	loop??=false;
+
+	spr = new FlxSprite(x,y);
+
+	if (animArray != null) {
+		spr.frames = Paths.getSparrowAtlas(image); //fix for the story cutscenes
+		for (i in 0...animArray.length) {
+			var anim:String = animArray[i];
+			spr.animation.addByPrefix(anim, anim, 24, loop);
+			if(idleAnim == null) {
+				spr.idleAnim = anim;
+				spr.animation.play(anim);
+			}
+		}
+	} else {
+		spr.loadGraphic(Paths.image(image));
+	}
+
+	spr.set(scrollX, scrollY);
+	return spr;
 }
 
 function objectColor(object:Array<FlxSprite>, shitColor:FlxColor) for (i in 0...object.length) object[i].color = shitColor;

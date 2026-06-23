@@ -1,8 +1,10 @@
 import psych.BGSprite;
-public var whiteScreen:FlxSprite;
+public var Crowd:BGSprite;
+public var Background1:BGSprite;
+public var Floor:BGSprite;
 public var spotlightdad = new FlxSprite().loadGraphic(Paths.image("stages/spotlight"));
 public var spotlightbf = new FlxSprite().loadGraphic(Paths.image("stages/spotlight"));
-var shine:FlxSprite;
+public var whiteScreen:FlxSprite;
 var time:Float = 0;
 public var redthing:FlxSprite;
 function postNew() {
@@ -93,16 +95,12 @@ function postNew() {
 	switch(PlayState.SONG.meta.name.toLowerCase()) {
 		case 'adobe':add(spotlightbf); add(spotlightdad);
 	}
-	insert(19,dad);
 }
 function postCreate() {killEVERYONE();}
 function killEVERYONE() {
-	var charPropties=[];
 	for(i in 0...strumLines.length){
-		var shit = strumLines.members[i].characters[0];
-		var char = new Character(shit.x, shit.y, strumLines.members[i].characters[0].curCharacter, shit.isPlayer);
-		charPropties.push([char, strumLines.members[i]]);
-		trace(strumLines.members[i]);
+		remove(strumLines.members[i].characters[0]);
+		insert(members.indexOf(scripts.get('blackBG'))+1,strumLines.members[i].characters[0]);
 	}
 }
 
@@ -128,6 +126,7 @@ function stepHit() {
 
 				spotlightdad.alpha = 0.7;
 				spotlightbf.alpha = 0.7;
+				case 6:scripts.call('colorTween',[[Background1], 0.1, FlxColor.WHITE, 0xFF191919]);
 				case 256:Crowd.color = 0xFFFFFFFF;
 				gf.color = 0xFFFFFFFF;
 				Background1.color = 0xFFFFFFFF;
@@ -138,14 +137,14 @@ function stepHit() {
 				case 576:FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom}, 2.5);
 				case 768:if(FlxG.save.data.flashing) FlxG.camera.flash(FlxColor.WHITE, 1);
 				if(FlxG.save.data.screenShake) FlxG.camera.shake(0.0175, 0.15);
-				blackBars(1);
-				colorTween([gf, dad, Crowd, Background1, Floor], 0.7, FlxColor.WHITE, 0xFF191919);
+				scripts.call('blackBars',[1]);
+				scripts.call('colorTween',[[gf, dad, Crowd, Background1, Floor], 0.7, FlxColor.WHITE, 0xFF191919]);
 				spotlightdad.alpha = 0.8;
 				spotlightbf.alpha = 0.8;
 				case 1024:if (FlxG.save.data.shaders) addShaderToCamera(['camgame', 'camhud'], new ChromaticAberrationEffect(0));
 				if(FlxG.save.data.flashing) FlxG.camera.flash(FlxColor.WHITE, 1);
-				colorTween([gf, dad, boyfriend, Crowd, Background1, Floor], 0.7, 0xFF191919, FlxColor.WHITE);
-				blackBars(0);
+				scripts.call('colorTween',[[gf, dad, boyfriend, Crowd, Background1, Floor], 0.7, 0xFF191919, FlxColor.WHITE]);
+				scripts.call('blackBars',0);
 				spotlightdad.alpha = 0;
 				spotlightbf.alpha = 0;
 			}
