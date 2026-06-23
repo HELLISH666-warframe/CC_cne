@@ -32,7 +32,6 @@ for (script in oldScripts) {
             song_Scripts.push(script);
         default: other_Scripts.push(script);
     }
-    trace(script.fileName);
 }
 
 var finalScripts:Array<Script> = [];

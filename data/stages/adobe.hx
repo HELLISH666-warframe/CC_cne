@@ -3,13 +3,9 @@ public var whiteScreen:FlxSprite;
 public var spotlightdad = new FlxSprite().loadGraphic(Paths.image("stages/spotlight"));
 public var spotlightbf = new FlxSprite().loadGraphic(Paths.image("stages/spotlight"));
 var shine:FlxSprite;
-public var topBars:FlxSprite;
-public var bottomBars:FlxSprite;
-public var topBarsALT:FlxSprite;
-public var bottomBarsALT:FlxSprite;
 var time:Float = 0;
 public var redthing:FlxSprite;
-function afterNew() {
+function postNew() {
 	defaultCamZoom = 0.65;
 
 	whiteScreen = new FlxSprite(0, 0).makeSolid(Std.int(FlxG.width * 2), Std.int(FlxG.height * 2), FlxColor.WHITE);
@@ -38,8 +34,6 @@ function afterNew() {
 		spotlightbf = new FlxSprite().loadGraphic(Paths.image("spotlight"));
 		spotlightbf.alpha = 0.0001;
 
-		//bbgColor = 0xFF929292;
-
 		//if (FlxG.save.data.shaders) addShaderToCamera(['camgame', 'camhud'], new ChromaticAberrationEffect(0.0005));//LATER_BRO.
 
 		FlxG.camera.fade(FlxColor.BLACK, 0, false);
@@ -48,6 +42,30 @@ function afterNew() {
 	Floor = new BGSprite('chapter1/floor', -750, 713, 1, 1);
 	Floor.setGraphicSize(Std.int(Floor.width * 1.2));
 	add(Floor);
+
+	topBars = new FlxSprite().makeSolid(2580, 320, FlxColor.BLACK);
+	topBars.camera = camBars;
+	topBars.screenCenter();
+	topBars.y -= 850;
+	add(topBars);			
+
+	bottomBars = new FlxSprite().makeSolid(2580, 320, FlxColor.BLACK);
+	bottomBars.camera = camBars;
+	bottomBars.screenCenter();
+	bottomBars.y += 850;
+	add(bottomBars);
+
+	topBarsALT = new FlxSprite().makeSolid(2580,320, FlxColor.BLACK);
+	topBarsALT.camera = camBars;
+	topBarsALT.screenCenter();
+	topBarsALT.y -= 450;
+	add(topBarsALT);
+	
+	bottomBarsALT = new FlxSprite().makeSolid(2580,320, FlxColor.BLACK);
+	bottomBarsALT.camera = camBars;
+	bottomBarsALT.screenCenter();
+	bottomBarsALT.y += 450;
+	add(bottomBarsALT);
 
 	if (PlayState.SONG.meta.name.toLowerCase() == 'phantasm') {
 		defaultCamZoom = 1.8;
@@ -75,32 +93,17 @@ function afterNew() {
 	switch(PlayState.SONG.meta.name.toLowerCase()) {
 		case 'adobe':add(spotlightbf); add(spotlightdad);
 	}
+	insert(19,dad);
 }
-
-function create() {
-	topBars = new FlxSprite().makeSolid(2580, 320, FlxColor.BLACK);
-	topBars.camera = camBars;
-	topBars.screenCenter();
-	topBars.y -= 850;
-	add(topBars);			
-
-	bottomBars = new FlxSprite().makeSolid(2580, 320, FlxColor.BLACK);
-	bottomBars.camera = camBars;
-	bottomBars.screenCenter();
-	bottomBars.y += 850;
-	add(bottomBars);
-
-	topBarsALT = new FlxSprite().makeSolid(2580,320, FlxColor.BLACK);
-	topBarsALT.camera = camBars;
-	topBarsALT.screenCenter();
-	topBarsALT.y -= 450;
-	add(topBarsALT);
-	
-	bottomBarsALT = new FlxSprite().makeSolid(2580,320, FlxColor.BLACK);
-	bottomBarsALT.camera = camBars;
-	bottomBarsALT.screenCenter();
-	bottomBarsALT.y += 450;
-	add(bottomBarsALT);
+function postCreate() {killEVERYONE();}
+function killEVERYONE() {
+	var charPropties=[];
+	for(i in 0...strumLines.length){
+		var shit = strumLines.members[i].characters[0];
+		var char = new Character(shit.x, shit.y, strumLines.members[i].characters[0].curCharacter, shit.isPlayer);
+		charPropties.push([char, strumLines.members[i]]);
+		trace(strumLines.members[i]);
+	}
 }
 
 function onStartCountdown() {

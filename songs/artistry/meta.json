@@ -1,6 +1,6 @@
 {
 	"displayName": "Artistry",
-	"difficulties": ["simple","hard","insane"],
+	"difficulties": ["hard","insane"],
 	"bpm": 178,
 	"icon": "the-dark-lord",
 	"color": "#FF0000",
