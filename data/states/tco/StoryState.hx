@@ -3,6 +3,7 @@ import funkin.menus.StoryMenuState.StoryWeeklist;
 import flixel.addons.display.FlxBackdrop;
 import funkin.backend.utils.DiscordUtil;
 import funkin.menus.StoryMenuState;
+import funkin.savedata.FunkinSave;
 import flixel.math.FlxMath;
 
 var scoreText:FlxText;
@@ -28,7 +29,6 @@ public var camHUD:FlxCamera;
 var selectedSmth:Bool = false;
 
 static var lastDifficultyName:String = '';
-static var curDifficulty_storymode:Int = 0;
 var outline:FlxSprite;
 var crtShader = new CustomShader("CRT"); 
 public static var difficulties:Array<String> = ['Simple','Hard','Insane'];
@@ -42,15 +42,13 @@ var chapterThingyText:FlxText;
 
 var finishedZoom:Bool = false;
 
-public var weekList:StoryWeeklist;
-
+var weeklist = StoryWeeklist.get(true, false);
+var curDiffSM:Int = 0;
 static var curWeek:Int = 0;
 
 function create() {
 	DiscordUtil.changePresence('In the Story Mode', null);
 	
-	weeklist = StoryWeeklist.get(true, false);
-	trace(weeklist.weeks[1].songs);
 	window.title = "Computerized Conflict - Story Menu - Theme by: DangDoodle";
 
 	camGame = new FlxCamera();
@@ -219,26 +217,22 @@ function changeDifficulty(change:Int = 0, ?stop:Bool = false):Void {
 	if(stop) return;
 		
 	FlxG.sound.play(Paths.sound('scrollMenu'));
+	curDiffSM = FlxMath.wrap(curDiffSM + change, 0, difficulties.length - 1);
 
-	curDifficulty_storymode += change;
-
-	if (curDifficulty_storymode < 0) curDifficulty_storymode = difficulties.length-1;
-	if (curDifficulty_storymode >= difficulties.length) curDifficulty_storymode = 0;
-
-	var diff:String = difficulties[curDifficulty_storymode];
+	var diff:String = difficulties[curDiffSM];
 
 	sprDifficulty.loadGraphic(Paths.image('menus/storymenu/difficulties/'+diff));
 	sprDifficulty.antialiasing = Options.antialiasing;
 	sprDifficulty.x = 40;
 	sprDifficulty.y = 230;
 
-	weekImages.loadGraphic(Paths.image('menus/storymenu/chapterImages/'+curWeek+"-"+curDifficulty_storymode));
+	weekImages.loadGraphic(Paths.image('menus/storymenu/chapterImages/'+curWeek+"-"+curDiffSM));
 	weekImages.screenCenter(FlxAxes.Y);
 	weekImages.x = FlxG.width - weekImages.width;
 	weekImages.antialiasing = Options.antialiasing;
 	weekImages.setGraphicSize(Std.int(weekImages.width * 0.8));
 
-	switch(curDifficulty_storymode) {
+	switch(curDiffSM) {
 		case 0: FlxG.cameras.flash(FlxColor.BLACK, 0.50);
 		fires.alpha = 0.0001;
 		bgSprite.alpha = 1;
@@ -259,17 +253,17 @@ function changeDifficulty(change:Int = 0, ?stop:Bool = false):Void {
 		scrollingThing.color = 0xFF2C2425;
 	}
 	lastDifficultyName = diff;
+
+	scoreText.text=FunkinSave.getWeekHighscore(weeklist.weeks[curWeek].id, weeklist.weeks[curWeek].difficulties[curDiffSM]).score;
 }
 
 function changeWeek(change:Int = 0, ?stop:Bool = false):Void {
+	stop??=false;
 	if(stop) return;
 
-	curWeek += change;
+	curWeek = FlxMath.wrap(curWeek + change, 0, weeklist.weeks.length - 1);
 
-	if (curWeek < 0) curWeek = weeklist.weeks.length-1;
-	if (curWeek >= weeklist.weeks.length) curWeek = 0;
-
-	weekImages.loadGraphic(Paths.image('menus/storymenu/chapterImages/'+curWeek+"-"+curDifficulty_storymode));
+	weekImages.loadGraphic(Paths.image('menus/storymenu/chapterImages/'+curWeek+"-"+curDiffSM));
 	weekImages.screenCenter(FlxAxes.Y);
 	weekImages.x = FlxG.width - weekImages.width;
 	weekImages.antialiasing = Options.antialiasing;
@@ -283,6 +277,6 @@ function changeWeek(change:Int = 0, ?stop:Bool = false):Void {
 }
 
 function play() {
-	PlayState.loadWeek(weeklist.weeks[curWeek], difficulties[curDifficulty_storymode]);
+	PlayState.loadWeek(weeklist.weeks[curWeek], difficulties[curDiffSM]);
 	FlxG.switchState(new PlayState());
 }

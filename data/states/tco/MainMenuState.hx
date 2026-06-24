@@ -249,7 +249,7 @@ function create() {
 	chrom.bOffset=-0;
 	//chrom = new ChromaticAberrationEffect(0);
 
-	if (FlxG.save.data.shaders) camGame.setFilters(chrom);
+	if (FlxG.save.data.shaders) camGame.addShader(chrom);
 	//if (FlxG.save.data.shaders) addShaderToCamera('camgame', chrom);
 
 	changeItem(0);

@@ -113,7 +113,7 @@ function postCreate() {
 		healthBarB.sprTracker = healthBar;
 	}
 	var leftColor:Int = dad != null && dad.iconColor != null && Options.colorHealthBar ? dad.iconColor : (opponentMode ? 0xFF66FF33 : 0xFFFF0000);
-	var rightColor:Int = boyfriend != null && boyfriend.iconColor != null && Options.colorHealthBar ? boyfriend.iconColor : (opponentMode ? 0xFFFF0000 : 0xFF66FF33); // switch the colors
+	var rightColor:Int = boyfriend != null && boyfriend.iconColor != null && Options.colorHealthBar ? boyfriend.iconColor : (PlayState.opponentMode ? 0xFFFF0000 : 0xFF66FF33); // switch the colors
 	healthBar.createFilledBar(leftColor, rightColor);
 	insert(members.indexOf(healthBarBG), healthBar).camera=camHUD;
 	add(healthBarB).camera=camHUD;
@@ -232,9 +232,9 @@ function calculateRating() {
 
 	var advancedRating = "";
     if (misses == 0) {
-		advancedRating = "FC";
 		if(accuracy==1)advancedRating="SFC";
 		else if(hits['good']>0)advancedRating="GFC";
+		else if(hits['good']>0||hits['shit']>0)advancedRating="FC";
     }
 	else if (misses < 10) advancedRating = "SDCB"
 	else if (misses > 0) advancedRating = "Clear";

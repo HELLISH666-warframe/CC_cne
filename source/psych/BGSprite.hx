@@ -24,7 +24,6 @@ class BGSprite extends FlxSprite {
 			if(image != null) {
 				loadGraphic(Paths.image(image)); //fix for the story cutscenes
 			}
-			active = false;
 		}
 		scrollFactor.set(scrollX, scrollY);
 		antialiasing = Options.antialiasing;

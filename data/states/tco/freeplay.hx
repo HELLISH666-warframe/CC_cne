@@ -171,7 +171,6 @@ function create() {
 
 	FlxTween.tween(FlxG.camera, {zoom: 1}, 0.8, {ease: FlxEase.expoIn});
 	FlxG.camera.fade(FlxColor.BLACK, 0.9, true, ()->{finishedZoom = true;});
-		
 
 	if (FlxG.save.data.shaders) {FlxG.camera.addShader(crtShader = new CustomShader("CRTShader"));
 	FlxG.camera.addShader(fishEyeshader);
@@ -200,7 +199,7 @@ function beatHit() if(finishedZoom&&!selectedSmth)FlxTween.tween(FlxG.camera, {z
 var instPlaying:Int = -1;
 var holdTime:Float = 0;
 function update(elapsed:Float) {
-	if (FlxG.sound.music.volume < 0.7) FlxG.sound.music.volume += 0.5 * elapsed;
+	if (FlxG.sound.music.volume < 0.7&&!selectedSmth) FlxG.sound.music.volume += 0.5 * elapsed;
 
 	lerpScore = Math.floor(FlxMath.lerp(lerpScore, intendedScore, FlxMath.bound(elapsed * 24, 0, 1)));
 	lerpRating = FlxMath.lerp(lerpRating, intendedRating, FlxMath.bound(elapsed * 12, 0, 1));

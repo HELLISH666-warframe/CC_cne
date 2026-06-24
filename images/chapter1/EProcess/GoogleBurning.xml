@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="GoogleBurning.png">
+	<!-- Created with Adobe Animate version 21.0.2.37893 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Symbol 2 instance 10000" x="0" y="0" width="822" height="848"/>
+	<SubTexture name="Symbol 2 instance 10001" x="0" y="848" width="822" height="848"/>
+	<SubTexture name="Symbol 2 instance 10002" x="0" y="1696" width="822" height="848"/>
+	<SubTexture name="Symbol 2 instance 10003" x="0" y="2544" width="822" height="848"/>
+	<SubTexture name="Symbol 2 instance 10004" x="822" y="0" width="822" height="848"/>
+	<SubTexture name="Symbol 2 instance 10005" x="1644" y="0" width="822" height="848"/>
+	<SubTexture name="Symbol 2 instance 10006" x="1644" y="0" width="822" height="848"/>
+	<SubTexture name="Symbol 2 instance 10007" x="2466" y="0" width="822" height="848"/>
+	<SubTexture name="Symbol 2 instance 10008" x="822" y="848" width="822" height="848"/>
+	<SubTexture name="Symbol 2 instance 10009" x="822" y="1696" width="822" height="848"/>
+	<SubTexture name="Symbol 2 instance 10010" x="822" y="2544" width="822" height="848"/>
+	<SubTexture name="Symbol 2 instance 10011" x="1644" y="848" width="822" height="848"/>
+	<SubTexture name="Symbol 2 instance 10012" x="2466" y="848" width="822" height="848"/>
+	<SubTexture name="Symbol 2 instance 10013" x="1644" y="1696" width="822" height="848"/>
+	<SubTexture name="Symbol 2 instance 10014" x="1644" y="2544" width="822" height="848"/>
+</TextureAtlas>

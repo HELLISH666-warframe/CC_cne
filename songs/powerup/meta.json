@@ -1,6 +1,6 @@
 {
 	"displayName": "Powerup",
-	"difficulties": ["simple","hard","insane"],
+	"difficulties": ["hard"],
 	"bpm": 155,
 	"icon": "mario",
 	"color": "#FF9933",

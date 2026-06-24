@@ -50,7 +50,7 @@ function new() {
 
 function postCreate() {
 	//For_the_diff_text_the_first_letter_needs_to_be_capitalised.FUUUUUUUCK.
-	window.title = "Computerized Conflict -"+curSong+ " - ["+PlayState.difficulty+"] - Composed by: " +curSong.composer;
+	window.title = "Computerized Conflict -"+curSong+ " - ["+PlayState.difficulty+"] - Composed by: " +PlayState.SONG.meta.composer;
 }
 
 function beatHit() {
@@ -87,6 +87,15 @@ function beatHit() {
 
 function update(elapsed:Float) {
     healthDrainLolz(0.09 * elapsed, 0.2, multiplierDrain);
+}
+
+function onSongEnd() {
+	trace(FlxG.save.data.songsUnlocked);
+	if(!FlxG.save.data.songsUnlocked.contains(curSong)){
+		trace('played'+curSong+'for the first time');
+
+		FlxG.save.data.songsUnlocked.push(curSong);
+	}
 }
 
 public var lossingHealth:Bool = false;
@@ -179,10 +188,8 @@ function flash(color:FlxColor, duration:Float) if(FlxG.save.data.flashing) FlxG.
 
 function colorTween(object:Array<FlxSprite>, duration:Float, colorToSayGoodbye:FlxColor, colorToSayHello:FlxColor){
 	for (i in 0...object.length){
-		object[0].color=FlxColor.WHITE;
-		var newTweenColor = FlxTween.color(object[i], duration, colorToSayGoodbye, colorToSayHello);
-		FlxTween.color(object[0], duration, object[0].color, FlxColor.RED);
-		trace(object[0].color);
+		obj=object[i];
+		var newTweenColor = FlxTween.color(obj, duration, colorToSayGoodbye, colorToSayHello);
 	}
 }
 

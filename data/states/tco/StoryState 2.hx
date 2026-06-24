@@ -32,7 +32,7 @@ public static var curDiffSM:Int = 0;
 public static var crtShader = new CRTShader();
 var shaderFilter = new ShaderFilter(crtShader);
 
-public static var difficulties:Array<String> =['Simple','Hard','Insane'];
+public static var difficulties:Array<String> =['simple','hard','insane'];
 
 var checkpointSystemON:Bool;
 

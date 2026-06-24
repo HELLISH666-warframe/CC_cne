@@ -7,10 +7,8 @@ function onGameOver() {
 function onDiscordPresenceUpdate(e) {
 	var data = e.presence;
 
-	if(data.button1Label == null)
-		data.button1Label = "Codename Engine Discord";
-	if(data.button1Url == null)
-		data.button1Url = "https://discord.gg/2NTCdsQvx4";
+	if(data.button1Label == null)data.button1Label = "Download The Mod";
+	if(data.button1Url == null)data.button1Url = "ttps://gamebanana.com/mods/468922";
 }
 
 function onPlayStateUpdate() {

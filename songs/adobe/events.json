@@ -928,69 +928,57 @@
 		},
 		{
 			"params": [
-				1,
-				"tzen_coolerbf",
 				true,
-				"0,0",
-				true
+				true,
+				1
 			],
 			"time": 84000,
-			"name": "Change Character"
+			"name": "Alt Animation Toggle"
 		},
 		{
 			"params": [
-				1,
-				"animator-bf",
-				true,
-				"0,0",
-				true
+				false,
+				false,
+				1
 			],
 			"time": 98571.4285714286,
-			"name": "Change Character"
+			"name": "Alt Animation Toggle"
 		},
 		{
 			"params": [
-				1,
-				"tzen_coolerbf",
 				true,
-				"0,0",
-				true
+				true,
+				1
 			],
 			"time": 99375,
-			"name": "Change Character"
+			"name": "Alt Animation Toggle"
 		},
 		{
 			"params": [
-				1,
-				"animator-bf",
-				true,
-				"0,0",
-				true
+				false,
+				false,
+				1
 			],
 			"time": 100272.321428571,
-			"name": "Change Character"
+			"name": "Alt Animation Toggle"
 		},
 		{
 			"params": [
-				1,
-				"tzen_coolerbf",
 				true,
-				"0,0",
-				true
+				true,
+				1
 			],
 			"time": 105883.928571429,
-			"name": "Change Character"
+			"name": "Alt Animation Toggle"
 		},
 		{
 			"params": [
-				1,
-				"animator-bf",
-				true,
-				"0,0",
-				true
+				false,
+				false,
+				1
 			],
 			"time": 108000,
-			"name": "Change Character"
+			"name": "Alt Animation Toggle"
 		}
 	]
 }

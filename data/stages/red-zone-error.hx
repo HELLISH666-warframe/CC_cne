@@ -2,8 +2,7 @@
 var otakuBG:FlxSprite;
 var time:Float = 0;
 
-function create()
-{
+function create(){
 	//defaultCamZoom = 0.7;
 
 	rsod = new FlxSprite(-100, -90).loadGraphic(Paths.image('menus/EProcess/rsod'));
