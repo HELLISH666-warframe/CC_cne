@@ -3,6 +3,7 @@ public var camOther = new FlxCamera();
 public var camBars = new FlxCamera();
 public var camChar = new FlxCamera();
 
+var tweenZoomEvent:FlxTween;
 var LightsColors:Array<FlxColor>; //for the vignette changing color
 
 var bestPart2:Bool = false; //VIGNETTES HANDLER
@@ -87,6 +88,89 @@ function beatHit() {
 
 function update(elapsed:Float) {
     healthDrainLolz(0.09 * elapsed, 0.2, multiplierDrain);
+}
+
+//This_way_EVERY_event_is_atcually_loaded.
+function onEvent(_) {
+	switch(_.event.name){
+		case 'add_cam_zoom':if(FlxG.save.data.camZooms && FlxG.camera.zoom < 1.35) {
+			var camZoom:Float = Std.parseFloat(_.event.params[0]);
+			var hudZoom:Float = Std.parseFloat(_.event.params[1]);
+			if(Math.isNaN(camZoom)) camZoom = 0.015;
+			if(Math.isNaN(hudZoom)) hudZoom = 0.03;
+
+			FlxG.camera.zoom += camZoom;
+			camHUD.zoom += hudZoom;
+		}
+
+		case 'Alt Idle Animation':strumLines.members[_.event.params[0]].characters[0].idleSuffix=_.event.params[1];
+		case 'Screen Shake':var valuesArray:Array<String> = [_.event.params[0], _.event.params[1]];
+		var targetsArray:Array<FlxCamera> = [camGame, camHUD];
+		for (i in 0...targetsArray.length) {
+			var split:Array<String> = valuesArray[i].split(',');
+			var duration:Float = 0;
+			var intensity:Float = 0;
+			if(split[0] != null) duration = Std.parseFloat(split[0].trim());
+			if(split[1] != null) intensity = Std.parseFloat(split[1].trim());
+			if(Math.isNaN(duration)) duration = 0;
+			if(Math.isNaN(intensity)) intensity = 0;
+
+			if(duration > 0 && intensity != 0) targetsArray[i].shake(intensity, duration);
+		}
+
+		case 'Popup':if (popUp != null) return;
+		if (cpuControlled) return;
+		if (PlayState.difficulty.toLowerCase()== 'simple'||(PlayState.difficulty.toLowerCase()== 'hard' && FlxG.save.data.noMechanics)) return;
+
+		FlxG.sound.play(Paths.sound("erro"));
+		popUp = new FlxSprite(FlxG.random.int(0, 774), FlxG.random.int(0, 421)).loadGraphic(Paths.image('chapter1/EProcess/popups/popup_' + FlxG.random.int(1, 7)));
+		popUp.camera = camBars;
+		popUp.updateHitbox();
+		add(popUp);
+
+		closePopup = new FlxSprite().loadGraphic(Paths.image('chapter1/EProcess/popups/close_icon'));
+		closePopup.camera = camBars;
+		closePopup.scale.set(0.20, 0.20);
+		closePopup.x = popUp.x + 436;
+		closePopup.y = popUp.y + 22;
+		closePopup.setGraphicSize(Std.int(closePopup.width * 0.2));
+		closePopup.updateHitbox();
+		add(closePopup);
+
+		var timeThing = 10; //ahí para que te jodas un poquito si juegas en insane
+		switch(PlayState.difficulty.toLowerCase()) {
+			case 'HARD':timeThing = 27; // nerfing more lolz
+		}
+
+		popUpTimer = new FlxTimer();
+		popUpTimer.start(timeThing, ()->{
+			popUpTimer = null;
+			health = -0.1;
+		});
+
+		case 'zoomBeatType1':if(FlxG.save.data.camZooms) zoomType1 = true;
+		case 'zoomBeatType2':if(FlxG.save.data.camZooms) zoomType2 = true;
+		case 'zoomBeatType3':if(FlxG.save.data.camZooms) zoomType3 = true;
+
+		//stop beats
+		case 'zoomBeatType1 Cancel':zoomType1 = false;
+		case 'zoomBeatType2 Cancel':zoomType2 = false;
+		case 'zoomBeatType3 Cancel':zoomType3 = false;
+		case 'blackBars test':blackBars(1);
+		case 'cancel blackbars':blackBars(0);
+		case 'blackBars2 test':pushBlackBars2(1);
+		case 'cancel blackbars2':pushBlackBars2(0);
+		case 'Set Cam Zoom'|'defaultCamZoom':defaultCamZoom = _.event.params[0];
+		case 'Tween Zoom':
+		tweenZoomEvent = FlxTween.tween(FlxG.camera, {zoom: _.event.params[0]}, _.event.params[1] * scripts.get('playbackRate'), {
+			ease: FlxEase.quadInOut,
+			onComplete: function(twn){defaultCamZoom = _.event.params[0];},
+		});
+		case 'cancel Tween Zoom':if (tweenZoomEvent != null) tweenZoomEvent = null;
+		case 'Flash Camera BLACK':if(FlxG.save.data.flashing) FlxG.camera.flash(FlxColor.BLACK, _.event.params[0]);
+		case 'Flash Camera WHITE':if(FlxG.save.data.flashing) FlxG.camera.flash(FlxColor.WHITE, _.event.params[0]);
+		case 'Flash Camera RED':if(FlxG.save.data.flashing) FlxG.camera.flash(FlxColor.RED, _.event.params[0]);
+	}
 }
 
 function onSongEnd() {
@@ -193,13 +277,23 @@ function colorTween(object:Array<FlxSprite>, duration:Float, colorToSayGoodbye:F
 	}
 }
 
-function objectColor(object:Array<FlxSprite>, shitColor:FlxColor) for (i in 0...object.length) object[i].color = shitColor;
+function objectColor(object:Array<FlxSprite>, shitColor:FlxColor) for (i in 0...object.length) {
+	object[i].color = shitColor;
+	}
 
-function alphaTween(object:Array<FlxSprite>, duration:Float, alpha:Float) for (i in 0...object.length) FlxTween.tween(object[i], {alpha:duration}, alpha, {ease: FlxEase.sineInOut});
+function alphaTween(object:Array<FlxSprite>, duration:Float, alpha:Float){
+	for (i in 0...object.length) {
+	obj=object[i];
+	FlxTween.tween(obj, {alpha:duration}, alpha, {ease: FlxEase.sineInOut});
+	}
+}
 
 function setVisible(object:Array<FlxSprite>, visibility:Bool) for (i in 0...object.length) object[i].visible = visibility;
 
-function setAlpha(object:Array<FlxSprite>, visibility:Int) for (i in 0...object.length) object[i].alpha = visibility;
+function setAlpha(object:Array<FlxSprite>, visibility:Int) for (i in 0...object.length) {
+	obj=object[i];
+	obj.alpha = visibility;
+	}
 
 function setCamShake(shit:Array<FlxCamera>, intensity:Float, duration:Float, intensityAlt:Float) {
 	for (i in 0...shit.length) {
@@ -239,7 +333,7 @@ public function confBSODShake(intensity:Float = 1.0) {
 	new FlxTimer().start(0.25, ()->{bsod.y -= (1 * intensity);});
 }
 
-public function tcoBSOD(fuck:Bool){
+function tcoBSOD(fuck:Bool){
 	if (fuck) {
 		if (bsod != null) alphaTween([bsod], 1, 1);
 		if (bsod != null) colorTween([boyfriend], 1, 0xFF2C2425, FlxColor.WHITE);
@@ -249,9 +343,9 @@ public function tcoBSOD(fuck:Bool){
 	}
 }
 
-public function tcoStickPage(show:Bool) {
+function tcoStickPage(show:Bool) {
 	if (stickpage != null) setAlpha([stickpage, stickpageFloor], 1);
-	if (stickpage != null) triggerEventNote('Change Character', 'bf', 'stick-bf');
+	//if (stickpage != null) triggerEventNote('Change Character', 'bf', 'stick-bf');
 	if (stickpage != null) boyfriend.color = 0xFF2C2425;
 	if (stickpage != null) redthing.color = 0xFF000000;
 
@@ -261,7 +355,7 @@ public function tcoStickPage(show:Bool) {
 		stickpage.destroy();
 		stickpage = null;
 
-		triggerEventNote('Change Character', 'bf', 'animator-bf-stressed');
+		//triggerEventNote('Change Character', 'bf', 'animator-bf-stressed');
 		redthing.color = 0xFFFFFFFF;
 	}
 }

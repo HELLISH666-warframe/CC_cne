@@ -12,7 +12,7 @@ var songRealList = [
 	["adobe","outrage","end-process","morality","stick-em-up","artistry","proficiency","masterpiece"],
 	["trojan","conflict","dashpulse","time-travel","cubify","kickstarter","contrivance","messenger","amity","voltagen","issue","tune-in","unfaithful","rombie","fancy-funk","powerup","catto"],
 	["enmity","doppelganger","aurora","phantasm"],
-	["adobe-(old)","outrage-(older)","alan-(old)","outrage-(old)","end-process-(old)"],
+	["adobe-(old)","outrage-(older)","alan-(old)","outrage-(old)"],
 	["rewrite"]//35_songs_holy_shit.
 ];
 

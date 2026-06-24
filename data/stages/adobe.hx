@@ -1,14 +1,28 @@
 import flixel.text.FlxTextBorderStyle;
 import psych.BGSprite;
+
+//adobe:
 public var Crowd:BGSprite;
 public var Background1:BGSprite;
 public var Floor:BGSprite;
 public var spotlightdad = new FlxSprite().loadGraphic(Paths.image("stages/spotlight"));
 public var spotlightbf = new FlxSprite().loadGraphic(Paths.image("stages/spotlight"));
+
+//t.c.o:
+public var ScaredCrowd:BGSprite;
+public var redthing:FlxSprite;
+public var fires1:BGSprite;
+public var fires2:BGSprite;
+public var extraFires:BGSprite;
+
+public var bsod:BGSprite;
+public var stickpage:BGSprite;
+public var stickpageFloor:BGSprite;
+
 public var whiteScreen:FlxSprite;
 var time:Float = 0;
 public var redthing:FlxSprite;
-var chrom = new CustomShader("ChromaticAberrationShader");
+var ChromaticAberrationEffect = new CustomShader("ChromaticAberrationShader");
 function setChrome(shader:Dynamic,chromeOffset) {
 	shader.rOffset=chromeOffset;
 	shader.gOffset=0;
@@ -43,9 +57,9 @@ function postNew() {
 		spotlightbf = new FlxSprite().loadGraphic(Paths.image("spotlight"));
 		spotlightbf.alpha = 0.0001;
 
-		if (FlxG.save.data.shaders) {camGame.addShader(chrom);
-			camHUD.addShader(chrom);
-			setChrome(chrom,0.0005);
+		if (FlxG.save.data.shaders) {camGame.addShader(ChromaticAberrationEffect);
+			camHUD.addShader(ChromaticAberrationEffect);
+			setChrome(ChromaticAberrationEffect,0.0005);
 		}
 		//if (FlxG.save.data.shaders) addShaderToCamera(['camgame', 'camhud'], new ChromaticAberrationEffect(0.0005));//LATER_BRO.
 
@@ -93,11 +107,9 @@ function postNew() {
 		redthing.alpha = 0.0001;
 		add(redthing);
 
-		if (FlxG.save.data.shaders) addShaderToCamera(['camgame', 'camhud'], new ChromaticAberrationEffect(0.0005));
-
-		if (FlxG.save.data.shaders) {camGame.addShader(chrom);
-			camHUD.addShader(chrom);
-			setChrome(chrom,0.0005);
+		if (FlxG.save.data.shaders) {camGame.addShader(ChromaticAberrationEffect);
+			camHUD.addShader(ChromaticAberrationEffect);
+			setChrome(ChromaticAberrationEffect,0.0005);
 		}
 		
 		case 'end process':FlxG.mouse.visible = true;
@@ -312,7 +324,7 @@ function stepHit() {
 				scripts.call('colorTween',[[gf, dad, Crowd, Background1, Floor], 0.7, FlxColor.WHITE, 0xFF191919]);
 				spotlightdad.alpha = 0.8;
 				spotlightbf.alpha = 0.8;
-				case 1024:if (FlxG.save.data.shaders) setChrome(chrom,0);
+				case 1024:if (FlxG.save.data.shaders) setChrome(ChromaticAberrationEffect,0);
 				//if (FlxG.save.data.shaders) addShaderToCamera(['camgame', 'camhud'], new ChromaticAberrationEffect(0));
 				if(FlxG.save.data.flashing) FlxG.camera.flash(FlxColor.WHITE, 1);
 				scripts.call('colorTween',[[gf, dad, boyfriend, Crowd, Background1, Floor], 0.7, 0xFF191919, FlxColor.WHITE]);
@@ -325,16 +337,17 @@ function stepHit() {
 				case 1|8|16|32|40|48|64|72|80|96|104|112:
 				if(FlxG.save.data.flashing || !FlxG.save.data.lowQuality) FlxG.camera.fade(FlxColor.BLACK, 0.5, false);
 				case 120:FlxG.camera.fade(FlxColor.BLACK, 0, true);
-				case 767:tcoBSOD(true);
+				case 767:scripts.call('tcoBSOD',[true]);
 				redthing.color = 0xFFFFFFFF;
 				case 1392:defaultCamZoom = 1.45;
-				alphaTween([blackBG], 1, 0.75);
-				case 1406:tcoStickPage(false);
-				tcoBSOD(true);
+				scripts.call('alphaTween',[[blackBG], 1, 0.75]);
+				case 1406:scripts.call('tcoStickPage',[false]);
+				trace(Conductor.songPosition);
+				scripts.call('tcoBSOD',[true]);
 				bsod.alpha = 1; //fixing the bug
-				setAlpha([blackBG], 0);
+				scripts.call('setAlpha',[[blackBG], 0]);
 				if(FlxG.save.data.flashing) FlxG.camera.flash(FlxColor.WHITE, 1);
-				case 1025 | 1670:tcoBSOD(false);
+				case 1025 | 1670:scripts.call('tcoBSOD',[false]);
 			}
 		case 'end process':
 			switch(curStep) {
@@ -363,16 +376,16 @@ function beatHit() {
 		case 'outrage':
 			switch(curBeat) {
 				case 32:if(FlxG.save.data.flashing) FlxG.camera.flash(FlxColor.RED, 0.5);
-				if (FlxG.save.data.shaders) addShaderToCamera(['camgame', 'camhud'], new ChromaticAberrationEffect(0.0040));
+				if (FlxG.save.data.shaders) setChrome(ChromaticAberrationEffect,0.0040);
 				if(FlxG.save.data.screenShake) FlxG.camera.shake(0.01, 0.20);
-				objectColor([boyfriendGroup, gf, Floor, Background1, ScaredCrowd, whiteScreen], 0xFF2C2425);
-				setAlpha([redthing], 1);
-				setVisible([fires1, fires2], true);
+				scripts.call('objectColor',[[boyfriend, gf, Floor, Background1, ScaredCrowd, whiteScreen], 0xFF2C2425]);
+				scripts.call('setAlpha',[[redthing], 1]);
+				scripts.call('setVisible',[[fires1, fires2], true]);
 				lossingHealth = true;
-				case 288:tcoStickPage(true);
+				case 288:scripts.call('tcoStickPage',[true]);
 				case 424:if(FlxG.save.data.flashing) FlxG.camera.flash(FlxColor.WHITE, 0.5);
 				if(FlxG.save.data.screenShake) FlxG.camera.shake(0.01, 0.20);
-				colorTween([boyfriendGroup, gf, Floor, Background1, ScaredCrowd, whiteScreen], 0.8, 0xFF2C2425, FlxColor.WHITE);
+				scripts.call('colorTween',[[boyfriend, gf, Floor, Background1, ScaredCrowd, whiteScreen], 0.8, 0xFF2C2425, FlxColor.WHITE]);
 				lossingHealth = false;
 			}
 		case 'end process':

@@ -1,0 +1,12 @@
+{
+	"displayName": "outrage",
+	"difficulties": ["simple","hard"],
+	"bpm": 155,
+	"icon": "the-chosen-one",
+	"color": "#FCAE00",
+	"coopAllowed": true,
+	"opponentModeAllowed": true,
+	"background": "outrage",
+	"portrait": "outrage",
+	"composer": "Sas Original"
+}
