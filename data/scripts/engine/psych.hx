@@ -134,7 +134,8 @@ function postCreate() {
 	fakeScoreText.alpha = 0;
 	healthBar.alpha = 0;
 	healthBarB.alpha = 0;
-	fakeScoreText.text = 'Score: ' + songScore + ' | Misses: ' + misses + ' | Rating: ?';
+	calculateRating();
+	fakeScoreText.text = 'Score: ' + songScore + '\nCombo Breaks: ' + misses + '\nAccuracy: 0% (?)';
 
 	scoreTxt.visible = false;
 	accuracyTxt.visible=false;
@@ -144,11 +145,6 @@ function postCreate() {
 	iconP1.alpha = 0;
 	iconP2.alpha = 0;
 
-	remove(comboGroup, true); 
-	comboGroup.scale.set(0.7,0.7);
-	comboGroup.updateHitbox();
-	comboGroup.x -= 420;
-	comboGroup.y += 320;
 	//Ratingssss.
 	ratingManager.hitWindows.clear();
 	hits.clear();
@@ -157,6 +153,10 @@ function postCreate() {
 	ratingManager.addRating({name:"bad", accuracy:0.4, window:135, score:100, splash:false});
 	ratingManager.addRating({name:"shit", accuracy:0, window:180, score:50, splash:false});
 	for (i in ratingManager.ratingData) hits[i.name]=0;
+
+	for(i in 0...iconArray.length){
+		iconArray[i].y = healthBar.y - 50;
+	}
 }
 
 function beatHit() {
@@ -165,6 +165,13 @@ function beatHit() {
 		FlxTween.angle(iconP1, -30, 0, Conductor.crochet / 1300 * gfSpeed, {ease: FlxEase.quadOut});
 		FlxTween.angle(iconP2, -30, 0, Conductor.crochet / 1300 * gfSpeed, {ease: FlxEase.quadOut});
 	}
+
+	var funny:Float = (healthBar.percent * 0.01) + 0.01;
+
+	iconP1.setGraphicSize(Std.int(iconP1.width + (50 * funny)),Std.int(iconP2.height - (25 * funny)));
+	iconP2.setGraphicSize(Std.int(iconP1.width + (50 * funny)), Std.int(iconP2.height - (25 * funny)));
+	iconP1.updateHitbox();
+	iconP2.updateHitbox();
 }
 
 function onSongStart() {
@@ -188,8 +195,21 @@ function postUpdate(elapsed:Float) {
 
 		if(FlxG.save.data.timeBarType != 'Song Name') timeTxt.text = FlxStringUtil.formatTime(secondsTotal, false);
 	//}
-	comboGroup.cameras = [camHUD];
-    add(comboGroup);
+
+	switch(uiType) {
+		case 'psychDef':
+		iconP1.setGraphicSize(Std.int(FlxMath.lerp(150, iconP1.width, FlxMath.bound(1 - (elapsed * 30), 0, 1))));
+		iconP2.setGraphicSize(Std.int(FlxMath.lerp(150, iconP2.width, FlxMath.bound(1 - (elapsed * 30), 0, 1))));
+		default:
+		var mult:Float = FlxMath.lerp(0.75, iconP1.scale.x, FlxMath.bound(1 - (elapsed * 9/* * playbackRate*/), 0, 1));
+		iconP1.scale.set(mult, mult);
+
+		var mult:Float = FlxMath.lerp(0.75, iconP2.scale.x, FlxMath.bound(1 - (elapsed * 9/* * playbackRate*/), 0, 1));
+		iconP2.scale.set(mult, mult);
+	}
+		
+	iconP1.updateHitbox();
+	iconP2.updateHitbox();
 
 	iconP1.x = (healthBar.x + 80) + ((healthBar.width - 160) * FlxMath.remapToRange(healthBar.percent, 0, 100, 100, 0) * 0.01) + (150 * iconP1.scale.x - 150) / 2 - Flags.ICON_OFFSET;
 	iconP2.x = (healthBar.x + 80) + ((healthBar.width - 160) * FlxMath.remapToRange(healthBar.percent, 0, 100, 100, 0) * 0.01) - (150 * iconP2.scale.x) / 2 - Flags.ICON_OFFSET * 2;
@@ -198,7 +218,6 @@ function postUpdate(elapsed:Float) {
 var accuracyText = '?';
 function onPostPlayerMiss(e) {
 	calculateRating();
-	fakeScoreText.text = 'Score: ' + songScore + ' | Misses: ' + misses+ ' | Rating: ' + accuracyText;
 }
 
 var scoreTxtTween;
@@ -212,7 +231,10 @@ function onPlayerHit(e) {
 			scoreTxtTween = null;
 		}
 	});
-	fakeScoreText.text = 'Score: ' + songScore + ' | Misses: ' + misses + ' | Rating: ' + accuracyText;
+}
+
+function onDadHit(e){
+	if(dad.getAnimName()== 'attack')e.cancelAnim();
 }
 
 function calculateRating() {
@@ -240,6 +262,9 @@ function calculateRating() {
 	else if (misses > 0) advancedRating = "Clear";
 
 	accuracyText = ratingName + ' (' + (Math.floor(accuracy * 10000) / 100) + '%) - ' + advancedRating;
+	fakeScoreText.text = 'Score: ' + songScore + '\nCombo Breaks: ' + misses+ '\nAccuracy: ' + accuracyText;
+	remove(comboGroup, true); 
+	add(comboGroup);
 }
 
 function reloadTimeBarColors() {
@@ -255,3 +280,11 @@ function onGamePause(event) {
         
     openSubState(new ModSubState("tco/substates/PauseSubState"));
 }
+
+/*
+Strum_pos_shit.
+
+scale=0.8
+strum0.x=0.2
+strum1.x=0.8
+*/

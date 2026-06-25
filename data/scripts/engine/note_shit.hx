@@ -10,11 +10,9 @@ function onNoteCreation(e)
 		case 'fire-note':e.noteSprite = "game/notes/dangerNotes/fire";
         e.note.avoid = true;
 		case 'Hurt Note':e.noteSprite = "game/notes/hurt";
-        e.note.avoid = true;
 		case 'AV':e.noteSprite = "game/notes/dangerNotes/av";
         e.note.avoid = true;
 		case 'Tdl note':e.noteSprite = "game/notes/dangerNotes/tdl_blade";
-        e.note.avoid = true;
 		e.note.extra.set("checkedSlash",false);
 	}
 
@@ -37,13 +35,15 @@ function onPlayerMiss(e)
 		case 'fire-note':e.cancel(true); e.note.strumLine.deleteNote(e.note);
 		case 'Hurt Note':e.cancel(true); e.note.strumLine.deleteNote(e.note);
 		case 'AV':e.cancel(true); e.note.strumLine.deleteNote(e.note);
-		case 'Tdl note':health -= 0.8; dad.playAnim('attack', true);
+		case 'Tdl note':health -= PlayState.difficulty.toLowerCase()=='insane'?1.5:0.8;
+		dad.playAnim('attack', true);
 	}
 
 function onPlayerHit(e){
 	switch(e.noteType){
-		case 'fire-note':e.countAsCombo = e.showRating = e.showSplash = false;
-        e.strumGlowCancelled = true;
+		case 'fire-note':e.healthGain=0;
+		e.countAsCombo = e.showRating = e.showSplash = false;
+        e.misses=e.strumGlowCancelled = true;
         FlxG.sound.play(Paths.sound("burnSound"));
 
         health -= 0.5; 
@@ -58,24 +58,19 @@ function onPlayerHit(e){
 			boyfriend.playAnim('hurt', true);
 		}
 		e.misses=true;
-		case 'AV':e.misses=true;
+		case 'AV':e.misses=e.strumGlowCancelled = true;
         e.countAsCombo = e.showRating = e.showSplash = false;
-        e.strumGlowCancelled = true;
 		case 'gf-sing':e.cancelAnim();
         gf.playSingAnim(e.direction, e.animSuffix);
-		case 'Tdl note':
-		FlxG.sound.play(Paths.sound("darkLordAttack"));
+		case 'Tdl note':FlxG.sound.play(Paths.sound("darkLordAttack"));
 
 		if(boyfriend.hasAnim('dodge')) {
 			e.cancelAnim();
 			boyfriend.playAnim('dodge', true);
 		}
 	}
-	if(boyfriend.getAnimName()=='dodge'){
-		e.cancelAnim();
-	}
 }
 
 function onDadHit(e){
-	if(slashing)e.cancelAnim();
+	if(dad.getAnimName()== 'attack')e.cancelAnim();
 }

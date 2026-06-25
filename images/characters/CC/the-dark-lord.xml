@@ -4,9 +4,30 @@ Created with Funkin Packer v0.1.2 https://neeeoo.github.io/funkin-packer/
 -->
 <TextureAtlas imagePath="the-dark-lord.png" width="4567" height="4835">
 	<SubTexture name="TDL Slice0000" x="3566" y="483" width="544" height="468" frameX="-101" frameY="-333" frameWidth="1122" frameHeight="804"/>
+	<SubTexture name="TDL Slice0001" x="3708" y="1" width="544" height="468" frameX="-101" frameY="-333" frameWidth="1122" frameHeight="804"/>
+	<SubTexture name="TDL Slice0002" x="919" y="3411" width="551" height="479" frameX="-123" frameY="-325" frameWidth="1122" frameHeight="804"/>
+	<SubTexture name="TDL Slice0003" x="1" y="3681" width="551" height="479" frameX="-123" frameY="-325" frameWidth="1122" frameHeight="804"/>
+	<SubTexture name="TDL Slice0004" x="3229" y="1672" width="609" height="512" frameX="-142" frameY="-289" frameWidth="1122" frameHeight="804"/>
 	<SubTexture name="TDL Slice0005" x="1" y="1" width="826" height="797" frameX="-296" frameY="-0" frameWidth="1122" frameHeight="804"/>
-	<SubTexture name="TDL Right0001" x="1" y="801" width="843" height="551" frameX="-254" frameY="-1" frameWidth="1109" frameHeight="552"/>
 	<SubTexture name="TDL Slice0006" x="830" y="1" width="586" height="781" frameX="-167" frameY="-13" frameWidth="1122" frameHeight="804"/>
+	<SubTexture name="TDL Slice0007" x="1969" y="743" width="640" height="606" frameX="-0" frameY="-190" frameWidth="1122" frameHeight="804"/>
+	<SubTexture name="TDL Slice0008" x="1473" y="3411" width="429" height="615" frameX="-211" frameY="-181" frameWidth="1122" frameHeight="804"/>
+	<SubTexture name="TDL Slice0009" x="1905" y="3411" width="429" height="615" frameX="-211" frameY="-181" frameWidth="1122" frameHeight="804"/>
+	<SubTexture name="TDL Slice0010" x="2797" y="2784" width="456" height="622" frameX="-185" frameY="-175" frameWidth="1122" frameHeight="804"/>
+	<SubTexture name="TDL Slice0011" x="3256" y="2784" width="456" height="622" frameX="-185" frameY="-175" frameWidth="1122" frameHeight="804"/>
+	<SubTexture name="TDL Slice0012" x="933" y="2786" width="456" height="622" frameX="-185" frameY="-175" frameWidth="1122" frameHeight="804"/>
+	<SubTexture name="TDL Slice0013" x="1" y="3056" width="456" height="622" frameX="-185" frameY="-175" frameWidth="1122" frameHeight="804"/>
+	<SubTexture name="TDL Slice0014" x="3107" y="483" width="456" height="623" frameX="-185" frameY="-175" frameWidth="1122" frameHeight="804"/>
+	<SubTexture name="TDL Slice0015" x="460" y="3056" width="456" height="622" frameX="-185" frameY="-175" frameWidth="1122" frameHeight="804"/>
+	<SubTexture name="TDL Slice0016" x="1392" y="2786" width="456" height="622" frameX="-185" frameY="-175" frameWidth="1122" frameHeight="804"/>
+	<SubTexture name="TDL Slice0017" x="1851" y="2786" width="456" height="622" frameX="-185" frameY="-175" frameWidth="1122" frameHeight="804"/>
+	<SubTexture name="TDL Slice0018" x="2310" y="2786" width="456" height="622" frameX="-185" frameY="-175" frameWidth="1122" frameHeight="804"/>
+	<SubTexture name="TDL Slice0019" x="2769" y="3409" width="456" height="622" frameX="-185" frameY="-175" frameWidth="1122" frameHeight="804"/>
+	<SubTexture name="TDL Slice0020" x="3228" y="3409" width="456" height="622" frameX="-185" frameY="-175" frameWidth="1122" frameHeight="804"/>
+	<SubTexture name="TDL Slice0021" x="2797" y="2784" width="456" height="622" frameX="-185" frameY="-175" frameWidth="1122" frameHeight="804"/>
+	<SubTexture name="TDL Slice0022" x="3256" y="2784" width="456" height="622" frameX="-185" frameY="-175" frameWidth="1122" frameHeight="804"/>
+	<SubTexture name="TDL Slice0023" x="933" y="2786" width="456" height="622" frameX="-185" frameY="-175" frameWidth="1122" frameHeight="804"/>
+	<SubTexture name="TDL Right0001" x="1" y="801" width="843" height="551" frameX="-254" frameY="-1" frameWidth="1109" frameHeight="552"/>
 	<SubTexture name="TDL Right0000" x="1" y="1355" width="819" height="551" frameX="-0" frameY="-0" frameWidth="1109" frameHeight="552"/>
 	<SubTexture name="TDL Up0005" x="847" y="785" width="568" height="724" frameX="-0" frameY="-26" frameWidth="569" frameHeight="750"/>
 	<SubTexture name="TDL Up0001" x="1418" y="785" width="548" height="750" frameX="-8" frameY="-0" frameWidth="569" frameHeight="750"/>
@@ -14,7 +35,6 @@ Created with Funkin Packer v0.1.2 https://neeeoo.github.io/funkin-packer/
 	<SubTexture name="TDL Up0003" x="823" y="1512" width="548" height="739" frameX="-8" frameY="-11" frameWidth="569" frameHeight="750"/>
 	<SubTexture name="TDL Up0004" x="1" y="1909" width="548" height="729" frameX="-8" frameY="-21" frameWidth="569" frameHeight="750"/>
 	<SubTexture name="TDL Down0000" x="1374" y="1538" width="954" height="415" frameX="-0" frameY="-0" frameWidth="954" frameHeight="416"/>
-	<SubTexture name="TDL Slice0007" x="1969" y="743" width="640" height="606" frameX="-0" frameY="-190" frameWidth="1122" frameHeight="804"/>
 	<SubTexture name="TDL Down0002" x="1970" y="1" width="928" height="415" frameX="-16" frameY="-0" frameWidth="954" frameHeight="416"/>
 	<SubTexture name="TDL Down0001" x="1374" y="1956" width="928" height="414" frameX="-16" frameY="-0" frameWidth="954" frameHeight="416"/>
 	<SubTexture name="TDL Down0003" x="1" y="2641" width="929" height="412" frameX="-16" frameY="-2" frameWidth="954" frameHeight="416"/>
@@ -25,24 +45,7 @@ Created with Funkin Packer v0.1.2 https://neeeoo.github.io/funkin-packer/
 	<SubTexture name="TDL Right0002" x="2331" y="1352" width="748" height="498" frameX="-356" frameY="-54" frameWidth="1109" frameHeight="552"/>
 	<SubTexture name="TDL Up0000" x="2612" y="419" width="492" height="749" frameX="-44" frameY="-1" frameWidth="569" frameHeight="750"/>
 	<SubTexture name="TDL Right0003" x="3082" y="1171" width="737" height="498" frameX="-356" frameY="-54" frameWidth="1109" frameHeight="552"/>
-	<SubTexture name="TDL Slice0004" x="3229" y="1672" width="609" height="512" frameX="-142" frameY="-289" frameWidth="1122" frameHeight="804"/>
 	<SubTexture name="TDL Right0004" x="3107" y="1" width="598" height="479" frameX="-359" frameY="-73" frameWidth="1109" frameHeight="552"/>
-	<SubTexture name="TDL Slice0014" x="3107" y="483" width="456" height="623" frameX="-185" frameY="-175" frameWidth="1122" frameHeight="804"/>
-	<SubTexture name="TDL Slice0010" x="2797" y="2784" width="456" height="622" frameX="-185" frameY="-175" frameWidth="1122" frameHeight="804"/>
-	<SubTexture name="TDL Slice0011" x="3256" y="2784" width="456" height="622" frameX="-185" frameY="-175" frameWidth="1122" frameHeight="804"/>
-	<SubTexture name="TDL Slice0012" x="933" y="2786" width="456" height="622" frameX="-185" frameY="-175" frameWidth="1122" frameHeight="804"/>
-	<SubTexture name="TDL Slice0013" x="1" y="3056" width="456" height="622" frameX="-185" frameY="-175" frameWidth="1122" frameHeight="804"/>
-	<SubTexture name="TDL Slice0015" x="460" y="3056" width="456" height="622" frameX="-185" frameY="-175" frameWidth="1122" frameHeight="804"/>
-	<SubTexture name="TDL Slice0016" x="1392" y="2786" width="456" height="622" frameX="-185" frameY="-175" frameWidth="1122" frameHeight="804"/>
-	<SubTexture name="TDL Slice0017" x="1851" y="2786" width="456" height="622" frameX="-185" frameY="-175" frameWidth="1122" frameHeight="804"/>
-	<SubTexture name="TDL Slice0018" x="2310" y="2786" width="456" height="622" frameX="-185" frameY="-175" frameWidth="1122" frameHeight="804"/>
-	<SubTexture name="TDL Slice0019" x="2769" y="3409" width="456" height="622" frameX="-185" frameY="-175" frameWidth="1122" frameHeight="804"/>
-	<SubTexture name="TDL Slice0020" x="3228" y="3409" width="456" height="622" frameX="-185" frameY="-175" frameWidth="1122" frameHeight="804"/>
-	<SubTexture name="TDL Slice0002" x="919" y="3411" width="551" height="479" frameX="-123" frameY="-325" frameWidth="1122" frameHeight="804"/>
-	<SubTexture name="TDL Slice0003" x="1" y="3681" width="551" height="479" frameX="-123" frameY="-325" frameWidth="1122" frameHeight="804"/>
-	<SubTexture name="TDL Slice0008" x="1473" y="3411" width="429" height="615" frameX="-211" frameY="-181" frameWidth="1122" frameHeight="804"/>
-	<SubTexture name="TDL Slice0009" x="1905" y="3411" width="429" height="615" frameX="-211" frameY="-181" frameWidth="1122" frameHeight="804"/>
-	<SubTexture name="TDL Slice0001" x="3708" y="1" width="544" height="468" frameX="-101" frameY="-333" frameWidth="1122" frameHeight="804"/>
 	<SubTexture name="TDL Left0001" x="3822" y="954" width="452" height="522" frameX="-5" frameY="-0" frameWidth="527" frameHeight="522"/>
 	<SubTexture name="TDL Left0004" x="3687" y="3409" width="452" height="521" frameX="-14" frameY="-1" frameWidth="527" frameHeight="522"/>
 	<SubTexture name="TDL Left0002" x="3715" y="2784" width="451" height="522" frameX="-11" frameY="-0" frameWidth="527" frameHeight="522"/>
@@ -90,9 +93,6 @@ Created with Funkin Packer v0.1.2 https://neeeoo.github.io/funkin-packer/
 	<SubTexture name="TDL Idle0014" x="4137" y="3933" width="207" height="591" frameX="-0" frameY="-4" frameWidth="209" frameHeight="595"/>
 	<SubTexture name="TDL Idle0028" x="4137" y="3933" width="207" height="591" frameX="-0" frameY="-4" frameWidth="209" frameHeight="595"/>
 	<SubTexture name="TDL Idle0029" x="4137" y="3933" width="207" height="591" frameX="-0" frameY="-4" frameWidth="209" frameHeight="595"/>
-	<SubTexture name="TDL Slice0021" x="2797" y="2784" width="456" height="622" frameX="-185" frameY="-175" frameWidth="1122" frameHeight="804"/>
-	<SubTexture name="TDL Slice0022" x="3256" y="2784" width="456" height="622" frameX="-185" frameY="-175" frameWidth="1122" frameHeight="804"/>
-	<SubTexture name="TDL Slice0023" x="933" y="2786" width="456" height="622" frameX="-185" frameY="-175" frameWidth="1122" frameHeight="804"/>
 	<SubTexture name="TDL Up0006" x="847" y="785" width="568" height="724" frameX="-0" frameY="-26" frameWidth="569" frameHeight="750"/>
 	<SubTexture name="TDL Up0007" x="847" y="785" width="568" height="724" frameX="-0" frameY="-26" frameWidth="569" frameHeight="750"/>
 	<SubTexture name="TDL Up0008" x="847" y="785" width="568" height="724" frameX="-0" frameY="-26" frameWidth="569" frameHeight="750"/>

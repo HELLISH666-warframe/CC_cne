@@ -173,6 +173,14 @@ function onEvent(_) {
 	}
 }
 
+function onDadHit(e){
+	switch(e.character.curCharacter.toLowerCase()){
+		case 'the-chosen-one':
+			if (!FlxG.fullscreen || !window.maximized) setCamShake([camHUD, camGame], 0.015, 0.05, 0.005);
+			else setCamShake([camHUD, camGame, camOther], 0.015, 0.05, 0.0045);
+	}
+}
+
 function onSongEnd() {
 	trace(FlxG.save.data.songsUnlocked);
 	if(!FlxG.save.data.songsUnlocked.contains(curSong)){
@@ -297,8 +305,7 @@ function setAlpha(object:Array<FlxSprite>, visibility:Int) for (i in 0...object.
 
 function setCamShake(shit:Array<FlxCamera>, intensity:Float, duration:Float, intensityAlt:Float) {
 	for (i in 0...shit.length) {
-		if (SONG.notes[curSection].mustHitSection) camGame.shake(intensityAlt, duration);
-		else shit[i].shake(intensity, duration);
+		curCameraTarget==1? camGame.shake(intensityAlt, duration):shit[i].shake(intensity, duration);
 	}
 }
 
@@ -360,7 +367,7 @@ function tcoStickPage(show:Bool) {
 	}
 }
 
-public function endProcessBSODS(fuck:Bool, type:Int) {
+function endProcessBSODS(fuck:Bool, type:Int) {
 	switch(type) {
 		case 1:if (fuck && bsodStatic != null) alphaTween([bsodStatic], 1, 1);
 		else alphaTween([bsodStatic], 0, 1);
@@ -369,7 +376,7 @@ public function endProcessBSODS(fuck:Bool, type:Int) {
 	}
 }
 
-public function showUpCorruptBackground(fuck:Bool) {
+function showUpCorruptBackground(fuck:Bool) {
 	if (fuck) if (corruptBG != null) setAlpha([corruptBG, corruptFloor], 1);
 	else if (corruptBG != null) setAlpha([corruptBG, corruptFloor], 0);
 }

@@ -10,12 +10,13 @@ import funkin.backend.chart.Chart;
 songs = [];
 var songRealList = [	
 	["adobe","outrage","end-process","morality","stick-em-up","artistry","proficiency","masterpiece"],
-	["trojan","conflict","dashpulse","time-travel","cubify","kickstarter","contrivance","messenger","amity","voltagen","issue","tune-in","unfaithful","rombie","fancy-funk","powerup","catto"],
+	["trojan","conflict","end-process-(reborn)","dashpulse","time-travel","cubify","kickstarter","contrivance","messenger","amity","voltagen","issue","tune-in","unfaithful","rombie","fancy-funk","powerup","catto"],
 	["enmity","doppelganger","aurora","phantasm"],
 	["adobe-(old)","outrage-(older)","alan-(old)","outrage-(old)"],
 	["rewrite"]//35_songs_holy_shit.
 ];
 
+if(!FlxG.save.data.songsUnlocked.contains('end-process'))songRealList[1].remove("end-process-(reborn)");
 if(FlxG.save.data.songsUnlocked.contains('redzone-error'))songRealList[1].push("redzone-error");
 if(FlxG.save.data.alanUnlocked)songRealList[1].push("alan");
 if(FlxG.save.data.songsUnlocked.contains('catto'))songRealList[3].push("catto-(old)");

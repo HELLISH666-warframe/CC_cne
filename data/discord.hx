@@ -8,7 +8,10 @@ function onDiscordPresenceUpdate(e) {
 	var data = e.presence;
 
 	if(data.button1Label == null)data.button1Label = "Download The Mod";
-	if(data.button1Url == null)data.button1Url = "ttps://gamebanana.com/mods/468922";
+	if(data.button1Url == null)data.button1Url = "https://gamebanana.com/mods/468922";
+	
+	if(data.button2Label == null)data.button2Label = "Download The Unoffical CNE Port";
+	if(data.button2Url == null)data.button2Url = "https://github.com/HELLISH666-warframe/CC_cne";
 }
 
 function onPlayStateUpdate() {

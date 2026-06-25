@@ -19,6 +19,27 @@ public var bsod:BGSprite;
 public var stickpage:BGSprite;
 public var stickpageFloor:BGSprite;
 
+//end process:
+public var newgroundsBurn:FlxSprite;
+public var twitterBurn:FlxSprite;
+public var googleBurn:FlxSprite;
+
+var virabot1:BGSprite;
+var virabot2:BGSprite;
+var virabot3:BGSprite;
+var virabot4:BGSprite;
+
+//corrupted bgs:
+public var corruptBG:BGSprite;
+public var corruptFloor:BGSprite;
+
+//bsod 2 and rsod + conflict bsod:
+public var bsodStatic:BGSprite;
+public var rsod:BGSprite;
+
+//Popup Mechanic:
+var popupsExplanation:FlxText;
+
 public var whiteScreen:FlxSprite;
 var time:Float = 0;
 public var redthing:FlxSprite;
@@ -43,7 +64,7 @@ function postNew() {
 
 	whiteScreen.color = Background1.color;
 
-	switch(PlayState.SONG.meta.name.toLowerCase()){
+	switch(PlayState.SONG.meta.displayName.toLowerCase()){
 		case 'adobe':noCurLight = true;
 		Crowd = new BGSprite('chapter1/theBGGuyz', -400, 7, 0.95, 0.95, ['BG  Guys']);
 		Crowd.setGraphicSize(Std.int(Crowd.width * 1.1));
@@ -80,7 +101,7 @@ function postNew() {
 		fires2.visible = false;
 		add(fires2);
 
-		if(PlayState.SONG.meta.name.toLowerCase() == 'outrage')  {
+		if(PlayState.SONG.meta.displayName.toLowerCase() == 'outrage')  {
 			stickpage = new BGSprite('chapter1/victim/distorted_stickpage_bg', -50, -90, 0.9, 0.9);
 			stickpage.setGraphicSize(Std.int(stickpage.width * 2.4));
 			stickpage.alpha = 0.0001;
@@ -152,8 +173,8 @@ function postNew() {
 			googleBurn.x += 250;
 			googleBurn.angle = -4;
 			add(googleBurn);
-			//FlxTween.tween(googleBurn, {y: googleBurn.y + 30}, 1, {ease:FlxEase.smoothStepInOut, type: PINGPONG});
-			FlxTween.angle(googleBurn, googleBurn.angle, 4, 2, {ease: FlxEase.quartInOut, type: PINGPONG});
+			FlxTween.tween(googleBurn, {y: googleBurn.y + 30}, 1, {ease:FlxEase.smoothStepInOut, type: FlxTween.PINGPONG});
+			FlxTween.angle(googleBurn, googleBurn.angle, 4, 2, {ease: FlxEase.quartInOut, type: FlxTween.PINGPONG});
 
 			twitterBurn = new FlxSprite(1300, -820); //thank to god the most toxic social media is on fire
 			twitterBurn.frames = Paths.getSparrowAtlas('chapter1/EProcess/TwitterBurning');
@@ -162,8 +183,8 @@ function postNew() {
 			twitterBurn.scale.set(0.7, 0.7);
 			twitterBurn.angle = -4;
 			add(twitterBurn);
-			//FlxTween.tween(twitterBurn, {y: twitterBurn.y + 30}, 1, {ease:FlxEase.smoothStepInOut, type: PINGPONG});
-			FlxTween.angle(twitterBurn, twitterBurn.angle, 4, 2, {ease: FlxEase.quartInOut, type: PINGPONG});
+			FlxTween.tween(twitterBurn, {y: twitterBurn.y + 30}, 1, {ease:FlxEase.smoothStepInOut, type: FlxTween.PINGPONG});
+			FlxTween.angle(twitterBurn, twitterBurn.angle, 4, 2, {ease: FlxEase.quartInOut, type: FlxTween.PINGPONG});
 
 			newgroundsBurn = new FlxSprite(-1000, -1020);
 			newgroundsBurn.frames = Paths.getSparrowAtlas('chapter1/EProcess/NewgroundsBurning');
@@ -172,27 +193,27 @@ function postNew() {
 			newgroundsBurn.scale.set(0.7, 0.7);
 			newgroundsBurn.angle = -4;
 			add(newgroundsBurn);
-			//FlxTween.tween(newgroundsBurn, {y: newgroundsBurn.y + 30}, 1, {ease:FlxEase.smoothStepInOut, type: PINGPONG});
-			FlxTween.angle(newgroundsBurn, newgroundsBurn.angle, 4, 2, {ease: FlxEase.quartInOut, type: PINGPONG});
+			FlxTween.tween(newgroundsBurn, {y: newgroundsBurn.y + 30}, 1, {ease:FlxEase.smoothStepInOut, type: FlxTween.PINGPONG});
+			FlxTween.angle(newgroundsBurn, newgroundsBurn.angle, 4, 2, {ease: FlxEase.quartInOut, type: FlxTween.PINGPONG});
 		}
 
 		corruptBG = new BGSprite('chapter1/bgCorrupted', -650, -600, 0.9, 0.9);
 		corruptBG.setGraphicSize(Std.int(corruptBG.width * 1.1));
 		corruptBG.color = 0xFF7B6CAD;
 		corruptBG.alpha = 0.0001;
-		if (FlxG.save.data.shaders) corruptBG.shader = new CRTShader();
+		if (FlxG.save.data.shaders) corruptBG.shader = new CustomShader("CRT");
 
 		corruptFloor = new BGSprite('chapter1/floorCorrupted', -750, -405, 1, 1);
 		corruptFloor.setGraphicSize(Std.int(corruptFloor.width * 1.2));
 		corruptFloor.color = 0xFF7B6CAD;
 		corruptFloor.alpha = 0.0001;
-		if (FlxG.save.data.shaders) corruptFloor.shader = new CRTShader();
+		if (FlxG.save.data.shaders) corruptFloor.shader = new CustomShader("CRT");
 
 		bsodStatic = new BGSprite('chapter1/EProcess/error_3rdsong', -50, -90, 1, 1);
 		bsodStatic.setGraphicSize(Std.int(bsodStatic.width * 2.4));
 		bsodStatic.antialiasing = Options.antialiasing;
 		bsodStatic.alpha = 0.0001;
-		if (FlxG.save.data.shaders) bsodStatic.shader = new CRTShader();
+		if (FlxG.save.data.shaders) bsodStatic.shader = new CustomShader("CRT");
 
 		rsod = new BGSprite('chapter1/EProcess/rsod', -50, -90, 1, 1);
 		rsod.setGraphicSize(Std.int(rsod.width * 2.4));
@@ -205,7 +226,7 @@ function postNew() {
 		redthing.alpha = 0.0001;
 		add(redthing);
 
-		if (PlayState.SONG.meta.displayName.toLowerCase() == 'end process' && PlayStateisStoryMode) {
+		if (PlayState.SONG.meta.displayName.toLowerCase() == 'end process' && PlayState.isStoryMode) {
 			popupsExplanation = new FlxText(0, 0, FlxG.width, "Close the popups when they appear,\nand press the slice notes", 20);
 			popupsExplanation.setFormat(Paths.font("phantommuff.ttf"), 60, FlxColor.WHITE, 'center', FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 			popupsExplanation.borderSize = 2;
@@ -215,12 +236,14 @@ function postNew() {
 			add(popupsExplanation);
 		}
 
-		if (FlxG.save.data.shaders) rsod.shader = new CRTShader();
+		if (FlxG.save.data.shaders) rsod.shader = new CustomShader("CRT");
 
 		FlxG.camera.fade(FlxColor.BLACK, 0, false);
 
-		//chromHandler = 0.0045;
-		if (FlxG.save.data.shaders) addShaderToCamera(['camgame', 'camhud'], new ChromaticAberrationEffect(0.0045));
+		if (FlxG.save.data.shaders) {camGame.addShader(ChromaticAberrationEffect);
+			camHUD.addShader(ChromaticAberrationEffect);
+			setChrome(ChromaticAberrationEffect,0.0045);
+		}
 	}
 
 	Floor = new BGSprite('chapter1/floor', -750, 713, 1, 1);
@@ -251,7 +274,7 @@ function postNew() {
 	bottomBarsALT.y += 450;
 	add(bottomBarsALT);
 
-	if (PlayState.SONG.meta.name.toLowerCase() == 'phantasm') {
+	if (PlayState.SONG.meta.displayName.toLowerCase() == 'phantasm') {
 		defaultCamZoom = 1.8;
 		GameOverSubstate.deathSoundName = 'aurora_loss_sfx';
 	}
@@ -260,7 +283,7 @@ function postNew() {
 
 	oldSongs = false;
 
-	switch(PlayState.SONG.meta.name.toLowerCase()) {
+	switch(PlayState.SONG.meta.displayName.toLowerCase()) {
 		case 'outrage':add(stickpage); add(stickpageFloor); add(bsod);
 		case 'phantasm':add(bsod);
 		case 'end process':add(corruptBG); add(corruptFloor); add(bsodStatic); add(rsod);
@@ -275,7 +298,7 @@ function postNew() {
 	}
 }
 function create() {killEVERYONE();}
-function postCreate() {switch(PlayState.SONG.meta.name.toLowerCase()) {
+function postCreate() {switch(PlayState.SONG.meta.displayName.toLowerCase()) {
 		case 'adobe':add(spotlightbf); add(spotlightdad);
 	}
 }
@@ -289,7 +312,7 @@ function killEVERYONE() {
 }
 
 function onStartCountdown() {
-	switch(PlayState.SONG.meta.name.toLowerCase()) {
+	switch(PlayState.SONG.meta.displayName.toLowerCase()) {
 		case 'adobe':spotlightdad.x = dad.x - 400;
 		spotlightdad.y = dad.y + dad.height - 1550;
 
@@ -355,14 +378,14 @@ function stepHit() {
 				case 192:if(popupsExplanation != null) FlxTween.tween(popupsExplanation, {alpha: 0}, 1);
 				FlxG.camera.fade(FlxColor.BLACK, 1, true);
 				case 1344:FlxTween.tween(redthing, {alpha: 0}, 0.4);
-				showUpCorruptBackground(true);
+				scripts.call('showUpCorruptBackground',[true]);
 				dad.color = 0xFF7A006A;
-				boyfriendGroup.color = 0xFF7B6CAD;
-				case 1536:endProcessBSODS(true, 1);
+				boyfriend.color = 0xFF7B6CAD;
+				case 1536:scripts.call('endProcessBSODS',[true, 1]);
 				FlxTween.color(dad, 1, 0xFF7A006A, FlxColor.WHITE);
-				FlxTween.color(boyfriendGroup, 1, 0xFF7B6CAD, FlxColor.WHITE);
-				case 1580:showUpCorruptBackground(false);
-				case 1600:endProcessBSODS(false, 1);
+				FlxTween.color(boyfriend, 1, 0xFF7B6CAD, FlxColor.WHITE);
+				case 1580:scripts.call('showUpCorruptBackground',[false]);
+				case 1600:scripts.call('endProcessBSODS',[false, 1]);
 				FlxTween.tween(redthing, {alpha: 1}, 0.8);
 				/*case 1328:constantShake = true;
 				case 1344:endProcessBSODS(true, 2);
@@ -398,22 +421,15 @@ function beatHit() {
 				FlxG.camera.flash(FlxColor.WHITE, Conductor.crochet / 1000);
 				case 144|192:defaultCamZoom += 0.2;
 				case 176|208:defaultCamZoom -= 0.2;
-				case 336:var epRTween1:FlxTween = FlxTween.tween(this, {defaultCamZoom: defaultCamZoom + 0.4}, Conductor.crochet / 1000 * 16, {ease: FlxEase.linear});
-				stopTweens.push(epRTween1);
-				case 368:var epRTween2:FlxTween = FlxTween.tween(this, {defaultCamZoom: defaultCamZoom - 0.4}, Conductor.crochet / 1000, {ease: FlxEase.linear});
-				stopTweens.push(epRTween2);
-				case 398:var epRTween3:FlxTween = FlxTween.tween(this, {defaultCamZoom: defaultCamZoom + 0.4}, Conductor.crochet / 1000 * 16, {ease: FlxEase.linear});
-				stopTweens.push(epRTween3);
+				case 336:FlxTween.tween(this, {defaultCamZoom: defaultCamZoom + 0.4}, Conductor.crochet / 1000 * 16, {ease: FlxEase.linear});
+				case 368:FlxTween.tween(this, {defaultCamZoom: defaultCamZoom - 0.4}, Conductor.crochet / 1000, {ease: FlxEase.linear});
+				case 398:FlxTween.tween(this, {defaultCamZoom: defaultCamZoom + 0.4}, Conductor.crochet / 1000 * 16, {ease: FlxEase.linear});
 				case 400:defaultCamZoom -= 0.4;
 				case 80:FlxTween.tween(redthing, {alpha: 1}, 0.6);
 				if (!FlxG.save.data.lowQuality) {
-					var epTween1:FlxTween = FlxTween.tween(newgroundsBurn, {y:newgroundsBurn.y +2300}, 2, {ease: FlxEase.linear, type:LOOPING});
-					var epTween2:FlxTween = FlxTween.tween(twitterBurn, {y:twitterBurn.y +1800}, 1.6, {ease: FlxEase.linear, type:LOOPING});
-					var epTween3:FlxTween = FlxTween.tween(googleBurn, {y:googleBurn.y +2900}, 2.5, {ease: FlxEase.linear, type:LOOPING});
-
-					stopTweens.push(epTween1);
-					stopTweens.push(epTween2);
-					stopTweens.push(epTween3);
+					FlxTween.tween(newgroundsBurn, {y:newgroundsBurn.y +2300}, 2, {ease: FlxEase.linear, type:FlxTween.LOOPING});
+					FlxTween.tween(twitterBurn, {y:twitterBurn.y +1800}, 1.6, {ease: FlxEase.linear, type:FlxTween.LOOPING});
+					FlxTween.tween(googleBurn, {y:googleBurn.y +2900}, 2.5, {ease: FlxEase.linear, type:FlxTween.LOOPING});
 				}
 				case 460:FlxG.sound.play(Paths.sound('intro3'), 0.8);
 				case 461:FlxG.sound.play(Paths.sound('intro2'), 0.8);
@@ -434,7 +450,7 @@ function beatHit() {
 				case 456:FlxG.camera.fade(FlxColor.BLACK, 2, false);*/
 			}
 	}
-	switch(PlayState.SONG.meta.name.toLowerCase()) {
+	switch(PlayState.SONG.meta.displayName.toLowerCase()) {
 		case 'adobe':if (curBeat % 1 == 0 && Crowd != null) setDance([Crowd], true);
 		case 'end process':if (!FlxG.save.data.lowQuality){
 			if (curBeat % 2 == 0 && virabot1 != null && virabot2 != null && virabot3 != null
