@@ -282,7 +282,7 @@ function skipIntro() {
 		socialItems.forEach(function(socialItem:FlxSprite) socialItem.alpha = 1);
 		FlxG.mouse.visible = true;
 		FlxG.mouse.useSystemCursor = false;
-		mouseShit('cursors/EProcess',1.5);
+		FlxG.mouse.load(Paths.image("chapter1/EProcess/alt"), 1.5, 0);
 				
 		skippedIntro = true;
 	}

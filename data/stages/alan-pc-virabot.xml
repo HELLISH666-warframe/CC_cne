@@ -1,14 +1,5 @@
 <!DOCTYPE codename-engine-stage>
 <stage zoom="0.5" folder="stages/">
-    <sprite name="alanBG" x="-80" y="-1800" sprite="trojan/alan_desktop" scroll="1" scale="5"/>
-    <sprite name="adobeWindow" x="1180" y="-1059" sprite="trojan/XD" scroll="1" scale="2"/>
-    <sprite name="sFWindow" x="516" y="-1340" sprite="trojan/stickFightwindow" scroll="1" scale="1.5"/>
-     <sprite name="daFloor" x="-21" y="771.5" sprite="trojan/floor" scroll="1"/>
-    <sprite name="tscseeing" x="2908" y="235" sprite="trojan/secbop" scroll="1" type="loop" scale="1.3"/>
-         <anim name="secbop" anim="secbop " loop="true"/>
-     <sprite name="radialLine" x="0" y="0" sprite="extras/radial line" scroll="1" type="loop"/>
-         <anim name="anime_lines" anim="anime_lines" loop="true"/>
-     <sprite name="redthing" x="0" y="0" sprite="stages/victim/vignette"/>
     <girlfriend x="2000" y="109"/>
     <player x="2320" y="50"/>
 	<opponent x="1100" y="50"/>

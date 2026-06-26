@@ -31,7 +31,7 @@ var colorTween:FlxTween;
 var bg:FlxSprite;
 var vignette:FlxSprite;
 public var camHUD:FlxCamera;
-var typin:String;
+var typin:String='';
 var KONAMI:String = '38 38 40 40 37 39 37 39 66 65 ';
 var codeClearTimer:Float;
 
@@ -150,7 +150,8 @@ function create() {
 	add(camFollowPos);
 
 	FlxG.mouse.visible = true;
-	mouseShit('cursors/EProcess',1.5,0);
+	FlxG.mouse.unload();
+	FlxG.mouse.load(Paths.image("chapter1/EProcess/alt"), 1.5, 0);
 
 	newToTheMod=!FlxG.save.data.songsUnlocked_mainWeek;
 

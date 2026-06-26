@@ -53,13 +53,6 @@ function new() {
     for (i in Paths.getFolderContent('data/global')) importScript("data/global/"+Path.withoutExtension(i)); //import different global scripts for organization reasons
 }
 
-public static function mouseShit(pa:String,?size:Float=1,?offsets=[0,0]){   
-    size??=1;offsets??=[0,0];
-    // STUPID ASS HSCRIPT DOESNT LET ME ADD DEFAULT PARAMETERS. FUK.//Thanks PJ Party for letting me know.
-    FlxG.mouse.useSystemCursor = false;
-    FlxG.mouse.load(Assets.getBitmapData(Paths.image(pa)),size,offsets[0],offsets[1]);
-}
-
 function destroy(){
     FlxG.mouse.useSystemCursor = true;
     FlxG.mouse.visible = false;

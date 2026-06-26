@@ -9,14 +9,13 @@ import funkin.backend.chart.Chart;
 
 songs = [];
 var songRealList = [	
-	["adobe","outrage","end-process","morality","stick-em-up","artistry","proficiency","masterpiece"],
-	["trojan","conflict","end-process-(reborn)","dashpulse","time-travel","cubify","kickstarter","contrivance","messenger","amity","voltagen","issue","tune-in","unfaithful","rombie","fancy-funk","powerup","catto"],
-	["enmity","doppelganger","aurora","phantasm"],
-	["adobe-(old)","outrage-(older)","alan-(old)","outrage-(old)"],
-	["rewrite"]//35_songs_holy_shit.
+	["adobe","outrage","end-process","morality","stick-em-up","artistry","proficiency","masterpiece"],//8
+	["practice-time","trojan","conflict","dashpulse","time-travel","cubify","kickstarter","contrivance","messenger","amity","voltagen","issue","tune-in","unfaithful","rombie","fancy-funk","powerup","catto"],//26
+	["enmity","doppelganger","aurora","phantasm"],//30
+	["adobe-(old)","outrage-(older)",'end-process-(older)',"alan-(old)","outrage-(old)","end-process-(old)"],//36
+	["rewrite"]//37_songs_holy_shit.
 ];
 
-if(!FlxG.save.data.songsUnlocked.contains('end-process'))songRealList[1].remove("end-process-(reborn)");
 if(FlxG.save.data.songsUnlocked.contains('redzone-error'))songRealList[1].push("redzone-error");
 if(FlxG.save.data.alanUnlocked)songRealList[1].push("alan");
 if(FlxG.save.data.songsUnlocked.contains('catto'))songRealList[3].push("catto-(old)");
@@ -108,7 +107,7 @@ function create() {
 
 	for (i in 0...songs.length) {
 		var wasPlayed:Bool = FlxG.save.data.songsUnlocked.contains(songs[i].name);
-		var songText = new FlxText(500, 650,500, wasPlayed ? songs[i].name.toUpperCase() : '???').setFormat(Paths.font("phantommuff.ttf"), 44, FlxColor.WHITE, 'center', FlxTextBorderStyle.OUTLINE, FlxColor.TRANSPARENT);
+		var songText = new FlxText(500, 650,600, wasPlayed ? songs[i].name.toUpperCase() : '???').setFormat(Paths.font("phantommuff.ttf"), 44, FlxColor.WHITE, 'center', FlxTextBorderStyle.OUTLINE, FlxColor.TRANSPARENT);
 		songText.screenCenter(FlxAxes.X);
 		songText.scrollFactor.set(1, 0);
 		if(songs[i].name.toLowerCase()=='trojan'&&wasPlayed&&FlxG.random.int(1, 4) == 1)songText.text='POWER-GAIN';

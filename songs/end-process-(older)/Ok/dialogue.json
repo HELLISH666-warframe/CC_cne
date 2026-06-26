@@ -1,0 +1,60 @@
+{
+	"dialogue": [
+		{
+			"speed": 0.05,
+			"portrait": "tdl_idle",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "Hehe, finally I get my turn."
+		},
+		{
+			"speed": 0.05,
+			"portrait": "bf",
+			"boxState": "normal",
+			"expression": "shocked",
+			"text": "bep?"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "tdl_static",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "You see, everyone here hates me"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "tdl_static",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "I'm surprised to see you here, though I would like to rap battle you."
+		},
+		{
+			"speed": 0.05,
+			"portrait": "tdl_static",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "You accept?"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "bf",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "beep"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "tdl_laugh",
+			"boxState": "angry",
+			"expression": "talk",
+			"text": "HAHAHA! I WILL RIP OUT YOUR TONGUE!!!"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "bf",
+			"boxState": "normal",
+			"expression": "shocked",
+			"text": "Boop beep!?"
+		}
+	]
+}

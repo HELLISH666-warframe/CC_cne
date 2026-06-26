@@ -1,10 +1,10 @@
 {
-	"displayName": "Conflict",
-	"difficulties": ["simple","insane","hard"],
+	"displayName": "conflict",
+	"difficulties": ["simple","hard","insane"],
 	"bpm": 160,
 	"icon": "the-chosen-one",
 	"color": "#FCAE00",
-	"background": "outrage",
+	"background": "conflict",
 	"portrait": "outrage",
 	"coopAllowed": true,
 	"opponentModeAllowed": true,

@@ -1,6 +1,6 @@
 {
 	"displayName": "outrage",
-	"difficulties": ["simple","hard","insane"],
+	"difficulties": ["simple","hard"],
 	"bpm": 155,
 	"icon": "the-chosen-one",
 	"color": "#FCAE00",
@@ -8,5 +8,5 @@
 	"opponentModeAllowed": true,
 	"background": "outrage",
 	"portrait": "outrage",
-	"composer": "amaarzadjali"
+	"composer": "Sas Original"
 }

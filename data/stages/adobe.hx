@@ -5,8 +5,8 @@ import psych.BGSprite;
 public var Crowd:BGSprite;
 public var Background1:BGSprite;
 public var Floor:BGSprite;
-public var spotlightdad = new FlxSprite().loadGraphic(Paths.image("stages/spotlight"));
-public var spotlightbf = new FlxSprite().loadGraphic(Paths.image("stages/spotlight"));
+public var spotlightdad;
+public var spotlightbf;
 
 //t.c.o:
 public var ScaredCrowd:BGSprite;
@@ -85,7 +85,7 @@ function postNew() {
 		//if (FlxG.save.data.shaders) addShaderToCamera(['camgame', 'camhud'], new ChromaticAberrationEffect(0.0005));//LATER_BRO.
 
 		FlxG.camera.fade(FlxColor.BLACK, 0, false);
-		case 'outrage'|'phantasm':FlxG.camera.fade(FlxColor.BLACK, 0, false);
+		case 'outrage (old)'|'phantasm':FlxG.camera.fade(FlxColor.BLACK, 0, false);
 
 		fires1 = new BGSprite('chapter1/victim/BGFire', 870, -240, 0.9, 0.9, ['Symbol 1 instance 1'], true);
 		fires1.setGraphicSize(Std.int(fires1.width * 1.4));
@@ -101,7 +101,7 @@ function postNew() {
 		fires2.visible = false;
 		add(fires2);
 
-		if(PlayState.SONG.meta.displayName.toLowerCase() == 'outrage')  {
+		if(PlayState.SONG.meta.displayName.toLowerCase() == 'outrage (old)')  {
 			stickpage = new BGSprite('chapter1/victim/distorted_stickpage_bg', -50, -90, 0.9, 0.9);
 			stickpage.setGraphicSize(Std.int(stickpage.width * 2.4));
 			stickpage.alpha = 0.0001;
@@ -133,7 +133,7 @@ function postNew() {
 			setChrome(ChromaticAberrationEffect,0.0005);
 		}
 		
-		case 'end process':FlxG.mouse.visible = true;
+		case 'end process (old)':FlxG.mouse.visible = true;
 		FlxG.mouse.unload();
 		FlxG.mouse.load(Paths.image("chapter1/EProcess/alt").bitmap, 1.5, 0);
 
@@ -226,7 +226,7 @@ function postNew() {
 		redthing.alpha = 0.0001;
 		add(redthing);
 
-		if (PlayState.SONG.meta.displayName.toLowerCase() == 'end process' && PlayState.isStoryMode) {
+		if (PlayState.SONG.meta.displayName.toLowerCase() == 'end process (old)' && PlayState.isStoryMode) {
 			popupsExplanation = new FlxText(0, 0, FlxG.width, "Close the popups when they appear,\nand press the slice notes", 20);
 			popupsExplanation.setFormat(Paths.font("phantommuff.ttf"), 60, FlxColor.WHITE, 'center', FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 			popupsExplanation.borderSize = 2;
@@ -284,9 +284,9 @@ function postNew() {
 	oldSongs = false;
 
 	switch(PlayState.SONG.meta.displayName.toLowerCase()) {
-		case 'outrage':add(stickpage); add(stickpageFloor); add(bsod);
+		case 'outrage (old)':add(stickpage); add(stickpageFloor); add(bsod);
 		case 'phantasm':add(bsod);
-		case 'end process':add(corruptBG); add(corruptFloor); add(bsodStatic); add(rsod);
+		case 'end process (old)':add(corruptBG); add(corruptFloor); add(bsodStatic); add(rsod);
 	}
 
 	if (needsBlackBG) {
@@ -306,6 +306,8 @@ function killEVERYONE() {
 	for(i in 0...strumLines.length){
 		for(c in 0...strumLines.members[i].characters.length){
 			remove(strumLines.members[i].characters[c]);
+			if(i>=2)insert(members.indexOf(Floor)+1,strumLines.members[i].characters[c]);
+			else
 			insert(members.indexOf(scripts.get('blackBG'))+1,strumLines.members[i].characters[c]);
 		}
 	}
@@ -355,7 +357,7 @@ function stepHit() {
 				spotlightdad.alpha = 0;
 				spotlightbf.alpha = 0;
 			}
-		case 'outrage':
+		case 'outrage (old)':
 			switch(curStep) {
 				case 1|8|16|32|40|48|64|72|80|96|104|112:
 				if(FlxG.save.data.flashing || !FlxG.save.data.lowQuality) FlxG.camera.fade(FlxColor.BLACK, 0.5, false);
@@ -372,7 +374,7 @@ function stepHit() {
 				if(FlxG.save.data.flashing) FlxG.camera.flash(FlxColor.WHITE, 1);
 				case 1025 | 1670:scripts.call('tcoBSOD',[false]);
 			}
-		case 'end process':
+		case 'end process (old)':
 			switch(curStep) {
 				case 1:if(popupsExplanation != null) FlxTween.tween(popupsExplanation, {alpha: 1}, 2);
 				case 192:if(popupsExplanation != null) FlxTween.tween(popupsExplanation, {alpha: 0}, 1);
@@ -396,7 +398,7 @@ function stepHit() {
 }
 function beatHit() {
 	switch(PlayState.SONG.meta.displayName.toLowerCase()) {
-		case 'outrage':
+		case 'outrage (old)':
 			switch(curBeat) {
 				case 32:if(FlxG.save.data.flashing) FlxG.camera.flash(FlxColor.RED, 0.5);
 				if (FlxG.save.data.shaders) setChrome(ChromaticAberrationEffect,0.0040);
@@ -411,7 +413,7 @@ function beatHit() {
 				scripts.call('colorTween',[[boyfriend, gf, Floor, Background1, ScaredCrowd, whiteScreen], 0.8, 0xFF2C2425, FlxColor.WHITE]);
 				lossingHealth = false;
 			}
-		case 'end process':
+		case 'end process (old)':
 			switch(curBeat) {
 				case 76:defaultCamZoom += 0.3;
 				case 78|79:defaultCamZoom -= 0.075;
@@ -452,7 +454,7 @@ function beatHit() {
 	}
 	switch(PlayState.SONG.meta.displayName.toLowerCase()) {
 		case 'adobe':if (curBeat % 1 == 0 && Crowd != null) setDance([Crowd], true);
-		case 'end process':if (!FlxG.save.data.lowQuality){
+		case 'end process (old)':if (!FlxG.save.data.lowQuality){
 			if (curBeat % 2 == 0 && virabot1 != null && virabot2 != null && virabot3 != null
 			&& virabot4 != null) setDance([virabot1, virabot2, virabot3, virabot4], true);
 		}
@@ -461,7 +463,7 @@ function beatHit() {
 
 function update(elapsed:Float) {
 	time += elapsed;
-	if(curSong == "outrage-(old)")
+	if(curSong == "outrage-(older)")
 	bsod.shader.data.iTime.value = [time];
 	if(curSong == "end-process-(old)"){
 		for(i in [bsodStatic,corruptFloor,corruptBG,rsod])
@@ -470,13 +472,13 @@ function update(elapsed:Float) {
 }
 
 function onSongEnd() {
-	if(PlayState.SONG.meta.displayName.toLowerCase() == 'end process' && PlayState.isStoryMode){
+	if(PlayState.SONG.meta.displayName.toLowerCase() == 'end process (old)' && PlayState.isStoryMode){
 		FlxG.save.data.songsUnlocked_mainWeek = true;
 	}
 }
 
 function destroy() {
-	if(PlayState.SONG.meta.displayName.toLowerCase() == 'end process'){
+	if(PlayState.SONG.meta.displayName.toLowerCase() == 'end process (old)'){
 		FlxG.mouse.unload();
 		FlxG.mouse.visible = false;
 	}

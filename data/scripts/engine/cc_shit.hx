@@ -3,6 +3,11 @@ public var camOther = new FlxCamera();
 public var camBars = new FlxCamera();
 public var camChar = new FlxCamera();
 
+//Popup Mechanic:
+var popUp:FlxSprite;
+var closePopup:FlxSprite;
+public var popUpTimer:FlxTimer;
+
 var tweenZoomEvent:FlxTween;
 var LightsColors:Array<FlxColor>; //for the vignette changing color
 
@@ -88,6 +93,13 @@ function beatHit() {
 
 function update(elapsed:Float) {
     healthDrainLolz(0.09 * elapsed, 0.2, multiplierDrain);
+
+	//TODO: rework
+	//TODO: 440, 22
+	if (popUp != null && closePopup != null){
+		FlxG.mouse.visible = true;
+		checkIfClicked(closePopup, 'EP popup');
+	}
 }
 
 //This_way_EVERY_event_is_atcually_loaded.
@@ -468,6 +480,48 @@ public function clearShaderFromCamera(cam:Array<String>) {
 			camGame.setFilters(newCamEffects);
 		}
 	}
+}
+
+function startCharacterPos(char:Character, ?gfCheck:Bool = false) {
+	if(gfCheck && char.curCharacter.startsWith('gf') || char.curCharacter.startsWith('animator-gf') && SONG.song.toLowerCase() == 'practice time') { //IF DAD IS GIRLFRIEND, HE GOES TO HER POSITION
+		char.setPosition(GF_X, GF_Y);
+		char.scrollFactor.set(0.95, 0.95);
+		char.danceEveryNumBeats = 2;
+	}
+	char.x += char.positionArray[0];
+	char.y += char.positionArray[1];
+}
+
+function checkIfClicked(object:FlxSprite, tag:String) {//the tag is the thing used for the select void
+	if(!FlxG.mouse.justPressed) return;
+	if(!mouseOverlaps(object)) return;
+
+	trace(object);
+
+	//FlxG.sound.play(Paths.sound('mouseClick'));
+
+	switch(tag) {
+		case 'EP popup':
+		FlxG.sound.play(Paths.sound('mouseClick'));
+
+		//tweens are broken when 2 clicks in a row idk why xd
+		remove(popUp);
+		popUp.destroy();
+		popUp = null;
+		remove(closePopup);
+		closePopup.destroy();
+		closePopup = null;
+			
+		popUpTimer.cancel();
+		popUpTimer.destroy();
+	}
+}
+
+function mouseOverlaps(spr:FlxSprite) {//I needed neo's help for this
+	for (camera in spr.cameras) {
+		if (spr.overlapsPoint(FlxG.mouse.getWorldPosition(camera), true, camera)) return true;
+	}
+	return false;
 }
 
 public function healthDrainLolz(drain:Float, min:Float, mult:Float) {

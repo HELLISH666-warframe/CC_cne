@@ -14,6 +14,7 @@ var camFollowPos = new FlxObject(0, 0, 1, 1);
 var finishedZoom = false;
 
 function create() {
+	CoolUtil.playMenuSong(true);
 	DiscordUtil.changePresenceSince("In the Freeplay Menu", null);
 
 	window.title = "Computerized Conflict - Freeplay Menu - Theme by: DangDoodle";

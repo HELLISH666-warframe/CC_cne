@@ -1,6 +1,6 @@
 {
-	"displayName": "Issue",
-	"difficulties": ["simple","hard","insane"],
+	"displayName": "issue",
+	"difficulties": ["hard","insane"],
 	"bpm": 140,
 	"icon":"electro",
 	"color": "#141414",

@@ -1,0 +1,12 @@
+{
+	"displayName": "end process (older)",
+	"difficulties": ["easy","normal","hard","insane"],
+	"bpm": 155,
+	"icon": "tdl",
+	"color": "#9271FD",
+	"coopAllowed": true,
+	"opponentModeAllowed": true,
+	"background": "end-process (old)",
+	"portrait": "end-process",
+	"composer": "The Lost Gamer"
+}

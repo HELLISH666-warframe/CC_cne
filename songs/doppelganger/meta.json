@@ -1,6 +1,6 @@
 {
-	"displayName": "Doppelganger",
-	"difficulties": ["simple","hard","insane"],
+	"displayName": "doppelganger",
+	"difficulties": ["hard","insane"],
 	"bpm": 145,
 	"icon": "showdowntsc",
 	"color": "#FCAE00",
