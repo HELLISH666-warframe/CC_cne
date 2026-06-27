@@ -1,3 +1,10 @@
+public var BF_X:Float = 770;
+public var BF_Y:Float = 100;
+public var DAD_X:Float = 100;
+public var DAD_Y:Float = 100;
+public var GF_X:Float = 400;
+public var GF_Y:Float = 130;
+
 public var camLYRICS = new FlxCamera();
 public var camOther = new FlxCamera();
 public var camBars = new FlxCamera();
@@ -7,6 +14,13 @@ public var camChar = new FlxCamera();
 var popUp:FlxSprite;
 var closePopup:FlxSprite;
 public var popUpTimer:FlxTimer;
+
+//kaboom effect
+var angleshit = 1;
+var anglevar = 1;
+var intensity = 0;
+var intensity2 = 3;
+var kaboomEnabled:Bool = false;
 
 var tweenZoomEvent:FlxTween;
 var LightsColors:Array<FlxColor>; //for the vignette changing color
@@ -51,12 +65,32 @@ function new() {
     FlxG.cameras.add(camHUD, false);
 	FlxG.cameras.add(camOther, false);
 
+	/*BF_X = stageData.boyfriend[0];
+	BF_Y = stageData.boyfriend[1];
+	GF_X = stageData.girlfriend[0];
+	GF_Y = stageData.girlfriend[1];
+	DAD_X = stageData.opponent[0];
+	DAD_Y = stageData.opponent[1];*/
+
 	scripts.call('postNew');
 }
 
 function postCreate() {
 	//For_the_diff_text_the_first_letter_needs_to_be_capitalised.FUUUUUUUCK.
 	window.title = "Computerized Conflict -"+curSong+ " - ["+PlayState.difficulty+"] - Composed by: " +PlayState.SONG.meta.composer;
+}
+
+function stepHit() {
+	if (kaboomEnabled) {
+		if (curStep % 4 == 0) {
+			FlxTween.tween(camHUD, {y: -6 * intensity2}, Conductor.stepCrochet * 0.002, {ease: FlxEase.circOut});
+			FlxTween.tween(camGame.scroll, {y: 12}, Conductor.stepCrochet * 0.002, {ease: FlxEase.sineIn});
+		}
+		if (curStep % 4 == 2) {
+			FlxTween.tween(camHUD, {y: 0}, Conductor.stepCrochet * 0.002, {ease: FlxEase.sineIn});
+			FlxTween.tween(camGame.scroll, {y: 0}, Conductor.stepCrochet * 0.002, {ease: FlxEase.sineIn});
+		}
+	}
 }
 
 function beatHit() {
@@ -89,6 +123,18 @@ function beatHit() {
 
 		if(PlayState.SONG.meta.displayName.toLowerCase() == 'trojan') coolShit.color = LightsColors[curLight];
 	}
+
+	if (kaboomEnabled) {
+		if (curBeat % 2 == 0) angleshit = anglevar;
+		else angleshit = -anglevar;
+
+		camHUD.angle = angleshit * intensity2;
+		camGame.angle = angleshit * intensity2;
+		FlxTween.tween(camHUD, {angle: angleshit * intensity}, Conductor.stepCrochet * 0.002, {ease: FlxEase.circOut});
+		FlxTween.tween(camHUD, {x: -angleshit * intensity}, Conductor.crochet * 0.001, {ease: FlxEase.linear});
+		FlxTween.tween(camGame, {angle: angleshit * intensity}, Conductor.stepCrochet * 0.002, {ease: FlxEase.circOut});
+		FlxTween.tween(camGame, {x: -angleshit * intensity}, Conductor.crochet * 0.001, {ease: FlxEase.linear});
+	}
 }
 
 function update(elapsed:Float) {
@@ -114,7 +160,19 @@ function onEvent(_) {
 			FlxG.camera.zoom += camZoom;
 			camHUD.zoom += hudZoom;
 		}
+		case 'Camera Follow Pos':if(camFollow != null) {
+			var val1:Float = Std.parseFloat(_.event.params[0]);
+			var val2:Float = Std.parseFloat(_.event.params[1]);
+			if(Math.isNaN(val1)) val1 = 0;
+			if(Math.isNaN(val2)) val2 = 0;
 
+			isCameraOnForcedPos = false;
+			if(!Math.isNaN(Std.parseFloat(_.event.params[0])) || !Math.isNaN(Std.parseFloat(_.event.params[1]))) {
+				camFollow.x = val1;
+				camFollow.y = val2;
+				isCameraOnForcedPos = true;
+			}
+		}
 		case 'Alt Idle Animation':strumLines.members[_.event.params[0]].characters[0].idleSuffix=_.event.params[1];
 		case 'Screen Shake':var valuesArray:Array<String> = [_.event.params[0], _.event.params[1]];
 		var targetsArray:Array<FlxCamera> = [camGame, camHUD];
@@ -182,6 +240,8 @@ function onEvent(_) {
 		case 'Flash Camera BLACK':if(FlxG.save.data.flashing) FlxG.camera.flash(FlxColor.BLACK, _.event.params[0]);
 		case 'Flash Camera WHITE':if(FlxG.save.data.flashing) FlxG.camera.flash(FlxColor.WHITE, _.event.params[0]);
 		case 'Flash Camera RED':if(FlxG.save.data.flashing) FlxG.camera.flash(FlxColor.RED, _.event.params[0]);
+		case 'Virabot Attack'://virabotAttack();
+		case 'Kaboom':kaboomEnabled = true;
 	}
 }
 
@@ -483,13 +543,31 @@ public function clearShaderFromCamera(cam:Array<String>) {
 }
 
 function startCharacterPos(char:Character, ?gfCheck:Bool = false) {
-	if(gfCheck && char.curCharacter.startsWith('gf') || char.curCharacter.startsWith('animator-gf') && SONG.song.toLowerCase() == 'practice time') { //IF DAD IS GIRLFRIEND, HE GOES TO HER POSITION
+	if(gfCheck && char.curCharacter.startsWith('gf') || char.curCharacter.startsWith('animator-gf') && PlayState.SONG.meta.displayName.toLowerCase() == 'practice time') { //IF DAD IS GIRLFRIEND, HE GOES TO HER POSITION
 		char.setPosition(GF_X, GF_Y);
 		char.scrollFactor.set(0.95, 0.95);
 		char.danceEveryNumBeats = 2;
 	}
 	char.x += char.positionArray[0];
 	char.y += char.positionArray[1];
+}
+
+function virabotAttack() {
+	dodged = false;
+
+	dad.playAnim('throw', true);
+	dad.specialAnim = true;
+
+	if (dad.animation.curAnim.finished)	dad.specialAnim = false;
+
+	new FlxTimer().start(0.4, ()->{
+		if (dodged) {
+			boyfriend.playAnim('dodge');
+			boyfriend.specialAnim = true;
+
+			if (boyfriend.animation.curAnim.finished) boyfriend.specialAnim = false;
+		} else health -= 0.5;
+	});
 }
 
 function checkIfClicked(object:FlxSprite, tag:String) {//the tag is the thing used for the select void

@@ -2,6 +2,8 @@ import flixel.addons.display.FlxBackdrop;
 import flixel.text.FlxTextBorderStyle;
 import psych.BGSprite;
 
+var stopBFFlyTrojan = false;
+
 function postNew() {
 	scripts.set('LightsColors',[[0xFFE5BE01, 0xFF00AAE4, 0xFF76BD17, 0xFFFF0000, 0xFFFF8000]]);
 
@@ -115,7 +117,8 @@ function postNew() {
 	vignetteFin.camera = camChar;
 	add(vignetteFin);
 
-	colorShad = new ColorSwap();
+	//colorShadShit(colorShad,)
+	colorShad.data.uHsv.value=[0,0,0];
 	if(PlayState.SONG.meta.displayName.toLowerCase()== 'trojan') camGame.alpha = 0;
 
 	killThem(2);
@@ -125,6 +128,12 @@ function postNew() {
 
 	killThem(0);
 	killThem(1);
+}
+
+var colorShad = new CustomShader("psych/ColorSwapShader");
+
+function colorShadShit(shader,var:Int,val) {
+	shader.data.uHsv.value[0]=val;
 }
 
 function killThem(num:Int) {
@@ -152,22 +161,22 @@ function waterShit(betweenBeats:Array<Int>) {
 		var test:Float = (Conductor.songPosition/3000)*(Conductor.bpm/30);
 
 		dad.setPosition(DAD_X, DAD_Y);
-		startCharacterPos(dad, true);
+		scripts.call('startCharacterPos',[dad, true]);
 		dad.angle = 30*Math.cos(test/6);
 		dad.x += 50*Math.cos(test/6);
 		dad.y += 50*Math.sin(test/6);
 
 		boyfriend.setPosition(BF_X, BF_Y);
-		startCharacterPos(boyfriend);
+		scripts.call('startCharacterPos',[boyfriend]);
 		boyfriendGroup.angle = 30*Math.sin(test/6);
 		boyfriend.x += 50*Math.sin(test/6);
 		boyfriend.y += 50*Math.cos(test/6);
 	} else {
 		dad.setPosition(DAD_X, DAD_Y);
-		startCharacterPos(dad, true);
+		scripts.call('startCharacterPos',[dad, true]);
 		dad.angle = 0;
 		boyfriend.setPosition(BF_X, BF_Y);
-		startCharacterPos(boyfriend);
+		scripts.call('startCharacterPos',[boyfriend]);
 		boyfriendGroup.angle = 0;
 	}
 }
