@@ -186,6 +186,8 @@ function beatHit() {
 			glow.alpha = 0;
 			redthing.alpha = 0;
 			camChar.alpha = 0;
+			case 280:dad.playAnim('phase2Transition', true);
+			strumLines.members[0].animSuffix=dad.idleSuffix='-alt';
 			case 284:cpuStrums.forEach(function(spr:StrumNote) FlxTween.tween(spr, {alpha: 0}, 1));
 			cpuStrums.notes.forEach((note) -> FlxTween.tween(note, {alpha: 0}, 1));
 			case 288:veryEpicVignette.alpha = 0;
