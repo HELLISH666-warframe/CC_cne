@@ -1,6 +1,0 @@
-<!DOCTYPE codename-engine-stage>
-<stage zoom="0.6" folder="stages/">
-	<sprite name="bg" x="-500" y="-150" sprite="sam/sam_room" scroll="1" scale="0.84981132075471"/>
-	<opponent x="-100" y="210"/>
-	<player x="1050" y="210"/>
-</stage>

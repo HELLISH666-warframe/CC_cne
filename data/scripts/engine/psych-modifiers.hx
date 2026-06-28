@@ -1,6 +1,7 @@
+var playbackRate:Float=FlxG.save.data.gameplaySettings.get('songspeed');
 var practiceMode=FlxG.save.data.gameplaySettings.get('practice');
+
 function postCreate() {
-	validScore=!practiceMode;
 	scrollSpeed*=FlxG.save.data.gameplaySettings.get('scrollspeed');
 }
 

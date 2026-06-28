@@ -3,6 +3,17 @@ import flixel.text.FlxTextBorderStyle;
 import psych.BGSprite;
 
 var stopBFFlyTrojan = false;
+var ChromaticAberrationEffect = new CustomShader("ChromaticAberrationShader");
+var nightTimeShader = new CustomShader("NightTimeShader"+getTheOs());
+nightTimeShader.iTime=0;
+var BloomShader = new CustomShader("BloomShader");
+BloomShader.intensity = 0.35;
+BloomShader.blurSize = 1.0/512.0;
+function setChrome(shader:Dynamic,chromeOffset) {
+	shader.rOffset=chromeOffset;
+	shader.gOffset=0;
+	shader.bOffset=chromeOffset * -1;
+}
 
 function postNew() {
 	scripts.set('LightsColors',[[0xFFE5BE01, 0xFF00AAE4, 0xFF76BD17, 0xFFFF0000, 0xFFFF8000]]);
@@ -130,6 +141,117 @@ function postNew() {
 	killThem(1);
 }
 
+function onSongStart() {
+	switch(PlayState.SONG.meta.displayName.toLowerCase()){
+		case 'trojan':camGame.alpha = 1;filter.alpha = 1;
+	}
+}
+
+function update(elapsed:Float) {
+	scroll.x -= 0.45 * 60 * elapsed;
+	scroll.y -= 0.16 * 60 * elapsed;
+
+	viraScroll.x -= 0.45 * 240 * elapsed;
+	viraScroll.y -= 0.16 * 240 * elapsed;
+
+	waterShit([256, 318]);
+
+	nightTimeShader.iTime+=elapsed;
+}
+
+function beatHit() {
+	switch(PlayState.SONG.meta.displayName.toLowerCase()){
+		case 'trojan':
+			switch(curBeat){
+				case 28|188:camGame.fade(FlxColor.WHITE, (Conductor.crochet/1000*3), false);
+				case 32:camGame.fade(FlxColor.WHITE, 0, true);
+				if (FlxG.save.data.shaders) {camGame.addShader(ChromaticAberrationEffect);
+					camHUD.addShader(ChromaticAberrationEffect);
+					setChrome(ChromaticAberrationEffect,0.0045);
+				}
+				redthing.alpha = 1;
+				case 64|224|320:bestPart2 = true;
+				if (!FlxG.save.data.lowQuality)scripts.call('colorTween',[[gf, alanBG, tscseeing, sFWindow, adobeWindow, daFloor], 0.1, FlxColor.WHITE, 0xFF191919]);
+				else scripts.call('colorTween',[[gf, alanBG, sFWindow, adobeWindow, daFloor], 0.1, FlxColor.WHITE, 0xFF191919]);
+				radialLine.alpha = 1;
+				if (FlxG.save.data.shaders && FlxG.save.data.advancedShaders) {
+					FlxG.camera._filters = [];
+					FlxG.camera.addShader(nightTimeShader);
+				}
+				scroll.alpha = 0;
+				vignettMid.alpha = 0;
+				redthing.alpha = 0.0001;
+				camGame.alpha= 1;
+				filter.alpha = 1;
+				case 96:vignetteTrojan.alpha = 0.0001;
+				coolShit.alpha = 0.0001;
+				bestPart2 = false;
+				if (!FlxG.save.data.lowQuality) scripts.call('colorTween',[[gf, alanBG, tscseeing, sFWindow, adobeWindow, daFloor], 0.8, 0xFF191919, FlxColor.WHITE]);
+				else scripts.call('colorTween',[[gf, alanBG, sFWindow, adobeWindow, daFloor], 0.8, 0xFF191919, FlxColor.WHITE]);
+				radialLine.alpha = 0.0001;
+				redthing.alpha = 0;
+				if (FlxG.save.data.shaders) {FlxG.camera._filters = [];
+					camHUD._filters = [];
+					camGame.addShader(ChromaticAberrationEffect);
+					camHUD.addShader(ChromaticAberrationEffect);
+					setChrome(ChromaticAberrationEffect,0.0045);
+				}
+				case 160:if (FlxG.save.data.shaders && FlxG.save.data.advancedShaders) {
+					FlxG.camera._filters = [];
+					FlxG.camera.addShader(BloomShader);
+				}
+				case 192:camGame.fade(FlxColor.WHITE, 0, true);
+				if (FlxG.save.data.shaders) {FlxG.camera._filters = [];
+					camHUD._filters = [];
+					camGame.addShader(ChromaticAberrationEffect);
+					camHUD.addShader(ChromaticAberrationEffect);
+					setChrome(ChromaticAberrationEffect,0.0045);
+				}
+				redthing.alpha = 1;
+				case 256:vignetteTrojan.alpha = 0.0001;
+				vignettMid.alpha = 1;
+				scroll.alpha = 1;
+				radialLine.alpha = 0.0001;
+				coolShit.alpha = 0;
+				bestPart2 = false;
+				filter.alpha = 0.0001;
+				if(FlxG.save.data.flashing) camChar.flash(FlxColor.WHITE, 0.85);
+				boyfriend.setColorTransform(1, 1, 1, 1, 255, 255, 255, 0);
+				dad.setColorTransform(1, 1, 1, 1, 255, 255, 255, 0);
+				gf.alpha = 0.0001;
+				case 288:if(FlxG.save.data.flashing) camChar.flash(FlxColor.WHITE, 0.85);
+				case 318:camGame.alpha = 0;
+				boyfriend.setColorTransform(1, 1, 1, 1, 0, 0, 0, 0);
+				dad.setColorTransform(1, 1, 1, 1, 0, 0, 0, 0);
+				vignettMid.alpha = 0;
+				case 348:FlxG.sound.play(Paths.sound('intro3'), 0.4);
+				camGame.fade(FlxColor.WHITE, (Conductor.crochet/1000*3), false);
+				//cameraLocked = true;
+				stopBFFlyTrojan = true;
+				FlxTween.tween(boyfriend, {y: BF_Y - 1000}, 1, {ease: FlxEase.quadIn});
+				FlxTween.tween(boyfriendGroup, {angle: 359.99 * 4}, 23);
+				case 349:FlxG.sound.play(Paths.sound('intro2'), 0.4);
+				case 350:FlxG.sound.play(Paths.sound('intro1'), 0.4);
+				case 351:FlxG.sound.play(Paths.sound('introGo'), 0.4);
+				case 352:stopBFFlyTrojan = false;
+				camGame.fade(FlxColor.WHITE, 0.5, true);
+				if (FlxG.save.data.shaders && FlxG.save.data.flashing) {
+					FlxG.camera.setFilters([new ShaderFilter(colorShad.shader), new ShaderFilter(fishEyeshader)]);
+				fishEyeshader.MAX_POWER.value = [0.15];
+				}
+				isPlayersSpinning = true;
+				cameraLocked = false;
+				constantShake = true;
+				viraScroll.alpha = 1;
+				vignetteFin.alpha = 1;
+				filter.alpha = 0.0001;
+				gf.alpha = 0.0001;
+				if (!FlxG.save.data.lowQuality) scripts.call('colorTween',[[alanBG, tscseeing, sFWindow, adobeWindow, daFloor], 0.8, 0xFF191919, FlxColor.BLACK]);
+				else scripts.call('colorTween',[[alanBG, sFWindow, adobeWindow, daFloor], 0.8, 0xFF191919, FlxColor.BLACK]);
+			}
+	}
+}
+
 var colorShad = new CustomShader("psych/ColorSwapShader");
 
 function colorShadShit(shader,var:Int,val) {
@@ -142,16 +264,6 @@ function killThem(num:Int) {
 		remove(strumLines.members[num].characters[i],true);
 		add(strumLines.members[num].characters[i]);
 	}
-}
-
-function update(elapsed:Float) {
-	scroll.x -= 0.45 * 60 * elapsed;
-	scroll.y -= 0.16 * 60 * elapsed;
-
-	viraScroll.x -= 0.45 * 240 * elapsed;
-	viraScroll.y -= 0.16 * 240 * elapsed;
-
-	waterShit([256, 318]);
 }
 
 function waterShit(betweenBeats:Array<Int>) {
@@ -168,7 +280,7 @@ function waterShit(betweenBeats:Array<Int>) {
 
 		boyfriend.setPosition(BF_X, BF_Y);
 		scripts.call('startCharacterPos',[boyfriend]);
-		boyfriendGroup.angle = 30*Math.sin(test/6);
+		boyfriend.angle = 30*Math.sin(test/6);
 		boyfriend.x += 50*Math.sin(test/6);
 		boyfriend.y += 50*Math.cos(test/6);
 	} else {
@@ -177,6 +289,6 @@ function waterShit(betweenBeats:Array<Int>) {
 		dad.angle = 0;
 		boyfriend.setPosition(BF_X, BF_Y);
 		scripts.call('startCharacterPos',[boyfriend]);
-		boyfriendGroup.angle = 0;
+		boyfriend.angle = 0;
 	}
 }

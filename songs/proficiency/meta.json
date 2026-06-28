@@ -1,5 +1,5 @@
 {
-	"displayName": "Proficiency",
+	"displayName": "proficiency",
 	"difficulties": ["simple","hard","insane"],
 	"bpm": 195,
 	"icon": "the-dark-lord",

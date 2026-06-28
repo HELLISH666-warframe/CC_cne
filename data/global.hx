@@ -53,6 +53,10 @@ function new() {
     for (i in Paths.getFolderContent('data/global')) importScript("data/global/"+Path.withoutExtension(i)); //import different global scripts for organization reasons
 }
 
+public static function getTheOs() {
+	#if windows return ''; #else return '-unix';
+}
+
 function destroy(){
     FlxG.mouse.useSystemCursor = true;
     FlxG.mouse.visible = false;

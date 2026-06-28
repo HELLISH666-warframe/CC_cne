@@ -154,6 +154,7 @@ function postCreate() {
 	ratingManager.addRating({name:"shit", accuracy:0, window:180, score:50, splash:false});
 	for (i in ratingManager.ratingData) hits[i.name]=0;
 
+
 	for(i in 0...iconArray.length){
 		iconArray[i].y = healthBar.y - 50;
 	}
@@ -262,7 +263,7 @@ function calculateRating() {
 	else if (misses > 0) advancedRating = "Clear";
 
 	accuracyText = ratingName + ' (' + (Math.floor(accuracy * 10000) / 100) + '%) - ' + advancedRating;
-	fakeScoreText.text = 'Score: ' + songScore + '\nCombo Breaks: ' + misses+ '\nAccuracy: ' + accuracyText;
+	fakeScoreText.text = 'Score: ' + songScore + '\nCombo Breaks: ' + misses+ '\nAccuracy: '+ (Math.floor(accuracy * 10000) / 100) + '% (' + advancedRating+')';
 	remove(comboGroup, true); 
 	add(comboGroup);
 }

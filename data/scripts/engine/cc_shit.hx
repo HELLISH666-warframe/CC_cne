@@ -65,12 +65,17 @@ function new() {
     FlxG.cameras.add(camHUD, false);
 	FlxG.cameras.add(camOther, false);
 
-	/*BF_X = stageData.boyfriend[0];
-	BF_Y = stageData.boyfriend[1];
-	GF_X = stageData.girlfriend[0];
-	GF_Y = stageData.girlfriend[1];
-	DAD_X = stageData.opponent[0];
-	DAD_Y = stageData.opponent[1];*/
+	if(strumLines.length>=1){
+	BF_X=strumLines.members[1].characters[0].x;
+	BF_Y=strumLines.members[1].characters[0].y;
+	}
+	if(strumLines.length>=2){
+	GF_X=strumLines.members[2].characters[0].x;
+	GF_Y=strumLines.members[2].characters[0].y;
+	}
+	
+	DAD_X=strumLines.members[0].characters[0].x;
+	DAD_Y=strumLines.members[0].characters[0].y;
 
 	scripts.call('postNew');
 }
@@ -188,6 +193,20 @@ function onEvent(_) {
 			if(duration > 0 && intensity != 0) targetsArray[i].shake(intensity, duration);
 		}
 
+		case 'Psych/Change Scroll Speed':if (FlxG.save.data.gameplaySettings['scrolltype'] == "constant") return;
+		var val1:Float = Std.parseFloat(_.event.params[0]);
+		var val2:Float = Std.parseFloat(_.event.params[1]);
+		if(Math.isNaN(val1)) val1 = 1;
+		if(Math.isNaN(val2)) val2 = 0;
+		
+		var newValue:Float = PlayState.SONG.scrollSpeed * FlxG.save.data.gameplaySettings['scrollspeed'] * val1;
+
+		if(val2 <= 0) scrollSpeed = newValue;
+		else {
+			songSpeedTween = FlxTween.tween(this, {scrollSpeed: newValue}, val2 / scripts.get('playbackRate'), {ease: FlxEase.linear, onComplete:
+				function (twn:FlxTween) {songSpeedTween = null;}
+			});
+		}
 		case 'Popup':if (popUp != null) return;
 		if (cpuControlled) return;
 		if (PlayState.difficulty.toLowerCase()== 'simple'||(PlayState.difficulty.toLowerCase()== 'hard' && FlxG.save.data.noMechanics)) return;
@@ -543,13 +562,14 @@ public function clearShaderFromCamera(cam:Array<String>) {
 }
 
 function startCharacterPos(char:Character, ?gfCheck:Bool = false) {
-	if(gfCheck && char.curCharacter.startsWith('gf') || char.curCharacter.startsWith('animator-gf') && PlayState.SONG.meta.displayName.toLowerCase() == 'practice time') { //IF DAD IS GIRLFRIEND, HE GOES TO HER POSITION
+	gfCheck??=false;
+	if(gfCheck && StringTools.startsWith(char.curCharacter, 'gf')|| StringTools.startsWith(char.curCharacter, 'animator-gf') && PlayState.SONG.meta.displayName.toLowerCase() == 'practice time') { //IF DAD IS GIRLFRIEND, HE GOES TO HER POSITION
 		char.setPosition(GF_X, GF_Y);
 		char.scrollFactor.set(0.95, 0.95);
 		char.danceEveryNumBeats = 2;
 	}
-	char.x += char.positionArray[0];
-	char.y += char.positionArray[1];
+	char.x = BF_X;
+	char.y = BF_Y;
 }
 
 function virabotAttack() {
