@@ -20,6 +20,7 @@ function update(elapsed:Float) {
     if (curBeat <= 192)return;
     var currentBeat = (Conductor.songPosition/3000)*(Conductor.bpm/30);
 
+    //Psych_canceals_tweens_if_it_has_the_same_name.
     for(i in 0...4){
     if (strumTweens.exists('pSX'+i)) strumTweens.get('pSX'+i).cancel();
     if (strumTweens.exists('pSY'+i)) strumTweens.get('pSY'+i).cancel();

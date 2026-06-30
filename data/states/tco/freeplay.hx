@@ -10,7 +10,7 @@ import funkin.backend.chart.Chart;
 songs = [];
 var songRealList = [	
 	["adobe","outrage","end-process","morality","stick-em-up","artistry","proficiency","masterpiece"],//8
-	["practice-time","trojan","conflict","dashpulse","time-travel","cubify","kickstarter","contrivance","messenger","amity","voltagen","issue","tune-in","unfaithful","rombie","fancy-funk","powerup","catto"],//26
+	["practice-time","trojan","conflict","dashpulse","time-travel","cubify","kickstarter","contrivance","messenger","amity","voltagen","issue","tune-in","unfaithful","rombie","fancy-funk","catto"],//26
 	["enmity","doppelganger","aurora","phantasm"],//30
 	["adobe-(old)","outrage-(older)",'end-process-(older)',"alan-(old)","outrage-(old)","end-process-(old)"],//36
 	["rewrite"]//37_songs_holy_shit.
@@ -56,9 +56,7 @@ var finishedZoom = false;
 	
 var fishEyeshader = new CustomShader("fishEyeshader"); 
 
-public static var alanSongs:Array<String> = ['trojan', 'conflict', 'dashpulse', 'time travel', 'cubify', 'kickstarter', 'contrivance', 'messenger', 'amity', 'tune in', 'unfaithful', 'rombie', 'fancy funk', 'catto', 'enmity', 'phantasm', 'aurora'];
-
-public static var minimizeWindowArray:Array<String> = ['dashpulse', 'messenger', 'rombie', 'powerup'];
+public static var alanSongs:Array<String> = ['trojan','conflict','dashpulse','time travel','cubify','kickstarter','contrivance','messenger','amity','tune in','unfaithful','rombie','fancy funk','catto','enmity','phantasm','aurora'];
 
 var preload = [];
 var preload2 = [];
@@ -292,16 +290,7 @@ function update(elapsed:Float) {
 				FlxTween.tween(FlxG.camera, {zoom: 3}, 1.5, {ease: FlxEase.expoIn});
 				FlxG.camera.fade(FlxColor.BLACK, 0.8, false, function() {
 					if (songs[curSelFP].name.toLowerCase() == "amity") FlxG.switchState(new ModState('tco/MinusCharSelector'));
-					else {
-						FlxG.switchState(new PlayState());
-
-						if(minimizeWindowArray.contains(songs[curSelFP].name.toLowerCase()) && !FlxG.save.data.wideScreenSongs) {
-							window.resizable = false;
-							FlxG.scaleMode = new StageSizeScaleMode();
-							FlxG.resizeGame(360, 720);
-							FlxG.resizeWindow(960, 720);
-						}
-					}
+					else FlxG.switchState(new PlayState());
 				});
 				FlxG.sound.music.volume = 0;
 			} else if(controls.RESET) {

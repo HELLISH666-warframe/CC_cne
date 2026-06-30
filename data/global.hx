@@ -1,4 +1,5 @@
 import haxe.io.Path;
+
 function new() {   
     FlxG.save.data.songsUnlocked_mainWeek ??= false;
     FlxG.save.data.songsUnlocked_seenCredits ??= false;
@@ -52,9 +53,16 @@ function new() {
 	];
     for (i in Paths.getFolderContent('data/global')) importScript("data/global/"+Path.withoutExtension(i)); //import different global scripts for organization reasons
 }
-
 public static function getTheOs() {
 	#if windows return ''; #else return '-unix';
+}
+
+function update() {
+    if (FlxG.keys.pressed.SHIFT && FlxG.keys.pressed.H)
+        FlxG.switchState(new ModState('tco/credits_test',{
+			"videoName": 'tco_credits',
+            "canSkip":false
+	}));
 }
 
 function destroy(){

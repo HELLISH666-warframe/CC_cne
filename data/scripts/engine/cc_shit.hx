@@ -24,6 +24,7 @@ var kaboomEnabled:Bool = false;
 
 var tweenZoomEvent:FlxTween;
 var LightsColors:Array<FlxColor>; //for the vignette changing color
+var oldVideoResolution:Bool = false; // simulate 4:3 resolution like Alan old videos
 
 var bestPart2:Bool = false; //VIGNETTES HANDLER
 
@@ -45,7 +46,13 @@ var bottomBarsALT:FlxSprite; //THIS TOO
 var vignetteTrojan:FlxSprite; //USED IN TROJAN AND OTHER COOL SONGS
 var coolShit:FlxSprite; //USED IN TROJAN AND OTHER COOL SONGS
 
+public static var minimizeWindowArray:Array<String> = ['dashpulse', 'messenger', 'rombie', 'powerup'];
 function new() {
+	if(minimizeWindowArray.contains(PlayState.SONG.meta.name.toLowerCase()) && !FlxG.save.data.wideScreenSongs) {
+        oldVideoResolution=true;
+		FlxG.scaleMode.width = FlxG.width = FlxG.initialWidth = 960;
+    	FlxG.resizeWindow(960, 720);
+	}
 	camLYRICS.bgColor = 0;
 	camOther.bgColor = 0;
 	camBars.bgColor = 0;
@@ -69,7 +76,7 @@ function new() {
 	BF_X=strumLines.members[1].characters[0].x;
 	BF_Y=strumLines.members[1].characters[0].y;
 	}
-	if(strumLines.length>=2){
+	if(strumLines.length>=3){
 	GF_X=strumLines.members[2].characters[0].x;
 	GF_Y=strumLines.members[2].characters[0].y;
 	}
@@ -143,6 +150,7 @@ function beatHit() {
 }
 
 function update(elapsed:Float) {
+	if (oldVideoResolution) FlxG.fullscreen = false;
     healthDrainLolz(0.09 * elapsed, 0.2, multiplierDrain);
 
 	//TODO: rework
@@ -155,7 +163,8 @@ function update(elapsed:Float) {
 
 //This_way_EVERY_event_is_atcually_loaded.
 function onEvent(_) {
-	switch(_.event.name){
+	var e=_.event;
+	switch(e.name){
 		case 'add_cam_zoom':if(FlxG.save.data.camZooms && FlxG.camera.zoom < 1.35) {
 			var camZoom:Float = Std.parseFloat(_.event.params[0]);
 			var hudZoom:Float = Std.parseFloat(_.event.params[1]);
@@ -249,11 +258,11 @@ function onEvent(_) {
 		case 'cancel blackbars':blackBars(0);
 		case 'blackBars2 test':pushBlackBars2(1);
 		case 'cancel blackbars2':pushBlackBars2(0);
-		case 'Set Cam Zoom'|'defaultCamZoom':defaultCamZoom = _.event.params[0];
+		case 'Set Cam Zoom'|'defaultCamZoom':defaultCamZoom = e.params[0];
 		case 'Tween Zoom':
-		tweenZoomEvent = FlxTween.tween(FlxG.camera, {zoom: _.event.params[0]}, _.event.params[1] * scripts.get('playbackRate'), {
+		tweenZoomEvent = FlxTween.tween(FlxG.camera, {zoom: e.params[0]}, e.params[1] * scripts.get('playbackRate'), {
 			ease: FlxEase.quadInOut,
-			onComplete: function(twn){defaultCamZoom = _.event.params[0];},
+			onComplete: ()->{defaultCamZoom = e.params[0];},
 		});
 		case 'cancel Tween Zoom':if (tweenZoomEvent != null) tweenZoomEvent = null;
 		case 'Flash Camera BLACK':if(FlxG.save.data.flashing) FlxG.camera.flash(FlxColor.BLACK, _.event.params[0]);
@@ -281,7 +290,15 @@ function onSongEnd() {
 	}
 }
 
-public var lossingHealth:Bool = false;
+function destroy() {
+	if(window.width!=1280) {
+		FlxG.resizeWindow(1280, 720);
+        FlxG.resizeGame(1280, 720);
+	    FlxG.scaleMode.width = FlxG.camera.width = FlxG.width = FlxG.initialWidth = 1280;
+	}
+}
+
+var lossingHealth:Bool = false;
 
 public var multiplierDrain:Float = 1;
 

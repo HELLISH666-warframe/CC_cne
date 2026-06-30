@@ -3,12 +3,10 @@ import flixel.group.FlxGroup.FlxTypedGroup;
 import flixel.addons.display.FlxBackdrop;
 import funkin.backend.utils.DiscordUtil;
 import flixel.text.FlxTextBorderStyle;
-import flixel.input.keyboard.FlxKey;
 import openfl.filters.BitmapFilter;
 import openfl.filters.ShaderFilter;
 import funkin.options.OptionsMenu;
 import funkin.editors.ui.UIState;
-import flixel.util.FlxSave;
 import flixel.FlxObject;
 //import Shaders;
 
@@ -27,7 +25,6 @@ var camFollowPos:FlxObject;
 var scrollingThing:FlxBackdrop;
 var spikes1:FlxBackdrop;
 var spikes2:FlxBackdrop;
-var colorTween:FlxTween;
 var bg:FlxSprite;
 var vignette:FlxSprite;
 public var camHUD:FlxCamera;
@@ -176,7 +173,7 @@ function create() {
 		textPopup.screenCenter();
 		add(textPopup);
 
-		star = new FlxSprite(1200, 15).loadGraphic(Paths.image('mainmenu/star'));
+		star = new FlxSprite(1200, 15).loadGraphic(Paths.image('menus/mainmenu/star'));
 		star.scrollFactor.set();
 		star.antialiasing = Options.antialiasing;
 		star.camera = camHUD;
@@ -512,21 +509,13 @@ function loadTutorial() {targetAlphaCamPopup = 0;
 function changeItem(huh:Int = 0) {
 	curSelMM = FlxMath.wrap(curSelMM + huh, 0, menuItems.length - 1);
 
-	if(colorTween != null) colorTween.cancel();
-
 	var nameOfOptionSelected:String = optionShit[curSelMM];
 
-	colorTween = FlxTween.color(scrollingThing, 1, scrollingThing.color, colorsMap.get(nameOfOptionSelected), {
-		onComplete: function(twn:FlxTween) {
-			colorTween = null;
-		}
-	});
+	for(i in [scrollingThing,vignette])FlxTween.cancelTweensOf(i,['color']);
 
-	colorTween = FlxTween.color(vignette, 1, vignette.color, colorsMap.get(nameOfOptionSelected), {
-		onComplete: function(twn:FlxTween) {
-			colorTween = null;
-		}
-	});
+	FlxTween.color(scrollingThing, 1, scrollingThing.color, colorsMap.get(nameOfOptionSelected));
+
+	FlxTween.color(vignette, 1, vignette.color, colorsMap.get(nameOfOptionSelected));
 
 	itemsText.text = textChange(nameOfOptionSelected);
 }
