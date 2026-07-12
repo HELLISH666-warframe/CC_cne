@@ -154,6 +154,12 @@ function postCreate() {
 	ratingManager.addRating({name:"shit", accuracy:0, window:180, score:50, splash:false});
 	for (i in ratingManager.ratingData) hits[i.name]=0;
 
+	fuck = new FlxSprite().loadGraphic(Paths.image("Screenshot 2026-06-25 at 01.33.48"));
+	fuck.setGraphicSize(FlxG.width,FlxG.height);
+	fuck.updateHitbox();
+	fuck.screenCenter();
+	add(fuck).camera=camHUD;
+	fuck.alpha=0.0;
 
 	for(i in 0...iconArray.length){
 		iconArray[i].y = healthBar.y - 50;

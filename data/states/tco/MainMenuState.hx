@@ -483,7 +483,7 @@ function loadState() {
 					case 'freeplay':FlxG.switchState(new ModState('tco/FreeplayMenu'));
 					case 'art_gallery':FlxG.switchState(new ModState('tco/FanArtState'));
 					case 'credits':FlxG.switchState(new CreditsMain());
-					case 'options':FlxG.switchState(new OptionsMenu((_) -> FlxG.switchState(new MainMenuState())));
+					case 'options':FlxG.switchState(new ModState('Psych/options/OptionsState'));
 				}
 			});
 		}

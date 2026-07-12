@@ -1,5 +1,8 @@
 import psych.BGSprite;
 
+//dashpulse:
+public var otakuBG:BGSprite;
+
 function postNew() {
 	otakuBG = new BGSprite('extras/dashpulse_bg', -874, -255, 1, 1);
 	otakuBG.antialiasing = false;
@@ -68,11 +71,11 @@ function beatHit() {
 			case 99:FlxTween.tween(FlxG.camera,{zoom:FlxG.camera.zoom - 0.2},3,{ease: FlxEase.sineInOut});
 			case 100:otakuBG.color = gf.color = 0xFFFFFFFF;
 			if(FlxG.save.data.flashing) camGame.flash(FlxColor.WHITE, Conductor.crochet/1000);
-			case 256:colorTween([gf, otakuBG], 0.7, FlxColor.WHITE, 0xFF191919);
+			case 256:scripts.call('colorTween',[[gf, otakuBG], 0.7, FlxColor.WHITE, 0xFF191919]);
 			defaultCamZoom = 1.1;
 			bestPart2 = lossingHealth = true;
 			multiplierDrain = 1.5;
-			case 320:colorTween([gf, otakuBG], 1, 0xFF191919, FlxColor.WHITE);
+			case 320:scripts.call('colorTween',[[gf, otakuBG], 1, 0xFF191919, FlxColor.WHITE]);
 			defaultCamZoom = 0.65;
 			bestPart2 = lossingHealth = false;
 			case 354:FlxTween.tween(camHUD, {alpha:0}, 1, {ease: FlxEase.sineInOut});

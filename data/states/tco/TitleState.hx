@@ -123,7 +123,7 @@ function update(elapsed:Float) {
 
 	if(optionShortCut != null && FlxG.mouse.overlaps(optionShortCut) && FlxG.mouse.justPressed) {
 		FlxG.sound.play(Paths.sound('mouseClick'));
-		FlxG.switchState(new OptionsMenu((_) -> FlxG.switchState(new TitleState())));
+		FlxG.switchState(new ModState('Psych/options/OptionsState',{"exitState":(_) ->  FlxG.switchState(new TitleState())}));
 		titleOptions = true;
 		closedState = true;
 	}

@@ -26,9 +26,9 @@ var tweenZoomEvent:FlxTween;
 var LightsColors:Array<FlxColor>; //for the vignette changing color
 var oldVideoResolution:Bool = false; // simulate 4:3 resolution like Alan old videos
 
-var bestPart2:Bool = false; //VIGNETTES HANDLER
+public var bestPart2:Bool = false; //VIGNETTES HANDLER
 
-var noCurLight:Bool = false;
+public var noCurLight:Bool = false;
 
 //sonic.exe mod beat zooms type:
 var zoomType1:Bool = false;
@@ -43,15 +43,12 @@ var topBarsALT:FlxSprite; //THESE ONES AREN'T THE ONES WITH TWEEN
 var bottomBarsALT:FlxSprite; //THIS TOO
 
 //vignettes type:
-var vignetteTrojan:FlxSprite; //USED IN TROJAN AND OTHER COOL SONGS
+public var vignetteTrojan:FlxSprite; //USED IN TROJAN AND OTHER COOL SONGS
 var coolShit:FlxSprite; //USED IN TROJAN AND OTHER COOL SONGS
 
-public static var minimizeWindowArray:Array<String> = ['dashpulse', 'messenger', 'rombie', 'powerup'];
 function new() {
-	if(minimizeWindowArray.contains(PlayState.SONG.meta.name.toLowerCase()) && !FlxG.save.data.wideScreenSongs) {
+	if(minimizeWindowArray.contains(PlayState.SONG.meta.displayName.toLowerCase()) && !FlxG.save.data.wideScreenSongs) {
         oldVideoResolution=true;
-		FlxG.scaleMode.width = FlxG.width = FlxG.initialWidth = 960;
-    	FlxG.resizeWindow(960, 720);
 	}
 	camLYRICS.bgColor = 0;
 	camOther.bgColor = 0;
@@ -283,22 +280,14 @@ function onDadHit(e){
 
 function onSongEnd() {
 	trace(FlxG.save.data.songsUnlocked);
-	if(!FlxG.save.data.songsUnlocked.contains(curSong)){
-		trace('played'+curSong+'for the first time');
+	if(!FlxG.save.data.songsUnlocked.contains(PlayState.SONG.meta.displayName.toLowerCase())){
+		trace('played'+PlayState.SONG.meta.displayName.toLowerCase()+'for the first time');
 
-		FlxG.save.data.songsUnlocked.push(curSong);
+		FlxG.save.data.songsUnlocked.push(PlayState.SONG.meta.displayName.toLowerCase());
 	}
 }
 
-function destroy() {
-	if(window.width!=1280) {
-		FlxG.resizeWindow(1280, 720);
-        FlxG.resizeGame(1280, 720);
-	    FlxG.scaleMode.width = FlxG.camera.width = FlxG.width = FlxG.initialWidth = 1280;
-	}
-}
-
-var lossingHealth:Bool = false;
+public var lossingHealth:Bool = false;
 
 public var multiplierDrain:Float = 1;
 

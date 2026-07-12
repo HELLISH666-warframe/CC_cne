@@ -10,14 +10,21 @@ import funkin.backend.chart.Chart;
 songs = [];
 var songRealList = [	
 	["adobe","outrage","end-process","morality","stick-em-up","artistry","proficiency","masterpiece"],//8
-	["practice-time","trojan","conflict","dashpulse","time-travel","cubify","kickstarter","contrivance","messenger","amity","voltagen","issue","tune-in","unfaithful","rombie","fancy-funk","catto"],//26
-	["enmity","doppelganger","aurora","phantasm"],//30
-	["adobe-(old)","outrage-(older)",'end-process-(older)',"alan-(old)","outrage-(old)","end-process-(old)"],//36
-	["rewrite"]//37_songs_holy_shit.
+	["practice-time","trojan","conflict","dashpulse","time-travel","cubify","kickstarter","contrivance","messenger","amity","voltagen","tune-in","unfaithful","rombie","fancy-funk","catto"],//24
+	["enmity","doppelganger","aurora","phantasm"],//28
+	["adobe-(old)","outrage-(older)",'end-process-(older)',"alan-(old)","outrage-(old)","end-process-(old)"],//34
+	['issue']//35
 ];
 
+function checkIfAlanIsLocked() {
+	for (a in ['trojan','conflict','dashpulse','time travel','cubify','kickstarter','contrivance','messenger','amity','tune in','unfaithful','rombie','fancy funk','catto','enmity','phantasm','aurora']){
+		if (!FlxG.save.data.songsUnlocked.contains(a))
+            return false;
+	}
+	return true;
+}
 if(FlxG.save.data.songsUnlocked.contains('redzone-error'))songRealList[1].push("redzone-error");
-if(FlxG.save.data.alanUnlocked)songRealList[1].push("alan");
+if(checkIfAlanIsLocked())songRealList[1].push("alan");
 if(FlxG.save.data.songsUnlocked.contains('catto'))songRealList[3].push("catto-(old)");
 
 for(s in songRealList[FlxG.save.data.freeplaything_cc])
@@ -47,7 +54,6 @@ var colorTween:FlxTween;
 var zoomTween:FlxTween;
 var tweenX:FlxTween;
 var alphaTween:FlxTween;
-var weeks:Null<Array<String>>;
 var barName:FlxSprite;
 var arrow:FlxSprite;
 var flippedArrow:FlxSprite;
@@ -56,16 +62,12 @@ var finishedZoom = false;
 	
 var fishEyeshader = new CustomShader("fishEyeshader"); 
 
-public static var alanSongs:Array<String> = ['trojan','conflict','dashpulse','time travel','cubify','kickstarter','contrivance','messenger','amity','tune in','unfaithful','rombie','fancy funk','catto','enmity','phantasm','aurora'];
-
 var preload = [];
 var preload2 = [];
 
 function create() {
 	CoolUtil.playMenuSong(true);
 	DiscordUtil.changePresenceSince("In the Freeplay Song Selection", null);
-
-	checkIfAlanIsLocked();
 
 	FlxG.camera.zoom = 1.5;
 
@@ -104,8 +106,8 @@ function create() {
 	add(grpSongs);
 
 	for (i in 0...songs.length) {
-		var wasPlayed:Bool = FlxG.save.data.songsUnlocked.contains(songs[i].name);
-		var songText = new FlxText(500, 650,600, wasPlayed ? songs[i].name.toUpperCase() : '???').setFormat(Paths.font("phantommuff.ttf"), 44, FlxColor.WHITE, 'center', FlxTextBorderStyle.OUTLINE, FlxColor.TRANSPARENT);
+		var wasPlayed:Bool = FlxG.save.data.songsUnlocked.contains(songs[i].displayName.toLowerCase());
+		var songText = new FlxText(500, 650,600, wasPlayed ? songs[i].displayName.toUpperCase() : '???').setFormat(Paths.font("phantommuff.ttf"), 44, FlxColor.WHITE, 'center', FlxTextBorderStyle.OUTLINE, FlxColor.TRANSPARENT);
 		songText.screenCenter(FlxAxes.X);
 		songText.scrollFactor.set(1, 0);
 		if(songs[i].name.toLowerCase()=='trojan'&&wasPlayed&&FlxG.random.int(1, 4) == 1)songText.text='POWER-GAIN';
@@ -179,17 +181,6 @@ function closeSubState() {
 	changeSelection(0, false);
 	persistentUpdate = true;
 	super.closeSubState();
-}
-
-function checkIfAlanIsLocked() {
-	for (i in 0...alanSongs.length-1) {
-		if(FlxG.save.data.songsUnlocked.contains(alanSongs[i]) == false) {
-			FlxG.save.data.alanUnlocked = false;
-			return;
-		}
-	}
-
-	FlxG.save.data.alanUnlocked = true;
 }
 	
 function beatHit() if(finishedZoom&&!selectedSmth)FlxTween.tween(FlxG.camera, {zoom:1.02}, 0.3, {ease: FlxEase.quadOut, type: FlxTween.BACKWARD});
@@ -265,7 +256,7 @@ function update(elapsed:Float) {
 				openSubState(new ModSubState('Psych/substates/GameplayChangersSubstate'));
 			}
 			else if(FlxG.keys.justPressed.SPACE) {
-				if(!FlxG.save.data.songsUnlocked.contains(songs[curSelFP].name.toLowerCase()))return;
+				if(!FlxG.save.data.songsUnlocked.contains(songs[curSelFP].displayName.toLowerCase()))return;
 				if(instPlaying != curSelFP) {
 					#if PRELOAD_ALL
 					FlxG.sound.music.volume = 0;
@@ -319,7 +310,7 @@ function changeSelection(a:Int = 0, playSound:Bool = true) {
 	if(tweenX != null) tweenX.cancel();
 	if(alphaTween != null) alphaTween.cancel();
 
-	var songHasBeenPlayed:Bool = FlxG.save.data.songsUnlocked.contains(songs[curSelFP].name);
+	var songHasBeenPlayed:Bool = FlxG.save.data.songsUnlocked.contains(songs[curSelFP].displayName.toLowerCase());
 
 	var newColor:Int = songs[curSelFP].color;
 	if(newColor != intendedColor) {

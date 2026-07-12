@@ -59,10 +59,24 @@ public static function getTheOs() {
 
 function update() {
     if (FlxG.keys.pressed.SHIFT && FlxG.keys.pressed.H)
-        FlxG.switchState(new ModState('tco/credits_test',{
-			"videoName": 'tco_credits',
-            "canSkip":false
-	}));
+        FlxG.switchState(new ModState('Psych/options/OptionsState',{"exitState":(_) ->  FlxG.switchState(new TitleState())}));
+        //FlxG.switchState(new ModState('tco/credits_test',{"videoName": 'tco_credits',"canSkip":false}));
+}
+
+public static var minimizeWindowArray:Array<String> = ['dashpulse','messenger','rombie','powerup'];
+function preStateSwitch() {
+    if ((FlxG.width != 1280 || FlxG.height != 720) && !Std.isOfType(FlxG.game._requestedState, PlayState)){
+        FlxG.resizeWindow(1280, 720);
+        FlxG.resizeGame(1280, 720);
+	    FlxG.scaleMode.width = FlxG.width = FlxG.initialWidth = 1280;
+    }
+    if (Std.isOfType(FlxG.game._requestedState, PlayState)){
+        if(minimizeWindowArray.contains(PlayState.SONG.meta.displayName.toLowerCase()) && !FlxG.save.data.wideScreenSongs&&FlxG.width!=960) {
+        FlxG.resizeWindow(960, 720);
+		FlxG.scaleMode.width = FlxG.width = FlxG.initialWidth = 960;
+        //PlayState.scripts.set('oldVideoResolution',true);
+	}
+    }
 }
 
 function destroy(){
