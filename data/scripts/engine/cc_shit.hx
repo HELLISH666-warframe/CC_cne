@@ -47,7 +47,7 @@ public var vignetteTrojan:FlxSprite; //USED IN TROJAN AND OTHER COOL SONGS
 var coolShit:FlxSprite; //USED IN TROJAN AND OTHER COOL SONGS
 
 function new() {
-	if(minimizeWindowArray.contains(PlayState.SONG.meta.displayName.toLowerCase()) && !FlxG.save.data.wideScreenSongs) {
+	if(minimizeWindowArray.contains(PlayState.SONG.meta.displayName.toLowerCase()) && !ccSSC.wideScreenSongs) {
         oldVideoResolution=true;
 	}
 	camLYRICS.bgColor = 0;
@@ -162,7 +162,7 @@ function update(elapsed:Float) {
 function onEvent(_) {
 	var e=_.event;
 	switch(e.name){
-		case 'add_cam_zoom':if(FlxG.save.data.camZooms && FlxG.camera.zoom < 1.35) {
+		case 'add_cam_zoom':if(ccSSC.camZooms && FlxG.camera.zoom < 1.35) {
 			var camZoom:Float = Std.parseFloat(_.event.params[0]);
 			var hudZoom:Float = Std.parseFloat(_.event.params[1]);
 			if(Math.isNaN(camZoom)) camZoom = 0.015;
@@ -199,13 +199,13 @@ function onEvent(_) {
 			if(duration > 0 && intensity != 0) targetsArray[i].shake(intensity, duration);
 		}
 
-		case 'Psych/Change Scroll Speed':if (FlxG.save.data.gameplaySettings['scrolltype'] == "constant") return;
+		case 'Psych/Change Scroll Speed':if (ccSSC.gameplaySettings['scrolltype'] == "constant") return;
 		var val1:Float = Std.parseFloat(_.event.params[0]);
 		var val2:Float = Std.parseFloat(_.event.params[1]);
 		if(Math.isNaN(val1)) val1 = 1;
 		if(Math.isNaN(val2)) val2 = 0;
 		
-		var newValue:Float = PlayState.SONG.scrollSpeed * FlxG.save.data.gameplaySettings['scrollspeed'] * val1;
+		var newValue:Float = PlayState.SONG.scrollSpeed * ccSSC.gameplaySettings['scrollspeed'] * val1;
 
 		if(val2 <= 0) scrollSpeed = newValue;
 		else {
@@ -215,7 +215,7 @@ function onEvent(_) {
 		}
 		case 'Popup':if (popUp != null) return;
 		if (cpuControlled) return;
-		if (PlayState.difficulty.toLowerCase()== 'simple'||(PlayState.difficulty.toLowerCase()== 'hard' && FlxG.save.data.noMechanics)) return;
+		if (PlayState.difficulty.toLowerCase()== 'simple'||(PlayState.difficulty.toLowerCase()== 'hard' && ccSSC.noMechanics)) return;
 
 		FlxG.sound.play(Paths.sound("erro"));
 		popUp = new FlxSprite(FlxG.random.int(0, 774), FlxG.random.int(0, 421)).loadGraphic(Paths.image('chapter1/EProcess/popups/popup_' + FlxG.random.int(1, 7)));
@@ -243,9 +243,9 @@ function onEvent(_) {
 			health = -0.1;
 		});
 
-		case 'zoomBeatType1':if(FlxG.save.data.camZooms) zoomType1 = true;
-		case 'zoomBeatType2':if(FlxG.save.data.camZooms) zoomType2 = true;
-		case 'zoomBeatType3':if(FlxG.save.data.camZooms) zoomType3 = true;
+		case 'zoomBeatType1':if(ccSSC.camZooms) zoomType1 = true;
+		case 'zoomBeatType2':if(ccSSC.camZooms) zoomType2 = true;
+		case 'zoomBeatType3':if(ccSSC.camZooms) zoomType3 = true;
 
 		//stop beats
 		case 'zoomBeatType1 Cancel':zoomType1 = false;
@@ -262,9 +262,9 @@ function onEvent(_) {
 			onComplete: ()->{defaultCamZoom = e.params[0];},
 		});
 		case 'cancel Tween Zoom':if (tweenZoomEvent != null) tweenZoomEvent = null;
-		case 'Flash Camera BLACK':if(FlxG.save.data.flashing) FlxG.camera.flash(FlxColor.BLACK, _.event.params[0]);
-		case 'Flash Camera WHITE':if(FlxG.save.data.flashing) FlxG.camera.flash(FlxColor.WHITE, _.event.params[0]);
-		case 'Flash Camera RED':if(FlxG.save.data.flashing) FlxG.camera.flash(FlxColor.RED, _.event.params[0]);
+		case 'Flash Camera BLACK':if(ccSSC.flashing) FlxG.camera.flash(FlxColor.BLACK, _.event.params[0]);
+		case 'Flash Camera WHITE':if(ccSSC.flashing) FlxG.camera.flash(FlxColor.WHITE, _.event.params[0]);
+		case 'Flash Camera RED':if(ccSSC.flashing) FlxG.camera.flash(FlxColor.RED, _.event.params[0]);
 		case 'Virabot Attack'://virabotAttack();
 		case 'Kaboom':kaboomEnabled = true;
 	}
@@ -279,11 +279,11 @@ function onDadHit(e){
 }
 
 function onSongEnd() {
-	trace(FlxG.save.data.songsUnlocked);
-	if(!FlxG.save.data.songsUnlocked.contains(PlayState.SONG.meta.displayName.toLowerCase())){
+	trace(ccSSC.songsUnlocked);
+	if(!ccSSC.songsUnlocked.contains(PlayState.SONG.meta.displayName.toLowerCase())){
 		trace('played'+PlayState.SONG.meta.displayName.toLowerCase()+'for the first time');
 
-		FlxG.save.data.songsUnlocked.push(PlayState.SONG.meta.displayName.toLowerCase());
+		ccSSC.songsUnlocked.push(PlayState.SONG.meta.displayName.toLowerCase());
 	}
 }
 
@@ -373,7 +373,7 @@ function pushBlackBars2(yes:Int) {
 	}
 }
 
-function flash(color:FlxColor, duration:Float) if(FlxG.save.data.flashing) FlxG.cameras.flash(color, duration);
+function flash(color:FlxColor, duration:Float) if(ccSSC.flashing) FlxG.cameras.flash(color, duration);
 
 function colorTween(object:Array<FlxSprite>, duration:Float, colorToSayGoodbye:FlxColor, colorToSayHello:FlxColor){
 	for (i in 0...object.length){
@@ -410,16 +410,16 @@ public function setDance(object:Array<BGSprite>, dance:Bool) for (i in 0...objec
 
 function changeBetweenMinusTCO(angry:Bool) {
 	if (!angry) {
-		if(FlxG.save.data.flashing) FlxG.camera.flash(FlxColor.BLACK, 0.50);
+		if(ccSSC.flashing) FlxG.camera.flash(FlxColor.BLACK, 0.50);
 		triggerEventNote('Change Character', 'dad', 'minus-tco');
 	} else {
-		if(FlxG.save.data.flashing) FlxG.camera.flash(FlxColor.RED, 0.50);
+		if(ccSSC.flashing) FlxG.camera.flash(FlxColor.RED, 0.50);
 		triggerEventNote('Change Character', 'dad', 'angry-minus-tco');
 	}
 }
 
 function healthDrainRates(simple:Float, hard:Float, insane:Float, mult:Float = 1) {
-	if((PlayState.difficulty.toUpperCase() == 'HARD' || PlayState.difficulty.toUpperCase() == 'SIMPLE') && FlxG.save.data.noMechanics) return;
+	if((PlayState.difficulty.toUpperCase() == 'HARD' || PlayState.difficulty.toUpperCase() == 'SIMPLE') && ccSSC.noMechanics) return;
 
 	switch(PlayState.difficulty.toUpperCase()) {
 		case 'SIMPLE':health -= simple * mult;
@@ -479,19 +479,19 @@ function showUpCorruptBackground(fuck:Bool) {
 }
 
 public function showHUDTween(duration:Float, alpha:Float) {
-	if(!FlxG.save.data.hideHud) {
+	if(!ccSSC.hideHud) {
 		alphaTween([healthBar, healthBarBG, iconP1, iconP2, scoreTxt, judgementCounter, botplayTxt], duration, alpha);
 		if (iconP3 != null) alphaTween([iconP3], duration, alpha);
 		if (iconP4 != null) alphaTween([iconP4], duration, alpha);
 	}
 
-	if(FlxG.save.data.timeBarType != 'Disabled') {
+	if(ccSSC.timeBarType != 'Disabled') {
 		alphaTween([timeBar, timeBarBG, timeTxt], duration, alpha);
 	}
 
 	for (i in 0...playerStrums.length) alphaTween([playerStrums.members[i]], duration, alpha);
 
-	if (FlxG.save.data.middleScroll && alpha <= 0.35) {
+	if (ccSSC.middleScroll && alpha <= 0.35) {
 		for (i in 0...opponentStrums.length) alphaTween([opponentStrums.members[i]], ClientPrefs.middleScroll ? 0 : duration, 0.35);
 	} else {
 		for (i in 0...opponentStrums.length) alphaTween([opponentStrums.members[i]], ClientPrefs.middleScroll ? 0 : duration, alpha);
@@ -631,7 +631,7 @@ function mouseOverlaps(spr:FlxSprite) {//I needed neo's help for this
 public function healthDrainLolz(drain:Float, min:Float, mult:Float) {
 	if(!lossingHealth) return;
 	if(PlayState.difficulty.toUpperCase() == 'SIMPLE') return;
-	if(PlayState.difficulty.toUpperCase()== 'HARD' && FlxG.save.data.noMechanics_cc) return;
+	if(PlayState.difficulty.toUpperCase()== 'HARD' && ccSSC.noMechanics_cc) return;
 	if(health <= min) return;
 
 	health -= drain * multiplierDrain;

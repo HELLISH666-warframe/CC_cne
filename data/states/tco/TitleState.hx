@@ -27,7 +27,7 @@ function create(){
 
 	FlxG.mouse.visible = false;
 		
-	if(FlxG.save.data.flashing == null && !FlashingState.leftState) {
+	if(ccSSC.flashing == null/* && !FlashingState.leftState*/) {
 		FlxTransitionableState.skipNextTransIn = true;
 		FlxTransitionableState.skipNextTransOut = true;
 		FlxG.switchState(new ModState('Psych/FlashingState'));
@@ -145,10 +145,10 @@ function update(elapsed:Float) {
 		if(pressedEnter) {
 			titleText.alpha = 1;
 
-			FlxG.camera.flash(FlxG.save.data.flashing ? FlxColor.WHITE : 0x4CFFFFFF, 0.7);
+			FlxG.camera.flash(ccSSC.flashing ? FlxColor.WHITE : 0x4CFFFFFF, 0.7);
 			FlxG.sound.play(Paths.sound('ANGRY_TEXT_BOX'));
 
-			if(FlxG.save.data.screenShake_cc) FlxG.camera.shake(0.0045, 1);
+			if(ccSSC.screenShake) FlxG.camera.shake(0.0045, 1);
 			zoomLerpTo = 3;
 			zoomPerSec = 1.5;
 

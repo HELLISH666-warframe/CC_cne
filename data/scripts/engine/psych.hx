@@ -28,7 +28,7 @@ var songPercent:Float = 0;
 var uiType:String = 'default';
 
 function postCreate() {
-	var showTime:Bool = (FlxG.save.data.timeBarType != 'Disabled');
+	var showTime:Bool = (ccSSC.timeBarType != 'Disabled');
 	timeTxt = new FlxText(42 + (FlxG.width / 2) - 248, 9, 400, "", 32);
 	timeTxt.setFormat(Paths.font("phantommuff.ttf"), 32, FlxColor.WHITE, 'center', FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 	timeTxt.scrollFactor.set();
@@ -67,7 +67,7 @@ function postCreate() {
 		
 	add(timeTxt);
 
-	if(FlxG.save.data.timeBarType == 'Song Name') {
+	if(ccSSC.timeBarType == 'Song Name') {
 		timeTxt.size = 24;
 		timeTxt.y += 3;
 	}
@@ -82,7 +82,7 @@ function postCreate() {
 		healthBarB.y = FlxG.height * 0.89;
 		healthBarB.screenCenter(FlxAxes.X);
 		healthBarB.scrollFactor.set();
-		healthBarB.visible = !FlxG.save.data.hideHud;
+		healthBarB.visible = !ccSSC.hideHud;
 		healthBarB.xAdd = -4;
 		healthBarB.yAdd = -4;
 		add(healthBarB);
@@ -90,7 +90,7 @@ function postCreate() {
 		healthBarB.y = FlxG.height * 0.89;
 		healthBarB.screenCenter(FlxAxes.X);
 		healthBarB.scrollFactor.set();
-		healthBarB.visible = !FlxG.save.data.hideHud;
+		healthBarB.visible = !ccSSC.hideHud;
 		healthBarB.xAdd = -4;
 		healthBarB.yAdd = -4;
 		healthBarB.xAdd = -26;
@@ -100,8 +100,8 @@ function postCreate() {
 		healthBar = new FlxBar(healthBarB.x + 4, healthBarB.y + 8, FlxBarFillDirection.RIGHT_TO_LEFT, Std.int(healthBarB.width - 50), Std.int(healthBarB.height - 28), this,'health', 0, 2);
 		healthBar.scrollFactor.set();
 		// healthBar
-		healthBar.visible = !FlxG.save.data.hideHud;
-		healthBar.alpha = FlxG.save.data.healthBarAlpha;
+		healthBar.visible = !ccSSC.hideHud;
+		healthBar.alpha = ccSSC.healthBarAlpha;
 		healthBar.screenCenter(FlxAxes.X);
 		healthBar.x += 150;
 		healthBar.y += 10;
@@ -122,7 +122,7 @@ function postCreate() {
 		case 'psychDef':fakeScoreText = new FlxText(0, healthBarB.y + 36, FlxG.width, "", 20);
 		fakeScoreText.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.WHITE, 'center', FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		fakeScoreText.borderSize = 1.25;
-		fakeScoreText.visible = !FlxG.save.data.hideHud;
+		fakeScoreText.visible = !ccSSC.hideHud;
 		default:fakeScoreText = new FlxText(20, 0, 0, "", 20);
 		fakeScoreText.setFormat(Paths.font("phantommuff.ttf"), 22, FlxColor.WHITE, 'left', FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		fakeScoreText.borderSize = 2;
@@ -195,12 +195,12 @@ function postUpdate(elapsed:Float) {
 		songPercent = (curTime / FlxG.sound.music.length);
 
 		var songCalc:Float = (FlxG.sound.music.length - curTime);
-		if(FlxG.save.data.timeBarType == 'Time Elapsed') songCalc = curTime;
+		if(ccSSC.timeBarType == 'Time Elapsed') songCalc = curTime;
 
 		var secondsTotal:Int = Math.floor(songCalc / 1000);
 		if(secondsTotal < 0) secondsTotal = 0;
 
-		if(FlxG.save.data.timeBarType != 'Song Name') timeTxt.text = FlxStringUtil.formatTime(secondsTotal, false);
+		if(ccSSC.timeBarType != 'Song Name') timeTxt.text = FlxStringUtil.formatTime(secondsTotal, false);
 	//}
 
 	switch(uiType) {

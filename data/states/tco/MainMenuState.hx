@@ -150,9 +150,9 @@ function create() {
 	FlxG.mouse.unload();
 	FlxG.mouse.load(Paths.image("chapter1/EProcess/alt"), 1.5, 0);
 
-	newToTheMod=!FlxG.save.data.songsUnlocked_mainWeek;
+	newToTheMod=!ccSSC.songsUnlocked_mainWeek;
 
-	if(FlxG.save.data.songsUnlocked_seenCredits && FlxG.save.data.songsUnlocked_mainWeek) {
+	if(ccSSC.songsUnlocked_seenCredits && ccSSC.songsUnlocked_mainWeek) {
 		blackThingIG = new FlxSprite().makeSolid(FlxG.width, FlxG.height, FlxColor.BLACK);
 		blackThingIG.camera = camGF;
 		blackThingIG.screenCenter();
@@ -180,7 +180,7 @@ function create() {
 		add(star);
 	}
 
-	if (!FlxG.save.data.songsUnlocked_mainWeek) optionShit = optionShit_NO_STORY;
+	if (!ccSSC.songsUnlocked_mainWeek) optionShit = optionShit_NO_STORY;
 
 	menuItems = new FlxTypedGroup<FlxSprite>();
 	add(menuItems);
@@ -199,7 +199,7 @@ function create() {
 		var off = 0;
 		var off_NO_STORY = 0;
 		var fuckOPTIONS = 0;
-		if(FlxG.save.data.songsUnlocked_mainWeek) off = -100;
+		if(ccSSC.songsUnlocked_mainWeek) off = -100;
 		else {off_NO_STORY = -50; fuckOPTIONS = 250;}
 
 		switch(i) {
@@ -247,12 +247,12 @@ function create() {
 	chrom.bOffset=-0;
 	//chrom = new ChromaticAberrationEffect(0);
 
-	if (FlxG.save.data.shaders) camGame.addShader(chrom);
-	//if (FlxG.save.data.shaders) addShaderToCamera('camgame', chrom);
+	if (ccSSC.shaders) camGame.addShader(chrom);
+	//if (ccSSC.shaders) addShaderToCamera('camgame', chrom);
 
 	changeItem(0);
 
-	if (FlxG.save.data.shaders) FlxG.camera.addShader(crtShader);
+	if (ccSSC.shaders) FlxG.camera.addShader(crtShader);
 
 	FlxTween.tween(FlxG.camera, {zoom: 1}, 0.8, {ease: FlxEase.expoIn});
 	FlxG.camera.fade(FlxColor.BLACK, 0.8, true, function(){finishedZoom = true;});
@@ -262,10 +262,10 @@ function createGFPopup() {
 	if (!newToTheMod) return; //why would you need to play the tutorial if you already know how to play like duh
 
 	selectedSomethin = true;
-	gfMoment = true;
+	new FlxTimer().start(0.01, ()->{gfMoment = true;});
 	targetAlphaCamPopup = 1;
 
-	blackThingIG = new FlxSpriteExtra().makeSolid(FlxG.width, FlxG.height, FlxColor.BLACK);
+	blackThingIG = new FlxSprite().makeSolid(FlxG.width, FlxG.height, FlxColor.BLACK);
 	blackThingIG.camera = camGF;
 	blackThingIG.screenCenter();
 	blackThingIG.alpha = 0.3;
@@ -319,7 +319,7 @@ function update(elapsed:Float){
 			FlxG.sound.play(Paths.sound('scrollMenu'));
 			var targetOption:Int = curSelMM + 3;
 			if (curSelMM > 2) targetOption = curSelMM - 3;
-			if (!FlxG.save.data.songsUnlocked_mainWeek) {
+			if (!ccSSC.songsUnlocked_mainWeek) {
 				if(curSelMM == 3) //options menu
 					targetOption = 1;
 				else targetOption = 3;
@@ -404,7 +404,7 @@ function update(elapsed:Float){
 			codeClearTimer = 1;
 		}
 
-		if (typin == KONAMI && FlxG.save.data.songsUnlocked_mainWeek){
+		if (typin == KONAMI && ccSSC.songsUnlocked_mainWeek){
 			selectedSomethin = true;
 			typin = 'LOADING REDZONE ERROR';
 			PlayState.loadSong("redzone-error", "insane");
@@ -502,7 +502,7 @@ function startShitLolz() {
 function loadTutorial() {targetAlphaCamPopup = 0;
 	FlxG.sound.play(Paths.sound('confirmMenu'));
 
-	PlayState.loadSong("practice time", "hard");
+	PlayState.loadSong("practice-time", "hard");
 	FlxG.switchState(new PlayState());
 }
 

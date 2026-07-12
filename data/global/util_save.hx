@@ -1,0 +1,86 @@
+import flixel.util.FlxSave;
+
+//SAVES
+public static var ccSave = new FlxSave();
+public static var ccSSC;
+
+function new() {   
+    ccSave.bind('ComputerizedConflict', 'CodenameEngine');
+
+    if (ccSave.data.m == null) ccSave.data.m = {};
+
+    ccSSC=ccSave.data.m;
+
+    ccSSC.framerate??=60;
+    ccSSC.globalAntialiasing??=true;
+    ccSSC.songsUnlocked_mainWeek ??= false;
+    ccSSC.songsUnlocked_seenCredits ??= false;
+    ccSSC.songsUnlocked ??= [];
+    ccSSC.checkpoint_cc = null;
+    ccSSC.crt_cc ??= true;
+    ccSSC.alanUnlocked ??= false;
+    ccSSC.code_songs_cc ??= [];//GUARANTEE this won't be needed later.
+    ccSSC.shaders ??= true;
+    ccSSC.advancedShaders ??= true;
+    ccSSC.noteSplashes ??= true;
+    ccSSC.hideHud??=false;
+    ccSSC.timeBarType ??= "Time Left";
+    ccSSC.flashing=null;
+    ccSSC.screenShake ??= true;
+    ccSSC.camZooms??=true;
+    ccSSC.scoreZoom??=true;
+    ccSSC.healthBarAlpha??=1;
+    ccSSC.comboStacking??=false;
+    ccSSC.lagText??=true;
+    ccSSC.showFPS??=true;
+    ccSSC.showExtraInfo??=false;
+    ccSSC.cameraMovement??=true;
+    ccSSC.wideScreenSongs ??= false;
+    ccSSC.controllerMode??=false;
+    ccSSC.downScroll??=false;
+    ccSSC.middleScroll??=false;
+    ccSSC.noMechanics??=false;
+    ccSSC.judCounter??=false;
+    ccSSC.laneunderlay??=true;
+    ccSSC.laneTransparency??=0;
+    ccSSC.ghostTapping??=true;
+    ccSSC.opponentStrums??=true;
+    ccSSC.noReset??=false;
+    ccSSC.hitsoundVolume??=0;
+    ccSSC.ratingOffset??=0;
+    ccSSC.sickWindow??=45;
+    ccSSC.goodWindow??=90;
+    ccSSC.badWindow??=135;
+    ccSSC.safeFrames??=10;
+    ccSSC.gameplaySettings??=[
+		'scrollspeed' => 1.0,
+		'scrolltype' => 'multiplicative', 
+		'songspeed' => 1.0,
+		'healthgain' => 1.0,
+		'healthloss' => 1.0,
+		'instakill' => false,
+		'practice' => false,
+		'botplay' => false,
+		'opponentplay' => false
+	];
+
+    saveMyShit();
+    trace(ccSSC);
+}
+
+public static function saveMyShit() {
+    Options.antialiasing=ccSSC.globalAntialiasing;
+    Options.lowMemoryMode=ccSSC.lowQuality;
+    Options.framerate=ccSSC.framerate;
+    if (FlxG.updateFramerate < Options.framerate) FlxG.drawFramerate = FlxG.updateFramerate = Options.framerate;
+	else FlxG.updateFramerate = FlxG.drawFramerate = Options.framerate;
+    Options.splashesEnabled=ccSSC.noteSplashes;
+    Options.flashingMenu=ccSSC.flashing;
+    Options.camZoomOnBeat=ccSSC.camZooms;
+    Options.downscroll=ccSSC.downScroll;
+    Options.ghostTapping=ccSSC.ghostTapping;
+
+    ccSave.flush();
+    FlxG.save.data.ccSave=ccSave;
+    FlxG.save.flush();
+}

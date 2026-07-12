@@ -57,7 +57,7 @@ function create() {
 	FlxG.cameras.reset(camGame);
 	FlxCamera.defaultCameras = [camGame];
 	FlxG.cameras.add(camHUD, false);
-	checkpointSystemON = FlxG.save.data.checkpoint != null;
+	checkpointSystemON = ccSSC.checkpoint != null;
 
 	FlxG.camera.zoom = 1.5;
 	camHUD.zoom = 1.5;
@@ -159,7 +159,7 @@ function create() {
 	changeDifficulty(0);
 	changeWeek(0);
 
-	if(FlxG.save.data.crt_cc){FlxG.camera.addShader(crtShader);
+	if(ccSSC.shaders){FlxG.camera.addShader(crtShader);
 	camHUD.addShader(crtShader);
 	}
 

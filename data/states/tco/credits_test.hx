@@ -29,10 +29,10 @@ function goToState() {
 		case 'codes':FlxG.switchState(new MessagesState(true));
 		case 'alan-unlock':FlxG.switchState(new ModState('FreeplayMenu'));
 		FlxG.sound.playMusic(Paths.music('freakyMenu'));
-		case 'tco_credits':if(!FlxG.save.data.songsUnlocked_seenCredits){
+		case 'tco_credits':if(!ccSSC.songsUnlocked_seenCredits){
 		FlxG.switchState(new TitleState());
 		FlxG.sound.playMusic(Paths.music('freakyMenu'));
-		FlxG.save.data.songsUnlocked_seenCredits=true;
+		ccSSC.songsUnlocked_seenCredits=true;
 		}else{
 			FlxG.switchState(new ModState('tco/FreeplayMenu'));
 			FlxG.sound.playMusic(Paths.music('freakyMenu'));

@@ -65,7 +65,7 @@ function create() {
 
 	changeItem(0);
 
-	if (FlxG.save.data.shaders) FlxG.camera.addShader(crtShader = new CustomShader("CRTShader"));
+	if (ccSSC.shaders) FlxG.camera.addShader(crtShader = new CustomShader("CRTShader"));
 
 	FlxTween.tween(FlxG.camera, {zoom: 1}, 0.8, {ease: FlxEase.expoIn});
 	FlxG.camera.fade(FlxColor.BLACK, 0.8, true, function(){finishedZoom = true;});

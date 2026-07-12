@@ -18,14 +18,14 @@ var songRealList = [
 
 function checkIfAlanIsLocked() {
 	for (a in ['trojan','conflict','dashpulse','time travel','cubify','kickstarter','contrivance','messenger','amity','tune in','unfaithful','rombie','fancy funk','catto','enmity','phantasm','aurora']){
-		if (!FlxG.save.data.songsUnlocked.contains(a))
+		if (!ccSSC.songsUnlocked.contains(a))
             return false;
 	}
 	return true;
 }
-if(FlxG.save.data.songsUnlocked.contains('redzone-error'))songRealList[1].push("redzone-error");
+if(ccSSC.songsUnlocked.contains('redzone-error'))songRealList[1].push("redzone-error");
 if(checkIfAlanIsLocked())songRealList[1].push("alan");
-if(FlxG.save.data.songsUnlocked.contains('catto'))songRealList[3].push("catto-(old)");
+if(ccSSC.songsUnlocked.contains('catto'))songRealList[3].push("catto-(old)");
 
 for(s in songRealList[FlxG.save.data.freeplaything_cc])
 	songs.push(Chart.loadChartMeta(s, "hard", true));
@@ -106,7 +106,7 @@ function create() {
 	add(grpSongs);
 
 	for (i in 0...songs.length) {
-		var wasPlayed:Bool = FlxG.save.data.songsUnlocked.contains(songs[i].displayName.toLowerCase());
+		var wasPlayed:Bool = ccSSC.songsUnlocked.contains(songs[i].displayName.toLowerCase());
 		var songText = new FlxText(500, 650,600, wasPlayed ? songs[i].displayName.toUpperCase() : '???').setFormat(Paths.font("phantommuff.ttf"), 44, FlxColor.WHITE, 'center', FlxTextBorderStyle.OUTLINE, FlxColor.TRANSPARENT);
 		songText.screenCenter(FlxAxes.X);
 		songText.scrollFactor.set(1, 0);
@@ -172,7 +172,7 @@ function create() {
 	FlxTween.tween(FlxG.camera, {zoom: 1}, 0.8, {ease: FlxEase.expoIn});
 	FlxG.camera.fade(FlxColor.BLACK, 0.9, true, ()->{finishedZoom = true;});
 
-	if (FlxG.save.data.shaders) {FlxG.camera.addShader(crtShader = new CustomShader("CRTShader"));
+	if (ccSSC.shaders) {FlxG.camera.addShader(crtShader = new CustomShader("CRTShader"));
 	FlxG.camera.addShader(fishEyeshader);
 	fishEyeshader.MAX_POWER = 0.05;}
 }
@@ -256,7 +256,7 @@ function update(elapsed:Float) {
 				openSubState(new ModSubState('Psych/substates/GameplayChangersSubstate'));
 			}
 			else if(FlxG.keys.justPressed.SPACE) {
-				if(!FlxG.save.data.songsUnlocked.contains(songs[curSelFP].displayName.toLowerCase()))return;
+				if(!ccSSC.songsUnlocked.contains(songs[curSelFP].displayName.toLowerCase()))return;
 				if(instPlaying != curSelFP) {
 					#if PRELOAD_ALL
 					FlxG.sound.music.volume = 0;
@@ -310,7 +310,7 @@ function changeSelection(a:Int = 0, playSound:Bool = true) {
 	if(tweenX != null) tweenX.cancel();
 	if(alphaTween != null) alphaTween.cancel();
 
-	var songHasBeenPlayed:Bool = FlxG.save.data.songsUnlocked.contains(songs[curSelFP].displayName.toLowerCase());
+	var songHasBeenPlayed:Bool = ccSSC.songsUnlocked.contains(songs[curSelFP].displayName.toLowerCase());
 
 	var newColor:Int = songs[curSelFP].color;
 	if(newColor != intendedColor) {

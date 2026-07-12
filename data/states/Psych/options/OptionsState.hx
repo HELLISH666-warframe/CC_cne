@@ -5,7 +5,7 @@ import funkin.backend.utils.DiscordUtil;
 
 var options:Array<String> = ['Note Colors', 'Controls', 'Graphics', 'Visuals and UI', 'Gameplay'];
 private var grpOptions:FlxTypedGroup<Alphabet>;
-private static var curSelected:Int = 0;
+private static var curSelOS:Int = 0;
 public static var menuBG:FlxSprite;
 var finishedZoom = false;
 
@@ -13,10 +13,9 @@ function openSelectedSubstate(label:String) {
 	switch(label) {
 		case 'Note Colors':openSubState(new options.NotesSubState());
 		case 'Controls':persistentDraw = false; openSubState(new KeybindsOptions());
-		case 'Graphics':openSubState(new options.GraphicsSettingsSubState());
-		case 'Visuals and UI':openSubState(new options.VisualsUISubState());
-		case 'Gameplay':
-			openSubState(new ModSubState('Psych/options/BaseOptionsMenu',{"menu":'Gameplay'}));
+		case 'Graphics':openSubState(new ModSubState('Psych/options/BaseOptionsMenu',{"menu":'Graphics'}));
+		case 'Visuals and UI':openSubState(new ModSubState('Psych/options/BaseOptionsMenu',{"menu":'Visuals and UI'}));
+		case 'Gameplay':openSubState(new ModSubState('Psych/options/BaseOptionsMenu',{"menu":'Gameplay'}));
 	}
 }
 
@@ -114,7 +113,7 @@ function update(elapsed:Float) {
 	
 		if (controls.ACCEPT) {
 			persistentUpdate = false;
-			openSelectedSubstate(options[curSelected]);
+			openSelectedSubstate(options[curSelOS]);
 		}
 	}
 	if (FlxG.keys.pressed.SHIFT && FlxG.keys.pressed.K)
@@ -129,12 +128,12 @@ function exit() {
 	FlxG.switchState(new MainMenuState());
 }
 function changeSelection(change:Int = 0) {
-	curSelected = FlxMath.wrap(curSelected + change, 0, options.length - 1);
+	curSelOS = FlxMath.wrap(curSelOS + change, 0, options.length - 1);
 
 	var bullShit:Int = 0;
 
 	for (item in grpOptions.members) {
-		item.targetY = bullShit - curSelected;
+		item.targetY = bullShit - curSelOS;
 		bullShit++;
 
 		item.alpha = 0.6;
