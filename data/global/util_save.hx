@@ -1,15 +1,8 @@
-import flixel.util.FlxSave;
-
-//SAVES
-public static var ccSave = new FlxSave();
 public static var ccSSC;
 
 function new() {   
-    ccSave.bind('ComputerizedConflict', 'CodenameEngine');
-
-    if (ccSave.data.m == null) ccSave.data.m = {};
-
-    ccSSC=ccSave.data.m;
+    FlxG.save.data.Computerized_Conflict_Save??={};
+    ccSSC=FlxG.save.data.Computerized_Conflict_Save;
 
     ccSSC.framerate??=60;
     ccSSC.globalAntialiasing??=true;
@@ -25,7 +18,6 @@ function new() {
     ccSSC.noteSplashes ??= true;
     ccSSC.hideHud??=false;
     ccSSC.timeBarType ??= "Time Left";
-    ccSSC.flashing=null;
     ccSSC.screenShake ??= true;
     ccSSC.camZooms??=true;
     ccSSC.scoreZoom??=true;
@@ -68,6 +60,10 @@ function new() {
     trace(ccSSC);
 }
 
+function preStateSwitch() {
+    saveMyShit();
+}
+
 public static function saveMyShit() {
     Options.antialiasing=ccSSC.globalAntialiasing;
     Options.lowMemoryMode=ccSSC.lowQuality;
@@ -80,7 +76,6 @@ public static function saveMyShit() {
     Options.downscroll=ccSSC.downScroll;
     Options.ghostTapping=ccSSC.ghostTapping;
 
-    ccSave.flush();
-    FlxG.save.data.ccSave=ccSave;
     FlxG.save.flush();
+    trace(ccSSC.flashing);
 }

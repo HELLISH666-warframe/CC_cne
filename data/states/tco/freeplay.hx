@@ -23,7 +23,7 @@ function checkIfAlanIsLocked() {
 	}
 	return true;
 }
-if(ccSSC.songsUnlocked.contains('redzone-error'))songRealList[1].push("redzone-error");
+if(ccSSC.songsUnlocked.contains('redzone error'))songRealList[1].push("redzone-error");
 if(checkIfAlanIsLocked())songRealList[1].push("alan");
 if(ccSSC.songsUnlocked.contains('catto'))songRealList[3].push("catto-(old)");
 

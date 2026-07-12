@@ -121,7 +121,7 @@ function postNew() {
 	camChar.alpha = 0;
 	camHUD.alpha = 0;
 
-	if (FlxG.save.data.shaders) {camGame.addShader(ChromaticAberrationEffect);
+	if (ccSSC.shaders) {camGame.addShader(ChromaticAberrationEffect);
 		camHUD.addShader(ChromaticAberrationEffect);
 		setChrome(ChromaticAberrationEffect,0.0005);
 	}
@@ -193,8 +193,8 @@ function beatHit() {
 			cpuStrums.notes.forEach((note) -> FlxTween.tween(note, {alpha: 0}, 1));
 			case 288:veryEpicVignette.alpha = 0;
 			vignetteTrojan.alpha = 1;
-			case 316:cpuStrums.forEach(function(spr:StrumNote) FlxTween.tween(spr, {alpha:FlxG.save.data.middleScroll ? 0 : 1}, 1));
-			cpuStrums.notes.forEach((note) -> FlxTween.tween(note, {alpha: FlxG.save.data.middleScroll ? 0 : 1}, 1));
+			case 316:cpuStrums.forEach(function(spr:StrumNote) FlxTween.tween(spr, {alpha:ccSSC.middleScroll ? 0 : 1}, 1));
+			cpuStrums.notes.forEach((note) -> FlxTween.tween(note, {alpha: ccSSC.middleScroll ? 0 : 1}, 1));
 			dad.playAnim('phase3Transition', true);
 			dad.specialAnim = true;
 			case 320:altAnimation2 = true;

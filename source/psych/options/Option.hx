@@ -83,11 +83,11 @@ class Option
 
 	public function getValue():Dynamic
 	{
-		return Reflect.getProperty(FlxG.save.data, variable);
+		return Reflect.getProperty(ccSSC, variable);
 	}
 	public function setValue(value:Dynamic)
 	{
-		Reflect.setProperty(FlxG.save.data, variable, value);
+		Reflect.setProperty(ccSSC, variable, value);
 	}
 
 	public function setChild(child:Alphabet)

@@ -32,7 +32,7 @@ function postNew() {
 	electricCountdown.screenCenter();
 	add(electricCountdown);
 
-	if (FlxG.save.data.shaders) {camGame.addShader(ChromaticAberrationEffect);
+	if (ccSSC.shaders) {camGame.addShader(ChromaticAberrationEffect);
 		camHUD.addShader(ChromaticAberrationEffect);
 	}
 	skipCountdown = true;
