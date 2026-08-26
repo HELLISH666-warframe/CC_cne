@@ -20,10 +20,6 @@ private var descText:FlxText;
 
 public var title:String;
 public var rpcTitle:String;
-var scrollingThing:FlxBackdrop;
-var spikes1:FlxBackdrop;
-var spikes2:FlxBackdrop;
-var vignette:FlxSprite;
 
 //It's_fucking_abysmal_but_it's_better_than_3_extra_states.
 function tempFuncThing() {
@@ -52,6 +48,9 @@ function tempFuncThing() {
 		option.maxValue = 240;
 		option.displayFormat = '%v FPS';
 		option.onChange = onChangeFramerate;
+
+		var option = new Option('VRAM-Only Sprites',"If checked, will only store the bitmaps in the GPU, freeing a LOT of memory (EXPERIMENTAL). Turning this off will consume a lot of memory, especially on bigger sprites. If you aren't sure, leave this on.",'gpuOnlyBitmaps','bool',true);
+		addOption(option);
 		case 'Visuals and UI':title = 'Visuals and UI';
 		rpcTitle = 'Visuals & UI Settings Menu';
 		
@@ -132,6 +131,22 @@ function tempFuncThing() {
 		var option = new Option('Disable Reset Button',"If checked, pressing Reset won't do anything.",'noReset','bool',false);
 		addOption(option);
 
+		var option = new Option('Auto Pause',"If checked, switching windows will pause the game.",'autoPause','bool',true);
+		addOption(option);
+
+		var option = new Option('Song Offset','Changes the offset that songs should start with.','songOffset','int',0);
+		option.displayFormat = '%vms';
+		option.scrollSpeed = 50;
+		option.minValue = -5000;
+		option.maxValue = 5000;
+		addOption(option);
+
+		var option = new Option('Streamed Music',"If checked, only musics will have streamed audio, ALSO freeing a LOT of memory with the downside of higher cpu usage if more audio are being streamed at once (EXPERIMENTAL). Turning this off will consume a lot of memory, especially on longer songs. If you aren't sure, leave this on.",'streamedMusic','bool',true);
+		addOption(option);
+
+		var option = new Option('Streamed Vocals',"If checked, vocals will also be streamed if Streamed Music is checked, will impact the performance if the song uses alot of vocals (EXPERIMENTAL). If you aren't sure, leave this off.",'streamedVocals','bool',true);
+		addOption(option);
+
 		var option = new Option('Hitsound Volume','Funny notes does \"Tick!\" when you hit them."','hitsoundVolume','percent',0);
 		addOption(option);
 		option.scrollSpeed = 1.6;
@@ -185,38 +200,6 @@ function new() {
 
 	DiscordUtil.changePresenceSince(rpcTitle, null);
 
-	var bg:FlxSprite = new FlxSprite().loadGraphic(Paths.image('menus/menuDesat'));
-	bg.color = 0xFFea71fd;
-	bg.screenCenter();
-	bg.antialiasing = Options.antialiasing;
-	add(bg);
-		
-	scrollingThing = new FlxBackdrop(Paths.image('menus/mainmenu/scroll'), FlxAxes.XY);
-	scrollingThing.alpha = 0.9;
-	scrollingThing.setGraphicSize(Std.int(scrollingThing.width * 0.7));
-	add(scrollingThing);
-
-	var circVignette:FlxSprite = new FlxSprite();
-	circVignette.loadGraphic(Paths.image('menus/mainmenu/circVig'));
-	circVignette.scrollFactor.set();
-	add(circVignette);
-
-	vignette = new FlxSprite();
-	vignette.loadGraphic(Paths.image('menus/mainmenu/vignette'));
-	vignette.scrollFactor.set();
-	add(vignette);
-
-	spikes1 = new FlxBackdrop(Paths.image('menus/mainmenu/spikes'), FlxAxes.X);
-	spikes1.y -= 60;
-	spikes1.scrollFactor.set(0, 0);
-	spikes1.flipY = true;
-	add(spikes1);
-
-	spikes2 = new FlxBackdrop(Paths.image('menus/mainmenu/spikes'), FlxAxes.X);
-	spikes2.y += 630;
-	spikes2.scrollFactor.set(0, 0);
-	add(spikes2);
-
 	// avoids lagspikes while scrolling through menus!
 	grpOptions = new FlxTypedGroup<Alphabet>();
 	add(grpOptions);
@@ -231,8 +214,9 @@ function new() {
 	descBox.alpha = 0.6;
 	add(descBox);
 
-	var titleText:Alphabet = new Alphabet(75, 40, title, true);
+	var titleText:Alphabet = new Alphabet(45, 20, title, true);
 	titleText.scale.set(0.6,0.6);
+	titleText.updateHitbox();
 	titleText.alpha = 0.4;
 	add(titleText);
 
@@ -282,12 +266,6 @@ var nextAccept:Int = 5;
 var holdTime:Float = 0;
 var holdValue:Float = 0;
 function update(elapsed:Float) {
-	scrollingThing.x -= 0.45 * 60 * elapsed;
-	scrollingThing.y -= 0.16 * 60 * elapsed;
-
-	spikes1.x -= 0.45 * 60 * elapsed;
-	spikes2.x -= 0.45 * 60 * elapsed;
-		
 	if (controls.UP_P||controls.DOWN_P) changeSelection(controls.UP_P?-1:1);
 
 	if (controls.BACK) {
@@ -422,23 +400,6 @@ function changeSelection(change:Int = 0) {
 	FlxG.sound.play(Paths.sound('scrollMenu'));
 }
 
-function reloadBoyfriend() {
-	var wasVisible:Bool = false;
-	if(boyfriend != null) {
-		wasVisible = boyfriend.visible;
-		boyfriend.kill();
-		remove(boyfriend);
-		boyfriend.destroy();
-	}
-
-	boyfriend = new Character(840, 170, 'animator-bf', true);
-	boyfriend.setGraphicSize(Std.int(boyfriend.width * 0.75));
-	boyfriend.updateHitbox();
-	boyfriend.dance();
-	insert(1, boyfriend);
-	boyfriend.visible = wasVisible;
-}
-
 function reloadCheckboxes()
 	for (checkbox in checkboxGroup) {checkbox.daValue = (optionsArray[checkbox.ID].getValue() == true);}
 
@@ -448,7 +409,7 @@ function onChangeAntiAliasing() {
 		var sprite:Dynamic = sprite; //Make it check for FlxSprite instead of FlxBasic
 		var sprite:FlxSprite = sprite; //Don't judge me ok
 		if(sprite != null && (sprite is FlxSprite) && !(sprite is FlxText)) {
-			sprite.antialiasing = ClientPrefs.globalAntialiasing;
+			sprite.antialiasing = ccSSC.globalAntialiasing;
 		}
 	}
 }

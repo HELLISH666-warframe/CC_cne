@@ -9,7 +9,8 @@ public static function getTheOs() {
 
 function update() {
     if (FlxG.keys.pressed.SHIFT && FlxG.keys.pressed.H)
-        FlxG.switchState(new ModState('tco/credits_test',{"videoName": 'tco_credits',"canSkip":false}));
+        FlxG.switchState(new ModState('Psych/options/OptionsState'));
+        //FlxG.switchState(new ModState('tco/credits_test',{"videoName": 'tco_credits',"canSkip":false}));
 }
 
 public static var minimizeWindowArray:Array<String> = ['dashpulse','messenger','rombie','powerup'];

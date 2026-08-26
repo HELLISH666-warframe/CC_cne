@@ -1,329 +1,204 @@
-package options;
-
-#if desktop
-import Discord.DiscordClient;
-#end
-import flash.text.TextField;
-import flixel.FlxG;
-import flixel.FlxSprite;
-import flixel.addons.display.FlxGridOverlay;
 import flixel.group.FlxGroup.FlxTypedGroup;
-import flixel.math.FlxMath;
-import flixel.text.FlxText;
-import flixel.util.FlxColor;
-import lime.utils.Assets;
-import flixel.FlxSubState;
-import flash.text.TextField;
-import flixel.FlxG;
-import flixel.FlxSprite;
-import flixel.util.FlxSave;
-import haxe.Json;
-import flixel.tweens.FlxEase;
-import flixel.tweens.FlxTween;
-import flixel.util.FlxTimer;
-import flixel.input.keyboard.FlxKey;
-import flixel.graphics.FlxGraphic;
 import flixel.addons.display.FlxBackdrop;
-import Controls;
+import funkin.menus.ui.ClassicAlphabet;
+import Psych.ColorSwapTest;
 
-using StringTools;
+private static var curSelNSS:Int = 0;
+private static var typeSelected:Int = 0;
+private var grpNumbers:FlxTypedGroup<ClassicAlphabet>;
+private var grpNotes:FlxTypedGroup<FlxSprite>;
+private var shaderArray:Array<ColorSwap> = [];
+var curValue:Float = 0;
+var holdTime:Float = 0;
+var nextAccept:Int = 5;
 
-class NotesSubState extends MusicBeatSubstate
-{
-	private static var curSelected:Int = 0;
-	private static var typeSelected:Int = 0;
-	private var grpNumbers:FlxTypedGroup<Alphabet>;
-	private var grpNotes:FlxTypedGroup<FlxSprite>;
-	private var shaderArray:Array<ColorSwap> = [];
-	var curValue:Float = 0;
-	var holdTime:Float = 0;
-	var nextAccept:Int = 5;
+var blackBG:FlxSprite;
+var hsbText:Alphabet;
 
-	var blackBG:FlxSprite;
-	var hsbText:Alphabet;
-	var scrollingThing:FlxBackdrop;
-	var spikes1:FlxBackdrop;
-	var spikes2:FlxBackdrop;
-	var vignette:FlxSprite;
+var posX = 230;
 
-	var posX = 230;
-	public function new() {
-		super();
+function setHue(shader,val)shader.data.uHsv.value[0]=val;
+function setSaturation(shader,val)shader.data.uHsv.value[1]=val;
+function setBrightness(shader,val)shader.data.uHsv.value[2]=val;
+function create() {
+	blackBG = new FlxSprite(posX - 25).makeSolid(870, 200, FlxColor.BLACK);
+	blackBG.alpha = 0.4;
+	add(blackBG);
 
-		var bg:FlxSprite = new FlxSprite().loadGraphic(Paths.image('menuDesat'));
-		bg.color = 0xFFea71fd;
-		bg.screenCenter();
-		bg.antialiasing = ClientPrefs.globalAntialiasing;
-		add(bg);
-		
-		scrollingThing = new FlxBackdrop(Paths.image('mainmenu/scroll'), XY, 0, 0);
-		scrollingThing.alpha = 0.9;
-		scrollingThing.setGraphicSize(Std.int(scrollingThing.width * 0.7));
-		add(scrollingThing);
+	grpNotes = new FlxTypedGroup<FlxSprite>();
+	add(grpNotes);
+	grpNumbers = new FlxTypedGroup<ClassicAlphabet>();
+	add(grpNumbers);
 
-		var circVignette:FlxSprite = new FlxSprite();
-		circVignette.loadGraphic(Paths.image('mainmenu/circVig'));
-		circVignette.scrollFactor.set();
-		add(circVignette);
-
-		vignette = new FlxSprite();
-		vignette.loadGraphic(Paths.image('mainmenu/vignette'));
-		vignette.scrollFactor.set();
-		add(vignette);
-
-		blackBG = new FlxSprite(posX - 25).makeGraphic(870, 200, FlxColor.BLACK);
-		blackBG.alpha = 0.4;
-		add(blackBG);
-
-		grpNotes = new FlxTypedGroup<FlxSprite>();
-		add(grpNotes);
-		grpNumbers = new FlxTypedGroup<Alphabet>();
-		add(grpNumbers);
-
-		for (i in 0...ClientPrefs.arrowHSV.length) {
-			var yPos:Float = (165 * i) + 35;
-			for (j in 0...3) {
-				var optionText:Alphabet = new Alphabet(posX + (225 * j) + 250, yPos + 60, Std.string(ClientPrefs.arrowHSV[i][j]), true);
-				grpNumbers.add(optionText);
-			}
-
-			var note:FlxSprite = new FlxSprite(posX, yPos);
-			note.frames = Paths.getSparrowAtlas('NOTE_assets');
-			var animations:Array<String> = ['purple0', 'blue0', 'green0', 'red0'];
-			note.animation.addByPrefix('idle', animations[i]);
-			note.animation.play('idle');
-			note.antialiasing = ClientPrefs.globalAntialiasing;
-			grpNotes.add(note);
-
-			var newShader:ColorSwap = new ColorSwap();
-			note.shader = newShader.shader;
-			newShader.hue = ClientPrefs.arrowHSV[i][0] / 360;
-			newShader.saturation = ClientPrefs.arrowHSV[i][1] / 100;
-			newShader.brightness = ClientPrefs.arrowHSV[i][2] / 100;
-			shaderArray.push(newShader);
+	for (i in 0...ccSSC.arrowHSV.length) {
+		var yPos:Float = (165 * i) + 35;
+		for (j in 0...3) {
+			var optionText = new ClassicAlphabet(posX + (225 * j) + 250, yPos + 60, Std.string(ccSSC.arrowHSV[i][j]), true);
+			optionText.refreshAlphabetXML('data/alphabet.xml');
+			grpNumbers.add(optionText);
 		}
 
+		var note = new FlxSprite(posX, yPos);
+		note.frames = Paths.getSparrowAtlas('game/notes/default');
+		var animations:Array<String> = ['purple0', 'blue0', 'green0', 'red0'];
+		note.animation.addByPrefix('idle', animations[i]);
+		note.animation.play('idle');
+		note.antialiasing = ccSSC.globalAntialiasing;
+		grpNotes.add(note);
 
-		spikes1 = new FlxBackdrop(Paths.image('mainmenu/spikes'), X, 0, 0);
-		spikes1.y -= 60;
-		spikes1.scrollFactor.set(0, 0);
-		spikes1.flipY = true;
-		add(spikes1);
-
-		spikes2 = new FlxBackdrop(Paths.image('mainmenu/spikes'), X, 0, 0);
-		spikes2.y += 630;
-		spikes2.scrollFactor.set(0, 0);
-		add(spikes2);
-
-		hsbText = new Alphabet(posX + 560, 0, "Hue    Saturation  Brightness", false);
-		hsbText.scaleX = 0.6;
-		hsbText.scaleY = 0.6;
-		add(hsbText);
-		
-
-		changeSelection();
+		var newShader = new CustomShader("psych/ColorSwapShader");
+		newShader.data.uHsv.value=[0, 0, 0];
+		note.shader = newShader;
+		shaderArray.push(newShader);
 	}
 
-	var changingNote:Bool = false;
-	override function update(elapsed:Float) {
-		scrollingThing.x -= 0.45 * 60 * elapsed;
-		scrollingThing.y -= 0.16 * 60 * elapsed;
+	hsbText = new Alphabet(480, 0, "Hue      Saturation   Brightness", false);
+	hsbText.scale.set(0.6,0.6);
+	hsbText.updateHitbox();
+	add(hsbText);
+		
+	changeSelection(0);
+}
 
-		spikes1.x -= 0.45 * 60 * elapsed;
-		spikes2.x -= 0.45 * 60 * elapsed;
-
-		if(changingNote) {
-			if(holdTime < 0.5) {
-				if(controls.UI_LEFT_P) {
-					updateValue(-1);
-					FlxG.sound.play(Paths.sound('scrollMenu'));
-				} else if(controls.UI_RIGHT_P) {
-					updateValue(1);
-					FlxG.sound.play(Paths.sound('scrollMenu'));
-				} else if(controls.RESET) {
-					resetValue(curSelected, typeSelected);
-					FlxG.sound.play(Paths.sound('scrollMenu'));
-				}
-				if(controls.UI_LEFT_R || controls.UI_RIGHT_R) {
-					holdTime = 0;
-				} else if(controls.UI_LEFT || controls.UI_RIGHT) {
-					holdTime += elapsed;
-				}
-			} else {
-				var add:Float = 90;
-				switch(typeSelected) {
-					case 1 | 2: add = 50;
-				}
-				if(controls.UI_LEFT) {
-					updateValue(elapsed * -add);
-				} else if(controls.UI_RIGHT) {
-					updateValue(elapsed * add);
-				}
-				if(controls.UI_LEFT_R || controls.UI_RIGHT_R) {
-					FlxG.sound.play(Paths.sound('scrollMenu'));
-					holdTime = 0;
-				}
+var changingNote:Bool = false;
+function update(elapsed:Float) {
+	if(changingNote) {
+		if(holdTime < 0.5) {
+			if(controls.LEFT_P||controls.RIGHT_P) {
+				updateValue(controls.LEFT_P?-1:1);
+				FlxG.sound.play(Paths.sound('scrollMenu'));
+			} else if(controls.RESET) {
+				resetValue(curSelNSS, typeSelected);
+				FlxG.sound.play(Paths.sound('scrollMenu'));
 			}
+			if(controls.LEFT_R || controls.RIGHT_R)holdTime = 0;
+			else if(controls.LEFT || controls.RIGHT) holdTime += elapsed;
 		} else {
-			if (controls.UI_UP_P) {
-				changeSelection(-1);
+			var add:Float = 90;
+			switch(typeSelected) {case 1 | 2: add = 50;}
+			if(controls.LEFT) updateValue(elapsed * -add);
+			else if(controls.RIGHT) updateValue(elapsed * add);
+			if(controls.LEFT_R || controls.RIGHT_R) {
 				FlxG.sound.play(Paths.sound('scrollMenu'));
-			}
-			if (controls.UI_DOWN_P) {
-				changeSelection(1);
-				FlxG.sound.play(Paths.sound('scrollMenu'));
-			}
-			if (controls.UI_LEFT_P) {
-				changeType(-1);
-				FlxG.sound.play(Paths.sound('scrollMenu'));
-			}
-			if (controls.UI_RIGHT_P) {
-				changeType(1);
-				FlxG.sound.play(Paths.sound('scrollMenu'));
-			}
-			if(controls.RESET) {
-				for (i in 0...3) {
-					resetValue(curSelected, i);
-				}
-				FlxG.sound.play(Paths.sound('scrollMenu'));
-			}
-			if (controls.ACCEPT && nextAccept <= 0) {
-				FlxG.sound.play(Paths.sound('scrollMenu'));
-				changingNote = true;
 				holdTime = 0;
-				for (i in 0...grpNumbers.length) {
-					var item = grpNumbers.members[i];
-					item.alpha = 0;
-					if ((curSelected * 3) + typeSelected == i) {
-						item.alpha = 1;
-					}
-				}
-				for (i in 0...grpNotes.length) {
-					var item = grpNotes.members[i];
-					item.alpha = 0;
-					if (curSelected == i) {
-						item.alpha = 1;
-					}
-				}
-				super.update(elapsed);
-				return;
 			}
 		}
-
-		if (controls.BACK || (changingNote && controls.ACCEPT)) {
-			if(!changingNote) {
-				close();
-			} else {
-				changeSelection();
-			}
-			changingNote = false;
-			FlxG.sound.play(Paths.sound('cancelMenu'));
+	} else {
+		if (controls.UP_P||controls.DOWN_P) {
+			changeSelection(controls.UP_P?-1:1);
+			FlxG.sound.play(Paths.sound('scrollMenu'));
 		}
-
-		if(nextAccept > 0) {
-			nextAccept -= 1;
+		if (controls.LEFT_P||controls.RIGHT_P) {
+			changeType(controls.LEFT_P?-1:1);
+			FlxG.sound.play(Paths.sound('scrollMenu'));
 		}
-		super.update(elapsed);
-	}
-
-	function changeSelection(change:Int = 0) {
-		curSelected += change;
-		if (curSelected < 0)
-			curSelected = ClientPrefs.arrowHSV.length-1;
-		if (curSelected >= ClientPrefs.arrowHSV.length)
-			curSelected = 0;
-
-		curValue = ClientPrefs.arrowHSV[curSelected][typeSelected];
-		updateValue();
-
-		for (i in 0...grpNumbers.length) {
-			var item = grpNumbers.members[i];
-			item.alpha = 0.6;
-			if ((curSelected * 3) + typeSelected == i) {
-				item.alpha = 1;
-			}
+		if(controls.RESET) {
+			for (i in 0...3) resetValue(curSelNSS, i);
+			FlxG.sound.play(Paths.sound('scrollMenu'));
 		}
-		for (i in 0...grpNotes.length) {
-			var item = grpNotes.members[i];
-			item.alpha = 0.6;
-			item.scale.set(0.75, 0.75);
-			if (curSelected == i) {
-				item.alpha = 1;
-				item.scale.set(1, 1);
-				hsbText.y = item.y - 70;
-				blackBG.y = item.y - 20;
+		if (controls.ACCEPT && nextAccept <= 0) {
+			FlxG.sound.play(Paths.sound('scrollMenu'));
+			changingNote = true;
+			holdTime = 0;
+			for (i in 0...grpNumbers.length) {
+				var item = grpNumbers.members[i];
+				item.alpha = 0;
+				if ((curSelNSS * 3) + typeSelected == i) item.alpha = 1;
 			}
-		}
-		FlxG.sound.play(Paths.sound('scrollMenu'));
-	}
-
-	function changeType(change:Int = 0) {
-		typeSelected += change;
-		if (typeSelected < 0)
-			typeSelected = 2;
-		if (typeSelected > 2)
-			typeSelected = 0;
-
-		curValue = ClientPrefs.arrowHSV[curSelected][typeSelected];
-		updateValue();
-
-		for (i in 0...grpNumbers.length) {
-			var item = grpNumbers.members[i];
-			item.alpha = 0.6;
-			if ((curSelected * 3) + typeSelected == i) {
-				item.alpha = 1;
+			for (i in 0...grpNotes.length) {
+				var item = grpNotes.members[i];
+				item.alpha = 0;
+				if (curSelNSS == i) item.alpha = 1;
 			}
+			return;
 		}
 	}
 
-	function resetValue(selected:Int, type:Int) {
-		curValue = 0;
-		ClientPrefs.arrowHSV[selected][type] = 0;
-		switch(type) {
-			case 0: shaderArray[selected].hue = 0;
-			case 1: shaderArray[selected].saturation = 0;
-			case 2: shaderArray[selected].brightness = 0;
-		}
+	if (controls.BACK || (changingNote && controls.ACCEPT)) {
+		if(!changingNote) close();
+		else changeSelection(0);
+		changingNote = false;
+		FlxG.sound.play(Paths.sound('cancelMenu'));
+	}
 
-		var item = grpNumbers.members[(selected * 3) + type];
-		item.text = '0';
+	if(nextAccept > 0) nextAccept -= 1;
+}
 
-		var add = (40 * (item.letters.length - 1)) / 2;
-		for (letter in item.letters)
-		{
-			letter.offset.x += add;
+function changeSelection(change:Int = 0) {
+	curSelNSS = FlxMath.wrap(curSelNSS + change, 0, ccSSC.arrowHSV.length - 1);
+
+	curValue = ccSSC.arrowHSV[curSelNSS][typeSelected];
+	updateValue(0);
+
+	for (i in 0...grpNumbers.length) {
+		var item = grpNumbers.members[i];
+		item.alpha = 0.6;
+		if ((curSelNSS * 3) + typeSelected == i) item.alpha = 1;
+	}
+	for (i in 0...grpNotes.length) {
+		var item = grpNotes.members[i];
+		item.alpha = 0.6;
+		item.scale.set(0.75, 0.75);
+		if (curSelNSS == i) {
+			item.alpha = 1;
+			item.scale.set(1, 1);
+			hsbText.y = item.y - 10;
+			blackBG.y = item.y - 20;
 		}
 	}
-	function updateValue(change:Float = 0) {
-		curValue += change;
-		var roundedValue:Int = Math.round(curValue);
-		var max:Float = 180;
-		switch(typeSelected) {
-			case 1 | 2: max = 100;
-		}
+	FlxG.sound.play(Paths.sound('scrollMenu'));
+}
 
-		if(roundedValue < -max) {
-			curValue = -max;
-		} else if(roundedValue > max) {
-			curValue = max;
-		}
-		roundedValue = Math.round(curValue);
-		ClientPrefs.arrowHSV[curSelected][typeSelected] = roundedValue;
+function changeType(change:Int = 0) {
+	typeSelected = FlxMath.wrap(typeSelected + change, 0, 2);
 
-		switch(typeSelected) {
-			case 0: shaderArray[curSelected].hue = roundedValue / 360;
-			case 1: shaderArray[curSelected].saturation = roundedValue / 100;
-			case 2: shaderArray[curSelected].brightness = roundedValue / 100;
-		}
+	curValue = ccSSC.arrowHSV[curSelNSS][typeSelected];
+	updateValue(0);
 
-		var item = grpNumbers.members[(curSelected * 3) + typeSelected];
-		item.text = Std.string(roundedValue);
+	for (i in 0...grpNumbers.length) {
+		var item = grpNumbers.members[i];
+		item.alpha = 0.6;
+		if ((curSelNSS * 3) + typeSelected == i) item.alpha = 1;
+	}
+}
 
-		var add = (40 * (item.letters.length - 1)) / 2;
-		for (letter in item.letters)
-		{
-			letter.offset.x += add;
-			if(roundedValue < 0) letter.offset.x += 10;
-		}
+function resetValue(selected:Int, type:Int) {
+	curValue = 0;
+	ccSSC.arrowHSV[selected][type] = 0;
+	switch(type) {
+		case 0:setHue(shaderArray[selected],0);
+		case 1:setSaturation(shaderArray[selected],0);
+		case 2:setBrightness(shaderArray[selected],0);
+	}
+
+	var item = grpNumbers.members[(selected * 3) + type];
+	item.text = '0';
+
+	var add = (40 * (item.letters.length - 1)) / 2;
+	for (letter in item.letters) letter.offset.x += add;
+}
+function updateValue(change:Float = 0) {
+	curValue += change;
+	var roundedValue:Int = Math.round(curValue);
+	var max:Float = (typeSelected==0?180:100);
+
+	if(roundedValue < -max) curValue = -max;
+	else if(roundedValue > max) curValue = max;
+	roundedValue = Math.round(curValue);
+	ccSSC.arrowHSV[curSelNSS][typeSelected] = roundedValue;
+
+	switch(typeSelected) {
+		case 0:setHue(shaderArray[curSelNSS],roundedValue / 360);
+		case 1:setSaturation(shaderArray[curSelNSS],roundedValue / 100);
+		case 2:setBrightness(shaderArray[curSelNSS],roundedValue / 100);
+	}
+
+	var item = grpNumbers.members[(curSelNSS * 3) + typeSelected];
+	item.text = Std.string(roundedValue);
+
+	var add = (40 * (item.members.length - 1)) / 2;
+	for (letter in item.members) {
+		letter.offset.x += add;
+		if(roundedValue < 0) letter.offset.x += 10;
 	}
 }

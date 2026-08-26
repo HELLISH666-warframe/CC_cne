@@ -1,28 +1,21 @@
-import flixel.FlxCamera;
 import funkin.backend.utils.DiscordUtil;
 import flixel.group.FlxGroup.FlxTypedGroup;
-import flixel.text.FlxText;
-import flixel.util.FlxColor;
-import flixel.tweens.FlxTween;
 import lime.utils.Assets;
 import flixel.system.FlxSound;
-import openfl.utils.Assets as OpenFlAssets;
-import flixel.tweens.FlxEase;
 import flixel.addons.display.FlxBackdrop;
-import Alphabet_cc;
+import openfl.filters.ShaderFilter;
+import Shaders;
 
 var credits:Array<CreditsMetadata> = [];
 
-var curSelected:Int = 0;
+var curSelCred:Int = 0;
 
-var grpCredits:FlxTypedGroup<Alphabet_cc>;
+var grpCredits:FlxTypedGroup<Alphabet>;
 
 var grpIcons:FlxTypedGroup<AttachedSprite>;
 
 var bg:FlxSprite;
 var scrollingThing:FlxBackdrop;
-var arrow:FlxSprite;
-var flippedArrow:FlxSprite;
 
 var outlineWidth:Float = 10;
 
@@ -39,8 +32,8 @@ var descBox:AttachedSprite;
 
 var specialThanks:FlxSprite;
 
-//public static var crtShader = new CRTShader();
-//var shaderFilter = new ShaderFilter(crtShader);
+public static var crtShader = new CRTShader();
+var shaderFilter = new ShaderFilter(crtShader);
 
 var moveCredits:Bool = true;
 
@@ -53,19 +46,18 @@ function create() {
 
 	camDefault = new FlxCamera();
 	camTexts = new FlxCamera();
-	camTexts.bgColor = 0;
+	camTexts.bgColor.alpha = 0;
 	camSpecialThanks = new FlxCamera();
-	camSpecialThanks.bgColor = 0;
+	camSpecialThanks.bgColor.alpha = 0;
 
 	FlxG.cameras.reset(camDefault);
 	FlxG.cameras.add(camTexts, false);
 	FlxG.cameras.add(camSpecialThanks, false);
 
-	//CustomFadeTransition.nextCamera = camSpecialThanks;
+	CustomFadeTransition.nextCamera = camSpecialThanks;
 
 	credits = [
 		//Tco Dev Team
-
 		new CreditsMetadata("JetTRG", "jet", "Director, Concept Artist & Main Charter.", 0xbd3185, "what's 6 × 3? 21."),
 		new CreditsMetadata("MijaeLio", "mijae", "Co-Director & Main Coder.", 0xFF5F5D5D, "Saludos a mi vieja"),
 		new CreditsMetadata("Tiburones202", "Tiburones202", "Coder & Charter.", 0xFFFF0000, "Twinkle of Contagion is a Passive Item added in the Spitshine update.\nFlavor text: \"Take the Shot\"\nItem Pool: Treasure, Drug Dealer\nQuality: 2\nItem Tags: Syringe, Summonable, Offensive"),
@@ -96,7 +88,6 @@ function create() {
 
 		//Contributers (no icons)
 		//Also try making credit sections if you can lol
-
 		new CreditsMetadata("Scorpzie", "scorpzie", "Original vocals for \"Adobe (Old)\".", 0xFFFFFFFF, ""),
 		new CreditsMetadata("XG_Chris", "chris", "Old Artist.", 0xFFFFFFFF, ""),
 		new CreditsMetadata("03Cube", "cheese", "Virabot, fires and social media burning sprites.", 0xFFFFFFFF, ""),
@@ -107,63 +98,63 @@ function create() {
 		new CreditsMetadata("atpx8", "", "Helped with the End Process pop-ups mechanic.", 0xFFFFFFFF, ""),
 		new CreditsMetadata("Tentilog", "tenti", "3D STICK Sprite.", 0xFFFFFFFF, ""),
 		new CreditsMetadata("Koi", "koi", "Rombie BG Artist.", 0xFFFFFFFF, ""),
-		new CreditsMetadata("Blonic", "blonic", "Logo Artist.", 0xFFFFFFFF, ""),
+		new CreditsMetadata("Blonic", "blonic", "Logo Artist.", 0xFFFFFFFF, "")
 	];
 
-	bg = new FlxSprite().loadGraphic(Paths.image('menus/creditsmenu/background'));
+	bg = new FlxSprite().loadGraphic(Paths.image('creditsmenu/background'));
 	bg.scrollFactor.set();
 	bg.updateHitbox();
 	bg.screenCenter();
-	bg.antialiasing = Options.antialiasing;
+	bg.antialiasing = ccSSC.globalAntialiasing;
 	add(bg);
 
-	scrollingThing = new FlxBackdrop(Paths.image('menus/creditsmenu/Main_Checker'), FlxAxes.XY, 0, 0);
+	scrollingThing = new FlxBackdrop(Paths.image('creditsmenu/Main_Checker'), FlxAxes.XY);
 	scrollingThing.scrollFactor.set(0, 0.07);
 	scrollingThing.alpha = 0.7;
 	scrollingThing.setGraphicSize(Std.int(scrollingThing.width * 0.4));
-	scrollingThing.antialiasing = Options.antialiasing;
+	scrollingThing.antialiasing = ccSSC.globalAntialiasing;
 	add(scrollingThing);
 
 	var vignette = new FlxSprite();
-	vignette.loadGraphic(Paths.image('menus/creditsmenu/ok'));
+	vignette.loadGraphic(Paths.image('creditsmenu/ok'));
 	vignette.scrollFactor.set();
-	vignette.antialiasing = Options.antialiasing;
+	vignette.antialiasing = ccSSC.globalAntialiasing;
 	add(vignette);
 
-	grpCredits = new FlxTypedGroup<Alphabet_cc>();
+	grpCredits = new FlxTypedGroup<Alphabet>();
 	add(grpCredits);
 	grpIcons = new FlxTypedGroup<AttachedSprite>();
 	add(grpIcons);
 
 	var topbar = new FlxSprite();
-	topbar.loadGraphic(Paths.image('menus/creditsmenu/upperBar'));
+	topbar.loadGraphic(Paths.image('creditsmenu/upperBar'));
 	topbar.scrollFactor.set();
-	topbar.antialiasing = Options.antialiasing;
+	topbar.antialiasing = ccSSC.globalAntialiasing;
 	topbar.cameras = [camTexts];
 	add(topbar);
 
 	var creditsbar = new FlxSprite();
-	creditsbar.loadGraphic(Paths.image('menus/creditsmenu/creditsBar'));
+	creditsbar.loadGraphic(Paths.image('creditsmenu/creditsBar'));
 	creditsbar.scrollFactor.set();
 	creditsbar.x = FlxG.width - creditsbar.width;
-	creditsbar.antialiasing = Options.antialiasing;
+	creditsbar.antialiasing = ccSSC.globalAntialiasing;
 	creditsbar.cameras = [camTexts];
 	add(creditsbar);
 
 	var downBar = new FlxSprite();
-	downBar.loadGraphic(Paths.image('menus/creditsmenu/downBar'));
+	downBar.loadGraphic(Paths.image('creditsmenu/downBar'));
 	downBar.scrollFactor.set();
 	downBar.y = FlxG.height - downBar.height;
-	downBar.antialiasing = Options.antialiasing;
+	downBar.antialiasing = ccSSC.globalAntialiasing;
 	downBar.cameras = [camTexts];
 	add(downBar);
 
 	prompt = new FlxSprite();
-	prompt.loadGraphic(Paths.image('menus/creditsmenu/popup'));
+	prompt.loadGraphic(Paths.image('creditsmenu/popup'));
 	prompt.scrollFactor.set();
 	prompt.x = FlxG.width - prompt.width - 100;
 	prompt.screenCenter(FlxAxes.Y);
-	prompt.antialiasing = Options.antialiasing;
+	prompt.antialiasing = ccSSC.globalAntialiasing;
 	prompt.cameras = [camTexts];
 	add(prompt);
 
@@ -175,28 +166,23 @@ function create() {
 	prompttext.color = 0xFF000000;
 	prompttext.x = prompt.x;
 	prompttext.y = prompt.y;
-	prompttext.antialiasing = Options.antialiasing;
+	prompttext.antialiasing = ccSSC.globalAntialiasing;
 	prompttext.cameras = [camTexts];
 	add(prompttext);
 
 	for (i in 0...credits.length) {
-		var creditText = new Alphabet_cc(300, 300, credits[i].name, false);
+		var creditText = new Alphabet(300, 300, credits[i].name, false);
 		creditText.fontColor = credits[i].color;
 		creditText.isCreditItem = true;
 		creditText.distancePerItem.x = 0;
 		creditText.distancePerItem.y = 200;
 		creditText.targetY = i;
-		if(i == 0) {
-			creditText.outline = outlineWidth;
-		}
+		if(i == 0) creditText.outline = outlineWidth;
 		creditText.snapToPosition();
 		grpCredits.add(creditText);
 
-		if(credits[i].color & 0xFFFFFF == 0xFFFFFF) {
-			creditText.outlineColor = 0xFF000000;
-		} else {
-			creditText.outlineColor = 0xFFFFFFFF;
-		}
+		if(credits[i].color & 0xFFFFFF == 0xFFFFFF) creditText.outlineColor = 0xFF000000;
+		else creditText.outlineColor = 0xFFFFFFFF;
 
 		creditText.outlineCameras = [camDefault];
 		creditText.cameras = [camTexts];
@@ -206,11 +192,10 @@ function create() {
 		icon.yAdd = -100;
 		icon.xAdd = -320;
 		icon.origin.set(280, 200);
-		icon.antialiasing = Options.antialiasing;
+		icon.antialiasing = ccSSC.globalAntialiasing;
 		icon.cameras = [camTexts];
 		grpIcons.add(icon);
 	}
-
 
 	descBox = new AttachedSprite();
 	descBox.makeGraphic(1, 1, 0xFF79c5ff);
@@ -231,16 +216,14 @@ function create() {
 
 	specialThanks = new FlxSprite();
 	specialThanks.loadGraphic(Paths.image('creditsmenu/specialThanks'));
-	specialThanks.antialiasing = Options.antialiasing;
+	specialThanks.antialiasing = ccSSC.globalAntialiasing;
 	specialThanks.alpha = 0.0001;
 	specialThanks.cameras = [camSpecialThanks];
 	add(specialThanks);
 
 	changeSelection(0);
 
-	if (ClientPrefs.shaders) FlxG.camera.setFilters([shaderFilter]);
-	if (ClientPrefs.shaders) camTexts.setFilters([shaderFilter]);
-	if (ClientPrefs.shaders) camSpecialThanks.setFilters([shaderFilter]);
+	if (ccSSC.shaders) {FlxG.camera.setFilters([shaderFilter]);camTexts.setFilters([shaderFilter]);camSpecialThanks.setFilters([shaderFilter]);}
 }
 
 var holdTime:Float = 0;
@@ -255,21 +238,18 @@ function update(elapsed:Float) {
 	if(FlxG.keys.pressed.SHIFT) shiftMult = 3;
 
 	if(credits.length > 1) {
-		if (controls.UP_P) {
-			changeSelection(-shiftMult);
+		if (controls.UP_P||controls.DOWN_P) {
+			changeSelection(controls.UP_P?-shiftMult:shiftMult);
 			holdTime = 0;
 		}
-		if (controls.DOWN_P) {
-			changeSelection(shiftMult);
-			holdTime = 0;
-		}
+
 		if(controls.UP_P || controls.DOWN_P) {
 			var checkLastHold:Int = Math.floor((holdTime - 0.5) * 10);
 			holdTime += elapsed;
 			var checkNewHold:Int = Math.floor((holdTime - 0.5) * 10);
 
 			if(holdTime > 0.5 && checkNewHold - checkLastHold > 0)
-				changeSelection((checkNewHold - checkLastHold) * (controls.UI_UP_P ? -shiftMult : shiftMult));
+				changeSelection((checkNewHold - checkLastHold) * (controls.UP_P ? -shiftMult : shiftMult));
 		}
 
 		if(FlxG.mouse.wheel != 0) {
@@ -278,7 +258,7 @@ function update(elapsed:Float) {
 		}
 	}
 
-	if(FlxG.keys.justPressed.SPACE)  {
+	if(FlxG.keys.justPressed.SPACE) {
 		specialThanks.alpha = specialThanks.alpha == 1 ? 0.0001 : 1;
 		moveCredits = !moveCredits;
 	}
@@ -286,8 +266,8 @@ function update(elapsed:Float) {
 	if (controls.BACK) {
 		persistentUpdate = false;
 		FlxG.sound.play(Paths.sound('cancelMenu'));
-		//CustomFadeTransition.nextCamera = camSpecialThanks;
-		FlxG.switchState(new ModState('tco/MainMenuState'));
+		CustomFadeTransition.nextCamera = camSpecialThanks;
+		FlxG.switchState(new MainMenuState());
 	}
 }
 
@@ -301,20 +281,17 @@ function changeSelection(change:Int = 0, playSound:Bool = true) {
 	if(playSound) FlxG.sound.play(Paths.sound('scrollMenu'), 0.4);
 	if(!moveCredits) return;
 
-	curSelected += change;
+	curSelCred = FlxMath.wrap(curSelCred+change,0,credits.length-1);
 
-	if (curSelected < 0) curSelected = credits.length - 1;
-	if (curSelected >= credits.length) curSelected = 0;
-
-	prompttext.visible = prompt.visible = credits[curSelected].desc != "";
+	prompttext.visible = prompt.visible = credits[curSelCred].desc != "";
 	if(prompttext.visible) {
-		prompttext.text = credits[curSelected].desc;
+		prompttext.text = credits[curSelCred].desc;
 		prompttext.updateHitbox();
 		prompttext.x = prompt.x + 110;
 		prompttext.y = prompt.y + 90;
 	}
 
-	descText.text = credits[curSelected].auth;
+	descText.text = credits[curSelCred].auth;
 	descText.updateHitbox();
 	descText.screenCenter();
 	descText.y = FlxG.height - descText.height + -75 - 60;
@@ -325,38 +302,29 @@ function changeSelection(change:Int = 0, playSound:Bool = true) {
 	descBox.setGraphicSize(Std.int(descText.width + 20), Std.int(descText.height + 25));
 	descBox.updateHitbox();
 
-	for (i in 0...grpIcons.members.length) {
-		tween(grpIcons.members[i], {"scale.x": 0.35, "scale.y": 0.35, xAdd: -300}, 0.2, {
-			ease: FlxEase.quadOut
-		});
-	}
+	for (i in 0...grpIcons.members.length)
+		tween(grpIcons.members[i], {"scale.x": 0.35, "scale.y": 0.35, xAdd: -300}, 0.2, {ease: FlxEase.quadOut});
 
-	tween(grpIcons.members[curSelected], {"scale.x": 0.6, "scale.y": 0.6, xAdd: -320}, 0.2, {
-		ease: FlxEase.quadOut
-	});
+	tween(grpIcons.members[curSelCred], {"scale.x": 0.6, "scale.y": 0.6, xAdd: -320}, 0.2, {ease: FlxEase.quadOut});
 
 	for (i=>item in grpCredits.members) {
-		var shit = i - curSelected;
+		var shit = i - curSelCred;
 		var scale = shit == 0 ? 0.75 : 0.375;
-		var outline:Float = shit == 0 ? outlineWidth : 0;
-		var outlineAlpha:Float = shit == 0 ? 1.0 : 0.0;
+		#if !web var outline:Float = shit == 0 ? outlineWidth : 0;
+		var outlineAlpha:Float = shit == 0 ? 1.0 : 0.0; #end
 
 		item.textOffsetX = shit == 0 ? 120 : 0;
-		tween(item, {scaleX: scale, "scale.y": scale, #if !web outline: outline, outlineAlpha: outlineAlpha #end}, 0.2, {
-			ease: FlxEase.quadOut
-		});
+		tween(item, {scaleX: scale, "scale.y": scale, #if !web outline: outline, outlineAlpha: outlineAlpha #end}, 0.2, {ease: FlxEase.quadOut});
 
 		item.targetY = shit;
 
-		if (shit == 0) {
-			item.alpha = 1;
-		} else {
-			item.alpha = 0.4;
-		}
+		if (shit == 0) item.alpha = 1;
+		else item.alpha = 0.4;
 	}
 }
 
-class CreditsMetadata {
+class CreditsMetadata
+{
 	public var name:String = "";
 	public var icon:String = "";
 	public var auth:String = "";

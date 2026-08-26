@@ -60,6 +60,8 @@ function onPlayerHit(e){
 		e.misses=true;
 		case 'AV':e.misses=e.strumGlowCancelled = true;
         e.countAsCombo = e.showRating = e.showSplash = false;
+		trace(e.strumID);
+		//ALSO_CAUSES_THE_LANE_TO_BE_UNABLE_TO_HIT_ANYTHING.
 		case 'gf-sing':e.cancelAnim();
         gf.playSingAnim(e.direction, e.animSuffix);
 		case 'Tdl note':FlxG.sound.play(Paths.sound("darkLordAttack"));

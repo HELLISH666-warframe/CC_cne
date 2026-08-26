@@ -158,11 +158,6 @@ function onSongStart() {
 	}
 }
 
-function postUpdate() {
-	cpuStrums.notes.forEach((note) -> note.alpha=cpuStrums.members[0].alpha);
-	playerStrums.notes.forEach((note) -> note.alpha=playerStrums.members[0].alpha);
-}
-
 function killThem(num:Int) {
 	if(strumLines.length<=num)return;
 	for(i in 0...strumLines.members[num].characters.length){

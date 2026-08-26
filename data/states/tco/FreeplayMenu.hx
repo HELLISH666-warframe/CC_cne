@@ -119,8 +119,8 @@ function update(elapsed:Float) {
 
 					FlxTween.tween(FlxG.camera, {zoom: 3}, 1.5, {ease: FlxEase.expoIn});
 					FlxG.camera.fade(FlxColor.BLACK, 0.8, false, function() {
-						FlxG.switchState(new FreeplayState());
-						FlxG.save.data.freeplaything_cc = curSelFS;
+						FlxG.switchState(new ModState('tco/Freeplay',{"cat":1}));
+						ccSSC.freeplayCat = curSelFS;
 					});
 				}
 			});

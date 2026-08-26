@@ -125,7 +125,7 @@ function update(elapsed:Float) {
 			practiceText.visible = PlayState.instance.scripts.get('practiceMode');
 			case "RESTART SONG":FlxG.resetState();
 			case "CHANGE CONTROLS":persistentDraw = false; openSubState(new KeybindsOptions());
-			case "CHANGE OPTIONS": FlxG.switchState(new OptionsMenu((_) -> FlxG.switchState(new PlayState())));
+			case "CHANGE OPTIONS":FlxG.switchState(new ModState('Psych/options/OptionsState',{"exitState":(_) ->  FlxG.switchState(new PlayState())}));
 			case "Leave Charting Mode":FlxG.resetState();
 			PlayState.chartingMode = false;
 			case "End Song":close(); PlayState.instance.endSong();
@@ -144,7 +144,7 @@ function update(elapsed:Float) {
 			else if(gfMoment) {
 				FlxG.switchState(new MainMenuState());
 				MainMenuState.gfMoment = false;
-			} else FlxG.switchState(new ModState('tco/FreeplayMenu'));
+			} else FlxG.switchState(new ModState('tco/Freeplay',{"cat":ccSSC.freeplayCat}));
 			PlayState.cancelMusicFadeTween();
 			FlxG.sound.playMusic(Paths.music('freakyMenu'));
 			PlayState.changedDifficulty = false;

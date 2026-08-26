@@ -8,15 +8,19 @@ private var grpOptions:FlxTypedGroup<Alphabet>;
 private static var curSelOS:Int = 0;
 public static var menuBG:FlxSprite;
 var finishedZoom = false;
+var inSubMenu = false;
 
 function openSelectedSubstate(label:String) {
 	switch(label) {
-		case 'Note Colors':openSubState(new options.NotesSubState());
+		case 'Note Colors':openSubState(new ModSubState('Psych/options/NotesSubState'));
 		case 'Controls':persistentDraw = false; openSubState(new KeybindsOptions());
 		case 'Graphics':openSubState(new ModSubState('Psych/options/BaseOptionsMenu',{"menu":'Graphics'}));
 		case 'Visuals and UI':openSubState(new ModSubState('Psych/options/BaseOptionsMenu',{"menu":'Visuals and UI'}));
 		case 'Gameplay':openSubState(new ModSubState('Psych/options/BaseOptionsMenu',{"menu":'Gameplay'}));
 	}
+	grpOptions.forEach(function(spr) {spr.alpha = 0;});
+	selectorLeft.alpha=selectorRight.alpha=0;
+	inSubMenu=true;
 }
 
 var selectorLeft:Alphabet;
@@ -88,20 +92,19 @@ function create() {
 	FlxG.camera.fade(FlxColor.BLACK, 0.8, true, function(){finishedZoom = true;});
 }
 
-override function closeSubState() {
-	super.closeSubState();
-	ClientPrefs.saveSettings();
+override function onCloseSubState() {
+	inSubMenu=false;
+	changeSelection(0);
+	saveMyShit();
 }
 
 public var exitCallback:Dynamic->Void;
 function update(elapsed:Float) {
-	scrollingThing.x -= 0.45 * 60 * elapsed;
 	scrollingThing.y -= 0.16 * 60 * elapsed;
 
-	spikes1.x -= 0.45 * 60 * elapsed;
-	spikes2.x -= 0.45 * 60 * elapsed;
+	scrollingThing.x = spikes1.x = spikes2.x -= 0.45 * 60 * elapsed;
 
-	if(finishedZoom) {
+	if(finishedZoom&&!inSubMenu) {
 		if (controls.UP_P||controls.DOWN_P) changeSelection(controls.UP_P?-1:1);
 	
 		if (controls.BACK) {
@@ -111,10 +114,7 @@ function update(elapsed:Float) {
 			FlxG.camera.fade(FlxColor.BLACK, 0.8, false, function() {exit();});
 		}
 	
-		if (controls.ACCEPT) {
-			persistentUpdate = false;
-			openSelectedSubstate(options[curSelOS]);
-		}
+		if (controls.ACCEPT) openSelectedSubstate(options[curSelOS]);
 	}
 	if (FlxG.keys.pressed.SHIFT && FlxG.keys.pressed.K)
         openSubState(new ModSubState('Psych/options/BaseOptionsMenu',{"exitState":(_) ->  FlxG.switchState(new TitleState())}));
@@ -138,7 +138,7 @@ function changeSelection(change:Int = 0) {
 
 		item.alpha = 0.6;
 		if (item.targetY == 0) {
-			item.alpha = 1;
+			selectorLeft.alpha=selectorRight.alpha=item.alpha = 1;
 			selectorLeft.x = item.x - 63;
 			selectorLeft.y = item.y;
 			selectorRight.x = item.x + item.width + 15;

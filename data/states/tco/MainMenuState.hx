@@ -1,6 +1,7 @@
 import flixel.addons.transition.FlxTransitionableState;
 import flixel.group.FlxGroup.FlxTypedGroup;
 import flixel.addons.display.FlxBackdrop;
+import funkin.menus.credits.CreditsMain;
 import funkin.backend.utils.DiscordUtil;
 import flixel.text.FlxTextBorderStyle;
 import openfl.filters.BitmapFilter;

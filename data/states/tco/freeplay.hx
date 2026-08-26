@@ -27,8 +27,7 @@ if(ccSSC.songsUnlocked.contains('redzone error'))songRealList[1].push("redzone-e
 if(checkIfAlanIsLocked())songRealList[1].push("alan");
 if(ccSSC.songsUnlocked.contains('catto'))songRealList[3].push("catto-(old)");
 
-for(s in songRealList[FlxG.save.data.freeplaything_cc])
-	songs.push(Chart.loadChartMeta(s, "hard", true));
+for(s in songRealList[ccSSC.freeplayCat]) songs.push(Chart.loadChartMeta(s, "hard", true));
 
 static var curSelFP:Int = 0;
 static var curSelFPR = [0,0,0,0];
@@ -97,7 +96,7 @@ function create() {
 	add(downBar);
 	downBar.screenCenter();
 
-	barName = new FlxSprite().loadGraphic(Paths.image('menus/freeplayArt/freeplayImages/type of freeplay/'+FlxG.save.data.freeplaything_cc));
+	barName = new FlxSprite().loadGraphic(Paths.image('menus/freeplayArt/freeplayImages/type of freeplay/'+ccSSC.freeplayCat));
 	barName.antialiasing = Options.antialiasing;
 	add(barName);
 	barName.screenCenter();
@@ -163,7 +162,7 @@ function create() {
 
 	add(scoreText);
 
-	curSelFP=curSelFPR[FlxG.save.data.freeplaything_cc];
+	curSelFP=curSelFPR[ccSSC.freeplayCat];
 	scrollingThing.color = songs[curSelFP].color;
 	intendedColor = scrollingThing.color;
 
@@ -304,7 +303,7 @@ function changeSelection(a:Int = 0, playSound:Bool = true) {
 	playSound??=true;
 	if(playSound) FlxG.sound.play(Paths.sound('scrollMenu'), 0.4);
 	curSelFP = FlxMath.wrap(curSelFP+a,0,songs.length-1);
-	curSelFPR[FlxG.save.data.freeplaything_cc]=curSelFP;
+	curSelFPR[ccSSC.freeplayCat]=curSelFP;
 
 	if(zoomTween != null) zoomTween.cancel();
 	if(tweenX != null) tweenX.cancel();

@@ -87,6 +87,12 @@ function new() {
 function postCreate() {
 	//For_the_diff_text_the_first_letter_needs_to_be_capitalised.FUUUUUUUCK.
 	window.title = "Computerized Conflict -"+curSong+ " - ["+PlayState.difficulty+"] - Composed by: " +PlayState.SONG.meta.composer;
+	trace(strumLines.length);
+	for(i in 0...strumLines.length){
+		if(!strumLines.members[i].visible)return;
+		for(l in 0...strumLines.members[i].members.length)
+	strumLines.members[i].members[l].extraCopyFields=['alpha','scale.x','scale.y'];
+	}
 }
 
 function stepHit() {
@@ -426,15 +432,6 @@ function healthDrainRates(simple:Float, hard:Float, insane:Float, mult:Float = 1
 		case 'HARD':health -= hard * mult;
 		case 'INSANE':health -= insane * mult;
 	}
-}
-
-public function confBSODShake(intensity:Float = 1.0) {
-	new FlxTimer().start(0.01, ()->{bsod.y += (10 * intensity);});
-	new FlxTimer().start(0.05, ()->{bsod.y -= (15 * intensity);});
-	new FlxTimer().start(0.10, ()->{bsod.y += (8 * intensity);});
-	new FlxTimer().start(0.15, ()->{bsod.y -= (5 * intensity);});
-	new FlxTimer().start(0.20, ()->{bsod.y += (3 * intensity);});
-	new FlxTimer().start(0.25, ()->{bsod.y -= (1 * intensity);});
 }
 
 function tcoBSOD(fuck:Bool){

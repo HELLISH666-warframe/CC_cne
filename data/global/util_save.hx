@@ -4,6 +4,7 @@ function new() {
     FlxG.save.data.Computerized_Conflict_Save??={};
     ccSSC=FlxG.save.data.Computerized_Conflict_Save;
 
+    ccSSC.arrowHSV??=[[0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0]];
     ccSSC.framerate??=60;
     ccSSC.globalAntialiasing??=true;
     ccSSC.songsUnlocked_mainWeek ??= false;
@@ -56,6 +57,12 @@ function new() {
 		'opponentplay' => false
 	];
 
+    ccSSC.autoPause??=true;
+    ccSSC.songOffset??=0;
+    ccSSC.streamedMusic??=true;
+    ccSSC.streamedVocals??=true;
+    ccSSC.gpuOnlyBitmaps??=false;
+
     saveMyShit();
     trace(ccSSC);
 }
@@ -75,6 +82,13 @@ public static function saveMyShit() {
     Options.camZoomOnBeat=ccSSC.camZooms;
     Options.downscroll=ccSSC.downScroll;
     Options.ghostTapping=ccSSC.ghostTapping;
+
+    Options.autoPause=ccSSC.autoPause;
+    FlxG.autoPause = Options.autoPause;
+    Options.songOffset=ccSSC.songOffset;
+    Options.streamedMusic=ccSSC.streamedMusic;
+    Options.streamedVocals=ccSSC.streamedVocals;
+    Options.gpuOnlyBitmaps=ccSSC.gpuOnlyBitmaps;
 
     FlxG.save.flush();
     trace(ccSSC.flashing);

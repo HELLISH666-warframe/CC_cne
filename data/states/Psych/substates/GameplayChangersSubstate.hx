@@ -347,8 +347,8 @@ class GameplayOption
 		}
 	}
 
-	public function getValue() return FlxG.save.data.gameplaySettings.get(variable);
-	public function setValue(value:Dynamic) FlxG.save.data.gameplaySettings.set(variable, value);
+	public function getValue() return ccSSC.gameplaySettings.get(variable);
+	public function setValue(value:Dynamic) ccSSC.gameplaySettings.set(variable, value);
 
 	public function setChild(child:Alphabet)
 	{
